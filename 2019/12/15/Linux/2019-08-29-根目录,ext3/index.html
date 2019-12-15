@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="根目录,ext3categories: Linux 根目录下的文件 &#x2F;bin, &#x2F;usr&#x2F;bin, &#x2F;usr&#x2F;local&#x2F;bin: 可执行的二进制文件  &#x2F;boot: 开机文件, &#x2F;boot&#x2F;vmlinuz下放置的是linux内核. &#x2F;boot&#x2F;grub防止的开机管理程序grub.  &#x2F;dev: 装置与接口文档. 接口设备(character device), 如键盘, 鼠标等; 块设备(bloc">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2019-08-29-根目录,ext3">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;15&#x2F;Linux&#x2F;2019-08-29-%E6%A0%B9%E7%9B%AE%E5%BD%95,ext3&#x2F;index.html">
+<meta property="og:site_name" content="探究前线">
+<meta property="og:description" content="根目录,ext3categories: Linux 根目录下的文件 &#x2F;bin, &#x2F;usr&#x2F;bin, &#x2F;usr&#x2F;local&#x2F;bin: 可执行的二进制文件  &#x2F;boot: 开机文件, &#x2F;boot&#x2F;vmlinuz下放置的是linux内核. &#x2F;boot&#x2F;grub防止的开机管理程序grub.  &#x2F;dev: 装置与接口文档. 接口设备(character device), 如键盘, 鼠标等; 块设备(bloc">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-12-15T04:53:28.194Z">
+<meta property="article:modified_time" content="2019-12-10T00:53:01.294Z">
+<meta property="article:author" content="tianyilt">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/12/15/Linux/2019-08-29-根目录,ext3/"/>
+
+
+
+
+
+  <title>2019-08-29-根目录,ext3 | 探究前线</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.1.1"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">探究前线</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">究天人之际,析万物之理</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/15/Linux/2019-08-29-%E6%A0%B9%E7%9B%AE%E5%BD%95,ext3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="tianyilt">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="探究前线">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">2019-08-29-根目录,ext3</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-15T12:53:28+08:00">
+                2019-12-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="根目录-ext3"><a href="#根目录-ext3" class="headerlink" title="根目录,ext3"></a>根目录,ext3</h1><p>categories: Linux</p>
+<h2 id="根目录下的文件"><a href="#根目录下的文件" class="headerlink" title="根目录下的文件"></a>根目录下的文件</h2><ul>
+<li><p><code>/bin</code>, <code>/usr/bin</code>, <code>/usr/local/bin</code>: 可执行的二进制文件</p>
+</li>
+<li><p><code>/boot</code>: 开机文件, <code>/boot/vmlinuz</code>下放置的是linux内核. <code>/boot/grub</code>防止的开机管理程序<code>grub</code>.</p>
+</li>
+<li><p><code>/dev</code>: 装置与接口文档. 接口设备(character device), 如键盘, 鼠标等; 块设备(block device), 如硬盘, 光盘等.</p>
+</li>
+<li><p><code>/etc</code>: 系统的设定文件, 如用户等.</p>
+<ul>
+<li><p><code>/etc/init.d/</code>: 服务的启动与停止.</p>
+<p><code>/etc/init.d/iptables start</code>: 启动iptables服务.</p>
+<p><code>/etc/init.d/iptables stop</code>: 停用iptables服务.</p>
+</li>
+</ul>
+</li>
+<li><p><code>/lib</code>, <code>/usr/lib</code>, <code>/usr/local/lib</code>: 函数库. kernel的关键模块放置在<code>/lib/modules</code>下.</p>
+</li>
+<li><p><code>/mnt</code>: 挂载点.</p>
+</li>
+<li><p><code>/opt</code>: 软件安装的目录.</p>
+</li>
+<li><p><code>/proc</code>: 重要的数据, 只存放在内存中. </p>
+</li>
+<li><p><code>/sbin</code>, <code>/usr/sbin</code>, <code>/usr/local/sbin</code>: 只有管理员才能使用的可执行二进制文件.</p>
+</li>
+<li><p><code>/srv</code>: 一些服务要用到的数据就放在里面.</p>
+</li>
+<li><p><code>/usr</code>: 系统程序, 图形接口文件, 函数库, 本机自行安装的软件, 共享的目录与文件.</p>
+<ul>
+<li><code>/usr/bin</code>, <code>/usr/sbin</code></li>
+<li><code>/usr/include</code>: c/c++ 需要include的库.</li>
+<li><code>/usr/lib</code>: 软件函数库. </li>
+<li><code>/usr/local</code>: 本机自行安装软件预放置的目录. </li>
+<li><code>/usr/share</code>: 共享目录. <code>/usr/share/doc</code>: 系统说明文件. <code>/usr/share/man</code>: man的说明文档. </li>
+<li><code>/usr/src</code>: linux系统代码. <code>/usr/src/linux</code>是核心源代码. </li>
+</ul>
+</li>
+<li><p><code>/var</code>: 常态性变动文档.</p>
+<ul>
+<li><code>/var/chache</code>: 缓存文档. </li>
+<li><code>/var/lib</code>: 程序运行时需要使用的数据文件放置的目录. </li>
+<li><code>/var/log</code>: 登陆文件.</li>
+<li><code>/var/spool</code>: 队列数据. <code>/var/spool/mail</code>放置收到的邮件. <code>/var/spool/mqueue</code>放置暂时发不出去的邮件. </li>
+</ul>
+</li>
+</ul>
+<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><ul>
+<li>系统启动只会挂载根目录所在的分区, 因此与系统启动有关的文件都要放在根目录所在的分区内, 包括<code>/etc, /sbin, /bin, /dev, /lib</code>.</li>
+<li>读取频繁的文件(容易造成磁盘损坏), 需要特定空间的文件可以单独挂载, 如<code>/home, /usr, /var</code>. </li>
+</ul>
+<h2 id="文件系统"><a href="#文件系统" class="headerlink" title="文件系统"></a>文件系统</h2><p><strong>ext3</strong>: 比ext2多了一个磁盘写入的日志, 写入磁盘时, 就会在日志中记录<code>开始写入</code>, 写入后就会记录<code>完成写入</code>. 这样遭遇断电事故, 检查日志就可以缩小检查文件一致性的磁盘范围. </p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/12/15/Linux/2019-08-29-man,info,reboot/" rel="next" title="2019-08-29-man,info,reboot">
+                <i class="fa fa-chevron-left"></i> 2019-08-29-man,info,reboot
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/12/15/Linux/2019-08-29-%E6%A1%A3%E6%A1%88%E5%B1%9E%E6%80%A7%E5%92%8C%E7%94%A8%E6%88%B7%E9%85%8D%E7%BD%AE/" rel="prev" title="2019-08-29-档案属性和用户配置">
+                2019-08-29-档案属性和用户配置 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">tianyilt</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%20%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">52</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">categories</span>
+                
+              </div>
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#根目录-ext3"><span class="nav-number">1.</span> <span class="nav-text">根目录,ext3</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#根目录下的文件"><span class="nav-number">1.1.</span> <span class="nav-text">根目录下的文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注意"><span class="nav-number">1.2.</span> <span class="nav-text">注意</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文件系统"><span class="nav-number">1.3.</span> <span class="nav-text">文件系统</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">tianyilt</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

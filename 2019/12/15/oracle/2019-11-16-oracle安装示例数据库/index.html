@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="oracle安装示例数据库categories: oracle我们在安装完oracle数据后发现没有示例数据库,先重新配置一个有hr的数据库 依赖环境完成oracle安装 前置准备从入门到删库跑路删除原有库 输入dbca,点击删除,一路确定 创建非容器的数据库输入dbca  勾掉容器数据库   这里也勾掉容器数据库      这里勾示例方案添加到数据库  字符集最好操作系统字符集      点击口">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2019-11-16-oracle安装示例数据库">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;15&#x2F;oracle&#x2F;2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93&#x2F;index.html">
+<meta property="og:site_name" content="探究前线">
+<meta property="og:description" content="oracle安装示例数据库categories: oracle我们在安装完oracle数据后发现没有示例数据库,先重新配置一个有hr的数据库 依赖环境完成oracle安装 前置准备从入门到删库跑路删除原有库 输入dbca,点击删除,一路确定 创建非容器的数据库输入dbca  勾掉容器数据库   这里也勾掉容器数据库      这里勾示例方案添加到数据库  字符集最好操作系统字符集      点击口">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;15&#x2F;oracle&#x2F;2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93&#x2F;2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93&#x2F;1573866789059.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;15&#x2F;oracle&#x2F;2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93&#x2F;2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93&#x2F;1573866845789.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;15&#x2F;oracle&#x2F;2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93&#x2F;2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93&#x2F;1573866871323.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;15&#x2F;oracle&#x2F;2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93&#x2F;2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93&#x2F;1573866899402.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;15&#x2F;oracle&#x2F;2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93&#x2F;2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93&#x2F;1573866917756.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;15&#x2F;oracle&#x2F;2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93&#x2F;2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93&#x2F;1573866937385.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;15&#x2F;oracle&#x2F;2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93&#x2F;2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93&#x2F;1573866948026.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;15&#x2F;oracle&#x2F;2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93&#x2F;2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93&#x2F;1573866975319.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;15&#x2F;oracle&#x2F;2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93&#x2F;2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93&#x2F;1573867014239.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;15&#x2F;oracle&#x2F;2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93&#x2F;2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93&#x2F;1573867045201.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;15&#x2F;oracle&#x2F;2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93&#x2F;2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93&#x2F;1573867064239.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;15&#x2F;oracle&#x2F;2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93&#x2F;2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93&#x2F;1573867088628.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;15&#x2F;oracle&#x2F;2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93&#x2F;2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93&#x2F;1573867112386.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;15&#x2F;oracle&#x2F;2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93&#x2F;2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93&#x2F;1573867161011.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;15&#x2F;oracle&#x2F;2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93&#x2F;2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93&#x2F;1573867495931.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;15&#x2F;oracle&#x2F;2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93&#x2F;2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93&#x2F;1573867626477.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;15&#x2F;oracle&#x2F;2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93&#x2F;2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93&#x2F;1573867644945.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;15&#x2F;oracle&#x2F;2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93&#x2F;2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93&#x2F;1573867794323.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;15&#x2F;oracle&#x2F;2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93&#x2F;2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93&#x2F;1573867821641.png">
+<meta property="article:published_time" content="2019-12-15T04:53:28.231Z">
+<meta property="article:modified_time" content="2019-12-10T00:53:01.357Z">
+<meta property="article:author" content="tianyilt">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;15&#x2F;oracle&#x2F;2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93&#x2F;2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93&#x2F;1573866789059.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/12/15/oracle/2019-11-16-oracle安装示例数据库/"/>
+
+
+
+
+
+  <title>2019-11-16-oracle安装示例数据库 | 探究前线</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.1.1"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">探究前线</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">究天人之际,析万物之理</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/15/oracle/2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="tianyilt">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="探究前线">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">2019-11-16-oracle安装示例数据库</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-15T12:53:28+08:00">
+                2019-12-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/oracle/" itemprop="url" rel="index">
+                    <span itemprop="name">oracle</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="oracle安装示例数据库"><a href="#oracle安装示例数据库" class="headerlink" title="oracle安装示例数据库"></a>oracle安装示例数据库</h1><p>categories: oracle<br>我们在安装完oracle数据后发现没有示例数据库,先重新配置一个有hr的数据库</p>
+<h2 id="依赖环境"><a href="#依赖环境" class="headerlink" title="依赖环境"></a>依赖环境</h2><p>完成<a href="./2019-11-03-oracle工作环境.md">oracle安装</a></p>
+<h2 id="前置准备"><a href="#前置准备" class="headerlink" title="前置准备"></a>前置准备</h2><p><del>从入门到删库跑路</del>删除原有库</p>
+<p>输入dbca,点击删除,一路确定</p>
+<h2 id="创建非容器的数据库"><a href="#创建非容器的数据库" class="headerlink" title="创建非容器的数据库"></a>创建非容器的数据库</h2><p>输入dbca</p>
+<p><img src="2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93/1573866789059.png" alt="1573866789059"></p>
+<p>勾掉容器数据库</p>
+<p><img src="2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93/1573866845789.png" alt="1573866840466"></p>
+<p><img src="2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93/1573866871323.png" alt="1573866871323"></p>
+<p>这里也勾掉容器数据库</p>
+<p><img src="2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93/1573866899402.png" alt="1573866899402"></p>
+<p><img src="2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93/1573866917756.png" alt="1573866917756"></p>
+<p><img src="2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93/1573866937385.png" alt="1573866937385"></p>
+<p><img src="2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93/1573866948026.png" alt="1573866948026"></p>
+<p><img src="2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93/1573866975319.png" alt="1573866975319"></p>
+<p>这里勾示例方案添加到数据库</p>
+<p><img src="2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93/1573867014239.png" alt="1573867014239"></p>
+<p>字符集最好操作系统字符集</p>
+<p><img src="2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93/1573867045201.png" alt="1573867045201"></p>
+<p><img src="2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93/1573867064239.png" alt="1573867064239"></p>
+<p><img src="2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93/1573867088628.png" alt="1573867088628"></p>
+<p><img src="2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93/1573867112386.png" alt="1573867112386"></p>
+<p><img src="2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93/1573867161011.png" alt="1573867161011"></p>
+<p><img src="2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93/1573867495931.png" alt="1573867495931">点击<strong>口令管理</strong></p>
+<p><img src="2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93/1573867626477.png" alt="1573867626477"></p>
+<p><img src="2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93/1573867644945.png" alt="1573867644945"></p>
+<p>给hr配上口令为hr</p>
+<p><strong>如果你忘记了这一步</strong></p>
+<p>在sqlplus中输入</p>
+<pre><code>alter user hr account unlock identified as hr</code></pre><h2 id="登陆hr"><a href="#登陆hr" class="headerlink" title="登陆hr"></a>登陆hr</h2><p>哈哈哈哈终于装好了,我们直接登进去</p>
+<p>发现</p>
+<p><img src="2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93/1573867794323.png" alt="1573867794323"></p>
+<p>对此,我们应该</p>
+<p><img src="2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93/1573867821641.png" alt="1573867821641"></p>
+<p>先变成管理员</p>
+<pre><code class="bash">sqlplus / as sysdba</code></pre>
+<p>然后解锁</p>
+<pre><code>alter user hr account unlock;</code></pre><p>然后登入hr</p>
+<pre><code>sqlplus hr/hr</code></pre><p>成功,完事情,撒花</p>
+<h2 id="从github下载示例文件"><a href="#从github下载示例文件" class="headerlink" title="从github下载示例文件"></a>从github下载示例文件</h2><p>从github上下载源代码：</p>
+<p><a href="https://github.com/oracle/db-sample-schemas/releases/latest" target="_blank" rel="noopener">https://github.com/oracle/db-sample-schemas/releases/latest</a></p>
+<p>上传到数据库服务器：</p>
+<pre><code class="bash">[oracle@dave.cndba.cn demo]$ cp /home/oracle/db-sample-schemas-12.2.0.1.zip $ORACLE_HOME/demo
+[oracle@dave.cndba.cn demo]$ ls
+db-sample-schemas-12.2.0.1.zip  schema
+[oracle@dave.cndba.cn demo]$ unzip db-sample-schemas-12.2.0.1.zip
+[oracle@dave.cndba.cn demo]$ mv schema schema.bak
+[oracle@dave.cndba.cn demo]$ mv db-sample-schemas-12.2.0.1 schema</code></pre>
+<p>导入</p>
+<pre><code class="sql">@mksample waterman waterman hr oe pm ix sh bi users temp /home/oracle/dbca/ 192.168.0.220:1521/orcl</code></pre>
+<p>报错处理</p>
+<pre><code class="bash">perl -p -i.bak -e &#39;s#__SUB__CWD__#&#39;$(pwd)&#39;#g&#39; *.sql */*.sql */*.dat</code></pre>
+<p>验证</p>
+<pre><code class="sql">select username,created from dba_users where created&gt;sysdate-1;</code></pre>
+<h2 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h2><p><a href="https://www.cndba.cn/dave/article/1985" target="_blank" rel="noopener">Oracle 12cR2 安装示例用户(Sample Schemas)</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/12/15/oracle/2019-11-10-%E5%90%AF%E5%8A%A8%E6%95%B0%E6%8D%AE%E5%BA%93/" rel="next" title="2019-11-10-启动数据库">
+                <i class="fa fa-chevron-left"></i> 2019-11-10-启动数据库
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/12/15/%E9%85%8D%E7%8E%AF%E5%A2%83_%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/2019-11-16-pycharm%E6%97%A0%E6%B3%95%E8%BF%90%E8%A1%8C%E8%B0%83%E5%87%BAconsole/" rel="prev" title="2019-11-16-pycharm无法运行调出console">
+                2019-11-16-pycharm无法运行调出console <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">tianyilt</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%20%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">52</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">categories</span>
+                
+              </div>
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#oracle安装示例数据库"><span class="nav-number">1.</span> <span class="nav-text">oracle安装示例数据库</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#依赖环境"><span class="nav-number">1.1.</span> <span class="nav-text">依赖环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#前置准备"><span class="nav-number">1.2.</span> <span class="nav-text">前置准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建非容器的数据库"><span class="nav-number">1.3.</span> <span class="nav-text">创建非容器的数据库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#登陆hr"><span class="nav-number">1.4.</span> <span class="nav-text">登陆hr</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#从github下载示例文件"><span class="nav-number">1.5.</span> <span class="nav-text">从github下载示例文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#reference"><span class="nav-number">1.6.</span> <span class="nav-text">reference</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">tianyilt</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

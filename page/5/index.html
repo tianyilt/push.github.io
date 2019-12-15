@@ -1,0 +1,2983 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="探究前线">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;page&#x2F;5&#x2F;index.html">
+<meta property="og:site_name" content="探究前线">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="tianyilt">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/page/5/"/>
+
+
+
+
+
+  <title>探究前线</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.1.1"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">探究前线</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">究天人之际,析万物之理</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/15/Git/2019-08-25-git%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="tianyilt">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="探究前线">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/12/15/Git/2019-08-25-git%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/" itemprop="url">2019-08-25-git基础命令</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-15T12:53:28+08:00">
+                2019-12-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Git/" itemprop="url" rel="index">
+                    <span itemprop="name">Git</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="git基础命令"><a href="#git基础命令" class="headerlink" title="git基础命令"></a>git基础命令</h1><p>categories: Git</p>
+<h2 id="初始配置"><a href="#初始配置" class="headerlink" title="初始配置"></a>初始配置</h2><ul>
+<li><code>git  init</code> 初始化  </li>
+<li><code>git  status</code>  </li>
+</ul>
+<h2 id="提交和日志"><a href="#提交和日志" class="headerlink" title="提交和日志"></a>提交和日志</h2><ul>
+<li><code>git  add</code>  </li>
+<li><code>git  commit -m &#39;write something to explain the changes&#39;</code>  </li>
+<li><code>git  log --pretty=oneline</code>  </li>
+<li><code>git  log --graph --pretty=oneline --abbrev-commit</code> 可视化  </li>
+</ul>
+<h2 id="回滚"><a href="#回滚" class="headerlink" title="回滚"></a>回滚</h2><ul>
+<li><code>git  reset --hard HEAD^</code>  </li>
+<li><code>git  reset --hard version_id</code>  </li>
+<li><code>git  checkout -- &lt;filename&gt;</code> 丢弃工作区的修改，退回到版本库（或暂存区）最新版本  </li>
+<li><code>git  reset HEAD &lt;filename&gt;</code> 撤销暂存区的修改，重新放回工作区<br><code>rm &lt;filename&gt;</code> 从系统删除文件  </li>
+<li><code>git  rm &lt;filename&gt;</code> 从版本库删除文件。删除之后要git commit -m提交  </li>
+</ul>
+<h2 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h2><p>github git仓库托管服务  </p>
+<ul>
+<li><code>git  remote</code> 查看远程库信息  </li>
+<li><code>git  remote -v</code> 查看远程库详细信息  </li>
+<li><code>git  remote add origin https://github.com/LiuJin3042/learngit.git</code> 关联远程库，默认名称origin  </li>
+<li><code>git  remote add &lt;repo_name&gt; https://github.com/LiuJin3042/learngit.git</code> 关联远程库，用任意名称  </li>
+<li><code>git  push -u origin master</code> 将本地分支master上传到远程库origin，-u参数关联master分支  </li>
+<li><code>git  push origin master(dev)</code> 将本地分支master(dev)的修改推送到github。没有联网也可以工作  </li>
+<li><code>git  clone https://...</code> 复制远程库到本地，复制后只能看到master分支  </li>
+<li><code>git  pull</code> 必须先将远程库同步到本地，解决冲突后本地才可以push到远程  </li>
+</ul>
+<h2 id="多分支"><a href="#多分支" class="headerlink" title="多分支"></a>多分支</h2><ul>
+<li><code>git  branch --set-upstream-to=origin/dev dev</code> 将本地的dev和远程的dev链接起来  </li>
+<li><code>git  checkout -b branch-name origin/branch-name</code> 本地创建和远程分支对应的分支，分支名称最好一致  </li>
+<li><code>git  checkout -b dev</code> 创建dev分支，切换到dev分支（相当于下面两条指令）  <ul>
+<li><code>git branch dev</code>  </li>
+<li><code>git checkout dev</code>  </li>
+</ul>
+</li>
+<li><code>git  branch</code> 查看分支  </li>
+<li><code>git  merge dev</code> 合并指定分支到当前分支  </li>
+<li><code>git  branch -d dev</code> 删除dev  </li>
+<li><code>git  merge --no-ff -m &quot;merge with no-ff&quot; dev</code> 禁用fast forward  </li>
+</ul>
+<h2 id="上传大文件"><a href="#上传大文件" class="headerlink" title="上传大文件"></a>上传大文件</h2><p>超过100M的大文件需要使用git-lfs上传. 但是git-lfs对库的容量有要求, 库超过1G大就要购买额外空间.</p>
+<ul>
+<li>在<a href="git-lfs.github.com">此网站</a>下载git-lfs并安装(Windows系统)</li>
+<li>在<code>git bash</code>中输入<code>git lfs install</code></li>
+<li>在库中输入<code>git lfs track &quot;*.pdf&quot;</code>, 以后pdf文件都是用git-lfs上传</li>
+</ul>
+<h2 id="暂存状态"><a href="#暂存状态" class="headerlink" title="暂存状态"></a>暂存状态</h2><ul>
+<li><code>git  stash</code>清空工作区，将当前工作放到栈里  </li>
+<li><code>git  stash list</code> 查看栈  </li>
+<li><code>git  stash pop</code> 恢复栈，清空内容。  </li>
+<li><code>git  stash app</code>  </li>
+</ul>
+<h2 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h2><ul>
+<li><code>git  tag</code> 查看所有标签  </li>
+<li><code>git  tag v0.9 f52c633</code> 在id为f52c633的commit上打一个标签，标签名是v0.9  </li>
+<li><code>git  show &lt;tagname&gt;</code> 查看标签信息  </li>
+<li><code>git  tag -a v0.1 -m &quot;version 0.1 released&quot; 1094adb</code> -a添加标签名称，-m添加备注  </li>
+<li><code>git  tag -d &lt;tagname&gt;</code>  </li>
+<li><code>git  push origin &lt;tagname&gt;</code> 将本地的标签推到远程  </li>
+<li><code>git  push origin --tags</code> 推送所有标签  </li>
+<li><code>git  push origin :refs/tags/v0.9</code> 删除远程标签，要先删除本地的标签，然后用这句话  </li>
+</ul>
+<h2 id="杂项配置"><a href="#杂项配置" class="headerlink" title="杂项配置"></a>杂项配置</h2><ul>
+<li><code>git  config --global color.ui true</code> 命令显示颜色  </li>
+</ul>
+<h2 id="忽略文件"><a href="#忽略文件" class="headerlink" title="忽略文件"></a>忽略文件</h2><p>编写 .gitignore 文件<br>.gitignore 需要提交到库里，并对文件做版本管理  </p>
+<ul>
+<li><code>git  add -f App.class</code> 强制添加被忽略的文件  </li>
+<li><code>git  check-ignore -v App.class</code>  </li>
+</ul>
+<h2 id="命令别名"><a href="#命令别名" class="headerlink" title="命令别名"></a>命令别名</h2><ul>
+<li><code>git  config --global alias.st status</code> 用st代替status命令。–global是全局参数，表示本电脑所有git库都可以使用  </li>
+</ul>
+<h2 id="配置git服务器"><a href="#配置git服务器" class="headerlink" title="配置git服务器"></a>配置git服务器</h2><ul>
+<li>推荐linux系统<br><code>sudo apt-get install git</code><br><code>sudo adduser git</code>  </li>
+<li>把所有公钥导入到<code>/home/git/.ssh/authorized_keys</code>文件里，一行一个  </li>
+<li>先选定一个目录作为Git仓库，假定<code>是/srv/sample.git</code>，在/srv目录下输入命令：<br><code>sudo git init --bare sample.git</code>  </li>
+<li>把owner改为git: <code>sudo chown -R git:git sample.git</code>  </li>
+<li>禁用shell登录sudo chown -R git:git sample.git改为git: <code>x:1001:1001:...:/home/git:/usr/bin/git-shell</code>  </li>
+<li><code>git  clone git@server:/srv/sample.git</code>  </li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/15/%E6%80%9D%E7%A7%912/RSE_C2_PT%20/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="tianyilt">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="探究前线">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/12/15/%E6%80%9D%E7%A7%912/RSE_C2_PT%20/" itemprop="url">RSE_C2_PT</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-15T12:53:28+08:00">
+                2019-12-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%80%9D%E7%A7%912/" itemprop="url" rel="index">
+                    <span itemprop="name">思科2</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>第二章实战分析<br>categories: 思科2<br>conf terminal<br>!R1<br>hostname Central<br>ipv6 unicast-routing<br>no ip domain-lookup<br>int s0/0/0<br>description For Primary Lan<br>ip add 128.107.0.1 255.255.255.252<br>ipv add 2001:DB8:2:1::1/64<br>ipv add FE80::1 link-local<br>no sh<br>exit</p>
+<p>int s0/0/1<br>description For Backup Lan<br>ip add 128.107.0.5 255.255.255.252<br>ipv add 2001:DB8:3:1::1/64<br>ipv add FE80::1 link-local<br>no sh<br>exit</p>
+<p>int s0/1/1<br>description For Router<br>ip add 10.10.20.1 255.255.255.252<br>ipv add 2001:DB8:1:1::1/64<br>ipv add FE80::1 link-local<br>no sh<br>exit</p>
+<p>enable secret cisco<br>line console 0<br>password class<br>login<br>exit</p>
+<p>line vty 0 15<br>password class<br>login<br>exit<br>service pass<br>banner motd “you are fucking crazy”<br>ip route 10.10.2.0 255.255.255.0 s0/1/1<br>ip route 10.10.1.0 255.255.255.0 s0/1/1<br>ipv6 route 2001:DB8:1:B::/64 S0/1/1<br>ipv6 route 2001:DB8:1:A::/64 S0/1/1<br>ip route 0.0.0.0 0.0.0.0 s0/0/0<br>ip route 0.0.0.0 0.0.0.0 s0/0/1 2<br>ipv6 route ::/0 s0/0/1 2</p>
+<p>!确认配置<br>sh ip route</p>
+<hr>
+<p>!West<br>hostname West</p>
+<p>ipv6 unicast-routing<br>int s0/0/0<br>ip add 10.10.20.2 255.255.255.252<br>ipv add 2001:DB8:1:1::2/64<br>ipv add FE80::2 link-local<br>no sh<br>exit<br>int g0/0<br>ip add 10.10.1.254 255.255.255.0<br>ipv add 2001:DB8:1:A::1/64<br>ipv add FE80::2 link-local<br>no sh<br>exit<br>int g0/1<br>ip add 10.10.2.254 255.255.255.0<br>ipv add 2001:DB8:1:B::1/64<br>ipv add FE80::2 link-local<br>no sh<br>exit</p>
+<p>ip route 0.0.0.0 0.0.0.0 s0/0/0<br>ipv6 route ::/0 s0/0/0</p>
+<p>会看到<br>West#sh ipv6 route<br>IPv6 Routing Table - 8 entries<br>Codes: C - Connected, L - Local, S - Static, R - RIP, B - BGP<br>       U - Per-user Static route, M - MIPv6<br>       I1 - ISIS L1, I2 - ISIS L2, IA - ISIS interarea, IS - ISIS summary<br>       O - OSPF intra, OI - OSPF inter, OE1 - OSPF ext 1, OE2 - OSPF ext 2<br>       ON1 - OSPF NSSA ext 1, ON2 - OSPF NSSA ext 2<br>       D - EIGRP, EX - EIGRP external<br>S   ::/0 [1/0]<br>     via Serial0/0/0, directly connected<br>C   2001:DB8:1:1::/64 [0/0]<br>     via Serial0/0/0, directly connected<br>L   2001:DB8:1:1::2/128 [0/0]<br>     via Serial0/0/0, receive<br>C   2001:DB8:1:A::/64 [0/0]<br>     via GigabitEthernet0/0, directly connected<br>L   2001:DB8:1:A::1/128 [0/0]<br>     via GigabitEthernet0/0, receive<br>C   2001:DB8:1:B::/64 [0/0]<br>     via GigabitEthernet0/1, directly connected<br>L   2001:DB8:1:B::1/128 [0/0]<br>     via GigabitEthernet0/1, receive<br>L   FF00::/8 [0/0]<br>     via Null0, receive</p>
+<hr>
+<p><img src="RSE_C2_PT%20-%20%E5%89%AF%E6%9C%AC/1574498707719.png" alt="1574498707719"></p>
+<p><a href="https://www.youtube.com/watch?v=fmvC_LPpJTA" target="_blank" rel="noopener">具体视频教程链接</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/15/%E6%80%9D%E7%A7%912/2019-11-28-ch09%20IPv4%20NAT/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="tianyilt">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="探究前线">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/12/15/%E6%80%9D%E7%A7%912/2019-11-28-ch09%20IPv4%20NAT/" itemprop="url">2019-11-28-ch09 IPv4 NAT</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-15T12:53:28+08:00">
+                2019-12-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%80%9D%E7%A7%912/" itemprop="url" rel="index">
+                    <span itemprop="name">思科2</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="NAT"><a href="#NAT" class="headerlink" title="NAT"></a>NAT</h1><p>categories: 思科2<br>公有IPv4地址有限, 为了节省地址发明. 内网流量传到外网, 通过路由器包装, 路由器会把NAT地址池中的一个地址拿来替换内网地址. 这样外网看来是一个公有地址在通讯. </p>
+<h2 id="NAT-操作"><a href="#NAT-操作" class="headerlink" title="NAT 操作"></a>NAT 操作</h2><p>NAT有这些术语</p>
+<ul>
+<li>内部地址: 经过NAT转换设备的地址</li>
+<li>外部地址: 目标设备的地址</li>
+<li>本地地址: 内网出现的地址</li>
+<li>全局地址: 出现在外网</li>
+</ul>
+<p>推广</p>
+<ul>
+<li>内部本地: 内网出现的要被转换的地址</li>
+<li>内部全局: 内网地址转换后的地址</li>
+<li>外部本地: 目标设备的地址在内网的样子(不变)</li>
+<li>外部全局: 目标设备的地址在外网的样子(==外部本地)</li>
+</ul>
+<h3 id="工作方式"><a href="#工作方式" class="headerlink" title="工作方式"></a>工作方式</h3><ul>
+<li>内部主机使用内部本地地址发送一个数据包</li>
+<li>NAT路由器接到数据包</li>
+<li>NAT路由器吧数据包的内部本地地址替换为内部全局地址</li>
+<li>发往外部全局地址</li>
+<li>收到回信</li>
+<li>把内部全局地址按照映射表转换为内部本地地址</li>
+<li>发送回去</li>
+</ul>
+<h3 id="NAT类型"><a href="#NAT类型" class="headerlink" title="NAT类型"></a>NAT类型</h3><ul>
+<li><p>静态NAT: 本地地址-全局地址, 一对一映射, 永久的, 除非手动更改.</p>
+</li>
+<li><p>动态NAT: 多对多. 100内部, 10个全局, 可以按需转换. 如果NAT池耗尽, 其他的接入就要等待</p>
+<p>静态/动态NAT工作流程</p>
+<ul>
+<li>发起会话</li>
+<li>路由器的一个端口上接收到数据包, 如果应用了NAT, 就检查数据包的内部地址, 如果满足条件, 就进行转换</li>
+<li>收到数据包时根据记录的映射进行转换</li>
+</ul>
+</li>
+<li><p>端口地址转换PAT: 多对一. 根据端口转发. 重复次数高达65536次</p>
+<p>一般来说只有一个内部全局地址.</p>
+<p>通信流程</p>
+<ul>
+<li>发起TCP/IP会话</li>
+<li>生成一个 TCP 或 UDP 源端口值或专门为 ICMP 分配的查询 ID来标记会话</li>
+<li>用端口号确定转发</li>
+</ul>
+<p>如果源端口别占用, 会从相应端口组( 0–511、512–1023 或 1024–65535 )分配第一个可用的端口号. <strong>新的端口号是对于内部全局地址而言的, 内部本地地址不必更改端口号</strong>. 收到数据包的时候, 会根据映射表把端口号和ip都进行转换.</p>
+</li>
+</ul>
+<h3 id="NAT优势"><a href="#NAT优势" class="headerlink" title="NAT优势"></a>NAT优势</h3><ul>
+<li>节省地址</li>
+<li>增强连接公网的灵活性, 可以实施多池/备用池/负载均衡池</li>
+<li>更改公共IPv4地址不必对本地地址重新编址, 为内部网络编址方案提供了一致性 </li>
+<li>隐藏内部地址</li>
+</ul>
+<h3 id="NAT缺陷"><a href="#NAT缺陷" class="headerlink" title="NAT缺陷"></a>NAT缺陷</h3><ul>
+<li><p>转发延迟</p>
+</li>
+<li><p>端到端编址的丢失, 与目的IPv4地址有关的协议将不可用. 例如数字签名</p>
+</li>
+<li><p>端到端IPv4可追溯性缺失, 排除故障困难</p>
+</li>
+<li><p>隧道协议复杂. IPsec不可用</p>
+</li>
+<li><p>外网发起的TCP链接的一些服务或无状态协议可能中断</p>
+</li>
+</ul>
+<h2 id="配置NAT"><a href="#配置NAT" class="headerlink" title="配置NAT"></a>配置NAT</h2><h3 id="静态NAT"><a href="#静态NAT" class="headerlink" title="静态NAT"></a>静态NAT</h3><p>配置 192.168.10.254 映射到 209.165.201.5 </p>
+<pre><code>(config)
+ip nat inside source static 192.168.10.254 209.168.201.5 // 静态nat映射
+interface s0/0/0
+(config-if)
+ip addr 192.168.1.2 255.255.255.252 // 分配端口ip
+ip nat inside // 配置为nat内部接口
+exit
+(config)
+inter s0/1/0
+(config-if)
+ip addr 209.165.200.1 255.255.255.252
+ip nat outside</code></pre><p>验证NAT</p>
+<pre><code>clear ip nat statistics // 先清空NAT统计信息
+show ip nat translations // 清空后是没有转换的, 如果一段时间后看到了转换, 说明NAT成功建立</code></pre><h3 id="动态NAT"><a href="#动态NAT" class="headerlink" title="动态NAT"></a>动态NAT</h3><pre><code>(config)
+ip nat pool NAT-POOL-NAME 209.168.200.226 209.168.200.240 netmask 255.255.255.224 // 地址池
+access-list 1 permit 192.168.0.0 0.0.255.255 // 建立ACL 1
+ip nat inside source list 1 pool NAT-POOL-NAME // 把 nat pool 和 ACL 1 绑定
+inter s0/0/0
+(config-if)
+ip nat inside
+inter s0/1/0
+ip nat outside</code></pre><p>验证NAT</p>
+<pre><code>(en)
+show ip nat translations verbose // 加上verbose查看详细信息, 包括过期时间
+ip nat translation timeout timeout-seconds // 设定过期时间(默认1天)
+clear ip nat translation inside [内部全局ip] [内部本地ip] {可选: global [外部本地ip] [外部全局ip]} // 清除一个动态转换条目
+clear ip nat translation protocol inside [内部全局ip] [内部全局port] [内部本地ip] [内部本地port] {可选: global [外部本地ip] [外部本地port] [外部全局ip] [外部全局port]} // 清楚一个PAT
+clear ip nat translation * // 加上*清楚所有动态条目</code></pre><h3 id="PAT"><a href="#PAT" class="headerlink" title="PAT"></a>PAT</h3><p>PAT可以是地址池可以是一个地址</p>
+<pre><code>ip nat pool POOL-1 209.168.200.226 209.165.200.240 netmask 255.255.255.224
+access-list 1 permit 192.168.0.0 0.0.255.255 // 建立ACL 1
+ip nat inside source list 1 pool POOL-1 overload // 注意关键词overload
+inter s0/0/0
+(config-if)
+ip nat inside
+inter s0/1/0
+ip nat outside</code></pre><h3 id="端口转发"><a href="#端口转发" class="headerlink" title="端口转发"></a>端口转发</h3><p>为了在点对点传输中, 让外部客户机访问内网的服务器, 用端口转发, 把特定请求转发到内部的特定端口.</p>
+<p>例如: </p>
+<p>外部用户想访问内网的web服务器</p>
+<ul>
+<li>外部用户向80端口发送请求</li>
+<li>路由器接收到80端口的请求, 把它转发到内部的192.168.1.100:8080主机</li>
+<li>内部主机接受请求并且应答</li>
+</ul>
+<p>配置</p>
+<pre><code>ip nat inside source static tcp 192.168.10.254 80 209.165.200.225 8080
+inter s0/0/0
+ip nat inside
+inter s0/1/0
+ip nat outside</code></pre><h3 id="NAT和IPv6"><a href="#NAT和IPv6" class="headerlink" title="NAT和IPv6"></a>NAT和IPv6</h3><p>IPv6唯一本地地址(ULA), 为本地站点的通信提供IPv6地址空间, <strong>前缀FC00::/7</strong>, 第8位是0或1, 如果前缀是本地分配的, 第8位就是1. 这样前缀就是<strong>FD00/8</strong></p>
+<p>![image-20191129093417161](2019-11-28-ch09 IPv4 NAT/image-20191129093417161.png)</p>
+<ul>
+<li>允许站点合并, 私下互联</li>
+<li>独立于ISP, 不可进行互联网链接</li>
+<li>不可同通过互联网路由</li>
+</ul>
+<p>IPv6的NAT用来提供仅支持IPv6和仅支持IPv4的网络之间的访问, 不是地址转换.</p>
+<h2 id="故障排除"><a href="#故障排除" class="headerlink" title="故障排除"></a>故障排除</h2><h3 id="NAT故障排除命令"><a href="#NAT故障排除命令" class="headerlink" title="NAT故障排除命令"></a>NAT故障排除命令</h3><p><strong>步骤 1.</strong>根据配置，清楚地确定应该实现什么样的 NAT。这可能会揭示出配置问题。</p>
+<p><strong>步骤 2.</strong>使用 <strong>show ip nat translations</strong> 命令验证转换表中转换条目是否正确。</p>
+<ul>
+<li><p>如果内外接口弄反了</p>
+<pre><code>inter s0/0/0
+no ip nat outside
+ip nat inside</code></pre><p>使用<strong>show access-lists</strong>检查ACL配置</p>
+<pre><code>show access-lists
+no access-list 1
+access-list 1 permit ...</code></pre></li>
+</ul>
+<p><strong>步骤 3.</strong>使用 <strong>clear</strong> 和 <strong>debug</strong> 命令验证 NAT 是否如预期一样工作。检查动态条目被清除后，是否又被重新创建出来。</p>
+<pre><code>debug ip nat</code></pre><p>![image-20191129094323010](2019-11-28-ch09 IPv4 NAT/image-20191129094323010.png)</p>
+<p><strong>步骤 4.</strong>详细审查数据包传送情况，确认路由器具有移动数据包所需的正确路由信息。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/15/%E6%80%9D%E7%A7%912/2019-11-26-ch05%E4%BA%A4%E6%8D%A2%E6%9C%BA%E9%85%8D%E7%BD%AE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="tianyilt">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="探究前线">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/12/15/%E6%80%9D%E7%A7%912/2019-11-26-ch05%E4%BA%A4%E6%8D%A2%E6%9C%BA%E9%85%8D%E7%BD%AE/" itemprop="url">2019-11-26-ch05交换机配置</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-15T12:53:28+08:00">
+                2019-12-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%80%9D%E7%A7%912/" itemprop="url" rel="index">
+                    <span itemprop="name">思科2</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="交换机配置"><a href="#交换机配置" class="headerlink" title="交换机配置"></a>交换机配置</h1><p>categories: 思科2</p>
+<h2 id="基本配置"><a href="#基本配置" class="headerlink" title="基本配置"></a>基本配置</h2><h3 id="通过初始配置设置交换机"><a href="#通过初始配置设置交换机" class="headerlink" title="通过初始配置设置交换机"></a>通过初始配置设置交换机</h3><h4 id="交换机启动顺序"><a href="#交换机启动顺序" class="headerlink" title="交换机启动顺序"></a>交换机启动顺序</h4><ul>
+<li><p>POST: power on self test 加电自检. </p>
+</li>
+<li><p>引导程序: 存放在rom中</p>
+</li>
+<li><p>低级cpu初始化: 初始化cpu寄存器</p>
+</li>
+<li><p>启动初始化系统主板的flash系统</p>
+</li>
+<li><p>加载ios到内存</p>
+<ul>
+<li><p>用boot环境变量的信息启动</p>
+<ul>
+<li>环境变量未设置-找flash中第一个可执行文件</li>
+</ul>
+<pre><code>show boot // 查看启动文件设置
+boot system flash://..... // 指定启动文件</code></pre></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>开机后在nvram中找到startup config</li>
+</ul>
+<h4 id="修复系统"><a href="#修复系统" class="headerlink" title="修复系统"></a>修复系统</h4><p><img src="2019-11-26-ch05%E4%BA%A4%E6%8D%A2%E6%9C%BA%E9%85%8D%E7%BD%AE/image-20191126144003969.png" alt="image-20191126144003969"></p>
+<p>进入到恢复模式, 可以格式化操作系统, 重新安装操作系统, 回复密码</p>
+<h4 id="LED指示灯"><a href="#LED指示灯" class="headerlink" title="LED指示灯"></a>LED指示灯</h4><ul>
+<li>系统: 绿色-正常, 琥珀色-不正常, 不亮-未开机</li>
+<li>冗余电源(RPS): 不亮-未发现RPS, 绿色-正常, 闪烁-RPS正在为其他设备供电, 琥珀色-RPS故障, 琥珀色闪烁-RPS正在供电.</li>
+<li>端口状态: <ul>
+<li>绿色-一条链路, </li>
+<li>绿色闪烁-传输数据, </li>
+<li>绿色琥珀色交替-故障. </li>
+<li>琥珀色-端口阻塞, 正在确保转发域不存在环路; 端口被激活30s内是这个状态</li>
+<li>琥珀色闪烁-端口阻塞, 转发域存在环路;</li>
+</ul>
+</li>
+<li>端口双工LED, 绿色: 全双工, 不亮: 半双工, </li>
+<li>端口速度LED, 绿色: 100Mbps, 绿色闪烁: 1000Mbps, 不亮: 10Mbps</li>
+<li>以太网供电(PoE), <ul>
+<li>不亮: 没有使用PoE. </li>
+<li>琥珀色闪烁: 没有选择PoE, 但是有一个端口断电或故障</li>
+<li>绿色: 选择了PoE</li>
+<li>绿色琥珀色交替: PoE被拒绝, 用电设备的供电超过交换机电源容量</li>
+<li>琥珀色闪烁: 故障关闭</li>
+<li>琥珀色: 禁用PoE</li>
+</ul>
+</li>
+</ul>
+<h2 id="配置交换机端口"><a href="#配置交换机端口" class="headerlink" title="配置交换机端口"></a>配置交换机端口</h2><h4 id="准备基本交换机管理"><a href="#准备基本交换机管理" class="headerlink" title="准备基本交换机管理"></a>准备基本交换机管理</h4><p>想远程管理访问交换机, 必须配置ip, 子网掩码, 如果是其他网络访问还要配置默认网关. 配置到虚拟接口SVI上</p>
+<p>所有端口默认是分给vlan1的. 所以SVI也是默认给vlan1. 最好是将SVI分配给另一个vlan. </p>
+<pre><code>conf t
+inter vlan 99
+ip addr ...
+no shut
+end
+(config)
+ip default-gateway ...
+end
+(en)
+copy run start</code></pre><h4 id="配置全双工"><a href="#配置全双工" class="headerlink" title="配置全双工"></a>配置全双工</h4><p>交换机都有自动协商功能(默认启用), 但是连接到专用设备的时候, 手动配置非常有用.</p>
+<pre><code>conf t
+inter g0/0
+duplex full // 全双工
+speed 100 // 100Mbps
+end</code></pre><p>1000Mbps只能在全双工下工作</p>
+<h4 id="MDIX"><a href="#MDIX" class="headerlink" title="MDIX"></a>MDIX</h4><p>auto-MDIX自动检测直通/交叉, 自动配置, 但是连接到服务器/工作站等没有自动MDIX的, 就需要手动选择电缆. 启用MDIX:</p>
+<pre><code>conf t
+inter g0/0
+duplex auto
+speed auto
+mdix auto
+end</code></pre><h4 id="验证配置"><a href="#验证配置" class="headerlink" title="验证配置"></a>验证配置</h4><pre><code>show interfaces f0/18
+show ip f0/18
+show mac-address-table
+show flash</code></pre><h3 id="接入层故障排除"><a href="#接入层故障排除" class="headerlink" title="接入层故障排除"></a>接入层故障排除</h3><p><img src="2019-11-26-ch05%E4%BA%A4%E6%8D%A2%E6%9C%BA%E9%85%8D%E7%BD%AE/image-20191126193054420.png" alt="image-20191126193054420"></p>
+<ul>
+<li>接口up, 协议down, 说明另一端接口可能被禁用, 查看是否有<code>EMI/noise</code>, 找到噪声源. 双工配置是否正确. </li>
+<li>接口协议都down, 说明电缆未链接/损坏, 接口损坏, 接口速度不匹配造成问题</li>
+<li>管理性关闭, 说明被手动禁用</li>
+</ul>
+<p><img src="2019-11-26-ch05%E4%BA%A4%E6%8D%A2%E6%9C%BA%E9%85%8D%E7%BD%AE/image-20191126193413274.png" alt="image-20191126193413274"></p>
+<ul>
+<li>如果CRC错误多, 说明电缆可能存在问题(电磁干扰)</li>
+<li>冲突: 半双工时会存在. 全双工不会存在冲突</li>
+<li>延迟冲突: 传输了512位的帧之后发生冲突. 可能由于电缆过长, 一端是全双工而另一端是半双工.</li>
+</ul>
+<h2 id="安全性"><a href="#安全性" class="headerlink" title="安全性"></a>安全性</h2><h3 id="配置SSH"><a href="#配置SSH" class="headerlink" title="配置SSH"></a>配置SSH</h3><ul>
+<li><p>配置步骤</p>
+<pre><code>show ip ssh // 检查是否支持ssh
+conf t // 全局配置
+ip domain-name cisco.com // 配置ip域名
+crypto key generate rsa // 生成rsa密钥对
+username admin secret ccna // 创建用户
+line vty 0 15 // 在vty0-15上启用
+transport input ssh // 只接受ssh
+login local // 从本地用户名数据库验证身份
+exit
+ip ssh version 2 // 开启第二版ssh
+exit</code></pre></li>
+</ul>
+<h3 id="保护未使用端口安全"><a href="#保护未使用端口安全" class="headerlink" title="保护未使用端口安全"></a>保护未使用端口安全</h3><ul>
+<li><p>禁用未使用端口</p>
+<pre><code>interface range f0/1 - 15
+(config-if-range)
+shutdown</code></pre></li>
+<li><p>安全mac地址: 限定端口的mac地址, 其他地址不可接入</p>
+<ul>
+<li><p>静态安全: 手动配置</p>
+</li>
+<li><p>动态安全: 动态获取, 存储在地址表中, 重启后删除</p>
+</li>
+<li><p>粘性安全: 动态获取或手动配置, 存储在地址表中, 添加到运行配置.</p>
+<pre><code>switchport port-security mac-address sticky [mac-address] 
+no switchport port-security mac-address sticky //禁用</code></pre></li>
+</ul>
+</li>
+<li><p>违规模式: 违反安全要求后</p>
+<ul>
+<li>保护: 安全MAC地址数量达到限制, 未知源的数据包会被丢弃, 不通知. 直至移除足够数量的安全 MAC 地址或增加允许的最大地址数 </li>
+<li>限制: 同保护, 只是会发出通知.</li>
+<li>关闭: 立刻禁用, <code>show interface f0/18</code>会显示<code>err-disabled</code></li>
+</ul>
+<pre><code>switchport port-security violation {protect | restrict | shutdown}</code></pre></li>
+<li><p>总结配置</p>
+<pre><code>inter f0/18
+(config if)
+switchport mode access
+switchport port-security
+switchport port-security maximum 10
+switchport port-security mac-address sticky</code></pre></li>
+<li><p>查看配置</p>
+<pre><code>(en)
+show port-security inter f0/18
+show port-security address</code></pre></li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/15/%E6%80%9D%E7%A7%912/2019-11-25-ch03%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="tianyilt">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="探究前线">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/12/15/%E6%80%9D%E7%A7%912/2019-11-25-ch03%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1/" itemprop="url">2019-11-25-ch03动态路由</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-15T12:53:28+08:00">
+                2019-12-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%80%9D%E7%A7%912/" itemprop="url" rel="index">
+                    <span itemprop="name">思科2</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="动态路由"><a href="#动态路由" class="headerlink" title="动态路由"></a>动态路由</h1><p>categories: 思科2</p>
+<h2 id="动态路由协议"><a href="#动态路由协议" class="headerlink" title="动态路由协议"></a>动态路由协议</h2><h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><h4 id="发展历程"><a href="#发展历程" class="headerlink" title="发展历程"></a>发展历程</h4><ul>
+<li>1988, RIPv1</li>
+<li>开放最短路径优先OSPF</li>
+<li>中间系统到中间系统IS-IS</li>
+<li>(思科推出面向大型网络)内部网关路由协议(IGRP), 及其增强型(EIGRP)</li>
+<li>边界网关协议BGP</li>
+</ul>
+<h4 id="动态路由协议-1"><a href="#动态路由协议-1" class="headerlink" title="动态路由协议"></a>动态路由协议</h4><p>动态路由协议用于路由器之间交换路由信息, 作用包括</p>
+<ul>
+<li>发现远程网络</li>
+<li>动态更新路由信息</li>
+<li>确定最佳路径</li>
+<li>当前路径无法使用时找出最佳路径</li>
+</ul>
+<p>组成部分为</p>
+<ul>
+<li>数据结构: 路由表或数据库. 保存在内存中</li>
+<li>路由协议消息: 路由器之间沟通方法. 统一的消息, 找到附近路由, 交换信息, 维护网络</li>
+<li>算法: 确定最佳路径</li>
+</ul>
+<h4 id="静态-动态路由优缺点"><a href="#静态-动态路由优缺点" class="headerlink" title="静态/动态路由优缺点"></a>静态/动态路由优缺点</h4><p>静态优点</p>
+<ul>
+<li>末端网络</li>
+<li>不会增长的小型网络</li>
+<li>访问单一的路由</li>
+</ul>
+<p>静态缺点</p>
+<ul>
+<li>大型网络实施难</li>
+<li>管理耗时</li>
+<li>不会动态更新</li>
+</ul>
+<p>动态优点</p>
+<ul>
+<li>适用于大型网络</li>
+<li>可以自动适应网络拓扑的改变</li>
+</ul>
+<p>动态缺点</p>
+<ul>
+<li>不够安全</li>
+<li>占用资源</li>
+</ul>
+<h2 id="RIPv2"><a href="#RIPv2" class="headerlink" title="RIPv2"></a>RIPv2</h2><p>几乎不使用</p>
+<h4 id="RIPv1"><a href="#RIPv1" class="headerlink" title="RIPv1"></a>RIPv1</h4><ul>
+<li><p>启动/停止</p>
+<pre><code>router rip // 默认运行ripv1
+no router rip</code></pre></li>
+<li><p>通告直连网络的<strong>有类ip地址</strong>, 通告的接口会开始发送和接受rip更新, 每30s通告网络</p>
+<pre><code>router rip
+(config-router)
+network 192.168.1.0
+network 192.168.2.0</code></pre></li>
+<li><p>查看配置</p>
+<pre><code>show ip protocols</code></pre><p><img src="2019-11-25-ch03%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1/image-20191125211615257.png" alt="image-20191125211615257"></p>
+<pre><code>show ip route | begin Gateway</code></pre><p><img src="2019-11-25-ch03%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1/image-20191125211713244.png" alt="image-20191125211713244"></p>
+</li>
+</ul>
+<h4 id="RIPv2-1"><a href="#RIPv2-1" class="headerlink" title="RIPv2"></a>RIPv2</h4><ul>
+<li><p>启用</p>
+<pre><code>router rip
+(config-router)
+version 2</code></pre></li>
+<li><p>禁用自动汇总. 默认会在主网边界上自动汇总网络. 只有v2才可以禁用</p>
+<pre><code>(config-router)
+no auto-summary</code></pre></li>
+</ul>
+<h4 id="被动接口"><a href="#被动接口" class="headerlink" title="被动接口"></a>被动接口</h4><p>频繁而不需要的rip信息会造成</p>
+<ul>
+<li>浪费带宽</li>
+<li>设备处理rip信息会耗费资源</li>
+<li>rip被截获, 带来风险.</li>
+</ul>
+<p>配置被动接口, 只允许接口接收更新, 不发出更新. 这个接口的网络可以通过其他接口发出.</p>
+<pre><code>router rip
+passive-interface g0/0
+end</code></pre><p>把所有接口设置为默认接口</p>
+<pre><code>passive-interface default</code></pre><p>启用接口</p>
+<pre><code>no passive-interface</code></pre><h4 id="传播默认路由"><a href="#传播默认路由" class="headerlink" title="传播默认路由"></a>传播默认路由</h4><p>一般来说, 一个网络中只有一个接口接到ISP, 想联通互联网的数据都必须走这个接口. 把这个接口设置为默认静态路由, 然后通告.</p>
+<pre><code>(config)
+ip route 0.0.0.0 0.0.0.0 s0/0/1 209.168.200.226
+router rip
+default-information originate
+end</code></pre><h2 id="路由表"><a href="#路由表" class="headerlink" title="路由表"></a>路由表</h2><h3 id="IPv4路由表组成部分"><a href="#IPv4路由表组成部分" class="headerlink" title="IPv4路由表组成部分"></a>IPv4路由表组成部分</h3><ul>
+<li><p>本地</p>
+<p><img src="2019-11-25-ch03%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1/image-20191125215933298.png" alt="image-20191125215933298"></p>
+</li>
+<li><p>远程</p>
+<p><img src="2019-11-25-ch03%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1/image-20191125220229456.png" alt="image-20191125220229456"></p>
+</li>
+</ul>
+<p>路由源(ip的获取方式)中关于远程网络的代号</p>
+<ul>
+<li>S: 静态</li>
+<li>D: EIGRP协议获取</li>
+<li>O: OSPF</li>
+<li>R: RIP</li>
+</ul>
+<h3 id="路由表分级"><a href="#路由表分级" class="headerlink" title="路由表分级"></a>路由表分级</h3><ul>
+<li><p>最终路由</p>
+<p>包含下一跳IPv4地址或送出接口的路由表条目. 例如动态获取的直连本地路由</p>
+<p><img src="2019-11-25-ch03%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1/image-20191125220626520.png" alt="image-20191125220626520"></p>
+</li>
+<li><p>一级路由</p>
+<p>子网掩码小于等于网络地址有类掩码</p>
+<ul>
+<li>网络路由: 子网掩码等于有类掩码. eg. <code>192.168.1.0/24</code></li>
+<li>超网路由: 掩码小于有类掩码. <code>192.168.0.0/16</code></li>
+<li>默认路由: <code>0.0.0.0/0</code></li>
+</ul>
+<p>路由源可以是直连网络, 静态路由, 动态路由.</p>
+<p><img src="2019-11-25-ch03%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1/image-20191125221300000.png" alt="image-20191125221300000"></p>
+</li>
+<li><p>一级父路由</p>
+<p>划分子网的一级路由, 不能是最终路由</p>
+<p><img src="2019-11-25-ch03%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1/image-20191125221438286.png" alt="image-20191125221438286"></p>
+</li>
+<li><p>二级子路由</p>
+<p>一级父路由的子路由</p>
+</li>
+</ul>
+<h3 id="IPv4路由查找"><a href="#IPv4路由查找" class="headerlink" title="IPv4路由查找"></a>IPv4路由查找</h3><h4 id="路由查找过程"><a href="#路由查找过程" class="headerlink" title="路由查找过程"></a>路由查找过程</h4><ul>
+<li>匹配一级路由<ul>
+<li>匹配到最终路由, 成功</li>
+<li>匹配到一级父路由<ul>
+<li>匹配子路由<ul>
+<li>匹配成功</li>
+<li>匹配失败<ul>
+<li>匹配1级超网路由<ul>
+<li>匹配成功</li>
+<li>匹配失败, 默认路由</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>如果未使用思科快速转发 (CEF)，仅引用下一跳 IP 地址而不引用退出接口的路由必须解析为具有退出接口的路由。在没有 CEF 的情况下，会对下一跳 IP 地址执行递归查找，直到将该路由解析为某个退出接口。默认情况下，启用 CEF。 </p>
+</blockquote>
+<h4 id="最佳路由-最长匹配"><a href="#最佳路由-最长匹配" class="headerlink" title="最佳路由=最长匹配"></a>最佳路由=最长匹配</h4><blockquote>
+<p> 要使数据包的目标 IPv4 地址和路由表中的路由形成匹配，两者之间从最左侧开始必须存在最少匹配位数。这个最少匹配位数由路由表中路由的子网掩码决定。 </p>
+</blockquote>
+<p>和路由器的子网处在一个网段, 且路由器子网包含的主机数量最少, 就转发给这个路由.</p>
+<p>最<strong>精确</strong>地转发数据包</p>
+<p><img src="2019-11-25-ch03%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1/image-20191125222400469.png" alt="image-20191125222400469"></p>
+<p>路由3的子网掩码可以满足数据包的ip而且最长, 因此转发给路由3.</p>
+<h2 id="IPv6路由"><a href="#IPv6路由" class="headerlink" title="IPv6路由"></a>IPv6路由</h2><ul>
+<li>IPv6是无类的, 所有路由都是1级最终路由</li>
+</ul>
+<h3 id="直连"><a href="#直连" class="headerlink" title="直连"></a>直连</h3><p><img src="2019-11-25-ch03%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1/image-20191126133904479.png" alt="image-20191126133904479"></p>
+<h3 id="远程"><a href="#远程" class="headerlink" title="远程"></a>远程</h3><p><img src="2019-11-25-ch03%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1/image-20191126134039605.png" alt="image-20191126134039605"></p>
+<p><a href="./2019-11-25-ch03pt实践.md">pt实践</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/15/%E6%80%9D%E7%A7%912/2019-11-24-RSE_C2_PT%20/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="tianyilt">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="探究前线">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/12/15/%E6%80%9D%E7%A7%912/2019-11-24-RSE_C2_PT%20/" itemprop="url">2019-11-24-RSE_C2_PT</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-15T12:53:28+08:00">
+                2019-12-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%80%9D%E7%A7%912/" itemprop="url" rel="index">
+                    <span itemprop="name">思科2</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>en<br>categories: 思科2<br>!R1<br>hostname Central<br>ipv6 unicast-routing<br>no ip domain-lookup<br>int s0/0/0<br>description For Primary Lan<br>ip add 128.107.0.1 255.255.255.252<br>ipv add 2001:DB8:2:1::1/64<br>ipv add FE80::1 link-local<br>no sh<br>exit</p>
+<p>int s0/0/1<br>description For Backup Lan<br>ip add 128.107.0.5 255.255.255.252<br>ipv add 2001:DB8:3:1::1/64<br>ipv add FE80::1 link-local<br>no sh<br>exit</p>
+<p>int s0/1/1<br>description For Router<br>ip add 10.10.20.1 255.255.255.252<br>ipv add 2001:DB8:1:1::1/64<br>ipv add FE80::1 link-local<br>no sh<br>exit</p>
+<p>enable secret cisco<br>line console 0<br>password class<br>login<br>exit</p>
+<p>line vty 0 15<br>password class<br>login<br>exit<br>service pass<br>banner motd “you are fucking crazy”<br>ip route 10.10.2.0 255.255.255.0 s0/1/1<br>ip route 10.10.1.0 255.255.255.0 s0/1/1<br>ipv6 route 2001:DB8:1:B::/64 S0/1/1<br>ipv6 route 2001:DB8:1:A::/64 S0/1/1<br>ip route 0.0.0.0 0.0.0.0 s0/0/0<br>ip route 0.0.0.0 0.0.0.0 s0/0/1 2<br>ipv6 route ::/0 s0/0/1 2</p>
+<p>!确认配置<br>sh ip route</p>
+<hr>
+<p>!West<br>hostname West</p>
+<p>ipv6 unicast-routing<br>int s0/0/0<br>ip add 10.10.20.2 255.255.255.252<br>ipv add 2001:DB8:1:1::2/64<br>ipv add FE80::2 link-local<br>no sh<br>exit<br>int g0/0<br>ip add 10.10.1.254 255.255.255.0<br>ipv add 2001:DB8:1:A::1/64<br>ipv add FE80::2 link-local<br>no sh<br>exit<br>int g0/1<br>ip add 10.10.2.254 255.255.255.0<br>ipv add 2001:DB8:1:B::1/64<br>ipv add FE80::2 link-local<br>no sh<br>exit</p>
+<p>ip route 0.0.0.0 0.0.0.0 s0/0/0<br>ipv6 route ::/0 s0/0/0</p>
+<p>会看到<br>West#sh ipv6 route<br>IPv6 Routing Table - 8 entries<br>Codes: C - Connected, L - Local, S - Static, R - RIP, B - BGP<br>       U - Per-user Static route, M - MIPv6<br>       I1 - ISIS L1, I2 - ISIS L2, IA - ISIS interarea, IS - ISIS summary<br>       O - OSPF intra, OI - OSPF inter, OE1 - OSPF ext 1, OE2 - OSPF ext 2<br>       ON1 - OSPF NSSA ext 1, ON2 - OSPF NSSA ext 2<br>       D - EIGRP, EX - EIGRP external<br>S   ::/0 [1/0]<br>     via Serial0/0/0, directly connected<br>C   2001:DB8:1:1::/64 [0/0]<br>     via Serial0/0/0, directly connected<br>L   2001:DB8:1:1::2/128 [0/0]<br>     via Serial0/0/0, receive<br>C   2001:DB8:1:A::/64 [0/0]<br>     via GigabitEthernet0/0, directly connected<br>L   2001:DB8:1:A::1/128 [0/0]<br>     via GigabitEthernet0/0, receive<br>C   2001:DB8:1:B::/64 [0/0]<br>     via GigabitEthernet0/1, directly connected<br>L   2001:DB8:1:B::1/128 [0/0]<br>     via GigabitEthernet0/1, receive<br>L   FF00::/8 [0/0]<br>     via Null0, receive</p>
+<hr>
+<p><img src="RSE_C2_PT%20-%20%E5%89%AF%E6%9C%AC/1574498707719.png" alt="1574498707719"></p>
+<p><a href="https://www.youtube.com/watch?v=fmvC_LPpJTA" target="_blank" rel="noopener">具体视频教程链接</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/15/%E6%80%9D%E7%A7%912/2019-11-23-ch10%E8%AE%BE%E5%A4%87%E5%8F%91%E7%8E%B0%EF%BC%8C%E7%AE%A1%E7%90%86%EF%BC%8C%E7%BB%B4%E6%8A%A4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="tianyilt">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="探究前线">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/12/15/%E6%80%9D%E7%A7%912/2019-11-23-ch10%E8%AE%BE%E5%A4%87%E5%8F%91%E7%8E%B0%EF%BC%8C%E7%AE%A1%E7%90%86%EF%BC%8C%E7%BB%B4%E6%8A%A4/" itemprop="url">2019-11-23-ch10设备发现，管理，维护</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-15T12:53:28+08:00">
+                2019-12-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%80%9D%E7%A7%912/" itemprop="url" rel="index">
+                    <span itemprop="name">思科2</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="设备发现-管理-维护"><a href="#设备发现-管理-维护" class="headerlink" title="设备发现, 管理, 维护"></a>设备发现, 管理, 维护</h1><p>categories: 思科2</p>
+<h2 id="设备发现"><a href="#设备发现" class="headerlink" title="设备发现"></a>设备发现</h2><h3 id="CDP"><a href="#CDP" class="headerlink" title="CDP"></a>CDP</h3><p>CISCO DISCORY PROTOCAL, 是一个思科专有第 2 层协议, 共享同一数据链路的思科设备的信息. 默认开启. </p>
+<ul>
+<li><p>有关命令</p>
+<pre><code>show cdp // 查看cdp+
+show cdp neighbours // 查看发现的设备
+show cdp neighbours detail // 详细信息
+show cdp interface // 查看启用的接口
+(config) # cdp run // 启动cdp
+(config) # no cdp run // 全局禁用cdp, 最好这样做
+(config) # inter g0/0
+(conf-line) # cdp enable // 在端口上开启cdp
+(conf-line) # no cdp enable // 在端口上关闭cdp</code></pre></li>
+</ul>
+<h3 id="LLDP"><a href="#LLDP" class="headerlink" title="LLDP"></a>LLDP</h3><p>链路层发现协议 (LLDP), 国际通用协议. </p>
+<ul>
+<li><p>有关命令</p>
+<pre><code>(config)
+lldp run
+inter g0/1
+lldp transmit
+lldp recieve
+exit
+exit
+(en)
+show lldp
+show lldp neighbours
+show lldp neighbours detail</code></pre></li>
+</ul>
+<h2 id="设备管理"><a href="#设备管理" class="headerlink" title="设备管理"></a>设备管理</h2><h3 id="NTP"><a href="#NTP" class="headerlink" title="NTP"></a>NTP</h3><p>使用NTP设置系统时钟</p>
+<ul>
+<li><p>手动配置时间</p>
+<pre><code>clock set 20:01:00 dec 11 2019</code></pre></li>
+<li><p>用ntp设置时间</p>
+<pre><code>show clock detail
+conf t
+ntp server 209.168.200.225
+exit
+show ntp associations // 显示关联的ntp设备信息
+show ntp status // 显示本机ntp信息
+</code></pre></li>
+</ul>
+<p>ntp时间层级概念:</p>
+<p>第0层: 权威时间源, 计时用.</p>
+<p>第1层: 从权威时间源获取时间.</p>
+<p>第n层: 从第n-1层获取时间</p>
+<p>第16层: 表示设备不同步</p>
+<h3 id="系统日志"><a href="#系统日志" class="headerlink" title="系统日志"></a>系统日志</h3><p>日志的功能</p>
+<ul>
+<li><p>能够收集日志记录信息来用于监控和故障排除        </p>
+</li>
+<li><p>能够选择捕获的日志记录信息的类型   </p>
+</li>
+<li><p>能够指定捕获的系统日志消息的目的地</p>
+</li>
+</ul>
+<p>系统日志消息的常用目的地</p>
+<ul>
+<li><p>日志记录缓冲区（路由器或交换机内部的 RAM）     </p>
+</li>
+<li><p>控制台线路       </p>
+</li>
+<li><p>终端线路    </p>
+</li>
+<li><p>系统日志服务器</p>
+</li>
+</ul>
+<p>设备可以配置为将所有系统消息转发到外部系统日志服务器, 内部缓冲区的日志只能从CLI上看到.</p>
+<p>日志级别: 级别越小, 越紧急</p>
+<p><img src="2019-11-23-ch10%E8%AE%BE%E5%A4%87%E5%8F%91%E7%8E%B0%EF%BC%8C%E7%AE%A1%E7%90%86%EF%BC%8C%E7%BB%B4%E6%8A%A4/image-20191123153421475.png" alt="image-20191123153421475"></p>
+<p>日志的构成</p>
+<pre><code>seq no(日志的序号, 需要先配置service sequence-numbers) - 
+timestamp(日志时间戳, 需要先配置service timestamp与ntp) - 
+facility(来源设备) - 
+severity(严重性, 上面的0-7) - 
+MNEMONIC(简短的助记符) - 
+说明(详细报告)</code></pre><ul>
+<li><p>开启时间戳</p>
+<pre><code>conf t
+inter g0/0
+shutdown
+exit
+(config)
+service timestamps log datetime
+inter g0/0
+no shut</code></pre></li>
+</ul>
+<ul>
+<li><p>相关命令</p>
+<pre><code>show logging //查看日志记录设置
+(config)
+logging 192.168.1.4 // 配置log服务器
+logging trap 4 // 显示0-4级log
+logging source-interface g0/0 //指定系统日志数据包包含特定接口的 IPv4 或 IPv6 地址
+logging console // 把所有级别的日志都输出到console
+logging buffered // 缓冲系统日志消息</code></pre></li>
+</ul>
+<h2 id="设备维护"><a href="#设备维护" class="headerlink" title="设备维护"></a>设备维护</h2><h3 id="路由器交换机文件维护"><a href="#路由器交换机文件维护" class="headerlink" title="路由器交换机文件维护"></a>路由器交换机文件维护</h3><ul>
+<li><p>文件系统</p>
+<pre><code>show file systems // 查看文件系统
+dir // 列出文件, 类似ls
+cd nvram: // 切换到nvram
+pwd</code></pre></li>
+<li><p>使用TFTP备份和恢复</p>
+<p>备份</p>
+<p><img src="2019-11-23-ch10%E8%AE%BE%E5%A4%87%E5%8F%91%E7%8E%B0%EF%BC%8C%E7%AE%A1%E7%90%86%EF%BC%8C%E7%BB%B4%E6%8A%A4/image-20191123160551545.png" alt="image-20191123160551545"></p>
+<p>恢复</p>
+<p><code>copy tftp running-config</code></p>
+</li>
+<li><p>USB接口</p>
+<p><code>dir usbflash0</code></p>
+<p>备份和恢复</p>
+<pre><code>copy run usbflash0:/
+copy usbflshah0:/R1-config run //R1-config是usb上的备份文件名</code></pre></li>
+</ul>
+<h3 id="重置密码"><a href="#重置密码" class="headerlink" title="重置密码"></a>重置密码</h3><p>访问终端的配置</p>
+<ul>
+<li><p>9600 波特率       </p>
+</li>
+<li><p>无奇偶校验     </p>
+</li>
+<li><p>8 个数据位     </p>
+</li>
+<li><p>1 个停止位</p>
+</li>
+<li><p>无流量控制</p>
+</li>
+</ul>
+<p>重置密码</p>
+<ul>
+<li><p>进入rommon模式: 登录中断开设备电源然后重接, 在终端上按下<a href="https://www.cisco.com/c/en/us/support/docs/routers/10000-series-routers/12818-61.html" target="_blank" rel="noopener">中断序列</a>访问.</p>
+<pre><code>(rommon)
+confreg 0x2142 // 寄存器设置为这个值, 忽略启动配置文件
+reset</code></pre><p>重启中需要输入中断序列(快捷键)</p>
+</li>
+<li><p>重启后配置文件</p>
+<pre><code>copy start run
+conf t
+**设置所有密码**
+config-register 0x2102 // 重置寄存器
+end
+copy run start
+reload</code></pre></li>
+</ul>
+<h3 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h3><p>类型说明</p>
+<ul>
+<li>名称中有 <strong>universalk9</strong>, 标准的映像, 提供所有功能</li>
+<li>名称中<strong>带有“universalk9_npe</strong>, 提供强加密功能</li>
+</ul>
+<p>包含了四个技术包</p>
+<ul>
+<li>IP base</li>
+<li>UC, 统一通信</li>
+<li>数据</li>
+<li>安全</li>
+</ul>
+<p>映像文件名</p>
+<pre><code>show flash0:</code></pre><ul>
+<li><p><strong>映像名称 (c1900)</strong> - 标识映像运行的平台。在本示例中，平台是思科 1900 路由器。</p>
+</li>
+<li><p><strong>universalk9</strong> - 指定映像标识。ISR G2 的两个标识是 universalk9 和  universalk9_npe。Universalk9_npe  不包含强加密，适用于具有加密限制的国家/地区。通过许可控制功能，并可将功能分为四个技术包。它们是 IP Base、安全、统一通信和数据。</p>
+</li>
+<li><p><strong>mz</strong> - 表示运行映像的位置以及文件是否经过压缩。在本示例中，“mz”表示文件从 RAM 运行并经过压缩。 </p>
+<ul>
+<li><p><strong>f</strong> - 闪存 </p>
+</li>
+<li><p><strong>m</strong> - RAM              </p>
+</li>
+<li><p><strong>r</strong> - ROM  </p>
+</li>
+<li><p><strong>l</strong> - 可重定位 </p>
+</li>
+<li><p>z - zip</p>
+</li>
+<li><p>x - mzip</p>
+</li>
+</ul>
+</li>
+<li><p><strong>SPA</strong> - 表示文件是由思科以数字形式签名的。</p>
+</li>
+<li><p><strong>152-4.M3</strong> - 指定映像 15.2(4)M3 的文件名格式。这是 IOS 的版本，其包括主要发行版、次要发行版、维护发行版和维护重新构建编号。M 指示这是扩展维护发行版。 </p>
+</li>
+<li><p><strong>bin</strong> - 文件扩展名。该扩展名表示此文件是二进制可执行文件。</p>
+</li>
+</ul>
+<h4 id="备份"><a href="#备份" class="headerlink" title="备份"></a>备份</h4><p>将映像备份到TFTP/从TFTP恢复</p>
+<pre><code>copy flash0: tftp:</code></pre><h4 id="恢复"><a href="#恢复" class="headerlink" title="恢复"></a>恢复</h4><p>最好用<code>show flash0:</code>查看空间是否足够</p>
+<pre><code>copy tftp: flash0: 
+conf t
+boot system flash0://.....
+boot system rom // 如果flash0的系统无法使用, 就用rom的系统
+exit
+copy run start
+reload</code></pre><h2 id="许可"><a href="#许可" class="headerlink" title="许可"></a>许可</h2><ul>
+<li><p>用户购买思科设备, 思科设备预装了操作系统</p>
+<ul>
+<li>包括了IP base, data, uc, sec四个技术包</li>
+<li>ip base许可证是安装其他技术包许可证的前提</li>
+</ul>
+</li>
+<li><p>随着思科设备寄来的还有产品激活密钥(PAK)以及其他技术包的临时许可证, 可以试用新功能</p>
+</li>
+<li><p>查看设备的udi</p>
+<pre><code>show license udi</code></pre><p>使用udi和pak, 下载 <strong>思科 License Manager (CLM)</strong>  , 来激活设备</p>
+</li>
+<li><p>收到邮件, 包含里一个.lic文件, 放入flash中</p>
+<pre><code>license install flash0:...
+reload</code></pre></li>
+<li><p>备份许可</p>
+<pre><code> license save flash0:...</code></pre></li>
+<li><p>清楚许可证</p>
+<pre><code>// 禁用技术包
+license boot module c1900 technology-package seck9(包名称) disable
+exit
+reload
+// 清除许可证
+license clear seck9
+conf t
+no license boot module c1900 technology-package seck9(包名称) disable
+exit 
+reload</code></pre></li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/15/%E6%80%9D%E7%A7%912/2019-11-18-ch07%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E5%88%97%E8%A1%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="tianyilt">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="探究前线">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/12/15/%E6%80%9D%E7%A7%912/2019-11-18-ch07%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E5%88%97%E8%A1%A8/" itemprop="url">2019-11-18-ch07访问控制列表</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-15T12:53:28+08:00">
+                2019-12-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%80%9D%E7%A7%912/" itemprop="url" rel="index">
+                    <span itemprop="name">思科2</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="访问控制列表-ACL"><a href="#访问控制列表-ACL" class="headerlink" title="访问控制列表(ACL)"></a>访问控制列表(ACL)</h1><p>categories: 思科2</p>
+<h2 id="ACL工作原理"><a href="#ACL工作原理" class="headerlink" title="ACL工作原理"></a>ACL工作原理</h2><h3 id="ACL用途"><a href="#ACL用途" class="headerlink" title="ACL用途"></a>ACL用途</h3><ul>
+<li>限制流量: 例如不允许视频传输</li>
+<li>流量控制: 限制路由更新的传输</li>
+<li>限制网络访问, 提高安全性</li>
+<li>过滤流量: 例如不允许telnet传输</li>
+<li>拒绝网络服务的访问: 例如拒绝用户访问http</li>
+</ul>
+<h3 id="数据包过滤"><a href="#数据包过滤" class="headerlink" title="数据包过滤"></a>数据包过滤</h3><p> 访问控制条目ACE, 由permit和deny构成, 分析传入和传出的数据包, 然后根据特定条件转发或丢弃分析后的数据包 </p>
+<ul>
+<li>标准IPv4 ACL 是在网络接入层生效, 分析数据IP, 在ACE中从上至下比对</li>
+<li>不满足任何一条就不允许传入</li>
+<li>如果匹配到最后都没有满足还是不传入</li>
+</ul>
+<h3 id="入站出站ACL"><a href="#入站出站ACL" class="headerlink" title="入站出站ACL"></a>入站出站ACL</h3><ul>
+<li>每个端口都可以传入/传出流量</li>
+<li>控制传入/传出规则的是出/入站ACL</li>
+</ul>
+<h3 id="通配符掩码"><a href="#通配符掩码" class="headerlink" title="通配符掩码"></a>通配符掩码</h3><ul>
+<li>通配符掩码和IP地址结构相同</li>
+<li>与IP地址做<strong>异或</strong>运算, 即掩码是0的部分会被保留, 1的部分会被舍弃</li>
+<li>保留的部分是要在ACE中比较的部分</li>
+</ul>
+<h4 id="常用的例子"><a href="#常用的例子" class="headerlink" title="常用的例子"></a>常用的例子</h4><ul>
+<li><p>要比较每一位IP地址</p>
+<pre><code>IP=192.168.1.1
+掩码=0.0.0.0
+或者
+掩码=host 192.168.1.1</code></pre></li>
+<li><p>允许所有IP</p>
+<pre><code>掩码=0.0.0.0 255.255.255.255
+或
+掩码=any</code></pre></li>
+</ul>
+<ul>
+<li><p>比较前24位, 禁止192.168.1.1/24网段的</p>
+<pre><code>掩码=0.0.0.255</code></pre></li>
+<li><p>允许/拒绝某个网段的IP访问,<code>通配符掩码=255.255.255.255-子网掩码</code></p>
+</li>
+</ul>
+<h3 id="ACL创建规则"><a href="#ACL创建规则" class="headerlink" title="ACL创建规则"></a>ACL创建规则</h3><ul>
+<li>指导规则<ul>
+<li>内网和外网交界处使用ACL</li>
+<li>网络两个部分交界处</li>
+<li>网络边界的路由器</li>
+<li>边界路由器不同的网络协议</li>
+</ul>
+</li>
+<li>为每种协议, 每个方向, 每个接口配置ACL</li>
+</ul>
+<h3 id="ACL放置原则"><a href="#ACL放置原则" class="headerlink" title="ACL放置原则"></a>ACL放置原则</h3><ul>
+<li>扩展ACL,  放置在尽可能靠近需要过滤的流量源的位置上, 这样, 减少网络流量.</li>
+<li>标准ACL, 不会指定目标地址, 要靠近目标</li>
+</ul>
+<h2 id="标准IPv4ACL"><a href="#标准IPv4ACL" class="headerlink" title="标准IPv4ACL"></a>标准IPv4ACL</h2><h3 id="修改ACL"><a href="#修改ACL" class="headerlink" title="修改ACL"></a>修改ACL</h3><ul>
+<li><p>直接编辑</p>
+<pre><code>  no access-list 1
+  access-list 1 deny host 192.168.10.10
+  access-list 1 permit 192.168.0.0 0.0.255.255</code></pre></li>
+<li><p>使用序号</p>
+<pre><code>show access-lists 1
+conf t
+ip access-list standard 1
+no 10 // 删除编号为10的ACL语句
+10 deny host 192.168.10.10
+end</code></pre></li>
+<li><p>将ACL添加到端口</p>
+<pre><code>inter g0/0
+no ip access-group 20 in // 删除ACL
+ip access-group 10 in // 添加access-list 10 到入站口
+</code></pre></li>
+</ul>
+<h3 id="验证ACL"><a href="#验证ACL" class="headerlink" title="验证ACL"></a>验证ACL</h3><pre><code>show ip inter 
+show access-lists
+show running-config | include access-list 1</code></pre><ul>
+<li><code>show access-lists</code>会显示统计匹配到的数据包的数量, 使用<code>clear access-list counters</code>删除统计</li>
+</ul>
+<h3 id="限制远程接入"><a href="#限制远程接入" class="headerlink" title="限制远程接入"></a>限制远程接入</h3><p>在vty上配置ACL</p>
+<pre><code>line vty 0 4
+login local
+transport input ssh
+access-class 21 in // 限制传入
+exit
+access-list 21 permit host 192.168.10.2
+access-list 21 deny any</code></pre><h2 id="排除ACL故障"><a href="#排除ACL故障" class="headerlink" title="排除ACL故障"></a>排除ACL故障</h2><h3 id="使用ACL处理数据包"><a href="#使用ACL处理数据包" class="headerlink" title="使用ACL处理数据包"></a>使用ACL处理数据包</h3><ul>
+<li><p>ACE写的顺序要从小范围到大范围, 以防先匹配大范围忽略特定IP. 思科路由器会自动排序.</p>
+</li>
+<li><p>路由器接到数据处理流程</p>
+<ul>
+<li>检查MAC地址</li>
+<li>匹配入站ACL</li>
+<li>匹配出站ACL</li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/15/%E6%80%9D%E7%A7%912/2019-11-16-ch06VLAN/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="tianyilt">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="探究前线">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/12/15/%E6%80%9D%E7%A7%912/2019-11-16-ch06VLAN/" itemprop="url">2019-11-16-ch06VLAN</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-15T12:53:28+08:00">
+                2019-12-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%80%9D%E7%A7%912/" itemprop="url" rel="index">
+                    <span itemprop="name">思科2</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="VLAN"><a href="#VLAN" class="headerlink" title="VLAN"></a>VLAN</h1><p>categories: 思科2</p>
+<h2 id="VLAN分段"><a href="#VLAN分段" class="headerlink" title="VLAN分段"></a>VLAN分段</h2><h3 id="为何使用VLAN"><a href="#为何使用VLAN" class="headerlink" title="为何使用VLAN"></a>为何使用VLAN</h3><ul>
+<li>通常, 一个交换机是一个网段, 多个交换机插在路由器上</li>
+<li>访问其他网段必须通过路由器. 路由器可以隔离广播, 因此广播无法到达其他网段.</li>
+<li>因此一个交换机称为一个广播域.</li>
+<li>但是有的时候, 我的网段有<strong>数十个</strong>, 但是路由器的接口却没有这么多, 或者我想在两台交换机上<strong>灵活分配</strong>网段,传统的方式就显得不足.</li>
+</ul>
+<p><strong>VLAN就是用来跨交换机构建局域网</strong>, 优势有: </p>
+<ul>
+<li>安全, 隔离用户</li>
+<li>降低成本, 提高性能, 减小广播域</li>
+<li>提高IT员工效率, 相似网络需求的员工可以共享一个VLAN</li>
+<li>简化项目管理, 无需为接线烦恼</li>
+</ul>
+<h4 id="VLAN类型"><a href="#VLAN类型" class="headerlink" title="VLAN类型"></a>VLAN类型</h4><ul>
+<li>数据VLAN, 传输流量, 一般将语音流量, 管理流量, 数据流量分隔在不同VLAN上.</li>
+<li>默认VLAN, 交换机端口默认属于VLAN 1.</li>
+<li>本征VLAN, 链路部分收到了没有VLAN标签的数据, 就会加上本征VLAN标签.</li>
+<li>管理VLAN, 访问交换机管理功能. 默认是VLAN 1.</li>
+</ul>
+<h3 id="多交换环境中的VLAN"><a href="#多交换环境中的VLAN" class="headerlink" title="多交换环境中的VLAN"></a>多交换环境中的VLAN</h3><h4 id="VLAN中继"><a href="#VLAN中继" class="headerlink" title="VLAN中继"></a>VLAN中继</h4><ul>
+<li>两个交换机个有一些VLAN</li>
+<li>把两个交换机相同的VLAN连接起来的链路叫做中继, 中继网络又称为VLAN TRUNK, 像树干一样链接整个网络. 遵循IEEE 802.1Q协议</li>
+<li>广播域是同一个VLAN, 即使跨越了多个交换机.</li>
+</ul>
+<h4 id="标记以太网帧识别VLAN"><a href="#标记以太网帧识别VLAN" class="headerlink" title="标记以太网帧识别VLAN"></a>标记以太网帧识别VLAN</h4><p><img src="C:%5CUsers%5Clj%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20191116200256396.png" alt=""></p>
+<ul>
+<li><p><strong>类型</strong> - 2 字节值，称为标记协议 ID (TPID) 值。对于以太网，它设置为十六进制 0x8100。   </p>
+</li>
+<li><p><strong>用户优先级</strong> - 3 位值，支持级别或服务实施。       </p>
+</li>
+<li><p><strong>规范格式标识符 (CFI)</strong> - 1 位标识符，便于在以太网链路上传输令牌环帧。</p>
+</li>
+<li><p><strong>VLAN ID (VID)</strong> - 12 位 VLAN 标识号，最多支持 4096 个 VLAN ID。</p>
+</li>
+</ul>
+<h4 id="本征VLAN"><a href="#本征VLAN" class="headerlink" title="本征VLAN"></a>本征VLAN</h4><ul>
+<li>接入TRUNK的无VLAN设备会被分配本征VLAN</li>
+<li>无VLAN设备的数据会被转发到本征VLAN中</li>
+</ul>
+<h2 id="VLAN实施情况"><a href="#VLAN实施情况" class="headerlink" title="VLAN实施情况"></a>VLAN实施情况</h2><h3 id="VLAN分配"><a href="#VLAN分配" class="headerlink" title="VLAN分配"></a>VLAN分配</h3><h4 id="VLAN范围"><a href="#VLAN范围" class="headerlink" title="VLAN范围"></a>VLAN范围</h4><ul>
+<li>1-1005<ul>
+<li>普通VLAN</li>
+<li>端口1, 1002-1005是自动创建的, 不可删除. 1002-1005是留给令牌和光纤分布式数据接口 (FDDI) VLAN 的.</li>
+<li>配置文件存放在flash中, 名为vlan.dat</li>
+<li>VLAN中继协议管理普通VLAN</li>
+</ul>
+</li>
+<li>1006-4096<ul>
+<li>扩展VLAN</li>
+<li>保存在running config里</li>
+</ul>
+</li>
+</ul>
+<h3 id="创建VLAN"><a href="#创建VLAN" class="headerlink" title="创建VLAN"></a>创建VLAN</h3><p>创建一个VLAN</p>
+<pre><code>conf t
+vlan 100
+name test
+end</code></pre><p>为VLAN分配端口</p>
+<pre><code>conf t
+inter f0/0
+switchport mode access // 设置为接入端口
+switchport access vlan 10
+end</code></pre><p>为多个端口分配vlan</p>
+<pre><code>inter range f0/1-15
+switchport mode access
+switchport access vlan 20 
+mls qos trust cos // 信任语音流量
+switchport access vlan 150
+end</code></pre><p><strong>通常一个端口只能分给一个vlan, 但是思科交换机可以为一个端口分给数据vlan和语音vlan</strong>. </p>
+<p>给端口分配两个vlan</p>
+<pre><code>inter f0/1
+switchport mode access
+switchport access vlan 20 
+mls qos trust cos // 信任语音流量
+switchport access vlan 150
+end</code></pre><p>查看vlan </p>
+<pre><code>show vlan name student
+show vlan summary
+show inter vlan 20
+show inter f0/18 switchport</code></pre><p>删除端口的vlan</p>
+<pre><code>inter f0/1
+no switchport access vlan
+end
+show vlan brief // 查看vlan信息, 其实查看的是vlan.dat文件
+show inter f0/18 switchport // 查看端口信息
+</code></pre><p>删除vlan</p>
+<pre><code>(config)# no vlan 20</code></pre><p>将交换机恢复为出厂设置</p>
+<pre><code>erase startup-config
+delete vlan.dat</code></pre><h3 id="VLAN中继-1"><a href="#VLAN中继-1" class="headerlink" title="VLAN中继"></a>VLAN中继</h3><ul>
+<li><p>配置中继端口</p>
+<pre><code>inter f0/19
+switchport mode trunk
+switchport trunk native vlan 99
+switchport trunk allowed vlan 20,18
+end</code></pre></li>
+<li><p>重置端口</p>
+<pre><code>inter f0/19
+switchport mode trunk
+no switchport trunk allowed vlan
+switchport trunk native vlan 
+end</code></pre></li>
+</ul>
+<h3 id="vlan故障"><a href="#vlan故障" class="headerlink" title="vlan故障"></a>vlan故障</h3><ul>
+<li><p>vlan中子网不同将无法通信</p>
+</li>
+<li><p>vlan配置错误, 检查</p>
+<ul>
+<li>vlan正确了吗</li>
+<li>vlan是否已被删除</li>
+</ul>
+</li>
+<li><p>中继错误</p>
+<ul>
+<li>本征vlan是否一致</li>
+<li>是否开启了trunk链路</li>
+<li>vlan是否被允许通过链路</li>
+</ul>
+</li>
+</ul>
+<h2 id="vlan间路由"><a href="#vlan间路由" class="headerlink" title="vlan间路由"></a>vlan间路由</h2><h3 id="传统vlan间路由"><a href="#传统vlan间路由" class="headerlink" title="传统vlan间路由"></a>传统vlan间路由</h3><ul>
+<li>每一个vlan都要求接入路由器的一个接口</li>
+<li>和不同交换机接入路由器无异</li>
+</ul>
+<h3 id="单臂路由"><a href="#单臂路由" class="headerlink" title="单臂路由"></a>单臂路由</h3><ul>
+<li>只需要接入路由器一个接口</li>
+<li>在路由器上也配置支持vlan</li>
+</ul>
+<h2 id="配置单臂路由"><a href="#配置单臂路由" class="headerlink" title="配置单臂路由"></a>配置单臂路由</h2><ul>
+<li><p>在路由器上</p>
+<pre><code>inter g0/0.10 // 为g0/0创建子接口.10(可以任意, 一般与vlan相等), 在这个子接口上配置vlan 10
+encapsulation dot1q 10 // 在这个端口中删除vlan 10
+ip addr 172.17.10.1 255.255.255.0
+inter g0/0.30
+encapsulation dot1q 30 // 在这个端口中删除vlan 30
+ip addr 172.17.30.1 255.255.255.0
+exit
+inter g0/0
+no shut //开启所有子接口</code></pre></li>
+<li><p>验证vlan</p>
+<pre><code>show vlan
+show ip route</code></pre></li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/15/%E6%80%9D%E7%A7%912/2019-11-10-ch04%E4%BA%A4%E6%8D%A2%E7%BD%91%E7%BB%9C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="tianyilt">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="探究前线">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/12/15/%E6%80%9D%E7%A7%912/2019-11-10-ch04%E4%BA%A4%E6%8D%A2%E7%BD%91%E7%BB%9C/" itemprop="url">2019-11-10-ch04交换网络</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-15T12:53:28+08:00">
+                2019-12-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%80%9D%E7%A7%912/" itemprop="url" rel="index">
+                    <span itemprop="name">思科2</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="交换网络"><a href="#交换网络" class="headerlink" title="交换网络"></a>交换网络</h1><p>categories: 思科2</p>
+<h2 id="LAN设计"><a href="#LAN设计" class="headerlink" title="LAN设计"></a>LAN设计</h2><h3 id="融合网络"><a href="#融合网络" class="headerlink" title="融合网络"></a>融合网络</h3><h4 id="无边界交换网络的层次结构"><a href="#无边界交换网络的层次结构" class="headerlink" title="无边界交换网络的层次结构"></a>无边界交换网络的层次结构</h4><ul>
+<li>分层: 简化部署<ul>
+<li>接入层: 用户pc连接的一层, 网络边缘.</li>
+<li>分布层: 接入ISP</li>
+<li>核心层: 网络主干</li>
+</ul>
+</li>
+<li>模块化: 无缝网络扩展</li>
+<li>恢复能力: 保持网络运行</li>
+<li>灵活性: 只能流量负载</li>
+</ul>
+<h3 id="交换网络-1"><a href="#交换网络-1" class="headerlink" title="交换网络"></a>交换网络</h3><h4 id="选购交换机"><a href="#选购交换机" class="headerlink" title="选购交换机"></a>选购交换机</h4><ul>
+<li><p>成本</p>
+</li>
+<li><p>接口密度: 接口不要空余. 一般有12, 24, 48接口</p>
+</li>
+<li><p>电源: 冗余电源</p>
+</li>
+<li><p>可靠性</p>
+</li>
+<li><p>端口速度</p>
+</li>
+<li><p>帧缓冲</p>
+</li>
+<li><p>扩展性: 交换机的菊花链可以连接交换机做成一个大交换机</p>
+<p><img src="2019-11-10-ch04%E4%BA%A4%E6%8D%A2%E6%9C%BA/image-20191126141544180.png" alt="image-20191126141544180"></p>
+</li>
+</ul>
+<h3 id="帧转发"><a href="#帧转发" class="headerlink" title="帧转发"></a>帧转发</h3><p>交换机根据入口端口和目标地址转发帧</p>
+<ul>
+<li>存储转发: 循环冗余检查CRC, 检查帧(通过FCS校验)是否有错再转发</li>
+<li>直通交换: 直接转发</li>
+</ul>
+<h3 id="交换域"><a href="#交换域" class="headerlink" title="交换域"></a>交换域</h3><h4 id="冲突域"><a href="#冲突域" class="headerlink" title="冲突域"></a>冲突域</h4><p>设备之间共享带宽的网段是冲突域. <strong>半双工</strong>的交换机, 每个网段都是冲突与. <strong>全双工</strong>则没有这个问题.</p>
+<h4 id="广播域"><a href="#广播域" class="headerlink" title="广播域"></a>广播域</h4><p>路由器的一个接口就是一个广播域. 因为广播无法通过路由器.</p>
+<p>交换机接收到广播会范洪处理, 除了接收端口以外转发到其他端口.</p>
+<p>广播MAC地址为<code>FF-FF-FF-FF-FF-FF</code></p>
+<h4 id="缓解网络拥塞"><a href="#缓解网络拥塞" class="headerlink" title="缓解网络拥塞"></a>缓解网络拥塞</h4><ul>
+<li>高端口密度</li>
+<li>大型帧缓冲区</li>
+<li>端口速度</li>
+<li>快速内部交换</li>
+<li>低的端口成本</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/4/">&lt;i class&#x3D;&quot;fa fa-angle-left&quot;&gt;&lt;&#x2F;i&gt;</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/6/">&lt;i class&#x3D;&quot;fa fa-angle-right&quot;&gt;&lt;&#x2F;i&gt;</a>
+  </nav>
+
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">tianyilt</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%20%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">52</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">categories</span>
+                
+              </div>
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">tianyilt</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

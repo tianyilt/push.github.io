@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Vim编辑器categories: Linux test paragraph: My name is van, i&#39;m an artist, a performance artist. i&#39;m hired for people to  fulfill their fantasies, the deep dark fantesies. aMoving Cursor i: insert">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2019-08-27-vim编辑器">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;15&#x2F;Linux&#x2F;2019-08-27-vim%E7%BC%96%E8%BE%91%E5%99%A8&#x2F;index.html">
+<meta property="og:site_name" content="探究前线">
+<meta property="og:description" content="Vim编辑器categories: Linux test paragraph: My name is van, i&#39;m an artist, a performance artist. i&#39;m hired for people to  fulfill their fantasies, the deep dark fantesies. aMoving Cursor i: insert">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-12-15T04:53:28.187Z">
+<meta property="article:modified_time" content="2019-12-10T00:53:01.276Z">
+<meta property="article:author" content="tianyilt">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/12/15/Linux/2019-08-27-vim编辑器/"/>
+
+
+
+
+
+  <title>2019-08-27-vim编辑器 | 探究前线</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.1.1"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">探究前线</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">究天人之际,析万物之理</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/15/Linux/2019-08-27-vim%E7%BC%96%E8%BE%91%E5%99%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="tianyilt">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="探究前线">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">2019-08-27-vim编辑器</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-15T12:53:28+08:00">
+                2019-12-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Vim编辑器"><a href="#Vim编辑器" class="headerlink" title="Vim编辑器"></a>Vim编辑器</h1><p>categories: Linux</p>
+<pre><code>test paragraph:
+My name is van, i&#39;m an artist, a performance artist. i&#39;m hired for people to 
+fulfill their fantasies, the deep dark fantesies.
+a</code></pre><h2 id="Moving-Cursor"><a href="#Moving-Cursor" class="headerlink" title="Moving Cursor"></a>Moving Cursor</h2><ul>
+<li><code>i</code>: insert</li>
+<li><code>I</code>: insert at front of line</li>
+<li><code>a</code>: append</li>
+<li><code>A</code>: append at end of line</li>
+<li><code>o</code>: overline</li>
+<li><code>O</code>: upperline</li>
+<li><code>w</code>: word forward</li>
+<li><code>b</code>: word backword</li>
+<li><code>0</code>: move to the head of the line</li>
+<li><code>$</code>: move o the end of line </li>
+<li><code>+</code>: go to the first letter next line</li>
+<li><code>-</code>: first letter last line</li>
+<li><code>e/E</code>: end of word</li>
+<li><code>h,j,k,l</code>: left,up,down,right</li>
+<li><code>4h</code>: repeat ‘h’ 4 times</li>
+</ul>
+<h2 id="Edit"><a href="#Edit" class="headerlink" title="Edit"></a>Edit</h2><ul>
+<li><code>c</code>: change the letter</li>
+<li><code>cc</code>: change whole line</li>
+<li><code>cw</code>: change word</li>
+<li><code>c2b</code>: 2 words before the cursor</li>
+<li><code>c$/C</code>: delete words from cursor to the end of this line(stay in insert mode)</li>
+<li><code>c0</code>: cursor to the begin of the line</li>
+<li><code>C</code>: delete words from the cursor to the end</li>
+<li><code>s</code>: switch letter(will stay in the insert mode)</li>
+<li><code>r</code>: replace(will stay in the cmd mode) </li>
+<li><code>R</code>: replace but will cover letters behind</li>
+<li><code>u</code>: undo</li>
+<li><code>U</code>: recover whole line</li>
+<li><code>ctrl+r</code>: redo</li>
+<li><code>ZZ</code>: save and quit</li>
+<li><code>:e!</code>: ignore changes without quitting the file</li>
+<li><code>:q!</code>: ignore changes and quit</li>
+<li><code>x</code>: delete letter in the cursor(stay in cmd mode)</li>
+<li><code>X</code>: delete letter before cursor</li>
+<li><code>d</code>: delete and put them in clipboard </li>
+<li><code>dw</code>: delete word</li>
+<li><code>dd</code>: delete line</li>
+<li>`db,d2b,2dd,d$=D,d0,…</li>
+<li><code>p</code>: place the text behind the cursor</li>
+<li><code>P</code>: place before cursor</li>
+<li><code>y</code>: copy</li>
+<li><code>yy/Y</code>: copy whole line</li>
+<li><code>.</code>: repeat last command</li>
+</ul>
+<h2 id="Scrolling-Screen"><a href="#Scrolling-Screen" class="headerlink" title="Scrolling Screen"></a>Scrolling Screen</h2><pre><code>^f means [ctrl] + [f]</code></pre><ul>
+<li><code>^f</code>: forward scroll screen </li>
+<li><code>^b</code>: backward scroll screen</li>
+<li><code>^d</code>: downward half screen</li>
+<li><code>^u</code>: upward half screen</li>
+<li><code>z[enter]</code>: move cursor to the top of screen </li>
+<li><code>z.</code>: move cursor to mid of screen</li>
+<li><code>z-</code>: move cursor to end of screen</li>
+<li><code>50z[enter]</code>: move line 50 to the top</li>
+<li><code>H</code>: move cursor to the top of screen</li>
+<li><code>M</code>: mid of screen</li>
+<li><code>L</code>: buttom of screen</li>
+<li><code>5H</code>: 5 lines down the screen</li>
+<li><code>5L</code>: 5 lines up the screen</li>
+<li><code>+/-</code>: move to the first letter of next/up line</li>
+<li><code>^</code>: move to the first no space place</li>
+<li><code>5|</code>: move to the 5th column of this line</li>
+<li><code>e</code>: move to the end of letter</li>
+<li><code>E</code>: move to the end of letter ignoring the punctuate</li>
+<li><code>(</code>: move to the begining of current sentence</li>
+<li><code>)</code>: ~ next sentence</li>
+<li><code>{</code>: ~ current paragraph</li>
+<li><code>}</code>: ~ next paragraph</li>
+<li><code>[[</code>: ~ this section</li>
+<li><code>]]</code>: ~ next section</li>
+<li>`Move based of Search</li>
+<li><code>/</code>: search downwards</li>
+<li><code>?</code>: search upwards</li>
+<li><code>n</code>: repeat last search</li>
+<li><code>N</code>: repeat last search but in the opposite direction</li>
+<li><code>fw</code>: move cursor to the next place of ‘w’(in this line)</li>
+<li><code>Fw</code>: ~ last place ~</li>
+<li><code>tw</code>: move cursor to the place before ‘w’    </li>
+<li><code>Tw</code>: ~ last place ~</li>
+<li><code>;</code>: repeat last searching cmd</li>
+<li><code>&#39;</code>: ~ opposite direction</li>
+<li>`Move based on line number</li>
+<li><code>set nu</code>: view line number</li>
+<li><code>ctrl+G</code>: view info of this line</li>
+<li><code>G</code>: go to the last line</li>
+<li><code>55G</code>: go to 55th line</li>
+<li>`(command)(number)(object)</li>
+<li><code>c17G</code>: change text from cursor to line 17</li>
+<li><code>d{</code>: delete text from cursor to last paragraph</li>
+<li><code>yH</code>: copy from cursor to head of screen</li>
+</ul>
+<h2 id="Open-File"><a href="#Open-File" class="headerlink" title="Open File"></a>Open File</h2><ul>
+<li><code>vi + file</code>: open file at last line</li>
+<li><code>vi +10 file</code>: open file at 10th line</li>
+<li><code>vi +/&quot;pattern&quot; file</code>: open file at first pattern</li>
+<li><code>vi -R file</code>: open file in “ReadOnly”(this case, use `:w! to write and quit)</li>
+<li><code>view file</code>: ditto</li>
+</ul>
+<h2 id="Mark"><a href="#Mark" class="headerlink" title="Mark"></a>Mark</h2><ul>
+<li><code>mx</code>: mark current place as x(can be any symble)</li>
+<li><code>&#39;x</code>: move cursor to the line marked with x</li>
+<li><code>\</code>x`: move cursor to mark x</li>
+<li><code>``</code>: return to last mark or the place of cursor before moving</li>
+<li><code>&#39;&#39;</code>: return to last mark or begining of the line </li>
+</ul>
+<h2 id="ex-Editor"><a href="#ex-Editor" class="headerlink" title="ex Editor"></a>ex Editor</h2><ul>
+<li><code>:d[ln]</code>: delete + line number [ln]</li>
+<li><code>:m</code>: move line</li>
+<li><code>:co</code>/<code>t</code>: copy line</li>
+<li><code>:3,18d</code>: delete line 3 to line 18</li>
+<li><code>:170,220m3</code>: move line 170 to line 220 below line 3</li>
+<li><code>:23,29c100</code>: copy line 23 to line 29 and paste below line 100</li>
+<li><code>:set nu</code>: display line number</li>
+<li><code>:.$0%</code>: present/last/first/all line of this passage</li>
+<li><code>:20,.m$</code>: move from line 20 to present line to the end line</li>
+<li><code>:+/-</code>: reletive line number</li>
+<li><code>:.,.+10co.-20</code>: copy from present line to present +10 line and paste present - 20 line  </li>
+<li><code>:/pattern/</code>: find line through pattern</li>
+<li><code>(in vi)d/while</code>: delete words from cursor to ‘while’</li>
+<li><code>(in ex):.,/while/d</code>: delete current to next match ‘while’</li>
+<li><code>:g/pattern</code>: move to last ‘pattern’ in the article</li>
+<li><code>:g/pattern/p</code>: display all lines that match pattern</li>
+<li><code>:g!/pattern/p</code>: display any line not mathch ‘pattern’</li>
+<li><code>:60,110g/pattern/p</code>: from line 60 to 110, search and display</li>
+<li><code>|</code>: split commands</li>
+<li><code>:1,3d | s/thier/their</code>: del 1 to 3 line, sub ‘thier’ to ‘their’(in current line, which is original line 4)</li>
+<li><code>:w!</code>: write in by force</li>
+<li><code>:1,30w newfile.txt</code>: write line 1 to 30 to newfile.txt</li>
+<li><code>:1,30w &gt;&gt; newfile.txt</code>: append 1,30 to newfile.txt</li>
+<li><code>:r/read filename</code>: read a newfile and copy it to next line of cursor</li>
+<li><code>:100 r filename</code>: put the file to 100 line</li>
+<li><code>:vi file1 file2; :w; :n</code>: edit file1, write file1, goto file2</li>
+<li><code>:args</code>: show all file in edit list</li>
+<li><code>:e file2</code>: switch to file2</li>
+<li><code>:#,%</code>: represent for first file and second file</li>
+<li><code>:w %.new</code>: save present content in buffer to a new file</li>
+<li><code>:&quot;f4yy, w, e letter, &quot;fp</code>: yank line 4 into buffer ‘f’, save, switch to file ‘letter’, place text</li>
+</ul>
+<h2 id="Global-Replacement"><a href="#Global-Replacement" class="headerlink" title="Global Replacement"></a>Global Replacement</h2><ul>
+<li><code>:s/old/new/</code>: substitude one ‘old’ to ‘new’, in current line</li>
+<li><code>:s/old/new/g</code>: substitude all ‘old’ in the line</li>
+<li><code>:1,$s/old/new/g</code>: substitude whole passage</li>
+<li><code>:%s/old/new/g</code>: % == 1,$</li>
+<li><code>:1,$s/old/new/gc</code>: c means confirmation, mannually confirm each change.(y+enter to change, enter to pass)</li>
+<li><code>:g/pattern/s/old/new/g</code>: global search line with ‘pattern’, and sub ‘old’ to</li>
+<li>`:  ‘new’ in the matched line </li>
+<li><code>:%s/Yae/&amp; Sakura/</code>: substitude ‘Yae’ for ‘Yae Sakura’, ‘&amp;’ represents matched</li>
+<li>`:  content</li>
+<li><code>:s/\(this\) \(that\)/\u\1 \l\2</code>: ‘This That’ =&gt; ‘This that’</li>
+<li>`:  !Attention, must use ‘(‘,’)‘ so the matched pattern can be written in \1, \2</li>
+<li><code>:g/content/mo14</code>: search line with ‘content’ and move to line 14</li>
+<li><code>:1,10g/^/ 12,17 t $</code>: copy line 12 to line 17 to end of passage 10 times</li>
+<li><code>:g /^\d/.+2 w &gt;&gt; newfile</code>: search line begin with number, append 2 line next to it</li>
+<li>`:  to a newfile</li>
+<li><code>:/^part2/,/^part3/ g /^Chapter/ .+2 w &gt;&gt; newfile</code>: search line begin with</li>
+<li>`:  Chapter from line start with ‘part2’ to ‘part3’ and append 2 lines after it to</li>
+<li>`:  new file</li>
+<li><code>:/^part2/,/^part3/ g /^Chapter/ .+2 w &gt;&gt; newfile | + t $</code>: append those lines to</li>
+<li>`:  newfile and put one line after it to end of passage</li>
+</ul>
+<h2 id="Chapter-7-Advanced-Edit"><a href="#Chapter-7-Advanced-Edit" class="headerlink" title="Chapter 7: Advanced Edit"></a>Chapter 7: Advanced Edit</h2><h3 id="Customize-vi"><a href="#Customize-vi" class="headerlink" title="Customize vi"></a>Customize vi</h3><ul>
+<li><code>:set option</code>: turn off option</li>
+<li><code>:set nooption</code>: turn off option</li>
+<li><code>:set all</code>: check all options</li>
+<li><code>:set wrapmargin=10</code>: right margin = 10, auto change line</li>
+<li><code>config &#39;.exrc&#39; file</code>: vi will pre process commands in ‘.exrc’, no need to input</li>
+<li><code>&#39;</code>:’ before commands. <h3 id="Unix-Command"><a href="#Unix-Command" class="headerlink" title="Unix Command"></a>Unix Command</h3></li>
+<li><code>:!ls</code>: add ‘!’ before order to run in unix</li>
+<li><code>:sh</code>: open a shell window(press ^d to quit)</li>
+<li><code>:r !filename</code>: put contents in filename to this passage</li>
+</ul>
+<h2 id="Chapter-10-vim-vi-improved"><a href="#Chapter-10-vim-vi-improved" class="headerlink" title="Chapter 10: vim-vi improved"></a>Chapter 10: vim-vi improved</h2><ul>
+<li><code>50%</code>: go to line 50/100*(total line number)</li>
+<li><code>v</code>: visual mode, can select words and put them into buffer<br><code>in visual mode</code><ul>
+<li><code>as</code>: add a sentence to selected area</li>
+<li><code>is</code>: add inner sentence</li>
+<li><code>ap</code>: add paragraph</li>
+<li><code>ip</code>: add inner paragraph</li>
+<li><code>5aw</code>: add 5 words(including punctuations)</li>
+<li><code>5aW</code>: add 5 words(just words)</li>
+</ul>
+</li>
+</ul>
+<h2 id="Chapter-11-Multi-Windows"><a href="#Chapter-11-Multi-Windows" class="headerlink" title="Chapter 11: Multi Windows"></a>Chapter 11: Multi Windows</h2><h3 id="CREATE-NEW-WINDOW"><a href="#CREATE-NEW-WINDOW" class="headerlink" title="CREATE NEW WINDOW"></a>CREATE NEW WINDOW</h3><ul>
+<li>in command line<ul>
+<li><code>vim -o file1 file2</code></li>
+<li><code>vim -o3 file1 file2</code>: open 3 windows in total</li>
+</ul>
+</li>
+<li>in ex mode<ul>
+<li><code>vsplit</code>: split windows vertically</li>
+<li><code>split file2</code>: open file2 in another window horizontally</li>
+<li><code>[n]split file2</code>: display n lines of file2 horizontally. </li>
+<li>`  if no file is specified, display another window in the same content of present window. New window will cut the screen evenly if no [n] is specified. </li>
+<li><code>^WS</code>: same as split </li>
+<li><code>[n]new</code>: new window, creat a new file. </li>
+<li><code>[n]vnew</code>: open a vertical window.<h3 id="MOVE-CURSOR"><a href="#MOVE-CURSOR" class="headerlink" title="MOVE CURSOR"></a>MOVE CURSOR</h3></li>
+</ul>
+</li>
+<li><code>^W+h/j/k/l</code>: move cursor between windows, in the direction of h/j/k/l</li>
+<li><code>+t</code>: move to upper left corner.</li>
+<li><code>+b</code>: move to buttom right corner.</li>
+<li><code>+p</code>: move to last visited window.</li>
+<li><code>+w</code>: move to window below or to the right.(will circle back)</li>
+<li>`MOVE WINDOW<ul>
+<li><code>^W+r</code>: Rotate the window below or to the right.</li>
+<li><code>+R</code>: Rotate the window in the opposite way.</li>
+<li><code>+x</code>: exchange position with ajacent window.</li>
+<li><code>3^W+x</code>: exchange position with 3rd window below it.</li>
+<li><code>+H/J/K/L</code>: move window to the left/bottom/top/right side of the screen.</li>
+<li><code>+T</code>: move window to the new page.</li>
+</ul>
+</li>
+<li>RESIZE WINDOW<ul>
+<li><code>^W+=</code>: justfy windows to the same size.</li>
+<li><code>+-</code>: cut one line of present window.</li>
+<li><code>++</code>: add one line to present windwo.</li>
+<li><code>+&gt;</code>: cut one column.</li>
+<li><code>+&lt;</code>: add one column.</li>
+<li><code>:resize +n</code>: add n lines to present window.</li>
+<li><code>:resize n</code>: set width of present window to n lines.</li>
+<li><code>:vertical resize n</code>: set column number.</li>
+</ul>
+</li>
+<li>NEW TAB<ul>
+<li><code>:tabnew filename</code>: open new file in a new tab.</li>
+<li><code>:tabclose</code>: close present tab.</li>
+<li><code>:tabonly</code>: close all but this tab.</li>
+</ul>
+</li>
+<li>QUIT TAB<ul>
+<li><code>^W+q</code>: If ‘hidden’ is set and this window is the last one, window will be closed while buffer is saved. If ‘hidden’ not set or unsaved changes remain in buffer, no change will be make.</li>
+<li><code>+c</code>: Close present window.</li>
+<li><code>+o</code>: Close all but this.</li>
+<li><code>:only</code>: Close all but this. </li>
+<li><code>:close</code>: Close present window.</li>
+<li><code>:quit</code>: Leave the file while keeping the buffer.</li>
+</ul>
+</li>
+</ul>
+<h2 id="Chapter-12-Vim-Script"><a href="#Chapter-12-Vim-Script" class="headerlink" title="Chapter 12: Vim Script"></a>Chapter 12: Vim Script</h2><ul>
+<li>Edit <code>.vimrc</code>/<code>.gvimrc</code>/<code>_gvimrc</code></li>
+</ul>
+<h2 id="Chapter-13-Other-Usage"><a href="#Chapter-13-Other-Usage" class="headerlink" title="Chapter 13: Other Usage"></a>Chapter 13: Other Usage</h2><ul>
+<li>FOLD<ul>
+<li><code>zA</code>: Recursively switch the folding state. </li>
+<li><code>zC</code>: Recursively close folds.</li>
+<li><code>zD</code>: Recursively delete folds.</li>
+<li><code>zE</code>: Remove all folds.</li>
+<li><code>zf</code>: Fold starts from present cursor position to next position.</li>
+<li><code>[n]zf</code>: Fold n lines.</li>
+<li><code>zM</code>: Set foldlevel to 0.</li>
+<li><code>zN</code>: Set foldenable.</li>
+<li><code>zn</code>: Reset foldenable.</li>
+<li><code>zi</code>: Switch value of foldenable.</li>
+<li><code>zo</code>: Recursively onpen folds.</li>
+<li><code>za</code>: Switch status of a fold.</li>
+<li><code>zd</code>: Delete a fold.</li>
+<li><code>zj</code>: Move cursor to the begining of next fold.</li>
+<li><code>zk</code>: Move cursor to the end of last fold.</li>
+<li><code>zr</code>: Increment value of fold level.</li>
+<li><code>zm</code>: Decrement value of fold level.</li>
+<li><code>:mkview</code>,<code>:loadview</code>: Save all folds.</li>
+</ul>
+</li>
+<li>examples`:<ul>
+<li><code>3zF</code>: Fold 3 lines, including present line.</li>
+<li><code>3zfj</code>: Fold present line and 3 lines below.</li>
+<li>Firstly move cursor to <code>{</code> or <code>}</code>, then type <code>zf%</code>, will fold a code block. because <code>%</code> is used to move between pairs of brackets.</li>
+<li><code>Fold from &#39;FOLD&#39; to &#39;examples&#39;</code>: move cursor to FOLD, type <code>zf/examples[enter]</code>. Everything do to the folded line will change all lines folded.</li>
+<li><code>:set foldmethod=indent</code>: Fold based on indents.</li>
+<li><code>:set foldlevel=0</code>: Only view zero level of fold.</li>
+<li><code>:set foldmethod=syntax</code>: Fold based on syntax.</li>
+</ul>
+</li>
+<li>INDENT<ul>
+<li><code>:set ..indent</code></li>
+<li><code>autoindent</code></li>
+<li><code>cindent</code>: for c language.</li>
+<li><code>smartindent</code></li>
+</ul>
+</li>
+<li>COMPLETE KEY WORDS<ul>
+<li><code>^x</code>: Complete words.</li>
+<li><code>^x^f</code>: Complete filename.</li>
+<li><code>^x^n</code>: Find among candidates. (after that)^n`: Next completion choice. </li>
+<li><code>^p</code>: Previous choice.</li>
+<li><code>^x^l</code>: Complete line.</li>
+<li><code>^x^i</code>: Find keywords in present file and included files.</li>
+<li><code>^x^s</code>: Give a candidate list of available words. Need to switch on spelling check. `:set spell.</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/12/15/hexo/qq/" rel="next" title="hexo/qq">
+                <i class="fa fa-chevron-left"></i> hexo/qq
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/12/15/Linux/2019-08-27-%E7%A3%81%E7%9B%98%E6%A0%BC%E5%BC%8F%E8%AF%B4%E6%98%8E/" rel="prev" title="2019-08-27-磁盘格式说明">
+                2019-08-27-磁盘格式说明 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">tianyilt</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%20%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">52</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">categories</span>
+                
+              </div>
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Vim编辑器"><span class="nav-number">1.</span> <span class="nav-text">Vim编辑器</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Moving-Cursor"><span class="nav-number">1.1.</span> <span class="nav-text">Moving Cursor</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Edit"><span class="nav-number">1.2.</span> <span class="nav-text">Edit</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Scrolling-Screen"><span class="nav-number">1.3.</span> <span class="nav-text">Scrolling Screen</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Open-File"><span class="nav-number">1.4.</span> <span class="nav-text">Open File</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mark"><span class="nav-number">1.5.</span> <span class="nav-text">Mark</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ex-Editor"><span class="nav-number">1.6.</span> <span class="nav-text">ex Editor</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Global-Replacement"><span class="nav-number">1.7.</span> <span class="nav-text">Global Replacement</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Chapter-7-Advanced-Edit"><span class="nav-number">1.8.</span> <span class="nav-text">Chapter 7: Advanced Edit</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Customize-vi"><span class="nav-number">1.8.1.</span> <span class="nav-text">Customize vi</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Unix-Command"><span class="nav-number">1.8.2.</span> <span class="nav-text">Unix Command</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Chapter-10-vim-vi-improved"><span class="nav-number">1.9.</span> <span class="nav-text">Chapter 10: vim-vi improved</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Chapter-11-Multi-Windows"><span class="nav-number">1.10.</span> <span class="nav-text">Chapter 11: Multi Windows</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#CREATE-NEW-WINDOW"><span class="nav-number">1.10.1.</span> <span class="nav-text">CREATE NEW WINDOW</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MOVE-CURSOR"><span class="nav-number">1.10.2.</span> <span class="nav-text">MOVE CURSOR</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Chapter-12-Vim-Script"><span class="nav-number">1.11.</span> <span class="nav-text">Chapter 12: Vim Script</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Chapter-13-Other-Usage"><span class="nav-number">1.12.</span> <span class="nav-text">Chapter 13: Other Usage</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">tianyilt</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="以太网categories: 思科1思乐公司发明, 最流行的LAN技术. 以太网协议定义了网络通信的很多方面:   帧格式 帧大小 时序 编码  以太网协议以太网帧 以太网封装  最大支持100Gb&#x2F;s的带宽, 定义二层协议和一层技术. LLC子层, 获取网络协议数据(IPv4数据包)加入控制信息, 帮助数据包传送到目的节点. 可将其视为网卡的驱动程序.  MAC子层, 由硬件(计算机网卡)实施.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2019-09-28-ch05以太网">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;15&#x2F;%E6%80%9D%E7%A7%911&#x2F;2019-09-28-ch05%E4%BB%A5%E5%A4%AA%E7%BD%91&#x2F;index.html">
+<meta property="og:site_name" content="探究前线">
+<meta property="og:description" content="以太网categories: 思科1思乐公司发明, 最流行的LAN技术. 以太网协议定义了网络通信的很多方面:   帧格式 帧大小 时序 编码  以太网协议以太网帧 以太网封装  最大支持100Gb&#x2F;s的带宽, 定义二层协议和一层技术. LLC子层, 获取网络协议数据(IPv4数据包)加入控制信息, 帮助数据包传送到目的节点. 可将其视为网卡的驱动程序.  MAC子层, 由硬件(计算机网卡)实施.">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;15&#x2F;%E6%80%9D%E7%A7%911&#x2F;2019-09-28-ch05%E4%BB%A5%E5%A4%AA%E7%BD%91&#x2F;2019-09-28-ch5%E4%BB%A5%E5%A4%AA%E7%BD%91&#x2F;1570880643982.png">
+<meta property="article:published_time" content="2019-12-15T04:53:28.397Z">
+<meta property="article:modified_time" content="2019-12-10T00:53:01.397Z">
+<meta property="article:author" content="tianyilt">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;15&#x2F;%E6%80%9D%E7%A7%911&#x2F;2019-09-28-ch05%E4%BB%A5%E5%A4%AA%E7%BD%91&#x2F;2019-09-28-ch5%E4%BB%A5%E5%A4%AA%E7%BD%91&#x2F;1570880643982.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/12/15/思科1/2019-09-28-ch05以太网/"/>
+
+
+
+
+
+  <title>2019-09-28-ch05以太网 | 探究前线</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.1.1"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">探究前线</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">究天人之际,析万物之理</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/15/%E6%80%9D%E7%A7%911/2019-09-28-ch05%E4%BB%A5%E5%A4%AA%E7%BD%91/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="tianyilt">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="探究前线">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">2019-09-28-ch05以太网</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-15T12:53:28+08:00">
+                2019-12-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%80%9D%E7%A7%911/" itemprop="url" rel="index">
+                    <span itemprop="name">思科1</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="以太网"><a href="#以太网" class="headerlink" title="以太网"></a>以太网</h1><p>categories: 思科1<br>思乐公司发明, 最流行的LAN技术. 以太网协议定义了网络通信的很多方面: </p>
+<ul>
+<li>帧格式</li>
+<li>帧大小</li>
+<li>时序</li>
+<li>编码</li>
+</ul>
+<h2 id="以太网协议"><a href="#以太网协议" class="headerlink" title="以太网协议"></a>以太网协议</h2><h3 id="以太网帧"><a href="#以太网帧" class="headerlink" title="以太网帧"></a>以太网帧</h3><ul>
+<li><p>以太网封装</p>
+<ul>
+<li>最大支持100Gb/s的带宽, 定义二层协议和一层技术.</li>
+<li>LLC子层, 获取网络协议数据(IPv4数据包)加入控制信息, 帮助数据包传送到目的节点. 可将其视为网卡的驱动程序. </li>
+<li>MAC子层, 由硬件(计算机网卡)实施. </li>
+</ul>
+</li>
+<li><p>MAC子层</p>
+<ul>
+<li><p>职责为:</p>
+<ul>
+<li>数据封装</li>
+<li>介质访问控制</li>
+</ul>
+</li>
+<li><p>数据封装: 发送前-组装帧, 收到帧-解析帧. 构建帧时向网络层PDU添加帧头帧尾</p>
+<ul>
+<li>帧定界: 标识组成帧的一组位,  这些定界位会对发送节点与接收节点进行同步.</li>
+<li>编制:  封装过程包含第 3 层 PDU, 还提供数据链路层编址. </li>
+<li>错误检测: 由帧尾负责</li>
+</ul>
+</li>
+<li><p>介质访问控制: 把帧放入介质中, 或从介质中移除帧. 控制对介质的访问. 直接与物理层沟通. </p>
+</li>
+<li><p>以太网帧结构</p>
+<p><img src="2019-09-28-ch5%E4%BB%A5%E5%A4%AA%E7%BD%91/1570880643982.png" alt="1570880643982"></p>
+<p>ethernet II 是TCP/IP网络中使用的以太网帧格式.</p>
+</li>
+</ul>
+</li>
+<li><p>以太网帧字段</p>
+<ul>
+<li>帧字段构成<ul>
+<li>前导码: 7个字节+起始帧分界符(SFD)1个字节=8个字节. 通知对方准备接收帧, 并同步发送和接收设备.</li>
+<li>目的MAC地址: 6个字节</li>
+<li>源MAC地址: 6个字节</li>
+<li>EtherType: 2个字节, 以太网帧的上层协议(IPv4, IPv6, ARP等)</li>
+<li>数据字段, 46-1500个字节, 三层PDU. </li>
+<li>FCS: 帧校验序列, 4个字节, 使用冗余循环检验(CRC), 发送帧包含CRC结果, 接收方计算CRC, 两者一致说明没有错误. </li>
+</ul>
+</li>
+<li>最小64字节, 最大1518字节, 否则被丢弃.</li>
+</ul>
+</li>
+</ul>
+<h3 id="MAC地址"><a href="#MAC地址" class="headerlink" title="MAC地址"></a>MAC地址</h3><ul>
+<li>48位, 12个16进制数, 每块网卡都有一个MAC地址. 刻录在网卡的ROM中, 不可更改. </li>
+<li>前三个字节是厂商编码: OUI, 组织唯一标识符, 接着三个字节由厂商分配. 思科OUI是00-60-2F</li>
+<li>单播MAC地址: 单播通讯必须指定对方设备的MAC地址, 只处理符合自己MAC地址的信息. </li>
+<li>多播: MAC地址为FF-FF-FF-FF-FF-FF</li>
+<li>IPv4 组播地址的范围为 224.0.0.0 到 239.255.255.255,  IPv6 组播地址的范围以 FF00::/8 开头.  与 IPv4 组播地址关联的组播 MAC 地址是以 01-00-5E 开头,  其余部分通过将 IP 组播组地址的低 23 位换算成 6 个十六进制字符而创建. IPv6组播地址以33-33开头. </li>
+<li>使用短横<code>-</code>, 冒号<code>:</code>或句点<code>.</code>来分割</li>
+</ul>
+<h2 id="交换机"><a href="#交换机" class="headerlink" title="交换机"></a>交换机</h2><ul>
+<li>二层设备, 只根据MAC地址做转发. </li>
+<li>MAC地址表, 可编制内存(CAM)表, 在接受到端口1的信息, 包括源MAC和目标MAC, CAM记录这个端口对应的MAC地址, 然后给除了来源以外的端口群发信息(flood out, 泛洪), 4端口收到信息然后回复, CAM记录4端口对应的MAC地址. <ul>
+<li>一个端口可以对应多个MAC地址, 一个MAC地址只能出现在一个端口.</li>
+</ul>
+</li>
+</ul>
+<h3 id="交换机转发"><a href="#交换机转发" class="headerlink" title="交换机转发"></a>交换机转发</h3><ul>
+<li><p>存储转发: 存储整个帧道缓冲区, CRC校验完毕, 转发</p>
+</li>
+<li><p>直通: 收到数据包立刻转发. 不做错误检查. </p>
+<ul>
+<li>快速转发交换: 读取到MAC立刻转发. 延时指 收到第一个位到传出第一个位之间的时间差 .</li>
+<li>免分片交换, 交换机检验数据前64个字节, 没有错误之后, 全部转发.</li>
+</ul>
+</li>
+<li><p>内存缓冲: 转发帧之前存储帧, 当端口拥塞是, 可以一直存储帧到可以传送该帧.</p>
+<ul>
+<li>基于端口的内存缓冲, 缓存到传入-传出端口的队列中, 只有前面的帧都成功传送之后才会传送. </li>
+<li>共享内存缓冲, 一个公共的缓冲区,  这可以使更多带宽专用于特定端口, 例如连接到服务器的端口. </li>
+</ul>
+</li>
+<li><p>双工和速度设置:  交换机端口和连接的设备的双工设置和带宽设置必须匹配. 自动协调功能会自动选择高性能模式</p>
+</li>
+<li><p>Auto-MDIX: 自动介质相关接口交叉, 不用分别直通或者交叉电缆. 默认启用.</p>
+</li>
+</ul>
+<h2 id="地址解析协议"><a href="#地址解析协议" class="headerlink" title="地址解析协议"></a>地址解析协议</h2><h3 id="MAC和IP"><a href="#MAC和IP" class="headerlink" title="MAC和IP"></a>MAC和IP</h3><ul>
+<li><p>MAC地址, 物理地址. 以太网网卡的通信</p>
+</li>
+<li><p>IP地址, 逻辑地址.</p>
+</li>
+<li><p>前往远程网络:</p>
+<ul>
+<li>目的MAC地址位默认网关的地址</li>
+<li>路由器收到帧, 根据IPv4的地址, 确定转发路径</li>
+<li>负责转发的路由器收到帧, 根据IP地址确定下一跳的设备, 目的MAC地址修改为下一跳的MAC地址.</li>
+</ul>
+</li>
+</ul>
+<h3 id="ARP"><a href="#ARP" class="headerlink" title="ARP"></a>ARP</h3><ul>
+<li><p>IP和MAC的映射</p>
+</li>
+<li><p>ARP请求包括目标IP, 源MAC. 使用<code>arp -a</code>(windows)来查看MAC地址表. 两分钟没有使用的MAC地址会被删掉. 静态MAC地址是有特殊用途的, 不会被删除. </p>
+</li>
+<li><p>如果数据包的目的 IPv4 地址与源 IPv4 地址处于同一个网络, 则设备会在 ARP 表中搜索目的 IPv4 地址.</p>
+</li>
+</ul>
+<ul>
+<li>如果目的 IPv4 地址与源 IPv4 地址不在同一个网络中, 则设备会在 ARP 表中搜索默认网关的 IPv4 地址.</li>
+<li>ARP表的每一行绑定一个IPv4和MAC地址, 如果没有映射, 就发出ARP请求.</li>
+<li></li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/12/15/%E6%80%9D%E7%A7%911/2019-09-28-ch04%E7%BD%91%E7%BB%9C%E8%AE%BF%E9%97%AE/" rel="next" title="2019-09-28-ch04网络访问">
+                <i class="fa fa-chevron-left"></i> 2019-09-28-ch04网络访问
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/12/15/%E6%80%9D%E7%A7%911/2019-10-13-ch06%E7%BD%91%E7%BB%9C%E5%B1%82/" rel="prev" title="2019-10-13-ch06网络层">
+                2019-10-13-ch06网络层 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">tianyilt</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%20%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">52</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">categories</span>
+                
+              </div>
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#以太网"><span class="nav-number">1.</span> <span class="nav-text">以太网</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#以太网协议"><span class="nav-number">1.1.</span> <span class="nav-text">以太网协议</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#以太网帧"><span class="nav-number">1.1.1.</span> <span class="nav-text">以太网帧</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MAC地址"><span class="nav-number">1.1.2.</span> <span class="nav-text">MAC地址</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#交换机"><span class="nav-number">1.2.</span> <span class="nav-text">交换机</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#交换机转发"><span class="nav-number">1.2.1.</span> <span class="nav-text">交换机转发</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#地址解析协议"><span class="nav-number">1.3.</span> <span class="nav-text">地址解析协议</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#MAC和IP"><span class="nav-number">1.3.1.</span> <span class="nav-text">MAC和IP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ARP"><span class="nav-number">1.3.2.</span> <span class="nav-text">ARP</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">tianyilt</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

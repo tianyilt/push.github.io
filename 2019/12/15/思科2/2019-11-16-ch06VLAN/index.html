@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="VLANcategories: 思科2 VLAN分段为何使用VLAN 通常, 一个交换机是一个网段, 多个交换机插在路由器上 访问其他网段必须通过路由器. 路由器可以隔离广播, 因此广播无法到达其他网段. 因此一个交换机称为一个广播域. 但是有的时候, 我的网段有数十个, 但是路由器的接口却没有这么多, 或者我想在两台交换机上灵活分配网段,传统的方式就显得不足.  VLAN就是用来跨交换机构建局域">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2019-11-16-ch06VLAN">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;15&#x2F;%E6%80%9D%E7%A7%912&#x2F;2019-11-16-ch06VLAN&#x2F;index.html">
+<meta property="og:site_name" content="探究前线">
+<meta property="og:description" content="VLANcategories: 思科2 VLAN分段为何使用VLAN 通常, 一个交换机是一个网段, 多个交换机插在路由器上 访问其他网段必须通过路由器. 路由器可以隔离广播, 因此广播无法到达其他网段. 因此一个交换机称为一个广播域. 但是有的时候, 我的网段有数十个, 但是路由器的接口却没有这么多, 或者我想在两台交换机上灵活分配网段,传统的方式就显得不足.  VLAN就是用来跨交换机构建局域">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="c:%5CUsers%5Clj%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20191116200256396.png">
+<meta property="article:published_time" content="2019-12-15T04:53:28.057Z">
+<meta property="article:modified_time" content="2019-12-10T00:53:01.469Z">
+<meta property="article:author" content="tianyilt">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:%5CUsers%5Clj%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20191116200256396.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/12/15/思科2/2019-11-16-ch06VLAN/"/>
+
+
+
+
+
+  <title>2019-11-16-ch06VLAN | 探究前线</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.1.1"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">探究前线</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">究天人之际,析万物之理</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/15/%E6%80%9D%E7%A7%912/2019-11-16-ch06VLAN/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="tianyilt">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="探究前线">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">2019-11-16-ch06VLAN</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-15T12:53:28+08:00">
+                2019-12-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%80%9D%E7%A7%912/" itemprop="url" rel="index">
+                    <span itemprop="name">思科2</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="VLAN"><a href="#VLAN" class="headerlink" title="VLAN"></a>VLAN</h1><p>categories: 思科2</p>
+<h2 id="VLAN分段"><a href="#VLAN分段" class="headerlink" title="VLAN分段"></a>VLAN分段</h2><h3 id="为何使用VLAN"><a href="#为何使用VLAN" class="headerlink" title="为何使用VLAN"></a>为何使用VLAN</h3><ul>
+<li>通常, 一个交换机是一个网段, 多个交换机插在路由器上</li>
+<li>访问其他网段必须通过路由器. 路由器可以隔离广播, 因此广播无法到达其他网段.</li>
+<li>因此一个交换机称为一个广播域.</li>
+<li>但是有的时候, 我的网段有<strong>数十个</strong>, 但是路由器的接口却没有这么多, 或者我想在两台交换机上<strong>灵活分配</strong>网段,传统的方式就显得不足.</li>
+</ul>
+<p><strong>VLAN就是用来跨交换机构建局域网</strong>, 优势有: </p>
+<ul>
+<li>安全, 隔离用户</li>
+<li>降低成本, 提高性能, 减小广播域</li>
+<li>提高IT员工效率, 相似网络需求的员工可以共享一个VLAN</li>
+<li>简化项目管理, 无需为接线烦恼</li>
+</ul>
+<h4 id="VLAN类型"><a href="#VLAN类型" class="headerlink" title="VLAN类型"></a>VLAN类型</h4><ul>
+<li>数据VLAN, 传输流量, 一般将语音流量, 管理流量, 数据流量分隔在不同VLAN上.</li>
+<li>默认VLAN, 交换机端口默认属于VLAN 1.</li>
+<li>本征VLAN, 链路部分收到了没有VLAN标签的数据, 就会加上本征VLAN标签.</li>
+<li>管理VLAN, 访问交换机管理功能. 默认是VLAN 1.</li>
+</ul>
+<h3 id="多交换环境中的VLAN"><a href="#多交换环境中的VLAN" class="headerlink" title="多交换环境中的VLAN"></a>多交换环境中的VLAN</h3><h4 id="VLAN中继"><a href="#VLAN中继" class="headerlink" title="VLAN中继"></a>VLAN中继</h4><ul>
+<li>两个交换机个有一些VLAN</li>
+<li>把两个交换机相同的VLAN连接起来的链路叫做中继, 中继网络又称为VLAN TRUNK, 像树干一样链接整个网络. 遵循IEEE 802.1Q协议</li>
+<li>广播域是同一个VLAN, 即使跨越了多个交换机.</li>
+</ul>
+<h4 id="标记以太网帧识别VLAN"><a href="#标记以太网帧识别VLAN" class="headerlink" title="标记以太网帧识别VLAN"></a>标记以太网帧识别VLAN</h4><p><img src="C:%5CUsers%5Clj%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20191116200256396.png" alt=""></p>
+<ul>
+<li><p><strong>类型</strong> - 2 字节值，称为标记协议 ID (TPID) 值。对于以太网，它设置为十六进制 0x8100。   </p>
+</li>
+<li><p><strong>用户优先级</strong> - 3 位值，支持级别或服务实施。       </p>
+</li>
+<li><p><strong>规范格式标识符 (CFI)</strong> - 1 位标识符，便于在以太网链路上传输令牌环帧。</p>
+</li>
+<li><p><strong>VLAN ID (VID)</strong> - 12 位 VLAN 标识号，最多支持 4096 个 VLAN ID。</p>
+</li>
+</ul>
+<h4 id="本征VLAN"><a href="#本征VLAN" class="headerlink" title="本征VLAN"></a>本征VLAN</h4><ul>
+<li>接入TRUNK的无VLAN设备会被分配本征VLAN</li>
+<li>无VLAN设备的数据会被转发到本征VLAN中</li>
+</ul>
+<h2 id="VLAN实施情况"><a href="#VLAN实施情况" class="headerlink" title="VLAN实施情况"></a>VLAN实施情况</h2><h3 id="VLAN分配"><a href="#VLAN分配" class="headerlink" title="VLAN分配"></a>VLAN分配</h3><h4 id="VLAN范围"><a href="#VLAN范围" class="headerlink" title="VLAN范围"></a>VLAN范围</h4><ul>
+<li>1-1005<ul>
+<li>普通VLAN</li>
+<li>端口1, 1002-1005是自动创建的, 不可删除. 1002-1005是留给令牌和光纤分布式数据接口 (FDDI) VLAN 的.</li>
+<li>配置文件存放在flash中, 名为vlan.dat</li>
+<li>VLAN中继协议管理普通VLAN</li>
+</ul>
+</li>
+<li>1006-4096<ul>
+<li>扩展VLAN</li>
+<li>保存在running config里</li>
+</ul>
+</li>
+</ul>
+<h3 id="创建VLAN"><a href="#创建VLAN" class="headerlink" title="创建VLAN"></a>创建VLAN</h3><p>创建一个VLAN</p>
+<pre><code>conf t
+vlan 100
+name test
+end</code></pre><p>为VLAN分配端口</p>
+<pre><code>conf t
+inter f0/0
+switchport mode access // 设置为接入端口
+switchport access vlan 10
+end</code></pre><p>为多个端口分配vlan</p>
+<pre><code>inter range f0/1-15
+switchport mode access
+switchport access vlan 20 
+mls qos trust cos // 信任语音流量
+switchport access vlan 150
+end</code></pre><p><strong>通常一个端口只能分给一个vlan, 但是思科交换机可以为一个端口分给数据vlan和语音vlan</strong>. </p>
+<p>给端口分配两个vlan</p>
+<pre><code>inter f0/1
+switchport mode access
+switchport access vlan 20 
+mls qos trust cos // 信任语音流量
+switchport access vlan 150
+end</code></pre><p>查看vlan </p>
+<pre><code>show vlan name student
+show vlan summary
+show inter vlan 20
+show inter f0/18 switchport</code></pre><p>删除端口的vlan</p>
+<pre><code>inter f0/1
+no switchport access vlan
+end
+show vlan brief // 查看vlan信息, 其实查看的是vlan.dat文件
+show inter f0/18 switchport // 查看端口信息
+</code></pre><p>删除vlan</p>
+<pre><code>(config)# no vlan 20</code></pre><p>将交换机恢复为出厂设置</p>
+<pre><code>erase startup-config
+delete vlan.dat</code></pre><h3 id="VLAN中继-1"><a href="#VLAN中继-1" class="headerlink" title="VLAN中继"></a>VLAN中继</h3><ul>
+<li><p>配置中继端口</p>
+<pre><code>inter f0/19
+switchport mode trunk
+switchport trunk native vlan 99
+switchport trunk allowed vlan 20,18
+end</code></pre></li>
+<li><p>重置端口</p>
+<pre><code>inter f0/19
+switchport mode trunk
+no switchport trunk allowed vlan
+switchport trunk native vlan 
+end</code></pre></li>
+</ul>
+<h3 id="vlan故障"><a href="#vlan故障" class="headerlink" title="vlan故障"></a>vlan故障</h3><ul>
+<li><p>vlan中子网不同将无法通信</p>
+</li>
+<li><p>vlan配置错误, 检查</p>
+<ul>
+<li>vlan正确了吗</li>
+<li>vlan是否已被删除</li>
+</ul>
+</li>
+<li><p>中继错误</p>
+<ul>
+<li>本征vlan是否一致</li>
+<li>是否开启了trunk链路</li>
+<li>vlan是否被允许通过链路</li>
+</ul>
+</li>
+</ul>
+<h2 id="vlan间路由"><a href="#vlan间路由" class="headerlink" title="vlan间路由"></a>vlan间路由</h2><h3 id="传统vlan间路由"><a href="#传统vlan间路由" class="headerlink" title="传统vlan间路由"></a>传统vlan间路由</h3><ul>
+<li>每一个vlan都要求接入路由器的一个接口</li>
+<li>和不同交换机接入路由器无异</li>
+</ul>
+<h3 id="单臂路由"><a href="#单臂路由" class="headerlink" title="单臂路由"></a>单臂路由</h3><ul>
+<li>只需要接入路由器一个接口</li>
+<li>在路由器上也配置支持vlan</li>
+</ul>
+<h2 id="配置单臂路由"><a href="#配置单臂路由" class="headerlink" title="配置单臂路由"></a>配置单臂路由</h2><ul>
+<li><p>在路由器上</p>
+<pre><code>inter g0/0.10 // 为g0/0创建子接口.10(可以任意, 一般与vlan相等), 在这个子接口上配置vlan 10
+encapsulation dot1q 10 // 在这个端口中删除vlan 10
+ip addr 172.17.10.1 255.255.255.0
+inter g0/0.30
+encapsulation dot1q 30 // 在这个端口中删除vlan 30
+ip addr 172.17.30.1 255.255.255.0
+exit
+inter g0/0
+no shut //开启所有子接口</code></pre></li>
+<li><p>验证vlan</p>
+<pre><code>show vlan
+show ip route</code></pre></li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/12/15/%E6%80%9D%E7%A7%912/2019-11-10-ch04%E4%BA%A4%E6%8D%A2%E7%BD%91%E7%BB%9C/" rel="next" title="2019-11-10-ch04交换网络">
+                <i class="fa fa-chevron-left"></i> 2019-11-10-ch04交换网络
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/12/15/%E6%80%9D%E7%A7%912/2019-11-18-ch07%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E5%88%97%E8%A1%A8/" rel="prev" title="2019-11-18-ch07访问控制列表">
+                2019-11-18-ch07访问控制列表 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">tianyilt</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%20%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">52</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">categories</span>
+                
+              </div>
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#VLAN"><span class="nav-number">1.</span> <span class="nav-text">VLAN</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#VLAN分段"><span class="nav-number">1.1.</span> <span class="nav-text">VLAN分段</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#为何使用VLAN"><span class="nav-number">1.1.1.</span> <span class="nav-text">为何使用VLAN</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#VLAN类型"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">VLAN类型</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多交换环境中的VLAN"><span class="nav-number">1.1.2.</span> <span class="nav-text">多交换环境中的VLAN</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#VLAN中继"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">VLAN中继</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#标记以太网帧识别VLAN"><span class="nav-number">1.1.2.2.</span> <span class="nav-text">标记以太网帧识别VLAN</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#本征VLAN"><span class="nav-number">1.1.2.3.</span> <span class="nav-text">本征VLAN</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#VLAN实施情况"><span class="nav-number">1.2.</span> <span class="nav-text">VLAN实施情况</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#VLAN分配"><span class="nav-number">1.2.1.</span> <span class="nav-text">VLAN分配</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#VLAN范围"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">VLAN范围</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建VLAN"><span class="nav-number">1.2.2.</span> <span class="nav-text">创建VLAN</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#VLAN中继-1"><span class="nav-number">1.2.3.</span> <span class="nav-text">VLAN中继</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vlan故障"><span class="nav-number">1.2.4.</span> <span class="nav-text">vlan故障</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vlan间路由"><span class="nav-number">1.3.</span> <span class="nav-text">vlan间路由</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#传统vlan间路由"><span class="nav-number">1.3.1.</span> <span class="nav-text">传统vlan间路由</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#单臂路由"><span class="nav-number">1.3.2.</span> <span class="nav-text">单臂路由</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置单臂路由"><span class="nav-number">1.4.</span> <span class="nav-text">配置单臂路由</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">tianyilt</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
