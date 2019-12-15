@@ -647,7 +647,7 @@ Copy running-config startup-config</code></pre>
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tianyilt.github.io/push.github.io/2019/12/15/%E6%80%9D%E7%A7%911/2019-11-03-ch11%E6%9E%84%E5%BB%BA%E5%B0%8F%E5%9E%8B%E7%BD%91%E7%BB%9C/">
+    <link itemprop="mainEntityOfPage" href="http://tianyilt.github.io/push.github.io/2019/12/15/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/%E8%BF%AD%E4%BB%A3%E6%B3%95%E6%94%B6%E6%95%9B%E6%80%A7%E5%AE%9E%E9%AA%8C/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="tianyilt">
@@ -666,7 +666,7 @@ Copy running-config startup-config</code></pre>
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/push.github.io/2019/12/15/%E6%80%9D%E7%A7%911/2019-11-03-ch11%E6%9E%84%E5%BB%BA%E5%B0%8F%E5%9E%8B%E7%BD%91%E7%BB%9C/" itemprop="url">2019-11-03-ch11构建小型网络</a></h1>
+                <a class="post-title-link" href="/push.github.io/2019/12/15/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/%E8%BF%AD%E4%BB%A3%E6%B3%95%E6%94%B6%E6%95%9B%E6%80%A7%E5%AE%9E%E9%AA%8C/" itemprop="url">未命名</a></h1>
         
 
         <div class="post-meta">
@@ -701,8 +701,8 @@ Copy running-config startup-config</code></pre>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/push.github.io/categories/%E6%80%9D%E7%A7%911/" itemprop="url" rel="index">
-                    <span itemprop="name">思科1</span>
+                  <a href="/push.github.io/categories/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/" itemprop="url" rel="index">
+                    <span itemprop="name">数值分析</span>
                   </a>
                 </span>
 
@@ -740,92 +740,7 @@ Copy running-config startup-config</code></pre>
       
         
           
-            <h1 id="构建小型网络"><a href="#构建小型网络" class="headerlink" title="构建小型网络"></a>构建小型网络</h1><p>categories: 思科1</p>
-<h2 id="网络设计"><a href="#网络设计" class="headerlink" title="网络设计"></a>网络设计</h2><h3 id="小型网络中的设备"><a href="#小型网络中的设备" class="headerlink" title="小型网络中的设备"></a>小型网络中的设备</h3><h4 id="设备选择"><a href="#设备选择" class="headerlink" title="设备选择"></a>设备选择</h4><ul>
-<li>成本: 冗余量, 性能要求，布线费用， 安全技术</li>
-<li>端口: 前瞻性</li>
-<li>扩展性: 模块化设备便于扩展</li>
-<li>操作系统, 网络设备的功能</li>
-</ul>
-<h4 id="冗余"><a href="#冗余" class="headerlink" title="冗余"></a>冗余</h4><p>高可靠性. </p>
-<p>例如: 多个默认网关提供单个互联网出口点</p>
-<h4 id="扩展网络要考虑的要素"><a href="#扩展网络要考虑的要素" class="headerlink" title="扩展网络要考虑的要素"></a>扩展网络要考虑的要素</h4><ul>
-<li><p>网络文档: 物理拓扑和逻辑拓扑</p>
-</li>
-<li><p>设备清单</p>
-</li>
-<li><p>预算</p>
-</li>
-<li><p>流量分析</p>
-<p>捕获高峰期的流量, 了解流量类型</p>
-<p>争夺不同网段捕获流量</p>
-</li>
-</ul>
-<h2 id="网络安全"><a href="#网络安全" class="headerlink" title="网络安全"></a>网络安全</h2><h3 id="威胁类型"><a href="#威胁类型" class="headerlink" title="威胁类型"></a>威胁类型</h3><ul>
-<li>数据丢失</li>
-<li>DoS</li>
-<li>身份盗窃</li>
-<li>信息盗窃</li>
-</ul>
-<h3 id="物理安全"><a href="#物理安全" class="headerlink" title="物理安全"></a>物理安全</h3><ul>
-<li>硬件威胁: 物理破坏</li>
-<li>环境威胁: 极端环境造成破坏</li>
-<li>电气威胁: 供电问题</li>
-<li>维护威胁: 静电处理缺失/备用件缺失/布线混乱</li>
-</ul>
-<h3 id="漏洞类型"><a href="#漏洞类型" class="headerlink" title="漏洞类型"></a>漏洞类型</h3><ul>
-<li>技术漏洞</li>
-<li>配置缺陷</li>
-<li>管理漏洞</li>
-</ul>
-<h3 id="恶意软件"><a href="#恶意软件" class="headerlink" title="恶意软件"></a>恶意软件</h3><ul>
-<li>病毒: 把自身的副本插入另一个程序, 借助其传播. 宿主程序被执行的时候也会执行. 破坏系统.</li>
-<li>蠕虫: 独立软件, 利用网络自主传播</li>
-<li>特洛伊木马: 看起来合法的有害软件. 只通过用户交互传播.</li>
-</ul>
-<h3 id="攻击手段"><a href="#攻击手段" class="headerlink" title="攻击手段"></a>攻击手段</h3><ul>
-<li>侦察攻击: 查询攻击对象在互联网上的信息, 测试IP地址段, 端口扫描, 数据包嗅探</li>
-<li>访问攻击: 密码攻击, 信任利用(通过系统A信任的系统B攻击系统A), 端口重定向, 中间人</li>
-<li>拒绝服务攻击: 耗尽系统资源, 阻止系统服务<ul>
-<li>死亡之ping, 异常的ping数据包</li>
-<li>syn泛洪: 发送大量的syn, 让服务器等待完成三次握手, 正常用户不可访问</li>
-<li>DDoS, 僵尸计算机攻击受害主机</li>
-<li>Smurf, 发送大量ICMP淹没到达受害主机的线路</li>
-</ul>
-</li>
-</ul>
-<h3 id="防范"><a href="#防范" class="headerlink" title="防范"></a>防范</h3><ul>
-<li><p>更新系统</p>
-</li>
-<li><p>身份验证, 授权, 记账(记录行为)</p>
-</li>
-<li><p>防火墙</p>
-<ul>
-<li>数据包过滤: 根据IP或MAC允许或阻止访问</li>
-<li>应用程序过滤: 根据端口号允许或阻止</li>
-<li>URL过滤: 根据URL</li>
-<li>状态包侦测(SPI):  传入数据包必须是对内部主机请求的合法相应, 否则数据包会被拦截</li>
-</ul>
-</li>
-</ul>
-<h3 id="实践"><a href="#实践" class="headerlink" title="实践"></a>实践</h3><ul>
-<li><p>强密码</p>
-<pre><code>(config)# security passwords min-length // 限制长度
-(config)# login block-for 120 attempts 3 within 60 // 60s内3次失败将锁定120s</code></pre></li>
-<li><p>SSH</p>
-<pre><code>// 确保路由器有唯一主机名
-(config)# ip domain-name //配置IP域名
-(config)# crypto key generate rsa general-keys //生成密钥
-(config)# username // 创建数据库用户名条目
-(config)# line vty 0 4
-(config-line)# login local
-# transport input ssh
-exit</code></pre><p><img src="2019-11-03-ch11%E6%9E%84%E5%BB%BA%E5%B0%8F%E5%9E%8B%E7%BD%91%E7%BB%9C/1572792063003.png" alt="1572792063003"></p>
-</li>
-</ul>
-<h3 id="基础网络性能"><a href="#基础网络性能" class="headerlink" title="基础网络性能"></a>基础网络性能</h3><pre><code>arp -d * // 清除arp缓存(windows)
-show cdp neighbours // 发现cdp邻居的信息
-</code></pre>
+            
           
         
       
@@ -873,7 +788,7 @@ show cdp neighbours // 发现cdp邻居的信息
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tianyilt.github.io/push.github.io/2019/12/15/%E6%80%9D%E7%A7%911/2019-11-03-ch10%E5%BA%94%E7%94%A8%E5%B1%82/">
+    <link itemprop="mainEntityOfPage" href="http://tianyilt.github.io/push.github.io/2019/12/15/%E9%85%8D%E7%8E%AF%E5%A2%83_%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/2019-11-24-%E8%B0%B7%E6%AD%8C%E4%BA%91T4%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="tianyilt">
@@ -892,7 +807,7 @@ show cdp neighbours // 发现cdp邻居的信息
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/push.github.io/2019/12/15/%E6%80%9D%E7%A7%911/2019-11-03-ch10%E5%BA%94%E7%94%A8%E5%B1%82/" itemprop="url">2019-11-03-ch10应用层</a></h1>
+                <a class="post-title-link" href="/push.github.io/2019/12/15/%E9%85%8D%E7%8E%AF%E5%A2%83_%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/2019-11-24-%E8%B0%B7%E6%AD%8C%E4%BA%91T4%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/" itemprop="url">2019-11-24-谷歌云T4服务器配置</a></h1>
         
 
         <div class="post-meta">
@@ -927,8 +842,8 @@ show cdp neighbours // 发现cdp邻居的信息
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/push.github.io/categories/%E6%80%9D%E7%A7%911/" itemprop="url" rel="index">
-                    <span itemprop="name">思科1</span>
+                  <a href="/push.github.io/categories/%E9%85%8D%E7%8E%AF%E5%A2%83-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index">
+                    <span itemprop="name">配环境_深度学习</span>
                   </a>
                 </span>
 
@@ -966,69 +881,177 @@ show cdp neighbours // 发现cdp邻居的信息
       
         
           
-            <h1 id="应用层"><a href="#应用层" class="headerlink" title="应用层"></a>应用层</h1><p>categories: 思科1</p>
-<h2 id="应用层协议"><a href="#应用层协议" class="headerlink" title="应用层协议"></a>应用层协议</h2><h3 id="应用层-表示层-会话层"><a href="#应用层-表示层-会话层" class="headerlink" title="应用层, 表示层, 会话层"></a>应用层, 表示层, 会话层</h3><h4 id="应用层-1"><a href="#应用层-1" class="headerlink" title="应用层"></a>应用层</h4><p>最接近用户. OSI的应用层, 表示层, 会话层对应了TCP/IP的应用层</p>
-<h4 id="表示层和会话层"><a href="#表示层和会话层" class="headerlink" title="表示层和会话层"></a>表示层和会话层</h4><p>表示层的功能</p>
-<ul>
-<li>数据格式化</li>
-<li>数据压缩</li>
-<li>加密数据</li>
+            <p>#2019-11-24-谷歌云T4服务器配置<br>categories: 配置深度学习环境大作战<br>辣鸡神经网络,本地挂个4天都跑不完,8G显存都能爆掉,我选择tesla T4服务器</p>
+<h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><ul>
+<li>科学上网</li>
+<li>visa卡注册的账户</li>
+<li>已经提升过权限,不再是免费用户</li>
+<li>有xshell与xftp更加方便地进行图形化操作</li>
 </ul>
-<p>包括了各种文件标准, MPEG, GIF, JPG, PNG等</p>
-<p>会话层的功能</p>
-<ul>
-<li>创建和维持会话</li>
-<li>重启会话</li>
-</ul>
-<h4 id="TCP-IP应用层"><a href="#TCP-IP应用层" class="headerlink" title="TCP/IP应用层"></a>TCP/IP应用层</h4><p> 指定了许多常见 Internet 通信功能必需的格式和控制信息 </p>
-<p><img src="2019-11-03-ch10%E5%BA%94%E7%94%A8%E5%B1%82/1572788542262.png" alt="1572788542262"></p>
-<h3 id="交互"><a href="#交互" class="headerlink" title="交互"></a>交互</h3><h4 id="客户端-服务器模式"><a href="#客户端-服务器模式" class="headerlink" title="客户端-服务器模式"></a>客户端-服务器模式</h4><p>客户端请求信息, 服务器想要请求</p>
-<h4 id="对等网络"><a href="#对等网络" class="headerlink" title="对等网络"></a>对等网络</h4><p>P2P, 角色在客户端和服务器之间互换</p>
-<h4 id="对等应用程序"><a href="#对等应用程序" class="headerlink" title="对等应用程序"></a>对等应用程序</h4><p>同时充当客户端和服务器的应用程序</p>
-<p>例如即使消息</p>
-<h2 id="常用应用层协议"><a href="#常用应用层协议" class="headerlink" title="常用应用层协议"></a>常用应用层协议</h2><h3 id="web和email"><a href="#web和email" class="headerlink" title="web和email"></a>web和email</h3><h4 id="HTTP和HTTPs"><a href="#HTTP和HTTPs" class="headerlink" title="HTTP和HTTPs"></a>HTTP和HTTPs</h4><p>三种消息类型为get/post/put</p>
-<p>https的数据流通过ssl加密</p>
-<h4 id="电子邮件"><a href="#电子邮件" class="headerlink" title="电子邮件"></a>电子邮件</h4><ul>
-<li><p>SMTP</p>
-<p>邮件有报头和正文, 公认端口25, 客户端把邮件给服务器, 服务器转发邮件. 目标不可达时会尝试重发, 一段时间无法重发会将邮件退回.</p>
-</li>
-<li><p>POP</p>
-<p>检索邮件, 邮件下载到客户端后就从服务器删除. 端口110</p>
-</li>
-<li><p>IMAP</p>
-<p>原始邮件会存在服务器上. 有文件结构, 便于管理. 可以手动删除</p>
-</li>
-</ul>
-<h3 id="IP编址"><a href="#IP编址" class="headerlink" title="IP编址"></a>IP编址</h3><ul>
-<li><p>DNS层级</p>
-<ul>
-<li><a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a></li>
-<li>域名越往上, 层级越高</li>
-<li>查询IP, 先查.com, 再查baidu.com, 最后查<a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a></li>
-</ul>
-</li>
-<li><p>nslookup, 手动查询dns服务器IP地址</p>
-</li>
-<li><p>动态主机配置协议DHCP, 可以减少配置工作量, 减少错误</p>
-<ul>
-<li>通过广播请求DHCP服务器响应</li>
-<li>服务器回复, 提供IPv4地址, 子网掩码, DNS服务器的IPv4地址和默认网关, 还有地址的使用期限.</li>
-</ul>
-</li>
-</ul>
-<h3 id="文件共享"><a href="#文件共享" class="headerlink" title="文件共享"></a>文件共享</h3><h4 id="服务器消息块SMB"><a href="#服务器消息块SMB" class="headerlink" title="服务器消息块SMB"></a>服务器消息块SMB</h4><ul>
-<li>功能<ul>
-<li>启动, 身份验证, 终止会话</li>
-<li>控制文件和打印机访问(Windows文件共享, 连接打印机等)</li>
-<li>允许应用程序向任何设备发消息</li>
-</ul>
-</li>
-</ul>
-<h4 id="文件传输协议FTP"><a href="#文件传输协议FTP" class="headerlink" title="文件传输协议FTP"></a>文件传输协议FTP</h4><ul>
-<li>客户端与服务器用21端口建立一个用于控制传输的会话</li>
-<li>用20端口传输数据</li>
-<li>可以上传也可以下载</li>
-</ul>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p>建立前查看gpu在哪里有 <a href="https://cloud.google.com/compute/docs/gpus/" target="_blank" rel="noopener">https://cloud.google.com/compute/docs/gpus/</a><br>上来先 <a href="https://app.yinxiang.com/shard/s31/nl/23686157/6219b777-705d-4d6c-8319-ad038219d36a" target="_blank" rel="noopener">(1条消息)用SSH工具XShell连接谷歌云 root用户或普通用户 - 干货 - CSDN博客</a><br>然后根据 <a href="https://app.yinxiang.com/shard/s31/nl/23686157/988e45eb-d2a7-4bcf-b3a6-6340aa26f6f5" target="_blank" rel="noopener">在谷歌云服务器上搭建深度学习平台</a></p>
+<h2 id="申请compute-engine"><a href="#申请compute-engine" class="headerlink" title="申请compute engine"></a>申请compute engine</h2><p><img src="2019-11-24-%E8%B0%B7%E6%AD%8C%E4%BA%91T4%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/1574582404542.png" alt="1574582404542"></p>
+<p><img src="2019-11-24-%E8%B0%B7%E6%AD%8C%E4%BA%91T4%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/1574582419933.png" alt="1574582419933"></p>
+<p>然后不出所料地出现</p>
+<p><img src="2019-11-24-%E8%B0%B7%E6%AD%8C%E4%BA%91T4%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/1574582433893.png" alt="1574582433893"></p>
+<p>提高配额</p>
+<p>首先全局添加gpu</p>
+<p><img src="2019-11-24-%E8%B0%B7%E6%AD%8C%E4%BA%91T4%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/1574585845393.png" alt="1574585845393"></p>
+<p>然后修改每个地区</p>
+<p><img src="2019-11-24-%E8%B0%B7%E6%AD%8C%E4%BA%91T4%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/1574582451567.png" alt="1574582451567"></p>
+<p>把配额都提升到1,然后第二天配额通过后再来</p>
+<h2 id="服务器配置"><a href="#服务器配置" class="headerlink" title="服务器配置"></a>服务器配置</h2><h3 id="ssh配置"><a href="#ssh配置" class="headerlink" title="ssh配置"></a>ssh配置</h3><p><img src="2019-11-24-%E8%B0%B7%E6%AD%8C%E4%BA%91T4%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/1574748770830.png" alt="1574748770830"></p>
+<p>夺取新时代中国特色社会主义root账户所有权</p>
+<pre><code class="bash">sudo -i</code></pre>
+<p>禁用防火墙</p>
+<pre><code class="bash">sudo ufw disable</code></pre>
+<h4 id="修改SSH配置文件"><a href="#修改SSH配置文件" class="headerlink" title="修改SSH配置文件"></a><strong>修改SSH配置文件</strong></h4><p><strong>/etc/ssh/sshd_config</strong></p>
+<pre><code>vi /etc/ssh/sshd_config</code></pre><p>修改PermitRootLogin和PasswordAuthentication为yes</p>
+<pre><code class="bash"># Authentication:
+PermitRootLogin yes //默认为no，需要开启root用户访问改为yes
+
+# Change to no to disable tunnelled clear text passwords
+PasswordAuthentication yes //默认为no，改为yes开启密码登陆</code></pre>
+<h4 id="给root用户设置密码"><a href="#给root用户设置密码" class="headerlink" title="给root用户设置密码"></a><strong>给root用户设置密码</strong></h4><pre><code>passwd root</code></pre><p>####<strong>重启SSH服务使修改生效</strong></p>
+<pre><code>/etc/init.d/ssh restart</code></pre><h3 id="xshell-连接"><a href="#xshell-连接" class="headerlink" title="xshell 连接"></a>xshell 连接</h3><h3 id="光速配置深度学习环境"><a href="#光速配置深度学习环境" class="headerlink" title="光速配置深度学习环境"></a>光速配置深度学习环境</h3><h4 id="显卡驱动安装"><a href="#显卡驱动安装" class="headerlink" title="显卡驱动安装"></a>显卡驱动安装</h4><pre><code class="bash">apt -y install ubuntu-drivers-common
+apt-get update
+apt-get upgrade
+ubuntu-drivers autoinstall</code></pre>
+<p>然后<code>nvidia-smi</code>暗中观察一下</p>
+<p><img src="2019-11-24-%E8%B0%B7%E6%AD%8C%E4%BA%91T4%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/1574749300805.png" alt="1574749300805"></p>
+<h4 id="安装anaconda"><a href="#安装anaconda" class="headerlink" title="安装anaconda"></a>安装anaconda</h4><pre><code class="bash">wget https://repo.anaconda.com/archive/Anaconda3-2019.07-Linux-x86_64.sh
+cd ~
+mkdir .conda
+cd -
+bash Anaconda3-2019.07-Linux-x86_64.sh
+source ~/.bashrc</code></pre>
+<p>ps:感兴趣的同学可以考虑不创建.conda,然后欢乐踩坑</p>
+<h4 id="配置conda环境"><a href="#配置conda环境" class="headerlink" title="配置conda环境"></a>配置conda环境</h4><p>用conda只为一个原因.不用自己搞cuda与cudnn,只要安装<strong>-gpu</strong>就可以自动根据tensorflow版本配置相应版本的cuda与cudnn</p>
+<p>如果输入conda显示<code>command not find</code>,应该考虑重连</p>
+<pre><code class="bash">conda install -y tensorflow-gpu==1.14.0
+conda install -y keras-gpu</code></pre>
+<h3 id="部署项目过去"><a href="#部署项目过去" class="headerlink" title="部署项目过去"></a>部署项目过去</h3><p>如果有github库直接git clone就行了.</p>
+<p>通常需要使用xftp来传输文件到相应的位置</p>
+<p><img src="2019-11-24-%E8%B0%B7%E6%AD%8C%E4%BA%91T4%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/1574756196114.png" alt="1574756196114"></p>
+<h3 id="调用程序训练"><a href="#调用程序训练" class="headerlink" title="调用程序训练"></a>调用程序训练</h3><h4 id="利用screen防止xshell关进程亡"><a href="#利用screen防止xshell关进程亡" class="headerlink" title="利用screen防止xshell关进程亡"></a>利用screen防止xshell关进程亡</h4><p>如果程序要花费很长时间训练,xshell会中途断掉,需要先</p>
+<pre><code class="screen">screen</code></pre>
+<p>生成新的窗口,然后训练<br>重新回到窗口</p>
+<pre><code>screen -ls</code></pre><p>查看id</p>
+<p>如果dettached用<code>screen -r id</code>如果attached用<code>screen -rd id</code></p>
+<h4 id="tensorboard服务器在本地端查看"><a href="#tensorboard服务器在本地端查看" class="headerlink" title="tensorboard服务器在本地端查看"></a>tensorboard服务器在本地端查看</h4><p>在谷歌云防火墙开放外部端口，然后运行</p>
+<p>具体操作参考</p>
+<p><a href="https://www.jianshu.com/p/893d622d1b5a" target="_blank" rel="noopener">https://www.jianshu.com/p/893d622d1b5a</a></p>
+<pre><code class="bash">tensorboard --logdir=&#39;logs&#39; --port=6006</code></pre>
+<p>之后通过http://[服务器ip]:6006访问</p>
+<h4 id="设置python运行的工作路径"><a href="#设置python运行的工作路径" class="headerlink" title="设置python运行的工作路径"></a>设置python运行的工作路径</h4><p>如果直接运行,会看到令人窒息的结果</p>
+<p><img src="2019-11-24-%E8%B0%B7%E6%AD%8C%E4%BA%91T4%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/1574584660714.png" alt="1574584660714"></p>
+<p>这完全是因为工作路径PYTHONPATH下没有相关文件夹,需要设定工作路径</p>
+<p>用<code>export PYTHONPATH=</code>可以解忧</p>
+<pre><code class="bash">export PYTHONPATH=&quot;${PYTHONPATH}:/root/model_test(now)&quot;</code></pre>
+<p>然后</p>
+<pre><code class="bash">python3.7 /root/model_test\(now\)/train_script/train.py</code></pre>
+<h2 id="历史记录"><a href="#历史记录" class="headerlink" title="历史记录"></a>历史记录</h2><p>k80配置完成后的history记录，中间先安装-gpu再装显卡驱动，因此产生很多波折</p>
+<pre><code class="bash">  1  wget https://repo.anaconda.com/archive/Anaconda3-2019.07-Linux-x86_64.sh
+    2  bash Anaconda3-2019.07-Linux-x86_64.sh
+    3  sudo bash Anaconda3-2019.07-Linux-x86_64.sh
+    4  l
+    5  ll
+    6  cd /
+    7  ll
+    8  python
+    9  pip
+   10  conda
+   11  conda config --set auto_activate_base false
+   12  bash -u Anaconda3-2019.07-Linux-x86_64.sh
+   13  cd ~
+   14  bash -u Anaconda3-2019.07-Linux-x86_64.sh
+   15  ll
+   16  ./Anaconda3-2019.07-Linux-x86_64.sh
+   17  sudo -u ./Anaconda3-2019.07-Linux-x86_64.sh
+   18  passwd rppt
+   19  passwd root
+   20  vi /etc/ssh/sshd_config
+   21  /etc/init.d/ssh restart
+   22  ll
+   23  mkdir .conda
+   24  bash -u Anaconda3-2019.07-Linux-x86_64.sh
+   25  ./Anaconda3-2019.07-Linux-x86_64.sh
+   26  sudo -u ./Anaconda3-2019.07-Linux-x86_64.sh
+   27  rm -r anaconda3/
+   28  ll
+   29  bash  Anaconda3-2019.07-Linux-x86_64.sh
+   30  conda
+   31  lspci | grep -i nvidia
+   32  ubuntu-drivers autoinstall
+   33  apt install ubuntu-drivers-common
+   34  ubuntu-drivers autoinstall
+   35  nvidia-smi
+   36  history
+   37  conda list
+   38  pip install tqdm
+   39  conda install -y tensorflow-gpu==1.14.0
+   40  conda install -y keras-gpu
+   41  pip install scikit-learn
+   42  ll
+   43  nvidia-smi
+   44  git
+   45  ll
+   46  cd DGA-detector/
+   47  conda info
+   48  conda list
+   49  conda env export --file DGA.yml
+   50  cd DGA-detector/
+   51  ll
+   52  cd model_test\(now\)/
+   53  ll
+   54  python train_script/train.py
+   55  python ./train_script/train.py
+   56  pwd
+   57  export PYTHONPATH=&quot;${PYTHONPATH}:/root/DGA-detector/model_test(now)&quot;
+   58  python ./train_script/train.py
+   59  nvcc -v
+   60  apt install nvidia-cuda-toolkit
+   61  reboot
+   62  nvidia-smi
+   63  nvcc 0v
+   64  nvcc -v
+   65  nvcc
+   66  conda list
+   67  nvcc -v
+   68  nvcc --help
+   69  nvcc -V
+   70  conda install -y tensorflow-gpu==1.14.0
+   71  nvidia-smi
+   72  nvcc --version
+   73  cat /proc/driver/nvidia/version
+   74  sudo add-apt-repository ppa:graphics-drivers/ppa
+   75  apt update
+   76  apt list --upgradable
+   77  apt upgrade
+   78  nvidia-smi
+   79  sudo lshw -numeric -C display
+   80  ubuntu-drivers devices
+   81  apt install nvidia-430
+   82  nvidia-smi
+   83  nvcc -V
+   84  apt install nvidia-cuda-toolkit
+   85  apt uninstall nvidia-cuda-toolkit
+   86  apt remove nvidia-cuda-toolkit
+   87  apt install nvidia-cuda-toolkit
+   88  nvidia-smi
+   89  reboot
+   90  cd DGA-detector/model_test\(now\)/train_script/
+   91  ./ train.py
+   92  python train.py
+   93  export PYTHONPATH=&quot;${PYTHONPATH}:/root/DGA-detector/model_test(now)&quot;
+   94  python train.py
+   95  test2forbaipiao
+   96  ubuntu-drivers devices
+   97  nvcc -v
+   98  nvcc -V
+   99  nvidia-smi
+  100  history
+  101  watch nvidia-smi
+  102  history</code></pre>
 
           
         
@@ -1077,7 +1100,7 @@ show cdp neighbours // 发现cdp邻居的信息
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tianyilt.github.io/push.github.io/2019/12/15/%E6%80%9D%E7%A7%911/2019-11-03-ch09%E4%BC%A0%E8%BE%93%E5%B1%82/">
+    <link itemprop="mainEntityOfPage" href="http://tianyilt.github.io/push.github.io/2019/12/15/%E9%85%8D%E7%8E%AF%E5%A2%83_%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/2019-11-16-pycharm%E6%97%A0%E6%B3%95%E8%BF%90%E8%A1%8C%E8%B0%83%E5%87%BAconsole/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="tianyilt">
@@ -1096,7 +1119,7 @@ show cdp neighbours // 发现cdp邻居的信息
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/push.github.io/2019/12/15/%E6%80%9D%E7%A7%911/2019-11-03-ch09%E4%BC%A0%E8%BE%93%E5%B1%82/" itemprop="url">2019-11-03-ch09传输层</a></h1>
+                <a class="post-title-link" href="/push.github.io/2019/12/15/%E9%85%8D%E7%8E%AF%E5%A2%83_%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/2019-11-16-pycharm%E6%97%A0%E6%B3%95%E8%BF%90%E8%A1%8C%E8%B0%83%E5%87%BAconsole/" itemprop="url">2019-11-16-pycharm无法运行调出console</a></h1>
         
 
         <div class="post-meta">
@@ -1131,8 +1154,8 @@ show cdp neighbours // 发现cdp邻居的信息
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/push.github.io/categories/%E6%80%9D%E7%A7%911/" itemprop="url" rel="index">
-                    <span itemprop="name">思科1</span>
+                  <a href="/push.github.io/categories/%E9%85%8D%E7%8E%AF%E5%A2%83-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index">
+                    <span itemprop="name">配环境_深度学习</span>
                   </a>
                 </span>
 
@@ -1170,104 +1193,16 @@ show cdp neighbours // 发现cdp邻居的信息
       
         
           
-            <h1 id="传输层"><a href="#传输层" class="headerlink" title="传输层"></a>传输层</h1><p>categories: 思科1</p>
-<h2 id="传输层协议"><a href="#传输层协议" class="headerlink" title="传输层协议"></a>传输层协议</h2><h3 id="传输层原理"><a href="#传输层原理" class="headerlink" title="传输层原理"></a>传输层原理</h3><ul>
-<li>传输层负责在应用之间建立临时会话和传输数据. 从源主机的某程序生成数据传输到目标主机. </li>
-<li>会话: 源程序和目的程序传输的每个数据集称为一个会话</li>
-<li>传输层负责跟踪会话, 把数据段切块加上报头, 重组数据段, 用端口号标识应用程序</li>
-<li>多路复用: 把数据切成很小的块, 交替传输, 避免一个很大的块占用带宽</li>
-<li>TCP: 传输控制协议,  可靠且功能齐全,  确保所有数据到达目的设备, 报头复杂, 延迟高. 数据包需要确认收到, 没有确认, 会重发</li>
-<li>UDP: 用户数据报协议, 对可靠性要求不高的传输, 精简. </li>
-</ul>
-<h3 id="TCP功能"><a href="#TCP功能" class="headerlink" title="TCP功能"></a>TCP功能</h3><ul>
-<li>建立会话:  在源设备和目的设备之间协商并建立永久连接(或会话), 协商转发流量, 通信数据得到管理. </li>
-<li>可靠传输: 丢失补发</li>
-<li>同序船速: 用序列号编排数据段</li>
-<li>流量控制: 接收方处理能力有限的时候, 会请求原应用程序降低数据流速</li>
-</ul>
-<h4 id="TCP报头"><a href="#TCP报头" class="headerlink" title="TCP报头"></a>TCP报头</h4><p><img src="2019-11-03-ch9%E4%BC%A0%E8%BE%93%E5%B1%82/1572777711842.png" alt="1572777711842"></p>
-<h3 id="UDP功能"><a href="#UDP功能" class="headerlink" title="UDP功能"></a>UDP功能</h3><ul>
-<li>数据按接收顺序重构</li>
-<li>丢失数据不重传</li>
-<li>不建立会话</li>
-<li>不告知发送方资源可用性的信息</li>
-</ul>
-<h4 id="UDP报头"><a href="#UDP报头" class="headerlink" title="UDP报头"></a>UDP报头</h4><p><img src="2019-11-03-ch9%E4%BC%A0%E8%BE%93%E5%B1%82/1572777792817.png" alt="1572777792817"></p>
-<h3 id="端口号"><a href="#端口号" class="headerlink" title="端口号"></a>端口号</h3><p>端口号用来表示会话</p>
+            <p>这个时候要重装ipython<br>categories: 配置深度学习环境大作战</p>
 <ul>
-<li>源端口号由发送方设备动态生成 </li>
-<li>目的端口常常是固定的<ul>
-<li>POP3–110</li>
-<li>HTTP-80</li>
-<li>IM-531</li>
-</ul>
-</li>
-<li>IP+端口组成了套接字</li>
-<li>一个程序对应一个端口</li>
-</ul>
-<p>端口号分类</p>
-<ul>
-<li>公认端口0-1023, 用于固定的服务</li>
-<li>注册端口1024-49151, 用于用户选择安装的一些应用程序</li>
-<li>动态/私有端口49152-65535,  在开始连接服务时由客户端操作系统动态分配 , 在通信期间识别客户端应用程序</li>
-</ul>
-<h3 id="netstat"><a href="#netstat" class="headerlink" title="netstat"></a>netstat</h3><p>查看活跃的TCP连接</p>
-<h2 id="TCP和UDP"><a href="#TCP和UDP" class="headerlink" title="TCP和UDP"></a>TCP和UDP</h2><h3 id="TCP通信进程"><a href="#TCP通信进程" class="headerlink" title="TCP通信进程"></a>TCP通信进程</h3><p>三次握手的消息都是在TCP报头的控制位中.</p>
-<p><img src="2019-11-03-ch9%E4%BC%A0%E8%BE%93%E5%B1%82/1572778713690.png" alt="1572778713690"></p>
-<p>ACK-确认字段有效, =收到字节数+1</p>
-<p>SYN-同步序列号</p>
-<p>FIN-发送方不再发送数据</p>
-<ul>
-<li><p>建立连接-三次握手</p>
-<ul>
-<li>A发送SYN(SEQ=100, CTL=SYN), B接收SYN, </li>
-<li>B发送SYN(SEQ=300, ACK=101, CTL=SYN&amp;ACK), ACK, A接收SYN, ACK</li>
-<li>建立(SEQ=101, ACK=301, CTL=SYN&amp;ACK)</li>
-</ul>
-</li>
-<li><p>终止会话</p>
-<ul>
-<li>A发送FIN, B接收FIN</li>
-<li>B发送ACK, A接收ACK</li>
-<li>B发送FIN, A接收FIN</li>
-<li>A发送ACK, B接收ACK</li>
-</ul>
+<li><p>物理删除ipython文件</p>
+<p>在anaconda安装该环境的安装目录下</p>
 </li>
 </ul>
-<h3 id="TCP可靠性和流量控制"><a href="#TCP可靠性和流量控制" class="headerlink" title="TCP可靠性和流量控制"></a>TCP可靠性和流量控制</h3><ul>
-<li>使用序列号ISN标识数据段先后顺序</li>
-<li>ISN从一个随机的数开始(防止攻击), 发送一个字节增加1, </li>
-<li>窗口表示目的设备一次能处理的字节数, 在三次握手期间确定. 发送数据总大小不能超过窗口. </li>
-<li>滑动窗口<ul>
-<li>A向B发送数据, 假设窗口大小为N. A发送了X个数据(X&lt;N)</li>
-<li>B报告A他已经接收了m个数据</li>
-<li>窗口大小调整为m+N, 这样A就可以多发送m个数据</li>
-<li>这种方式可以保证A发送的数据永远在B处理范围以内</li>
-</ul>
-</li>
-<li>流量控制<ul>
-<li>如果大量丢包, 发送端会减少发送的字节数, 直到收到正常数量的确认信息</li>
-</ul>
-</li>
-</ul>
-<h3 id="UDP低开销和可靠性"><a href="#UDP低开销和可靠性" class="headerlink" title="UDP低开销和可靠性"></a>UDP低开销和可靠性</h3><ul>
-<li>按照接收的顺序重组数据报</li>
-<li>UDP客户端进程从可用端口号动态挑选一个端口, 作为会话的源端口</li>
-</ul>
-<h3 id="使用TCP的应用"><a href="#使用TCP的应用" class="headerlink" title="使用TCP的应用"></a>使用TCP的应用</h3><ul>
-<li>FTP</li>
-<li>SMTP</li>
-<li>HTTP</li>
-<li>Telnet</li>
-</ul>
-<h3 id="使用UDP的应用"><a href="#使用UDP的应用" class="headerlink" title="使用UDP的应用"></a>使用UDP的应用</h3><p>流媒体, 简单的请求和应答, 不必高可靠的应用</p>
+<p>删除<strong>ipython-版本号-py3.6.egg-info文件</strong></p>
+<p>如D:\appstore\anaconda\env\pytorch\Lib\site-packages\ipython-5.1.0-py3.6.egg-info 文件即可</p>
 <ul>
-<li>SNTP</li>
-<li>TFTP</li>
-<li>DNS</li>
-<li>DHCP</li>
-<li>VoIP</li>
-<li>IPTV</li>
+<li>然后在相应conda环境下pip install ipython</li>
 </ul>
 
           
@@ -1317,7 +1252,7 @@ show cdp neighbours // 发现cdp邻居的信息
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tianyilt.github.io/push.github.io/2019/12/15/%E6%80%9D%E7%A7%911/2019-11-02-ch08%E5%88%92%E5%88%86%E5%AD%90%E7%BD%91/">
+    <link itemprop="mainEntityOfPage" href="http://tianyilt.github.io/push.github.io/2019/12/15/oracle/2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="tianyilt">
@@ -1336,7 +1271,7 @@ show cdp neighbours // 发现cdp邻居的信息
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/push.github.io/2019/12/15/%E6%80%9D%E7%A7%911/2019-11-02-ch08%E5%88%92%E5%88%86%E5%AD%90%E7%BD%91/" itemprop="url">2019-11-02-ch08划分子网</a></h1>
+                <a class="post-title-link" href="/push.github.io/2019/12/15/oracle/2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93/" itemprop="url">2019-11-16-oracle安装示例数据库</a></h1>
         
 
         <div class="post-meta">
@@ -1371,8 +1306,8 @@ show cdp neighbours // 发现cdp邻居的信息
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/push.github.io/categories/%E6%80%9D%E7%A7%911/" itemprop="url" rel="index">
-                    <span itemprop="name">思科1</span>
+                  <a href="/push.github.io/categories/oracle/" itemprop="url" rel="index">
+                    <span itemprop="name">oracle</span>
                   </a>
                 </span>
 
@@ -1410,1231 +1345,1088 @@ show cdp neighbours // 发现cdp邻居的信息
       
         
           
-            <h1 id="对IP网络划分子网"><a href="#对IP网络划分子网" class="headerlink" title="对IP网络划分子网"></a>对IP网络划分子网</h1><p>categories: 思科1</p>
-<h2 id="对IPv4网络划分子网"><a href="#对IPv4网络划分子网" class="headerlink" title="对IPv4网络划分子网"></a>对IPv4网络划分子网</h2><h3 id="网络分段"><a href="#网络分段" class="headerlink" title="网络分段"></a>网络分段</h3><h4 id="广播域"><a href="#广播域" class="headerlink" title="广播域"></a>广播域</h4><ul>
-<li>广播可以用来发现其他设备的ip地址, 或者通过dhcp获取ipv4地址</li>
-<li>交换机将广播转发到除接收端外所有接口(<strong>泛洪</strong>)</li>
-<li>路由器<strong>隔离</strong>广播, 广播能到达的区域称为广播域</li>
+            <h1 id="oracle安装示例数据库"><a href="#oracle安装示例数据库" class="headerlink" title="oracle安装示例数据库"></a>oracle安装示例数据库</h1><p>categories: oracle<br>我们在安装完oracle数据后发现没有示例数据库,先重新配置一个有hr的数据库</p>
+<h2 id="依赖环境"><a href="#依赖环境" class="headerlink" title="依赖环境"></a>依赖环境</h2><p>完成<a href="./2019-11-03-oracle工作环境.md">oracle安装</a></p>
+<h2 id="前置准备"><a href="#前置准备" class="headerlink" title="前置准备"></a>前置准备</h2><p><del>从入门到删库跑路</del>删除原有库</p>
+<p>输入dbca,点击删除,一路确定</p>
+<h2 id="创建非容器的数据库"><a href="#创建非容器的数据库" class="headerlink" title="创建非容器的数据库"></a>创建非容器的数据库</h2><p>输入dbca</p>
+<p><img src="2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93/1573866789059.png" alt="1573866789059"></p>
+<p>勾掉容器数据库</p>
+<p><img src="2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93/1573866845789.png" alt="1573866840466"></p>
+<p><img src="2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93/1573866871323.png" alt="1573866871323"></p>
+<p>这里也勾掉容器数据库</p>
+<p><img src="2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93/1573866899402.png" alt="1573866899402"></p>
+<p><img src="2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93/1573866917756.png" alt="1573866917756"></p>
+<p><img src="2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93/1573866937385.png" alt="1573866937385"></p>
+<p><img src="2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93/1573866948026.png" alt="1573866948026"></p>
+<p><img src="2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93/1573866975319.png" alt="1573866975319"></p>
+<p>这里勾示例方案添加到数据库</p>
+<p><img src="2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93/1573867014239.png" alt="1573867014239"></p>
+<p>字符集最好操作系统字符集</p>
+<p><img src="2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93/1573867045201.png" alt="1573867045201"></p>
+<p><img src="2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93/1573867064239.png" alt="1573867064239"></p>
+<p><img src="2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93/1573867088628.png" alt="1573867088628"></p>
+<p><img src="2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93/1573867112386.png" alt="1573867112386"></p>
+<p><img src="2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93/1573867161011.png" alt="1573867161011"></p>
+<p><img src="2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93/1573867495931.png" alt="1573867495931">点击<strong>口令管理</strong></p>
+<p><img src="2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93/1573867626477.png" alt="1573867626477"></p>
+<p><img src="2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93/1573867644945.png" alt="1573867644945"></p>
+<p>给hr配上口令为hr</p>
+<p><strong>如果你忘记了这一步</strong></p>
+<p>在sqlplus中输入</p>
+<pre><code>alter user hr account unlock identified as hr</code></pre><h2 id="登陆hr"><a href="#登陆hr" class="headerlink" title="登陆hr"></a>登陆hr</h2><p>哈哈哈哈终于装好了,我们直接登进去</p>
+<p>发现</p>
+<p><img src="2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93/1573867794323.png" alt="1573867794323"></p>
+<p>对此,我们应该</p>
+<p><img src="2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93/1573867821641.png" alt="1573867821641"></p>
+<p>先变成管理员</p>
+<pre><code class="bash">sqlplus / as sysdba</code></pre>
+<p>然后解锁</p>
+<pre><code>alter user hr account unlock;</code></pre><p>然后登入hr</p>
+<pre><code>sqlplus hr/hr</code></pre><p>成功,完事情,撒花</p>
+<h2 id="从github下载示例文件"><a href="#从github下载示例文件" class="headerlink" title="从github下载示例文件"></a>从github下载示例文件</h2><p>从github上下载源代码：</p>
+<p><a href="https://github.com/oracle/db-sample-schemas/releases/latest" target="_blank" rel="noopener">https://github.com/oracle/db-sample-schemas/releases/latest</a></p>
+<p>上传到数据库服务器：</p>
+<pre><code class="bash">[oracle@dave.cndba.cn demo]$ cp /home/oracle/db-sample-schemas-12.2.0.1.zip $ORACLE_HOME/demo
+[oracle@dave.cndba.cn demo]$ ls
+db-sample-schemas-12.2.0.1.zip  schema
+[oracle@dave.cndba.cn demo]$ unzip db-sample-schemas-12.2.0.1.zip
+[oracle@dave.cndba.cn demo]$ mv schema schema.bak
+[oracle@dave.cndba.cn demo]$ mv db-sample-schemas-12.2.0.1 schema</code></pre>
+<p>导入</p>
+<pre><code class="sql">@mksample waterman waterman hr oe pm ix sh bi users temp /home/oracle/dbca/ 192.168.0.220:1521/orcl</code></pre>
+<p>报错处理</p>
+<pre><code class="bash">perl -p -i.bak -e &#39;s#__SUB__CWD__#&#39;$(pwd)&#39;#g&#39; *.sql */*.sql */*.dat</code></pre>
+<p>验证</p>
+<pre><code class="sql">select username,created from dba_users where created&gt;sysdate-1;</code></pre>
+<h2 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h2><p><a href="https://www.cndba.cn/dave/article/1985" target="_blank" rel="noopener">Oracle 12cR2 安装示例用户(Sample Schemas)</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://tianyilt.github.io/push.github.io/2019/12/15/oracle/2019-11-10-%E5%90%AF%E5%8A%A8%E6%95%B0%E6%8D%AE%E5%BA%93/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="tianyilt">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/push.github.io/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="探究前线">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/push.github.io/2019/12/15/oracle/2019-11-10-%E5%90%AF%E5%8A%A8%E6%95%B0%E6%8D%AE%E5%BA%93/" itemprop="url">2019-11-10-启动数据库</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-15T12:53:28+08:00">
+                2019-12-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/push.github.io/categories/oracle/" itemprop="url" rel="index">
+                    <span itemprop="name">oracle</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="启动数据库"><a href="#启动数据库" class="headerlink" title="启动数据库"></a>启动数据库</h1><p>categories: oracle</p>
+<h3 id="启动流程"><a href="#启动流程" class="headerlink" title="启动流程"></a>启动流程</h3><ul>
+<li>启动实例</li>
+<li>启动监听</li>
 </ul>
-<h4 id="广播域过大"><a href="#广播域过大" class="headerlink" title="广播域过大"></a>广播域过大</h4><ul>
-<li>网络流量大, 效率低下</li>
-<li>设备处理过多广播</li>
-<li>划分子网, 避免广播域过大</li>
-</ul>
-<h4 id="子网划分的情况"><a href="#子网划分的情况" class="headerlink" title="子网划分的情况"></a>子网划分的情况</h4><ul>
-<li>按照地理位置划分</li>
-<li>按照设备类型</li>
-<li>按照组织单位</li>
-</ul>
-<h4 id="八位组边界"><a href="#八位组边界" class="headerlink" title="八位组边界"></a>八位组边界</h4><ul>
-<li>前缀长度为8/16/24/</li>
-<li>网络部分不能变, 从主机部分”借”位数组成子网, 剩下的是子网里面的主机</li>
-<li>例如, 主机部分24位, 借8位做子网, 那就有256个子网, 剩下16位, 就有2^16-2个主机</li>
-<li>表示为<code>x.x.x.x/16</code></li>
-</ul>
-<h4 id="无类子网划分"><a href="#无类子网划分" class="headerlink" title="无类子网划分"></a>无类子网划分</h4><ul>
-<li><p>/n, 表示前n个是网络+子网地址, 后32-n个是主机地址</p>
+<p>进入路径<code>cd /u01/app/oracle/product/12.2.0.1/db_1/dbs</code></p>
+<p>这个路径下有这些文件</p>
+<pre><code>hc_ORCL.dat  init.ora  lkORCL  orapwORCL  snapcf_ORCL.f  spfileORCL.ora</code></pre><ul>
+<li><p>spfileORCL.ora: 格式为spfileSID.ora, (sp=sql parameters)这里我的SID是ORCL. 是二进制文件, 较之文本文件,  会实时更新. 使用strings命令查看</p>
+<pre><code class="bash">ORCL.__data_transfer_cache_size=0
+ORCL.__db_cache_size=603979776
+ORCL.__inmemory_ext_roarea=0
+ORCL.__inmemory_ext_rwarea=0
+ORCL.__java_pool_size=16777216
+ORCL.__large_pool_size=33554432
+ORCL.__oracle_base=&#39;/u01/app/oracle&#39;#ORACLE_BASE set from environment
+ORCL.__pga_aggregate_target=637534208
+ORCL.__sga_target=956301312 # sga可用内存大小
+ORCL.__shared_io_pool_size=50331648
+ORCL.__shared_pool_size=234881024
+ORCL.__streams_pool_size=0
+*.audit_file_dest=&#39;/u01/app/oracle/admin/orcl/adump&#39;
+*.audit_trail=&#39;d
+*.compatible=&#39;12.2.0&#39;
+*.control_files=&#39;/u01/app/oracle/oradata/orcl/control01.ctl&#39;,&#39;/u01/app/oracle/fast_recovery_area/orcl/control02.ctl&#39; # 控制文件位置, control02.ctl存放配置文件和检查点等记录
+*.db_block_size=8192 # 数据块大小
+*.db_name=&#39;orcl&#39; # 数据库名称
+*.db_recovery_file_dest=&#39;/u01/app/oracle/fast_recovery_area/orcl&#39;
+*.db_recovery_file_dest_size=12780m
+*.deferred_segment_creation=FALSE
+*.diagnostic_dest=&#39;/u01/app/oracle&#39;
+*.dispatchers=&#39;(PROTOCOL=TCP) (SERVICE=ORCLXDB)&#39;
+*.enable_pluggable_database=true
+*.local_listener=&#39;LISTENER_ORCL&#39;
+*.log_archive_format=
+&#39;%t_%s_%r.dbf&#39;
+*.memory_target=1507m # oracle 可用内存
+*.nls_language=&#39;SIMPLIFIED CHINESE&#39;
+*.nls_territory=&#39;CHINA&#39;
+*.open_cursors=300
+*.processes=320
+*.remote_login_passwordfile=&#39;EXCLUSIVE&#39;
+*.undo_tablespace=&#39;UNDOTBS1&#39;</code></pre>
 </li>
-<li><p>从/24的网络借1位, 能划出两个子网, 范围是0-127, 128-255. 借两位, 就是四个子网, 从0-63, 64-127, …</p>
-</li>
-<li><p>借用n位, 子网有2^n个, 网络内主机有2^(x-n)个, x是子网+主机的总长. </p>
-</li>
 </ul>
-<h3 id="可变长子网掩码"><a href="#可变长子网掩码" class="headerlink" title="可变长子网掩码"></a>可变长子网掩码</h3><ul>
-<li>从需求最大的子网开始划分, 知道最小的子网</li>
-<li>通过对子网再划分子网</li>
-</ul>
-<h3 id="对路由器和交换机设置子网"><a href="#对路由器和交换机设置子网" class="headerlink" title="对路由器和交换机设置子网"></a>对路由器和交换机设置子网</h3><ol>
-<li><p>基础设置</p>
-<pre><code>en
-conf t
-hostname 
-banner motd &#39;&#39;
-enable secret cisco
-line console 0 
-pass class
-login
-line vty 0 15
-pass class
-login
-exit</code></pre></li>
-<li><p>配置ip地址</p>
 <ul>
-<li><p>首先需要通过路由表确定端口连接的是哪个子网</p>
-<pre><code>show ip route
-show ipv6 route</code></pre></li>
-<li><p>配置ip地址和子网掩码</p>
-<pre><code>inter g0/0
-ip addr 192.168.100.64 255.255.255.224 // 根据实际情况确定
-// 子网掩码不可以用前缀缩写</code></pre></li>
-<li><p>如果是交换机, 配置vlan端口地址</p>
-<pre><code>interface vlan 1
-ip addr ...</code></pre></li>
-<li><p>设置默认网关</p>
-<pre><code>(config terminal)ip default-gateway 192...</code></pre></li>
-</ul>
+<li><p>init.ora: 再spfileSID.ora和initSID.ora缺失的时候会使用此文件启动</p>
+<p><code>create pfile from spfile</code>, 会创建initSID.ora</p>
 </li>
+</ul>
+<h3 id="sqlplus命令"><a href="#sqlplus命令" class="headerlink" title="sqlplus命令"></a>sqlplus命令</h3><ul>
+<li><code>select * from v$parameter;</code>, 查看系统参数, 不推荐使用<code>select *</code></li>
+<li><code>desc v$parameter;</code>, 查看表字段</li>
+<li><code>show parameter process;</code>, 查看parameter中含有process的字段</li>
+</ul>
+<h3 id="修改参数"><a href="#修改参数" class="headerlink" title="修改参数"></a>修改参数</h3><ul>
+<li><code>alter system set processes=400 scope=spfile(memory|both);</code>, 把processes改为400, scope是作用域, 作用在配置文件|内存|两者.</li>
+</ul>
+<h3 id="开关机"><a href="#开关机" class="headerlink" title="开关机"></a>开关机</h3><p>数据库开关机阶段</p>
+<ul>
+<li>shutdown, 关机状态</li>
+<li>nomount, 开启实例</li>
+<li>mount, 打开数据和控制文件, 控制文件修复数据文件, 保证一致性完整性</li>
+<li>open, 数据库打开</li>
+</ul>
+<pre><code class="bash">startup nomount; # 启动实例
+alter database mount; # 读取控制文件, 没有查询控制文件和日志文件
+alter database open; # 打开数据库
+alter database close; # 到mount状态, 回写数据, 拉检查点
+alter database dismount;</code></pre>
+<p>关机</p>
+<pre><code class="sql">shutdown ;
+startup force; 先断电再开机</code></pre>
+<p>参数</p>
+<ul>
+<li>N, normal, 会话全部结束才能关机</li>
+<li>T, transactional, 事务结束后关机</li>
+<li>I, immediate, 没有结束的事务回滚, 立刻结束</li>
+<li>A, abort, 立刻结束</li>
+</ul>
+<h2 id="安装pl-sqldeveloper"><a href="#安装pl-sqldeveloper" class="headerlink" title="安装pl sqldeveloper"></a><a href="2019-11-10-oracle客户端配置.md">安装pl sqldeveloper</a></h2><p>并且安装优化文件</p>
+<p>安装toad</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://tianyilt.github.io/push.github.io/2019/12/15/oracle/2019-11-10-oracle%E6%96%87%E6%9C%AC%E6%8F%92%E4%BB%B6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="tianyilt">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/push.github.io/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="探究前线">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/push.github.io/2019/12/15/oracle/2019-11-10-oracle%E6%96%87%E6%9C%AC%E6%8F%92%E4%BB%B6/" itemprop="url">2019-11-10-oracle文本插件</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-15T12:53:28+08:00">
+                2019-12-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/push.github.io/categories/oracle/" itemprop="url" rel="index">
+                    <span itemprop="name">oracle</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>categories: oracle</p>
+<h1 id="Oracle文本插件"><a href="#Oracle文本插件" class="headerlink" title="Oracle文本插件"></a>Oracle文本插件</h1><p>在安装完oracle后发现文本操作很不友好，退格左右按键都与正常配置不一样，以下给出相关插件</p>
+<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><pre><code class="bash">wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+rpm -Uvh epel-release-latest-7.noarch.rpm</code></pre>
+<h2 id="安裝rlwrap"><a href="#安裝rlwrap" class="headerlink" title="安裝rlwrap"></a>安裝rlwrap</h2><pre><code>yum install rlwrap -y</code></pre><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>設定別名在使用者.bash_profile</p>
+<pre><code>source .bash_profile</code></pre><p>然后启动数据库</p>
+<pre><code class="bash">su - oracle
+lsnrctl start
+lsnrctl status
+sqlplus / as sysdba
+startup
+alter system register;</code></pre>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://tianyilt.github.io/push.github.io/2019/12/15/oracle/2019-11-10-oracle%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E7%BD%AE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="tianyilt">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/push.github.io/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="探究前线">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/push.github.io/2019/12/15/oracle/2019-11-10-oracle%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E7%BD%AE/" itemprop="url">2019-11-10-oracle客户端配置</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-15T12:53:28+08:00">
+                2019-12-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/push.github.io/categories/oracle/" itemprop="url" rel="index">
+                    <span itemprop="name">oracle</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="oracle客户端配置"><a href="#oracle客户端配置" class="headerlink" title="oracle客户端配置"></a>oracle客户端配置</h1><p>categories: oracle<br>目前已经通过<a href="./2019-11-03-oracle工作环境.md">oracle工作环境</a>配置了cnetos7上的oracle服务器与web端客户端，接下来介绍主要win10客户端配置。</p>
+<p>主要涵盖</p>
+<ul>
+<li>Oracle Database Client12c</li>
+<li>sqldeveloper</li>
+</ul>
+<h2 id="Oracle-Database-Client12c-发行版"><a href="#Oracle-Database-Client12c-发行版" class="headerlink" title="Oracle Database Client12c 发行版"></a>Oracle Database Client12c 发行版</h2><p>启动安装程序</p>
+<p><img src="2019-11-10-oracle%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E7%BD%AE/1573358120643.png" alt="1573358120643"></p>
+<p><img src="2019-11-10-oracle%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E7%BD%AE/1573358215909.png" alt="1573358215909"></p>
+<p><img src="2019-11-10-oracle%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E7%BD%AE/1573358244982.png" alt="1573358244982"></p>
+<p><img src="2019-11-10-oracle%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E7%BD%AE/1573358273369.png" alt="1573358273369"></p>
+<p><img src="2019-11-10-oracle%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E7%BD%AE/1573358327651.png" alt="1573358327651"></p>
+<p><img src="2019-11-10-oracle%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E7%BD%AE/1573358356370.png" alt="1573358356370"></p>
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><h2 id="sqldeveloper"><a href="#sqldeveloper" class="headerlink" title="sqldeveloper"></a>sqldeveloper</h2><p>首先进行安装</p>
+<p><img src="2019-11-10-oracle%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E7%BD%AE/1573358908649.png" alt="1573358908649"></p>
+<p><img src="2019-11-10-oracle%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E7%BD%AE/1573360973987.png" alt="1573360973987"></p>
+<p>安装完成</p>
+<h1 id="使用-1"><a href="#使用-1" class="headerlink" title="使用"></a>使用</h1><h2 id="oracle-database-client12c"><a href="#oracle-database-client12c" class="headerlink" title="oracle database client12c"></a>oracle database client12c</h2><p>点击<img src="2019-11-10-oracle%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E7%BD%AE/1573363651542.png" alt="1573363651542"></p>
+<p><img src="2019-11-10-oracle%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E7%BD%AE/1573363635595.png" alt="1573363635595"></p>
+<h2 id="PLSQL-Developer"><a href="#PLSQL-Developer" class="headerlink" title="PLSQL Developer"></a>PLSQL Developer</h2><p>前置条件：</p>
+<ul>
+<li>安装完成Oracle Database client12c，并且连通以上步骤</li>
+</ul>
+<p>点击<img src="2019-11-10-oracle%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E7%BD%AE/1573361404041.png" alt="1573361404041"></p>
+<p><img src="2019-11-10-oracle%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E7%BD%AE/1573362267186.png" alt="1573362267186"></p>
+<p><img src="2019-11-10-oracle%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E7%BD%AE/1573361538482.png" alt="1573361538482"></p>
+<p>然后连不通，连不通就对了，我们点击取消进入主界面</p>
+<p>看到这个</p>
+<p><img src="2019-11-10-oracle%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E7%BD%AE/1573361556406.png" alt="1573361556406"></p>
+<p>需要<del>注册机或者</del>掏钱</p>
+<p>这是我出于教学和科研目的的结果（耿直）</p>
+<p><img src="2019-11-10-oracle%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E7%BD%AE/1573370268106.png" alt="1573370268106"></p>
+<p>当然，注册机跑不通也没关系</p>
+<p>我们接下来进行连接配置</p>
+<p><img src="2019-11-10-oracle%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E7%BD%AE/1573367140950.png" alt="1573367140950"></p>
+<p><img src="2019-11-10-oracle%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E7%BD%AE/1573368627273.png" alt="1573368627273"></p>
+<p>点击<img src="2019-11-10-oracle%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E7%BD%AE/1573368897603.png" alt="1573368897603">可以自动弹出，点击应用，确定，之后关闭PLSQL Developer</p>
+<p>找到win10端的oracle目录设置连接协议的地方</p>
+<p>我的是E:\app\client\tianyilt\product\12.2.0\client_1\network\admin</p>
+<p>在这里创建一个文件tnsnames.ora</p>
+<p>填入以下内容：</p>
+<pre><code>test_online=  
+  (DESCRIPTION =  
+    (ADDRESS = (PROTOCOL = TCP)(HOST = 192.168.12.132)(PORT = 1521))  
+    (CONNECT_DATA =  
+      (SERVER = DEDICATED)  
+      (SERVICE_NAME = ORCL)  
+    )  
+  )  </code></pre><p>HOST：远程oracle的ip地址</p>
+<p>PORT：远程lsnrctl监听的端口，默认1521</p>
+<p>SERVICE_NAME：远程SID号，我们课程里设置的是ORCL</p>
+<p>保存</p>
+<p>然后再打开PLSQL Developer</p>
+<p><img src="2019-11-10-oracle%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E7%BD%AE/1573369362921.png" alt="1573369362921"></p>
+<p>可以发现数据库中出现可选项目</p>
+<p><img src="2019-11-10-oracle%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E7%BD%AE/1573369398277.png" alt="1573369398277"></p>
+<p>这样就可以连通了</p>
+<p>PLSQL链接方法2</p>
+<p>在数据库里面输入 服务器ip/SID</p>
+<p>如192.168.12.132/orcl也可以连上</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://tianyilt.github.io/push.github.io/2019/12/15/oracle/2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="tianyilt">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/push.github.io/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="探究前线">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/push.github.io/2019/12/15/oracle/2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/" itemprop="url">2019-11-03-oracle工作环境安装</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-15T12:53:28+08:00">
+                2019-12-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/push.github.io/categories/oracle/" itemprop="url" rel="index">
+                    <span itemprop="name">oracle</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Oracle工作环境安装"><a href="#Oracle工作环境安装" class="headerlink" title="Oracle工作环境安装"></a>Oracle工作环境安装</h1><p><a href="https://www.oracle.com/database/technologies/oracle-database-software-downloads.html" target="_blank" rel="noopener">下载网站</a></p>
+<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/1572743053819.png" alt="1572743053819"></p>
+<p>下载12cRelease2, (12.2.0.1.0)</p>
+<p><a href="https://docs.oracle.com/en/" target="_blank" rel="noopener">获取数据库帮助</a></p>
+<h2 id="Oracle管理员的任务"><a href="#Oracle管理员的任务" class="headerlink" title="Oracle管理员的任务"></a>Oracle管理员的任务</h2><ol>
+<li>确定服务器硬件</li>
+<li>安装Oracle软件</li>
+<li>…</li>
 </ol>
-<h2 id="对IPv6网络设计子网"><a href="#对IPv6网络设计子网" class="headerlink" title="对IPv6网络设计子网"></a>对IPv6网络设计子网</h2><h3 id="IPv6全局单播地址"><a href="#IPv6全局单播地址" class="headerlink" title="IPv6全局单播地址"></a>IPv6全局单播地址</h3><p><img src="2019-11-02-ch8%E5%88%92%E5%88%86%E5%AD%90%E7%BD%91/1572763720767.png" alt="1572763720767"></p>
+<h2 id="用于管理Oracle的工具"><a href="#用于管理Oracle的工具" class="headerlink" title="用于管理Oracle的工具"></a>用于管理Oracle的工具</h2><ul>
+<li>Oracle Universal Installer(OUI)</li>
+<li>Database Configuration Assistant(DBCA), 创建数据库</li>
+<li>Oracle Enterprise Manager(OEM)</li>
+<li>SQL Plus, 管理工具</li>
+</ul>
+<h2 id="安装开始"><a href="#安装开始" class="headerlink" title="安装开始"></a>安装开始</h2><h3 id="环境检查"><a href="#环境检查" class="headerlink" title="环境检查"></a>环境检查</h3><ul>
+<li><p>系统要求(很重要)</p>
 <ul>
-<li>全局路由前缀: 供应商分配的地址, 48位</li>
-<li>子网ID: 用来确定子网, 16位, 可以创建2^16个子网</li>
-<li>接口ID: 主机部分.</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tianyilt.github.io/push.github.io/2019/12/15/%E6%80%9D%E7%A7%911/2019-10-26-ch07IP%E5%AF%BB%E5%9D%80/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="tianyilt">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/push.github.io/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="探究前线">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/push.github.io/2019/12/15/%E6%80%9D%E7%A7%911/2019-10-26-ch07IP%E5%AF%BB%E5%9D%80/" itemprop="url">2019-10-26-ch07IP寻址</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-15T12:53:28+08:00">
-                2019-12-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/push.github.io/categories/%E6%80%9D%E7%A7%911/" itemprop="url" rel="index">
-                    <span itemprop="name">思科1</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="IP编址"><a href="#IP编址" class="headerlink" title="IP编址"></a>IP编址</h1><p>categories: 思科1</p>
-<h2 id="IPv4网络地址"><a href="#IPv4网络地址" class="headerlink" title="IPv4网络地址"></a>IPv4网络地址</h2><h3 id="IPv4地址结构"><a href="#IPv4地址结构" class="headerlink" title="IPv4地址结构"></a>IPv4地址结构</h3><ul>
-<li>包括网络部分和主机部分, 标识网络和主机</li>
-<li>子网掩码: IP地址和子网掩码做与运算, 如果结果相同, 则表示为在同一个子网下.</li>
-<li>非标准子网掩码: 用1的个数标识子网掩码: /27标识子网掩码前27位是1, 后面5位是0. 用IP地址+斜杠标识: <code>192.168.0.250/27</code>, 长度越大, 子网网段内地址越少. </li>
-<li>主机位全为1的地址是广播地址, 全为0是网段地址</li>
-</ul>
-<h3 id="IPv4单播-组播-广播"><a href="#IPv4单播-组播-广播" class="headerlink" title="IPv4单播, 组播, 广播"></a>IPv4单播, 组播, 广播</h3><ul>
-<li><p>特殊用途的地址段</p>
-<ul>
-<li>组播地址<ul>
-<li>224.0.0.0-239.255.255.255: 用于组播</li>
-<li>224.0.0.0-224.0.0.255: 用于本地组播</li>
-<li>224.0.0.9: 用于RIP通讯</li>
+<li>系统: Centos 7.3以上</li>
+<li>内存（交换空间）: 4G</li>
+<li>磁盘容量: 40G以上</li>
 </ul>
 </li>
-<li>私有地址<ul>
-<li>10.0.0.0/8</li>
-<li>172.16.0.0/12, 即172.16.0.0-172.31.255.255</li>
-<li>192.168.0.0/16</li>
-</ul>
+<li><p>检查版本</p>
+<pre><code class="bash">cat /etc/redhat-release</code></pre>
 </li>
-<li>特殊地址<ul>
-<li>127.0.0.0/8, 用于测试IPv4协议栈</li>
-<li>169.254.0.0/16, 如果主机ip地址为此, 说明ip地址配置错误/没有dhcp服务器. 这个地址仅能用于内网通讯</li>
-</ul>
+<li><p>检查内核</p>
+<pre><code class="bash">uname -a</code></pre>
 </li>
-</ul>
+<li><p>检查内存</p>
+<pre><code class="bash">grep MemTotal /proc/meminfo
+grep SwapTotal /proc/meminfo</code></pre>
 </li>
-<li><p>有类编制, 目前已不采用, 用统一组织分配IP地址. 目前IPv4地址已耗尽</p>
-<ul>
-<li>A类: 0.0.0.0/8 – 127.0.0.0/8</li>
-<li>B类128.0.0.0 /16 – 191.255.0.0 /16</li>
-<li>C类192.0.0.0 /24 – 223.255.255.0 /24</li>
-</ul>
+<li><p>检查安装包</p>
+<p>linuxx64_12201_database, 3.3G左右</p>
 </li>
 </ul>
-<h2 id="IPv6网络地址"><a href="#IPv6网络地址" class="headerlink" title="IPv6网络地址"></a>IPv6网络地址</h2><h3 id="IPv4和IPv6共存"><a href="#IPv4和IPv6共存" class="headerlink" title="IPv4和IPv6共存"></a>IPv4和IPv6共存</h3><ul>
-<li>双堆栈: 同时有IPv4和v6协议栈</li>
-<li>隧道: 让IPv6协议通过IPv4网络</li>
-<li>转换: IPv6地址转化为IPv4</li>
-</ul>
-<h3 id="IPv6编址"><a href="#IPv6编址" class="headerlink" title="IPv6编址"></a>IPv6编址</h3><ul>
-<li>128位2进制编码, 用8组*4位16进制编码, 用冒号分隔.</li>
-<li>简写方式<ul>
-<li>每个段由4个16进制构成, 可以忽略开头的0, 如果一个段全为0, 至少写1个0. </li>
-<li>可以使用<strong>一次</strong>双冒号来省略全是0的段落. </li>
-</ul>
-</li>
-<li>前64位是前缀(网络地址), 后64位是接口id(主机地址)</li>
-</ul>
-<h3 id="IPv6地址类型"><a href="#IPv6地址类型" class="headerlink" title="IPv6地址类型"></a>IPv6地址类型</h3><ul>
-<li>单播: 唯一标记一个支持IPv6的<strong>接口</strong></li>
-<li>组播: 把单个IPv6数据包发送到各个目的地<ul>
-<li>全节点组播地址: 相当于广播</li>
-</ul>
-</li>
-<li>任播: 可以分配到多个设备, 任播地址的数据包会送到最近拥有该地址的路由.</li>
-<li>前缀(网络部分)64位, 接口(主机部分)64位.</li>
-</ul>
-<h3 id="IPv6单播地址"><a href="#IPv6单播地址" class="headerlink" title="IPv6单播地址"></a>IPv6单播地址</h3><p>用来唯一标识支持IPv6的设备的接口, 源地址必须是单播地址, 目的地址可以是组播或单播地址.</p>
-<ul>
-<li>全局单播(GUA): 公共地址, 前16位从2000到3FFF, 第一位是2或3. 前缀48位+16位子网id+最后64位是接口ID. </li>
-<li>本地链路: 子网 <strong>FE80::/10</strong> , 在同一个链路(子网)上通信. 全局单播不是必须的, 但是必须要有本地链路地址. 如果没有手动配置, 且没有dhcp, 设备会自动创建本地链路地址. FE80::/10表示范围是<code>1111 1110 10xx xxxx</code>, 即从<code>1111 1110 1000 0000</code>, 到<code>1111 1110 1011 1111</code></li>
-<li>唯一本地: FC00::/7-FDFF::/7, 唯一本地地址用于一个站点内或数量有限的站点之间的本地编址</li>
-<li>环回: ::1/128</li>
-</ul>
-<h3 id="静态配置"><a href="#静态配置" class="headerlink" title="静态配置"></a>静态配置</h3><pre><code>en
-conf t
-inter g0/0
-ipv6 addr ...</code></pre><h3 id="动态配置"><a href="#动态配置" class="headerlink" title="动态配置"></a>动态配置</h3><ul>
-<li><p>SLAAC, 无状态地址自动配置, 无需使用DHCPv6服务器, 根据本地路由器的 ICMPv6 路由器通告 (RA) 消息获取必要信息</p>
-<ul>
-<li><p>RA消息</p>
-<p>IPv6 路由器每 200 秒定期将 ICMPv6 RA 消息发送到网络上所有支持 IPv6 的设备. 在响应发送 ICMPv6 路由器请求 (RS) 消息的主机时, 也会发送 RA 消息</p>
-</li>
-<li><p>RA内容</p>
-<ul>
-<li>网络前缀与前缀长度</li>
-<li>RA消息的源IPv6地址作为默认网关的IPv6本地链路地址</li>
-<li>DNS地址和域名</li>
-</ul>
-</li>
-<li><p>RA选项</p>
-<ul>
-<li><p>仅SLAAC, </p>
-<p>RA内容包含前缀, 前缀长度, 默认网关</p>
-</li>
-<li><p>SLAAC和无状态DHCPv6</p>
-<p>RA内容包含前缀, 前缀长度, 默认网关, 从DHCP服务器获得域名等其他信息</p>
-</li>
-<li><p>有状态DHCPv6</p>
-<p>RA只发送默认网关,  全局单播地址, DNS 服务器地址,域名和所有其他信息从DHCP服务器获得</p>
-</li>
-</ul>
-</li>
-<li><p>客户端接收到前缀之后使用EUI-64或随机64位作为接口ID</p>
-</li>
-</ul>
-</li>
-<li><p>SLAAC和无状态DHCP</p>
-</li>
-<li><p>RA选项为SLAAC和无状态DHCPv6</p>
-</li>
-<li><p>有状态DHCP</p>
-<ul>
-<li>RA选项为SLAAC和有状态DHCP</li>
-</ul>
-</li>
-</ul>
-<h3 id="静态配置-1"><a href="#静态配置-1" class="headerlink" title="静态配置"></a>静态配置</h3><pre><code>ipv6 addr fe80::1 link-local</code></pre><h3 id="检验IPv6配置"><a href="#检验IPv6配置" class="headerlink" title="检验IPv6配置"></a>检验IPv6配置</h3><pre><code>show ipv6 interface brief</code></pre><h3 id="IPv6-组播地址"><a href="#IPv6-组播地址" class="headerlink" title="IPv6 组播地址"></a>IPv6 组播地址</h3><ul>
-<li><p>分配的组播: 为预先定义的设备组保留的组播地址. 有两种目的IPv6地址, 为: </p>
-<ul>
-<li>FF02::1 全节点组播, 发送到所有支持IPv6的设备组</li>
-<li>FF02::1 全路由组播组, 路由器会转发组播消息到所有支持IPv6设备</li>
-</ul>
-</li>
-<li><p>请求节点IPv6组播地址</p>
-<ul>
-<li>被映射到特殊的以太网组播地址 , 以太网网卡可以过滤帧</li>
-</ul>
-</li>
-</ul>
-<h2 id="ICMP"><a href="#ICMP" class="headerlink" title="ICMP"></a>ICMP</h2><h3 id="基本功能"><a href="#基本功能" class="headerlink" title="基本功能"></a>基本功能</h3><ul>
-<li>主机确认: 确定主机是否正常</li>
-<li>目标或服务不可达<ul>
-<li>0-网络不可达</li>
-<li>1-主机不可达</li>
-<li>2-协议</li>
-<li>3-端口</li>
-</ul>
-</li>
-<li>超时</li>
-</ul>
-<h3 id="ICMPv6的新功能"><a href="#ICMPv6的新功能" class="headerlink" title="ICMPv6的新功能"></a>ICMPv6的新功能</h3><ul>
-<li>地址解析: 使用NS(邻居查询)获得周围设备的MAC地址</li>
-<li>重复地址检测(DAD): 检测是否是唯一的地址(不必须), 即NA(邻居通告)</li>
-<li>还有请求IPv6地址的RA和RS</li>
-</ul>
-<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><h3 id="Ping-测试本地协议栈"><a href="#Ping-测试本地协议栈" class="headerlink" title="Ping, 测试本地协议栈"></a>Ping, 测试本地协议栈</h3><p>ping 127.0.0.1</p>
-<p>ping ::1 </p>
-<h3 id="Traceroute-测试路径"><a href="#Traceroute-测试路径" class="headerlink" title="Traceroute, 测试路径"></a>Traceroute, 测试路径</h3><p>提供每一跳的往返时间(让TTL从1开始增大, 测得通过每一个路由器往返时间)</p>
-<p>IPv4用TTL限制跳数, IPv6用跳数限制限制跳数</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tianyilt.github.io/push.github.io/2019/12/15/%E6%80%9D%E7%A7%911/2019-10-13-ch06%E7%BD%91%E7%BB%9C%E5%B1%82/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="tianyilt">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/push.github.io/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="探究前线">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/push.github.io/2019/12/15/%E6%80%9D%E7%A7%911/2019-10-13-ch06%E7%BD%91%E7%BB%9C%E5%B1%82/" itemprop="url">2019-10-13-ch06网络层</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-15T12:53:28+08:00">
-                2019-12-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/push.github.io/categories/%E6%80%9D%E7%A7%911/" itemprop="url" rel="index">
-                    <span itemprop="name">思科1</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="网络层"><a href="#网络层" class="headerlink" title="网络层"></a>网络层</h1><p>categories: 思科1</p>
-<h2 id="网络层协议"><a href="#网络层协议" class="headerlink" title="网络层协议"></a>网络层协议</h2><h3 id="IP协议特征"><a href="#IP协议特征" class="headerlink" title="IP协议特征"></a>IP协议特征</h3><ul>
-<li>封装, 添加报头, 路由至目的设备</li>
-<li>无连接<ul>
-<li>发送方不确定对方是否在侦听, 或者消息是否准时</li>
-<li>接收方不知道数据到达</li>
-</ul>
-</li>
-<li>尽力交付, 不保证送达</li>
-<li>和传输介质无关</li>
-</ul>
-<h3 id="报头"><a href="#报头" class="headerlink" title="报头"></a>报头</h3><p><img src="2019-10-13-ch6%E7%BD%91%E7%BB%9C%E5%B1%82/1570941840854.png" alt="1570941840854"></p>
-<h3 id="IPv6数据包"><a href="#IPv6数据包" class="headerlink" title="IPv6数据包"></a>IPv6数据包</h3><p><img src="2019-10-13-ch6%E7%BD%91%E7%BB%9C%E5%B1%82/1570942561869.png" alt="1570942561869"></p>
-<h2 id="路由"><a href="#路由" class="headerlink" title="路由"></a>路由</h2><h3 id="主机路由方式"><a href="#主机路由方式" class="headerlink" title="主机路由方式"></a>主机路由方式</h3><ul>
-<li><p>转发决策</p>
-<ul>
-<li>三种目的地: 自己, LAN中主机, 远程主机<ul>
-<li>自己: ping 127.0.0.1. 对环回接口执行 ping 操作可以测试主机上的 TCP/IP 协议堆栈.</li>
-<li>本地主机: 一般交换机即可完成作业, 目前路由器都集成了交换机功能. 不需要经过默认网关</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>默认网关</p>
-<ul>
-<li>对于终端电脑, 要与远程主机通信, 就要把信息发到默认网关, 网关转发(称为路由). </li>
-<li>拥有一个本地ip, 一个公网ip</li>
-<li>可以转发数据</li>
-</ul>
-</li>
-<li><p>主机路由表包括默认网关, 主机通过动态主机配置协议 (DHCP) 动态接收默认网关 IPv4 地址或手动配置 </p>
-</li>
-</ul>
-<h3 id="路由器路由表"><a href="#路由器路由表" class="headerlink" title="路由器路由表"></a>路由器路由表</h3><ul>
-<li><code>route print</code>, 查看路由器信息</li>
-</ul>
-<p><img src="2019-10-13-ch6%E7%BD%91%E7%BB%9C%E5%B1%82/1571281834545.png" alt="1571281834545"></p>
-<ul>
-<li>路由器上的路由表</li>
-</ul>
-<p><img src="2019-10-13-ch6%E7%BD%91%E7%BB%9C%E5%B1%82/1571446121743.png" alt="1571446121743"></p>
-<ul>
-<li>内容分析</li>
-</ul>
-<p><img src="2019-10-13-ch6%E7%BD%91%E7%BB%9C%E5%B1%82/1571446144624.png" alt="1571446144624"></p>
-<ul>
-<li><p>C: 直连</p>
-</li>
-<li><p>L: 本地</p>
-</li>
-<li><p>目的网络<code>192.168.10.0/24</code>是一个子网, <code>192.168.10.1/32</code>是子网内路由器的地址</p>
-</li>
-<li><p><code>GigabitEthernet0/0</code>: 数据包到目的地从这个接口出去</p>
-</li>
-<li><p><img src="2019-10-13-ch6%E7%BD%91%E7%BB%9C%E5%B1%82/1571446313359.png" alt="1571446313359"></p>
-<ul>
-<li>D/S/O: 路由来源, 确定路由器如何获得网络<ul>
-<li>D: 增强型内部网关路由选择协议(EIGRP)</li>
-<li>S: 静态路由</li>
-<li>O: 开放最短路径优先(OSPF)</li>
-</ul>
-</li>
-<li><code>10.1.1.0/24</code>: 确定目的网络</li>
-<li><code>90</code>: 路由来源的管理距离, 越低越好</li>
-<li><code>2170112</code>: 衡量路由好坏的参数, 越低越好</li>
-<li><code>209.165.200.226</code>: 下一跳路由器的地址</li>
-<li><code>00:00:05</code>: 路由最后一次侦听时间</li>
-<li><code>Serial0/0/0</code>: 数据包传出接口</li>
-</ul>
-</li>
-<li><p><img src="2019-10-13-ch6%E7%BD%91%E7%BB%9C%E5%B1%82/1571447057488.png" alt="1571447057488"></p>
-</li>
-<li></li>
-</ul>
-<h2 id="路由器"><a href="#路由器" class="headerlink" title="路由器"></a>路由器</h2><h3 id="路由器的特点"><a href="#路由器的特点" class="headerlink" title="路由器的特点"></a>路由器的特点</h3><ul>
-<li><p>路由器是电脑. 用户配置放到NVRAM中, 操作系统在FLASH中, 有RAM, 主板, CPU等.</p>
-</li>
-<li><p>有不同级别的路由器, 包括民用的继承多业务路由器(ISR), 大企业的多业务路由器(ASR), 服务提供商的路由器.</p>
-</li>
-<li><p>路由器存储器</p>
-<p><img src="2019-10-13-ch6%E7%BD%91%E7%BB%9C%E5%B1%82/1571447559605.png" alt="1571447559605"></p>
-<p><img src="2019-10-13-ch6%E7%BD%91%E7%BB%9C%E5%B1%82/1571447979345.png" alt="1571447979345"></p>
-<p><img src="2019-10-13-ch6%E7%BD%91%E7%BB%9C%E5%B1%82/1571448861432.png" alt="1571448861432"></p>
-</li>
-<li><p>启动IOS</p>
-<p><img src="2019-10-13-ch6%E7%BD%91%E7%BB%9C%E5%B1%82/1571449205683.png" alt="1571449205683"></p>
-</li>
-</ul>
-<h2 id="配置路由器"><a href="#配置路由器" class="headerlink" title="配置路由器"></a>配置路由器</h2><h3 id="基础配置"><a href="#基础配置" class="headerlink" title="基础配置"></a>基础配置</h3><ul>
-<li><p>交换机 | 路由器</p>
-<p>基本配置配置单</p>
-<pre><code>配置设备名称
-    hostname 名称
-保护用户模式
-    line console 0
-    password 口令
-    login
-保护远程 Telnet / SSH 访问
-    line vty 0 15
-    password 口令
-    login
-保护特权模式
-    enable secret 口令
-保护配置文件中的所有密码
-    service password-encryption
-提供约定通知
-    banner motd delimiter message delimiter
-配置管理 SVI
-    interface vlan 1
-    ip address ip-address subnet-mask
-    no shutdown</code></pre><p>操作</p>
-<pre><code>Switch&gt; enable
-Switch# configure terminal
-Switch(config)# hostname S1
-S1(config)# enable secret class
-S1(config)# line console 0
-S1(config-line)# password cisco
-S1(config-line)# login
-S1(config-line)# line vty 0 15
-S1(config-line)# password cisco
-S1(config-line)# login
-S1(config-line)# exit
-S1(config)# service password-encryption
-S1(config)# banner motd #No unauthorized access allowed!#
-S1(config)# interface vlan1
-S1(config-if)# ip address 192.168.10.50 255.255.255.0
-S1(config-if)# no shutdown
-S1(config-if)# end
-S1# copy running-config startup-config
-Destination filename [startup-config]?
-Building configuration...
-[OK]</code></pre></li>
-<li><p>给交换机配置默认网关</p>
-<pre><code>S1(config)# ip default-gateway 192.168.10.1</code></pre></li>
+<h3 id="安装软件包"><a href="#安装软件包" class="headerlink" title="安装软件包"></a>安装软件包</h3><pre><code class="bash">yum -y install binutils compat-libcap1 compat-libstdc++-33 gcc gcc-c++ glibc glibc-devel ksh libaio libaio-devel libgcc libstdc++ libstdc++-devel libXi libXtst make sysstat unixODBC unixODBC-devel
+yum update</code></pre>
+<p>为虚拟机拍摄快照</p>
+<h3 id="配置安装环境"><a href="#配置安装环境" class="headerlink" title="配置安装环境"></a>配置安装环境</h3><ul>
+<li><p>修改主机名为任意名称(<strong>不能是localhost</strong>), 改为例如cent7</p>
+<pre><code>sudo vi /etc/hostname</code></pre></li>
 </ul>
 <ul>
-<li><p>路由器</p>
-<p>给端口配置IP地址</p>
-<pre><code>R1# conf t
-Enter configuration commands, one per line.
-End with CNTL/Z.
-R1(config)#
-R1(config)# interface gigabitethernet 0/0
-R1(config-if)# ip address 192.168.10.1 255.255.255.0
-R1(config-if)# description Link to LAN-10
-R1(config-if)# no shutdown
-%LINK-5-CHANGED: Interface GigabitEthernet0/0,
-changed state to up
-%LINEPROTO-5-UPDOWN: Line protocol on Interface
-GigabitEthernet0/0,changed state to up
-R1(config-if)#exit
-R1(config)#int g0/1
-R1(config-if)#ip add 192.168.11.1 255.255.255.0
-R1(config-if)#des Link to LAN-11
-R1(config-if)#no shut</code></pre><p>检验配置</p>
-<pre><code>R1# show ip interface brief
-R1# ping 209.165.200.226
-R1# show ip brief</code></pre></li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tianyilt.github.io/push.github.io/2019/12/15/%E6%80%9D%E7%A7%911/2019-09-28-ch05%E4%BB%A5%E5%A4%AA%E7%BD%91/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="tianyilt">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/push.github.io/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="探究前线">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/push.github.io/2019/12/15/%E6%80%9D%E7%A7%911/2019-09-28-ch05%E4%BB%A5%E5%A4%AA%E7%BD%91/" itemprop="url">2019-09-28-ch05以太网</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-15T12:53:28+08:00">
-                2019-12-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/push.github.io/categories/%E6%80%9D%E7%A7%911/" itemprop="url" rel="index">
-                    <span itemprop="name">思科1</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="以太网"><a href="#以太网" class="headerlink" title="以太网"></a>以太网</h1><p>categories: 思科1<br>思乐公司发明, 最流行的LAN技术. 以太网协议定义了网络通信的很多方面: </p>
-<ul>
-<li>帧格式</li>
-<li>帧大小</li>
-<li>时序</li>
-<li>编码</li>
-</ul>
-<h2 id="以太网协议"><a href="#以太网协议" class="headerlink" title="以太网协议"></a>以太网协议</h2><h3 id="以太网帧"><a href="#以太网帧" class="headerlink" title="以太网帧"></a>以太网帧</h3><ul>
-<li><p>以太网封装</p>
-<ul>
-<li>最大支持100Gb/s的带宽, 定义二层协议和一层技术.</li>
-<li>LLC子层, 获取网络协议数据(IPv4数据包)加入控制信息, 帮助数据包传送到目的节点. 可将其视为网卡的驱动程序. </li>
-<li>MAC子层, 由硬件(计算机网卡)实施. </li>
-</ul>
+<li><p>创建用户和组(在root用户下)</p>
+<pre><code class="bash">groupadd oinstall  
+groupadd dba    
+useradd -g oinstall -G dba oracle 
+passwd oracle</code></pre>
 </li>
-<li><p>MAC子层</p>
-<ul>
-<li><p>职责为:</p>
-<ul>
-<li>数据封装</li>
-<li>介质访问控制</li>
-</ul>
-</li>
-<li><p>数据封装: 发送前-组装帧, 收到帧-解析帧. 构建帧时向网络层PDU添加帧头帧尾</p>
-<ul>
-<li>帧定界: 标识组成帧的一组位,  这些定界位会对发送节点与接收节点进行同步.</li>
-<li>编制:  封装过程包含第 3 层 PDU, 还提供数据链路层编址. </li>
-<li>错误检测: 由帧尾负责</li>
-</ul>
-</li>
-<li><p>介质访问控制: 把帧放入介质中, 或从介质中移除帧. 控制对介质的访问. 直接与物理层沟通. </p>
-</li>
-<li><p>以太网帧结构</p>
-<p><img src="2019-09-28-ch5%E4%BB%A5%E5%A4%AA%E7%BD%91/1570880643982.png" alt="1570880643982"></p>
-<p>ethernet II 是TCP/IP网络中使用的以太网帧格式.</p>
-</li>
-</ul>
-</li>
-<li><p>以太网帧字段</p>
-<ul>
-<li>帧字段构成<ul>
-<li>前导码: 7个字节+起始帧分界符(SFD)1个字节=8个字节. 通知对方准备接收帧, 并同步发送和接收设备.</li>
-<li>目的MAC地址: 6个字节</li>
-<li>源MAC地址: 6个字节</li>
-<li>EtherType: 2个字节, 以太网帧的上层协议(IPv4, IPv6, ARP等)</li>
-<li>数据字段, 46-1500个字节, 三层PDU. </li>
-<li>FCS: 帧校验序列, 4个字节, 使用冗余循环检验(CRC), 发送帧包含CRC结果, 接收方计算CRC, 两者一致说明没有错误. </li>
-</ul>
-</li>
-<li>最小64字节, 最大1518字节, 否则被丢弃.</li>
-</ul>
-</li>
-</ul>
-<h3 id="MAC地址"><a href="#MAC地址" class="headerlink" title="MAC地址"></a>MAC地址</h3><ul>
-<li>48位, 12个16进制数, 每块网卡都有一个MAC地址. 刻录在网卡的ROM中, 不可更改. </li>
-<li>前三个字节是厂商编码: OUI, 组织唯一标识符, 接着三个字节由厂商分配. 思科OUI是00-60-2F</li>
-<li>单播MAC地址: 单播通讯必须指定对方设备的MAC地址, 只处理符合自己MAC地址的信息. </li>
-<li>多播: MAC地址为FF-FF-FF-FF-FF-FF</li>
-<li>IPv4 组播地址的范围为 224.0.0.0 到 239.255.255.255,  IPv6 组播地址的范围以 FF00::/8 开头.  与 IPv4 组播地址关联的组播 MAC 地址是以 01-00-5E 开头,  其余部分通过将 IP 组播组地址的低 23 位换算成 6 个十六进制字符而创建. IPv6组播地址以33-33开头. </li>
-<li>使用短横<code>-</code>, 冒号<code>:</code>或句点<code>.</code>来分割</li>
-</ul>
-<h2 id="交换机"><a href="#交换机" class="headerlink" title="交换机"></a>交换机</h2><ul>
-<li>二层设备, 只根据MAC地址做转发. </li>
-<li>MAC地址表, 可编制内存(CAM)表, 在接受到端口1的信息, 包括源MAC和目标MAC, CAM记录这个端口对应的MAC地址, 然后给除了来源以外的端口群发信息(flood out, 泛洪), 4端口收到信息然后回复, CAM记录4端口对应的MAC地址. <ul>
-<li>一个端口可以对应多个MAC地址, 一个MAC地址只能出现在一个端口.</li>
-</ul>
-</li>
-</ul>
-<h3 id="交换机转发"><a href="#交换机转发" class="headerlink" title="交换机转发"></a>交换机转发</h3><ul>
-<li><p>存储转发: 存储整个帧道缓冲区, CRC校验完毕, 转发</p>
-</li>
-<li><p>直通: 收到数据包立刻转发. 不做错误检查. </p>
-<ul>
-<li>快速转发交换: 读取到MAC立刻转发. 延时指 收到第一个位到传出第一个位之间的时间差 .</li>
-<li>免分片交换, 交换机检验数据前64个字节, 没有错误之后, 全部转发.</li>
-</ul>
-</li>
-<li><p>内存缓冲: 转发帧之前存储帧, 当端口拥塞是, 可以一直存储帧到可以传送该帧.</p>
-<ul>
-<li>基于端口的内存缓冲, 缓存到传入-传出端口的队列中, 只有前面的帧都成功传送之后才会传送. </li>
-<li>共享内存缓冲, 一个公共的缓冲区,  这可以使更多带宽专用于特定端口, 例如连接到服务器的端口. </li>
-</ul>
-</li>
-<li><p>双工和速度设置:  交换机端口和连接的设备的双工设置和带宽设置必须匹配. 自动协调功能会自动选择高性能模式</p>
-</li>
-<li><p>Auto-MDIX: 自动介质相关接口交叉, 不用分别直通或者交叉电缆. 默认启用.</p>
-</li>
-</ul>
-<h2 id="地址解析协议"><a href="#地址解析协议" class="headerlink" title="地址解析协议"></a>地址解析协议</h2><h3 id="MAC和IP"><a href="#MAC和IP" class="headerlink" title="MAC和IP"></a>MAC和IP</h3><ul>
-<li><p>MAC地址, 物理地址. 以太网网卡的通信</p>
-</li>
-<li><p>IP地址, 逻辑地址.</p>
-</li>
-<li><p>前往远程网络:</p>
-<ul>
-<li>目的MAC地址位默认网关的地址</li>
-<li>路由器收到帧, 根据IPv4的地址, 确定转发路径</li>
-<li>负责转发的路由器收到帧, 根据IP地址确定下一跳的设备, 目的MAC地址修改为下一跳的MAC地址.</li>
-</ul>
-</li>
-</ul>
-<h3 id="ARP"><a href="#ARP" class="headerlink" title="ARP"></a>ARP</h3><ul>
-<li><p>IP和MAC的映射</p>
-</li>
-<li><p>ARP请求包括目标IP, 源MAC. 使用<code>arp -a</code>(windows)来查看MAC地址表. 两分钟没有使用的MAC地址会被删掉. 静态MAC地址是有特殊用途的, 不会被删除. </p>
-</li>
-<li><p>如果数据包的目的 IPv4 地址与源 IPv4 地址处于同一个网络, 则设备会在 ARP 表中搜索目的 IPv4 地址.</p>
+<li><p>配置内存参数</p>
+<p>创建文件</p>
+<pre><code class="bash">touch /etc/sysctl.d/97-oracledatabase-sysctl.conf</code></pre>
+<p>写入内容(直接复制到命令行, 需要删去注释)</p>
+<pre><code class="bash">cat &gt;&gt; /etc/sysctl.d/97-oracledatabase-sysctl.conf &lt;&lt; EOF
+fs.aio-max-nr = 1048576  
+fs.file-max = 6815744    
+# shm, shared memory, 共享内存
+# 配置共享内存和文件操作符是为了开启自动存储管理（AMM, Automatic Memory Management）
+kernel.shmall = 2097152   #需要计算, 设置为shmmax/4096
+kernel.shmmax = 4294967295   #需要计算, 设置为物理内存的90%
+kernel.shmmni = 4096    
+kernel.sem = 250 32000 100 128    
+net.ipv4.ip_local_port_range = 9000 65500    
+net.core.rmem_default = 4194304 12c 262144   
+net.core.rmem_max = 4194304    
+net.core.wmem_default = 262144    
+net.core.wmem_max = 1048586
+EOF</code></pre>
+<p>无注释版本</p>
+<pre><code class="bash">cat &gt;&gt; /etc/sysctl.d/97-oracledatabase-sysctl.conf &lt;&lt; EOF
+fs.aio-max-nr = 1048576  
+fs.file-max = 6815744    
+kernel.shmall = 2097152   
+kernel.shmmax = 4294967295   
+kernel.shmmni = 4096    
+kernel.sem = 250 32000 100 128    
+net.ipv4.ip_local_port_range = 9000 65500    
+net.core.rmem_default = 4194304 12c 262144   
+net.core.rmem_max = 4194304    
+net.core.wmem_default = 262144    
+net.core.wmem_max = 1048586
+EOF</code></pre>
 </li>
 </ul>
 <ul>
-<li>如果目的 IPv4 地址与源 IPv4 地址不在同一个网络中, 则设备会在 ARP 表中搜索默认网关的 IPv4 地址.</li>
-<li>ARP表的每一行绑定一个IPv4和MAC地址, 如果没有映射, 就发出ARP请求.</li>
-<li></li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tianyilt.github.io/push.github.io/2019/12/15/%E6%80%9D%E7%A7%911/2019-09-28-ch04%E7%BD%91%E7%BB%9C%E8%AE%BF%E9%97%AE/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="tianyilt">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/push.github.io/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="探究前线">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/push.github.io/2019/12/15/%E6%80%9D%E7%A7%911/2019-09-28-ch04%E7%BD%91%E7%BB%9C%E8%AE%BF%E9%97%AE/" itemprop="url">2019-09-28-ch04网络访问</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-15T12:53:28+08:00">
-                2019-12-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/push.github.io/categories/%E6%80%9D%E7%A7%911/" itemprop="url" rel="index">
-                    <span itemprop="name">思科1</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="网络访问"><a href="#网络访问" class="headerlink" title="网络访问"></a>网络访问</h1><p>categories: 思科1</p>
-<h2 id="物理层协议"><a href="#物理层协议" class="headerlink" title="物理层协议"></a>物理层协议</h2><h3 id="物理层连接"><a href="#物理层连接" class="headerlink" title="物理层连接"></a>物理层连接</h3><ul>
-<li>NIC, 网络接口卡, 以太网网卡用作有线连接</li>
-<li>ISR, 集成多业务路由器， 常用的家用路由器.</li>
-<li>WLAN, 无线网卡</li>
-</ul>
-<h3 id="物理层协议的作用"><a href="#物理层协议的作用" class="headerlink" title="物理层协议的作用"></a>物理层协议的作用</h3><ul>
-<li>从数据链路层接受帧</li>
-<li>把帧编码成电信号, 发送到介质上</li>
-<li>检索信号, 还原为完整的帧, 传送给数据链路层</li>
-</ul>
-<h3 id="特征"><a href="#特征" class="headerlink" title="特征"></a>特征</h3><ul>
-<li><p>物理层管理的功能区</p>
+<li><p>启用配置</p>
+<pre><code class="bash">sysctl --system # 立即生效
+sysctl -a |grep shmmax
+sysctl -a |grep shmall</code></pre>
+</li>
+<li><p>配置资源限制</p>
+<pre><code class="bash">cat &gt;&gt; /etc/security/limits.conf &lt;&lt; EOF  
+oracle  soft  nproc  2047    
+oracle  hard  nproc  16384    
+oracle  soft  nofile  1024    
+oracle  hard  nofile  65536    
+oracle  soft  stack   3145728
+oracle  hard  stack   3145728  
+EOF</code></pre>
 <ul>
-<li>物理组件: 电子硬件设备, 介质和连接器. 用来传输位信号</li>
-<li>编码: 将数据位流转化为电信号的方法</li>
-<li>信令: 位的表示方法称为信令方法, 规定那种类型的信号代表1, 哪种代表0</li>
+<li><p>修改本地hosts文件</p>
+<pre><code class="bash">vi /etc/hosts </code></pre>
+<p>在最后一行加入<code>[ip地址] [主机名]</code></p>
+<pre><code>192.168.27.157 cent7</code></pre></li>
 </ul>
 </li>
-<li><p>带宽: 最多能承载的数据能力, 单位时间可以流向目的地的数据量, 单位是bit/s, 常用有Mb/s, 或Mbps</p>
+<li><p>创建安装目录</p>
+<pre><code class="bash">mkdir -p /u01/app/oracle
+chown -R oracle:oinstall /u01/app/
+chown -R oracle:oinstall /u01
+chmod -R 755 /u01/app/oracle/
+chmod -R 755 /u01/</code></pre>
 </li>
-<li><p>吞吐量: 给定时段内通过介质传输的位的量度, 与带宽不同, 带宽是理想最大值, 吞吐量是实际值.</p>
+<li><p>安装rlwrap</p>
+<pre><code>wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+rpm -Uvh epel-release-latest-7.noarch.rpm
+yum install rlwrap -y</code></pre></li>
+<li><p>配置环境变量</p>
+<pre><code class="bash">su - oracle
+(以下的中文不需要去除)
+cat &gt;&gt; /home/oracle/.bash_profile &lt;&lt; EOF
+export EDITOR=vim 
+#oracle的BASE目录定义   
+export ORACLE_BASE=/u01/app/oracle 
+#oracle的HOME目录定义   
+export ORACLE_HOME=\$ORACLE_BASE/product/12.2.0.1/db_1    
+export ORACLE_SID=ORCL
+#重新定义系统环境变量
+export PATH=\$PATH:\$HOME/.local/bin:\$HOME/bin:\$ORACLE_HOME/bin 
+#简体中文版
+#export NLS_LANG=&quot;AMERICAN_AMERICA.ZHS16GBK&quot;   
+export NLS_LANG=&quot;SIMPLIFIED CHINESE_CHINA&quot;.UTF8 
+#定义语系
+export LANG=zh_CN.UTF-8
+#export LANG=en_US    
+#export LC_ALL=en_US    
+export LD_LIBRARY_PATH=/lib:/usr/lib:\$ORACLE_HOME/lib    
+export CLASSPATH=\$ORACLE_HOME/JRE:\$ORACLE_HOME/jlib:$ORACLE_HOME/rdbms/jlib
+alias sqlplus=&quot;rlwrap sqlplus&quot;    
+alias rman=&quot;rlwrap rman&quot;    
+#权限（反码）
+umask 022    
+EOF
+
+source .bash_profile</code></pre>
 </li>
-</ul>
-<h2 id="网络介质"><a href="#网络介质" class="headerlink" title="网络介质"></a>网络介质</h2><h3 id="铜缆"><a href="#铜缆" class="headerlink" title="铜缆"></a>铜缆</h3><p> 成本低, 易于安装, 电阻率低, 受到距离和信号干扰, 发送电脉冲信号. 容易受到两个干扰源的干扰: </p>
-<ul>
-<li>电磁干扰(EMI)或者射频干扰(RFI), 来源于无线电波和电磁设备(荧光灯, 电动机)</li>
-<li>串扰, 电线中的电信号对周围电线照成的干扰, 来源于电话串线.</li>
-</ul>
-<p>铜缆有以下几种类型</p>
-<ul>
-<li>非屏蔽双绞线(UTP, unshielded twisted pair), 四对绞起来的线. 双绞线防止信号受到干扰, 铜线外包裹彩色塑料绝缘层(看到是彩色的线), 用颜色区分每个线对, 使用RJ-45连接器端接.</li>
-</ul>
-<p><img src="2019-09-28-ch4%E7%BD%91%E7%BB%9C%E8%AE%BF%E9%97%AE/1570174138628.png" alt="1570174138628"></p>
-<ul>
-<li>屏蔽双绞线(STP, shielded twisted pair), 比UTP多裹了一层覆盖的金属屏蔽层(法拉第笼), 使用RJ-45连接器端接. 如果接地不正确, 反而会接受多于信号. </li>
-</ul>
-<p><img src="2019-09-28-ch4%E7%BD%91%E7%BB%9C%E8%AE%BF%E9%97%AE/1570174149278.png" alt="1570174149278"></p>
-<ul>
-<li>同轴电缆, 几乎被淘汰. 从内到外依次是: 导线-绝缘层-铜网屏蔽层-塑料保护层. 用于无线安装或有线互联网安装. 可以连接BNC口, N口, F口.</li>
-</ul>
-<p><img src="2019-09-28-ch4%E7%BD%91%E7%BB%9C%E8%AE%BF%E9%97%AE/1570174158306.png" alt="1570174158306"></p>
-<h3 id="UTP布线"><a href="#UTP布线" class="headerlink" title="UTP布线"></a>UTP布线</h3><ul>
-<li><p>两根电线紧密排列, 彼此磁场恰好相反, 磁场抵消, 也消除了EMI和RFI干扰, 不同颜色的线绞合密度不同. 遵循TIA/EIA 共同制定的标准TIA/EIA-568, 定义了电缆类型, 长度, 连接器, 电缆端接, 测试电缆的方法.</p>
+<li><p>关闭selinux和防火墙</p>
+<pre><code class="bash">vi /etc/selinux/config</code></pre>
+<p>把<code>SELINUX=enable</code>改为<code>SELINUX=disabled</code></p>
+<pre><code class="bash">systemctl stop firewalld.service
+systemctl disable firewalld.service</code></pre>
 </li>
-<li><p>分类</p>
-<ul>
-<li>3类: 线没有绞合, 带宽一般, 用作电话线</li>
-<li>5(Cat5)类, 增强型5类/5e类(Cat5e): 线按照一定规格绞合, 用于百兆网</li>
-<li>6(Cat6)类: 绞合的线外面包裹了分隔物, 支持千兆传输. 推荐使用</li>
-</ul>
-</li>
-<li><p>采用RJ-45连接器, 遵循TIA/EIA-568标准. 8根线, 只用到了1236四根线, 12负责输入, 36负责输出.注意正反面. 图中是宽的面在上.  </p>
-<p><img src="2019-09-28-ch4%E7%BD%91%E7%BB%9C%E8%AE%BF%E9%97%AE/1570175859931.png" alt="1570175859931"></p>
-<ul>
-<li>对于同种设备, 发送端的36要对应接收端的12. (交叉电缆), 包括主机-主机, 交换机-交换机, 路由器-路由器. 一端是T568A, 另一端T568B.</li>
-<li>如果是异种设备, 两种设备12对应12, 36要对应36.(直通电缆). 包括主机-交换机, 主机-集线器</li>
-</ul>
-</li>
-<li><p>传输距离100m</p>
-</li>
-</ul>
-<h3 id="光纤"><a href="#光纤" class="headerlink" title="光纤"></a>光纤</h3><p>发送光脉冲信号, 从内到外为: 纤芯(玻璃制成)-涂层(反射用)-缓冲区(保护)-强化材料(保护)-表皮(保护)</p>
-<p><img src="2019-09-28-ch4%E7%BD%91%E7%BB%9C%E8%AE%BF%E9%97%AE/1570176590558.png" alt="1570176590558"></p>
-<ul>
-<li>单模光纤: 数百公里, 用激光发射, 很细, 几乎不反射</li>
-<li>多模: 较粗, LED光源, 光反射</li>
-<li>信号损失发生在光纤到接口上</li>
-<li>OTDR, 光时域反射器, 根据反射光传输时间定位损坏位置</li>
-</ul>
-<h3 id="无线"><a href="#无线" class="headerlink" title="无线"></a>无线</h3><p>发送微波信号, 802.11标准</p>
-<ul>
-<li>无线接入点AP, 集中用户的无线信号, 并连接到现有基于铜介质的网络基础设施, 如以太网.</li>
-</ul>
-<h2 id="数据链路层"><a href="#数据链路层" class="headerlink" title="数据链路层"></a>数据链路层</h2><h3 id="职能"><a href="#职能" class="headerlink" title="职能"></a>职能</h3><ul>
-<li>允许上层访问介质</li>
-<li>接受第 3 层数据包，并将它们打包为帧</li>
+<li><p>关闭透明大页<br>查看</p>
+<pre><code class="bash">cat /sys/kernel/mm/transparent_hugepage/enabled
+[always]代表启用
+[never]代表禁用</code></pre>
+<p>修改</p>
+<pre><code>vi /etc/default/grub
+GRUB_CMDLINE_LINUX=&quot;crashkernel=auto rhgb quiet transparent_hugepage=never&quot;</code></pre><p>编译文件</p>
+<pre><code>grub2-mkconfig -o /boot/grub2/grub.cfg</code></pre></li>
 </ul>
 <ul>
-<li><p>为物理网络准备网络数据</p>
-</li>
-<li><p>控制数据在介质中的放置和接收方式</p>
-</li>
-<li><p>在物理网络介质（例如 UTP 或光纤）中的节点之间交换帧</p>
-</li>
-<li><p>收数据包并将其传输给上层协议</p>
-</li>
-<li><p>执行错误检测</p>
-</li>
+<li><p>重启系统</p>
+<pre><code>init 6</code></pre><p>检验有没有加进去</p>
+<pre><code>cat /proc/cmdline </code></pre></li>
 </ul>
-<p>分为两个子层:</p>
+<h3 id="安装oracle12c"><a href="#安装oracle12c" class="headerlink" title="安装oracle12c"></a>安装oracle12c</h3><p>先为虚拟机拍摄快照</p>
 <ul>
-<li><p>LLC, 逻辑链路控制, 根据网络层协议进行封装</p>
+<li><p>需要使用远程安装的方式, 先安装<code>xmanager</code></p>
 </li>
-<li><p>MAC, 介质访问控制, 对接物理标准, 把帧放到介质上, 从介质上获取帧. 不同的介质需要使用不同的数据链路层协议. 转发信息时, 需要接收帧-解封-重新封装-发送</p>
-<p>需要解决以下的问题</p>
+<li><p>用xmanager下的xshell连接虚拟机</p>
+</li>
+<li><p>(用户切换到oracle)将压缩包<strong>通过xshell界面(否则会解压失败)</strong>扔到<code>/u01</code>下</p>
 <ul>
-<li>拓扑-节点之间的连接如何显示在数据链路层中</li>
-<li>介质共享-如何共享介质</li>
-</ul>
-</li>
-</ul>
-<h3 id="拓扑"><a href="#拓扑" class="headerlink" title="拓扑"></a>拓扑</h3><p>网络设备以及互联布局或关系. 分类有: </p>
+<li><p>方法0，直接</p>
 <ul>
-<li>物理拓扑, 表示终端设备和基础设施设备, 突出设备位置, 设备种类</li>
-<li>逻辑拓扑, 突出ip地址, 连接端口</li>
-</ul>
-<h3 id="物理WAN拓扑"><a href="#物理WAN拓扑" class="headerlink" title="物理WAN拓扑"></a>物理WAN拓扑</h3><ul>
-<li>点对点<ul>
-<li>节点1-网络-节点二</li>
-<li>不用共享介质, 判断帧的目的地址</li>
-</ul>
-</li>
-<li>中心型</li>
-<li>网状</li>
-</ul>
-<h3 id="物理LAN拓扑"><a href="#物理LAN拓扑" class="headerlink" title="物理LAN拓扑"></a>物理LAN拓扑</h3><ul>
-<li>星型<ul>
-<li>集线器(假星型, 其实还是总线型, 公用带宽)<ul>
-<li>连接所有的点</li>
-<li>载波侦听多点接入/冲突检测CSMA/CD, 监听-冲突-等待-重发</li>
-<li>利用效率低</li>
-</ul>
-</li>
-<li>交换机(真星型, 独享带宽)<ul>
-<li>点对点通路</li>
-</ul>
-</li>
-<li>路由器<ul>
-<li>隔离广播, 广播不允许通过</li>
-</ul>
+<li><pre><code class="bash">        cd /u01</code></pre>
+<p>  然后把文件拖进xshell</p>
 </li>
 </ul>
 </li>
-<li>总线</li>
-<li>环</li>
-<li>扩展星型(多个星型相连)</li>
-<li>单工, 半双工, 双工: 单工: 发射接收角色不互换, 半双工(集线器), 发射接收不同时, 双工(交换机), 同时.</li>
-<li>争用访问-CSMA/CD, 载波侦听多路访问/冲突<strong>检测</strong>机制, 用于半双工, 需要一个进程管理设备合适可以发送以及多设备同时发送的处理. 进程如下:<ul>
-<li>A想要发送帧</li>
-<li>检测是否有人传输, 如果没有, 发送</li>
-<li>集线器接收帧</li>
-<li>B设备想发送, 必须等待</li>
-<li>所有设备接收到帧, MAC地址匹配的主机接收整个帧</li>
-<li>两台设备同时传输造成冲突, 两台设备都将检测到, 数据损失. 等待一段时间重新发送.</li>
+<li><p>方法1</p>
+<ul>
+<li><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/1573351396870.png" alt="1573351396870"></li>
+<li>用xftp速度更快</li>
 </ul>
 </li>
-<li>争用访问-CSMA/CA, 载波侦听多路访问/冲突<strong>避免</strong>机制, 数据包包含自己的长度. 其他设备收到此信息, 就会知道介质不可用时间, 在此期间停止传输. 接收方收到之后, 返回确认信息, 表示帧已到达. 用于无线连接. 全双工. 不会检测冲突, 而是在传输之前等待来避免冲突</li>
-</ul>
-<h3 id="数据链路帧"><a href="#数据链路帧" class="headerlink" title="数据链路帧"></a>数据链路帧</h3><ul>
-<li>帧: 帧头, 数据, 帧尾</li>
-<li>帧头<ul>
-<li>帧开始和停止标志, 标识帧的开始和结束位置的限制</li>
-<li>编址, 表示介质上的源节点和目的节点. 用MAC地址. 还包含了源地址.<ul>
-<li>路由器用IP地址确定通往目的设备的最佳路径</li>
-<li>路由器重新填写MAC地址, 转发到下一级</li>
-</ul>
-</li>
-<li>类型, 用于标识数据字段中的第 3 层协议</li>
-<li>控制, 用于标识特殊流量控制服务, 例如QoS, 某些信息有优先权. </li>
-</ul>
-</li>
-<li>帧尾<ul>
-<li>错误检测</li>
-<li>帧结束</li>
-</ul>
-</li>
-<li>协议种类<ul>
-<li>802.11无线帧</li>
-<li>以太帧</li>
-<li>……</li>
-</ul>
+<li><p>方法2：直接拷贝进vmware虚拟机内</p>
 </li>
 </ul>
+</li>
+<li><p>友情提示，如果出现权限问题，路径问题，请使用chmod来授权与mv来移动路径</p>
+</li>
+<li><p>解压</p>
+<pre><code>unzip ****.zip</code></pre></li>
+<li><p>安装</p>
+<pre><code>cd /u01/database
+./runinstaller</code></pre><p>如果出现错误<code>Error: Can&#39;t open display:</code></p>
+<pre><code>export DISPLAY=[主机和虚拟机同一个网段的ip]:0.0</code></pre></li>
+</ul>
+<p>如果一切正常, 会在主机弹出gui</p>
+<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/001.png" alt="001"></p>
+<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/002.png" alt="002"></p>
+<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/003.png" alt="003"></p>
+<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/004.png" alt="004"></p>
+<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/005.png" alt="005"></p>
+<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/006.png" alt="006"></p>
+<ul>
+<li><p>最后会提示你用root身份执行两个脚本</p>
+<pre><code>su -
+/u01/app/oraInventory/orainstRoot.sh   
+/u01/app/oracle/product/12.2.0.1/db_1/root.sh</code></pre></li>
+</ul>
+<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/1573353610472.png" alt="1573353610472"></p>
+<p>看到这个直接回车</p>
+<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/1573353641428.png" alt="1573353641428"></p>
+<p>看到这个键入y然后回车</p>
+<h3 id="创建监听服务"><a href="#创建监听服务" class="headerlink" title="创建监听服务"></a>创建监听服务</h3><ul>
+<li><p>切换到oracle用户</p>
+</li>
+<li><p>输入</p>
+<p><code>netca</code></p>
+</li>
+<li><p>然后在gui配置, 一路下一步</p>
+<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/001-1573290283151.png" alt="001"></p>
+</li>
+<li><p>检验</p>
+<pre><code>ps -ef |grep ora_</code></pre></li>
+</ul>
+<h3 id="创建数据库"><a href="#创建数据库" class="headerlink" title="创建数据库"></a>创建数据库</h3><pre><code>dbca</code></pre><p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/001-1573291200234.png" alt="001"></p>
+<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/002-1573291203916.png" alt="002"></p>
+<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/003-1573291207112.png" alt="003"></p>
+<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/004-1573291210275.png" alt="004"></p>
+<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/005-1573291214103.png" alt="005"></p>
+<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/006-1573291217094.png" alt="006"></p>
+<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/007.png" alt="007"></p>
+<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/008.png" alt="008"></p>
+<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/009.png" alt="009"></p>
+<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/0090.png" alt="0090"></p>
+<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/0091.png" alt="0091"></p>
+<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/010.png" alt="010"></p>
+<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/011.png" alt="011"></p>
+<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/012.png" alt="012"></p>
+<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/013.png" alt="013"></p>
+<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/014.png" alt="014"></p>
+<h3 id="访问数据库"><a href="#访问数据库" class="headerlink" title="访问数据库"></a>访问数据库</h3><ul>
+<li><p>安装flash-player播放器插件</p>
+<p>前往<a href="https://www.flash.cn/" target="_blank" rel="noopener">flash官网</a>下载rpm包</p>
+<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/1573292156421.png" alt="1573292156421"></p>
+<pre><code>rpm -ivh flash-player-npapi-26.0.0.131-release.x86_64.rpm
+sqlplus / as sysdba
+alter user sys identified by [sys密码]; # 更改sys的密码, 可不用</code></pre></li>
+<li><p>在主机的<strong>谷歌浏览器</strong> 地址栏中输入</p>
+<pre><code>https://[虚拟机ip地址]:5500/em/login</code></pre><p>会提示安装flash, 只要在网站设置里允许flash就可以了</p>
+<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/1573293118995.png" alt="1573293118995"></p>
+<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/1573295042473.png" alt="1573295042473"></p>
+<p>注意sys登录一定要勾选以sysdba身份</p>
+<p>成功登录.</p>
+<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/1573295081107.png" alt="1573295081107"></p>
+</li>
+</ul>
+<h3 id="其他配置"><a href="#其他配置" class="headerlink" title="其他配置"></a>其他配置</h3><ul>
+<li><p>启动配置</p>
+<pre><code class="bash">vi /etc/oratab  
+#把最后的N改成Y (默认是N)    
+orcl:/u01/app/oracle/product/12.2.0.1/db_1:Y
+# rc.local启动方式
+cat &gt;&gt; /etc/rc.local &lt;&lt; EOF  
+# Oracle service start    
+su - oracle -c &quot;lsnrctl start&quot;    
+su - oracle -c &quot;dbstart&quot;    
+EOF
+
+chmod +x /etc/rc.local</code></pre>
+</li>
+<li><p>进入数据库</p>
+<pre><code>sqlplus / as sysdba</code></pre><p>可以看到提示符变为<code>SQL&gt;</code></p>
+</li>
+<li><p>安装完数据库密码过期问题</p>
+<p>(alter等命令都是在数据库管理模式下输入, 即提示符是SQL)</p>
+<pre><code>SQL&gt; alter profile default limit password_life_time unlimited;
+alter profile default limit failed_login_attempts unlimited;</code></pre></li>
+<li><p>取消段延迟特性</p>
+<pre><code>alter system set deferred_segment_creation=false scope=both;</code></pre></li>
+<li><p>实例启动关闭</p>
+<pre><code>startup
+shutdown immediate </code></pre><p>查看实例状态</p>
+<pre><code>select status from v$instance;</code></pre></li>
+</ul>
+<h2 id="如果你很不幸"><a href="#如果你很不幸" class="headerlink" title="如果你很不幸"></a>如果你很不幸</h2><h3 id="交换空间不足"><a href="#交换空间不足" class="headerlink" title="交换空间不足"></a>交换空间不足</h3><p>查看swap交换空间方式一：</p>
+<pre><code class="bash">free -m
+free -mh</code></pre>
+<p>可以看出只有2G，而安装需要有4G</p>
+<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/1573352458187.png" alt="1573352458187"></p>
+<p>使用dd命令创建一个swap交换文件：</p>
+<pre><code class="bash">cd ~
+dd if=/dev/zero of=/home/swap bs=4096 count=1024000</code></pre>
+<p>制作为swap格式文件：</p>
+<pre><code>mkswap ~/swap
+swapon ~/swap</code></pre><p>然后查看一下</p>
+<pre><code>free -mh</code></pre><p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/1573353004564.png" alt="1573353004564"></p>
+<h3 id="netca报错Failed-to-write-core-dump"><a href="#netca报错Failed-to-write-core-dump" class="headerlink" title="netca报错Failed to write core dump"></a>netca报错Failed to write core dump</h3><p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/1573354328768.png" alt="1573354328768"></p>
+<p>首先确定xclock能看到</p>
+<p>然后</p>
+<pre><code class="bash">vi /etc/hosts </code></pre>
+<p>作以下修改<img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/1YVD9CWT(97IJ)ZS81V%60YG.png" alt="img"></p>
+<p>然后重启，在xmanager里面打开oracle</p>
 
           
         
@@ -2674,7 +2466,7 @@ R1# show ip brief</code></pre></li>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/push.github.io/page/2/">&lt;i class&#x3D;&quot;fa fa-angle-left&quot;&gt;&lt;&#x2F;i&gt;</a><a class="page-number" href="/push.github.io/">1</a><a class="page-number" href="/push.github.io/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/push.github.io/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/push.github.io/page/8/">8</a><a class="extend next" rel="next" href="/push.github.io/page/4/">&lt;i class&#x3D;&quot;fa fa-angle-right&quot;&gt;&lt;&#x2F;i&gt;</a>
+    <a class="extend prev" rel="prev" href="/push.github.io/page/2/">&lt;i class&#x3D;&quot;fa fa-angle-left&quot;&gt;&lt;&#x2F;i&gt;</a><a class="page-number" href="/push.github.io/">1</a><a class="page-number" href="/push.github.io/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/push.github.io/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/push.github.io/page/6/">6</a><a class="extend next" rel="next" href="/push.github.io/page/4/">&lt;i class&#x3D;&quot;fa fa-angle-right&quot;&gt;&lt;&#x2F;i&gt;</a>
   </nav>
 
 
@@ -2720,7 +2512,7 @@ R1# show ip brief</code></pre></li>
               
                 <a href="/push.github.io/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">74</span>
+                  <span class="site-state-item-count">53</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2731,7 +2523,7 @@ R1# show ip brief</code></pre></li>
               
               <div class="site-state-item site-state-categories">
                 <a href="/push.github.io/categories/index.html">
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>

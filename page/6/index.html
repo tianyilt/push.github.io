@@ -248,7 +248,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tianyilt.github.io/push.github.io/2019/12/15/Linux/2019-08-29-%E6%A1%A3%E6%A1%88%E5%B1%9E%E6%80%A7%E5%92%8C%E7%94%A8%E6%88%B7%E9%85%8D%E7%BD%AE/">
+    <link itemprop="mainEntityOfPage" href="http://tianyilt.github.io/push.github.io/2019/12/15/Git/2019-08-30-%E5%92%8Cfork%E6%9D%A5%E7%9A%84%E4%BB%93%E5%BA%93%E5%90%8C%E6%AD%A5/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="tianyilt">
@@ -267,1275 +267,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/push.github.io/2019/12/15/Linux/2019-08-29-%E6%A1%A3%E6%A1%88%E5%B1%9E%E6%80%A7%E5%92%8C%E7%94%A8%E6%88%B7%E9%85%8D%E7%BD%AE/" itemprop="url">2019-08-29-档案属性和用户配置</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-15T12:53:28+08:00">
-                2019-12-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/push.github.io/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>如何识别用户<br>categories: Linux<br>/etc/passwd 存放所有用户，username:x:1:0,代表用户名与密码与uid与组id<br>ls -l &gt;&gt; -rw-r–r–. 1 root root 17 …. root.txt ,第一个字符：字符设备c、区块设备b、文件-,一个数字代表链接，跟着用户和用户组，文件大小，修改时间，文件名<br>/etc/sudoers 所有管理员授权的用户,不应当随意编辑<br>visudo 编辑sudoers文件</p>
-<h2 id="chgrp-chown-chmod"><a href="#chgrp-chown-chmod" class="headerlink" title="chgrp, chown, chmod"></a>chgrp, chown, chmod</h2><pre><code># chgrp [-R] groupname filename/dir
-# chown [-R] groupname filename/dir
-# chmod [-R] 777 filename/dir</code></pre><h2 id="关于用户权限的一些信息"><a href="#关于用户权限的一些信息" class="headerlink" title="关于用户权限的一些信息"></a>关于用户权限的一些信息</h2><ul>
-<li>目录的<code>x</code>权限决定能否进入目录, <code>w</code>权限决定能否在目录下进行删除, 更新, 新建等操作.</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tianyilt.github.io/push.github.io/2019/12/15/Linux/2019-08-29-%E6%A0%B9%E7%9B%AE%E5%BD%95,ext3/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="tianyilt">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/push.github.io/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="探究前线">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/push.github.io/2019/12/15/Linux/2019-08-29-%E6%A0%B9%E7%9B%AE%E5%BD%95,ext3/" itemprop="url">2019-08-29-根目录,ext3</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-15T12:53:28+08:00">
-                2019-12-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/push.github.io/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="根目录-ext3"><a href="#根目录-ext3" class="headerlink" title="根目录,ext3"></a>根目录,ext3</h1><p>categories: Linux</p>
-<h2 id="根目录下的文件"><a href="#根目录下的文件" class="headerlink" title="根目录下的文件"></a>根目录下的文件</h2><ul>
-<li><p><code>/bin</code>, <code>/usr/bin</code>, <code>/usr/local/bin</code>: 可执行的二进制文件</p>
-</li>
-<li><p><code>/boot</code>: 开机文件, <code>/boot/vmlinuz</code>下放置的是linux内核. <code>/boot/grub</code>防止的开机管理程序<code>grub</code>.</p>
-</li>
-<li><p><code>/dev</code>: 装置与接口文档. 接口设备(character device), 如键盘, 鼠标等; 块设备(block device), 如硬盘, 光盘等.</p>
-</li>
-<li><p><code>/etc</code>: 系统的设定文件, 如用户等.</p>
-<ul>
-<li><p><code>/etc/init.d/</code>: 服务的启动与停止.</p>
-<p><code>/etc/init.d/iptables start</code>: 启动iptables服务.</p>
-<p><code>/etc/init.d/iptables stop</code>: 停用iptables服务.</p>
-</li>
-</ul>
-</li>
-<li><p><code>/lib</code>, <code>/usr/lib</code>, <code>/usr/local/lib</code>: 函数库. kernel的关键模块放置在<code>/lib/modules</code>下.</p>
-</li>
-<li><p><code>/mnt</code>: 挂载点.</p>
-</li>
-<li><p><code>/opt</code>: 软件安装的目录.</p>
-</li>
-<li><p><code>/proc</code>: 重要的数据, 只存放在内存中. </p>
-</li>
-<li><p><code>/sbin</code>, <code>/usr/sbin</code>, <code>/usr/local/sbin</code>: 只有管理员才能使用的可执行二进制文件.</p>
-</li>
-<li><p><code>/srv</code>: 一些服务要用到的数据就放在里面.</p>
-</li>
-<li><p><code>/usr</code>: 系统程序, 图形接口文件, 函数库, 本机自行安装的软件, 共享的目录与文件.</p>
-<ul>
-<li><code>/usr/bin</code>, <code>/usr/sbin</code></li>
-<li><code>/usr/include</code>: c/c++ 需要include的库.</li>
-<li><code>/usr/lib</code>: 软件函数库. </li>
-<li><code>/usr/local</code>: 本机自行安装软件预放置的目录. </li>
-<li><code>/usr/share</code>: 共享目录. <code>/usr/share/doc</code>: 系统说明文件. <code>/usr/share/man</code>: man的说明文档. </li>
-<li><code>/usr/src</code>: linux系统代码. <code>/usr/src/linux</code>是核心源代码. </li>
-</ul>
-</li>
-<li><p><code>/var</code>: 常态性变动文档.</p>
-<ul>
-<li><code>/var/chache</code>: 缓存文档. </li>
-<li><code>/var/lib</code>: 程序运行时需要使用的数据文件放置的目录. </li>
-<li><code>/var/log</code>: 登陆文件.</li>
-<li><code>/var/spool</code>: 队列数据. <code>/var/spool/mail</code>放置收到的邮件. <code>/var/spool/mqueue</code>放置暂时发不出去的邮件. </li>
-</ul>
-</li>
-</ul>
-<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><ul>
-<li>系统启动只会挂载根目录所在的分区, 因此与系统启动有关的文件都要放在根目录所在的分区内, 包括<code>/etc, /sbin, /bin, /dev, /lib</code>.</li>
-<li>读取频繁的文件(容易造成磁盘损坏), 需要特定空间的文件可以单独挂载, 如<code>/home, /usr, /var</code>. </li>
-</ul>
-<h2 id="文件系统"><a href="#文件系统" class="headerlink" title="文件系统"></a>文件系统</h2><p><strong>ext3</strong>: 比ext2多了一个磁盘写入的日志, 写入磁盘时, 就会在日志中记录<code>开始写入</code>, 写入后就会记录<code>完成写入</code>. 这样遭遇断电事故, 检查日志就可以缩小检查文件一致性的磁盘范围. </p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tianyilt.github.io/push.github.io/2019/12/15/Linux/2019-08-29-man,info,reboot/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="tianyilt">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/push.github.io/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="探究前线">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/push.github.io/2019/12/15/Linux/2019-08-29-man,info,reboot/" itemprop="url">2019-08-29-man,info,reboot</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-15T12:53:28+08:00">
-                2019-12-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/push.github.io/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="man-info-shutdown"><a href="#man-info-shutdown" class="headerlink" title="man, info, shutdown"></a>man, info, shutdown</h1><p>categories: Linux</p>
-<h2 id="man"><a href="#man" class="headerlink" title="man"></a>man</h2><ul>
-<li>查看特定代号的man, 使用<code>man -f [words]</code>, 可以查询<code>[words]</code>代表的所有代号. <code>man -f</code>相当于<code>whatis</code></li>
-</ul>
-<pre><code># man -f passwd
-passwd (5)           - password file
-sslpasswd (1ssl)     - compute password hashes
-passwd (1)           - update user&#39;s authentication tokens</code></pre><ul>
-<li><p>粗略寻找文件和帮助, 使用<code>man -k [words]</code>, 则会正则匹配<code>[words]</code>,<code>man -k</code>相当于<code>apropos</code>.</p>
-</li>
-<li><p>查看man文档的类型数字代表的含义, 使用<code>man man</code>, 在第二页. </p>
-</li>
-<li><p>查看特定类型的文件, 例如<code>passwd (5)</code>, 那么使用<code>man 5 passwd</code>.</p>
-</li>
-<li><p>man文档存放在<code>/usr/share</code>目录下.</p>
-</li>
-</ul>
-<h2 id="info"><a href="#info" class="headerlink" title="info"></a>info</h2><ul>
-<li>将光标停在info节点上, 按住<code>[enter]</code>就可以进入该节点.</li>
-<li><code>n</code>和<code>p</code>分别用于跳转到下一个, 上一个节点. </li>
-</ul>
-<h2 id="shutdown"><a href="#shutdown" class="headerlink" title="shutdown"></a>shutdown</h2><ul>
-<li><code>shutdown -h 1:30</code>: 在1:30关机.</li>
-<li><code>shutdown -h +10</code>: 在10分钟后关机.</li>
-<li><code>shutdown -r now</code>: 立刻重启. </li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tianyilt.github.io/push.github.io/2019/12/15/Linux/2019-08-27-%E7%A3%81%E7%9B%98%E6%A0%BC%E5%BC%8F%E8%AF%B4%E6%98%8E/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="tianyilt">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/push.github.io/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="探究前线">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/push.github.io/2019/12/15/Linux/2019-08-27-%E7%A3%81%E7%9B%98%E6%A0%BC%E5%BC%8F%E8%AF%B4%E6%98%8E/" itemprop="url">2019-08-27-磁盘格式说明</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-15T12:53:28+08:00">
-                2019-12-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/push.github.io/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="Linux的磁盘格式"><a href="#Linux的磁盘格式" class="headerlink" title="Linux的磁盘格式"></a>Linux的磁盘格式</h1><p>categories: Linux</p>
-<ol>
-<li>NTFS: 微软专用的磁盘格式,  替代FAT.</li>
-<li>EXT4: 第四代扩展文件系统. </li>
-<li>GUID: 全局唯一标识符, 128位, 显示硬件的唯一性.</li>
-<li>UEFI: 统一的可扩展固件接口. 用于加载操作系统. </li>
-<li>MBR: 分区表类型: 主引导记录, 磁盘前面的引导代码. <u>将分区信息写道磁盘64个字节中</u>, 读写硬盘时判断分区的合法性, 分区引导信息. Linux系统中MBR是GRUB加载器. 电脑启动时, BIOS先读取MBR, MBR启动windows.<ul>
-<li>MBR分区可直接用的叫主分割(Primary), 不可直接用的叫扩展分割(Extended), 扩展分割最多一个.</li>
-<li>Extended可以使用逻辑分区(Logical)来分割, 分区信息被记录到Extended中.</li>
-<li>可以有多达63个逻辑分区. </li>
-</ul>
-</li>
-<li>GPT: 分区表类型: GUID Partition Table, 全局唯一标识磁盘分区表. 使用UEFI启动. 微软建议使用GPT. </li>
-<li>MSR: 微软保留分区. 一共备用. 在将磁盘转换为动态磁盘的时候会使用. </li>
-<li>ESP: EFI系统分区. EFI BIOS来启动操作系统. <blockquote>
-<p>使用DiskGenius查看分区类型: 选择硬盘, 如果显示<code>转换为MBR分区</code>, 说明当前是GPT. </p>
-<img src='./2019-08-27-linux系统安装/001.png' width='100%'>
-</blockquote>
-</li>
-</ol>
-<h2 id="Linux磁盘文件"><a href="#Linux磁盘文件" class="headerlink" title="Linux磁盘文件"></a>Linux磁盘文件</h2><ol>
-<li>Linux硬件都挂载到/dev/下, <ul>
-<li>IDE接口的硬盘目录: <code>/dev/hd\[abcd][123456...]</code>, <code>a</code>对应第一个IDE槽的master, <code>b</code>对应第一个的slave. 1对应第一个分区. 如果配置为<code>2\*primary + 1\*logical</code>, 那么<code>primary</code>对应<code>hda1,hda2</code>, <code>extended</code>对应<code>hda3</code>, <code>logical</code>对应<code>hda4</code>.</li>
-<li>SATA接口的硬盘目录: <code>/dev/sd[abcd...]</code>.</li>
-<li>m.2接口: <code>/dev/nvme[0123...]n1p[1234...]</code>.</li>
-</ul>
-</li>
-</ol>
-<h2 id="Linux安装分区"><a href="#Linux安装分区" class="headerlink" title="Linux安装分区"></a>Linux安装分区</h2><ol>
-<li><p>/boot分区: 早年的bios只能读取1024个柱面. 如果启动文件放在前1024个柱面以外, 就无法读取. 因此需要专门划分100MB的/boot分区. 现在已不需要.</p>
-</li>
-<li><p>/swap分区: 虚拟内存. 服务器数据库需要大量读写的时候就尤为重要. 内存较小时, 大约是RAM的两倍.</p>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tianyilt.github.io/push.github.io/2019/12/15/Linux/2019-08-27-vim%E7%BC%96%E8%BE%91%E5%99%A8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="tianyilt">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/push.github.io/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="探究前线">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/push.github.io/2019/12/15/Linux/2019-08-27-vim%E7%BC%96%E8%BE%91%E5%99%A8/" itemprop="url">2019-08-27-vim编辑器</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-15T12:53:28+08:00">
-                2019-12-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/push.github.io/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="Vim编辑器"><a href="#Vim编辑器" class="headerlink" title="Vim编辑器"></a>Vim编辑器</h1><p>categories: Linux</p>
-<pre><code>test paragraph:
-My name is van, i&#39;m an artist, a performance artist. i&#39;m hired for people to 
-fulfill their fantasies, the deep dark fantesies.
-a</code></pre><h2 id="Moving-Cursor"><a href="#Moving-Cursor" class="headerlink" title="Moving Cursor"></a>Moving Cursor</h2><ul>
-<li><code>i</code>: insert</li>
-<li><code>I</code>: insert at front of line</li>
-<li><code>a</code>: append</li>
-<li><code>A</code>: append at end of line</li>
-<li><code>o</code>: overline</li>
-<li><code>O</code>: upperline</li>
-<li><code>w</code>: word forward</li>
-<li><code>b</code>: word backword</li>
-<li><code>0</code>: move to the head of the line</li>
-<li><code>$</code>: move o the end of line </li>
-<li><code>+</code>: go to the first letter next line</li>
-<li><code>-</code>: first letter last line</li>
-<li><code>e/E</code>: end of word</li>
-<li><code>h,j,k,l</code>: left,up,down,right</li>
-<li><code>4h</code>: repeat ‘h’ 4 times</li>
-</ul>
-<h2 id="Edit"><a href="#Edit" class="headerlink" title="Edit"></a>Edit</h2><ul>
-<li><code>c</code>: change the letter</li>
-<li><code>cc</code>: change whole line</li>
-<li><code>cw</code>: change word</li>
-<li><code>c2b</code>: 2 words before the cursor</li>
-<li><code>c$/C</code>: delete words from cursor to the end of this line(stay in insert mode)</li>
-<li><code>c0</code>: cursor to the begin of the line</li>
-<li><code>C</code>: delete words from the cursor to the end</li>
-<li><code>s</code>: switch letter(will stay in the insert mode)</li>
-<li><code>r</code>: replace(will stay in the cmd mode) </li>
-<li><code>R</code>: replace but will cover letters behind</li>
-<li><code>u</code>: undo</li>
-<li><code>U</code>: recover whole line</li>
-<li><code>ctrl+r</code>: redo</li>
-<li><code>ZZ</code>: save and quit</li>
-<li><code>:e!</code>: ignore changes without quitting the file</li>
-<li><code>:q!</code>: ignore changes and quit</li>
-<li><code>x</code>: delete letter in the cursor(stay in cmd mode)</li>
-<li><code>X</code>: delete letter before cursor</li>
-<li><code>d</code>: delete and put them in clipboard </li>
-<li><code>dw</code>: delete word</li>
-<li><code>dd</code>: delete line</li>
-<li>`db,d2b,2dd,d$=D,d0,…</li>
-<li><code>p</code>: place the text behind the cursor</li>
-<li><code>P</code>: place before cursor</li>
-<li><code>y</code>: copy</li>
-<li><code>yy/Y</code>: copy whole line</li>
-<li><code>.</code>: repeat last command</li>
-</ul>
-<h2 id="Scrolling-Screen"><a href="#Scrolling-Screen" class="headerlink" title="Scrolling Screen"></a>Scrolling Screen</h2><pre><code>^f means [ctrl] + [f]</code></pre><ul>
-<li><code>^f</code>: forward scroll screen </li>
-<li><code>^b</code>: backward scroll screen</li>
-<li><code>^d</code>: downward half screen</li>
-<li><code>^u</code>: upward half screen</li>
-<li><code>z[enter]</code>: move cursor to the top of screen </li>
-<li><code>z.</code>: move cursor to mid of screen</li>
-<li><code>z-</code>: move cursor to end of screen</li>
-<li><code>50z[enter]</code>: move line 50 to the top</li>
-<li><code>H</code>: move cursor to the top of screen</li>
-<li><code>M</code>: mid of screen</li>
-<li><code>L</code>: buttom of screen</li>
-<li><code>5H</code>: 5 lines down the screen</li>
-<li><code>5L</code>: 5 lines up the screen</li>
-<li><code>+/-</code>: move to the first letter of next/up line</li>
-<li><code>^</code>: move to the first no space place</li>
-<li><code>5|</code>: move to the 5th column of this line</li>
-<li><code>e</code>: move to the end of letter</li>
-<li><code>E</code>: move to the end of letter ignoring the punctuate</li>
-<li><code>(</code>: move to the begining of current sentence</li>
-<li><code>)</code>: ~ next sentence</li>
-<li><code>{</code>: ~ current paragraph</li>
-<li><code>}</code>: ~ next paragraph</li>
-<li><code>[[</code>: ~ this section</li>
-<li><code>]]</code>: ~ next section</li>
-<li>`Move based of Search</li>
-<li><code>/</code>: search downwards</li>
-<li><code>?</code>: search upwards</li>
-<li><code>n</code>: repeat last search</li>
-<li><code>N</code>: repeat last search but in the opposite direction</li>
-<li><code>fw</code>: move cursor to the next place of ‘w’(in this line)</li>
-<li><code>Fw</code>: ~ last place ~</li>
-<li><code>tw</code>: move cursor to the place before ‘w’    </li>
-<li><code>Tw</code>: ~ last place ~</li>
-<li><code>;</code>: repeat last searching cmd</li>
-<li><code>&#39;</code>: ~ opposite direction</li>
-<li>`Move based on line number</li>
-<li><code>set nu</code>: view line number</li>
-<li><code>ctrl+G</code>: view info of this line</li>
-<li><code>G</code>: go to the last line</li>
-<li><code>55G</code>: go to 55th line</li>
-<li>`(command)(number)(object)</li>
-<li><code>c17G</code>: change text from cursor to line 17</li>
-<li><code>d{</code>: delete text from cursor to last paragraph</li>
-<li><code>yH</code>: copy from cursor to head of screen</li>
-</ul>
-<h2 id="Open-File"><a href="#Open-File" class="headerlink" title="Open File"></a>Open File</h2><ul>
-<li><code>vi + file</code>: open file at last line</li>
-<li><code>vi +10 file</code>: open file at 10th line</li>
-<li><code>vi +/&quot;pattern&quot; file</code>: open file at first pattern</li>
-<li><code>vi -R file</code>: open file in “ReadOnly”(this case, use `:w! to write and quit)</li>
-<li><code>view file</code>: ditto</li>
-</ul>
-<h2 id="Mark"><a href="#Mark" class="headerlink" title="Mark"></a>Mark</h2><ul>
-<li><code>mx</code>: mark current place as x(can be any symble)</li>
-<li><code>&#39;x</code>: move cursor to the line marked with x</li>
-<li><code>\</code>x`: move cursor to mark x</li>
-<li><code>``</code>: return to last mark or the place of cursor before moving</li>
-<li><code>&#39;&#39;</code>: return to last mark or begining of the line </li>
-</ul>
-<h2 id="ex-Editor"><a href="#ex-Editor" class="headerlink" title="ex Editor"></a>ex Editor</h2><ul>
-<li><code>:d[ln]</code>: delete + line number [ln]</li>
-<li><code>:m</code>: move line</li>
-<li><code>:co</code>/<code>t</code>: copy line</li>
-<li><code>:3,18d</code>: delete line 3 to line 18</li>
-<li><code>:170,220m3</code>: move line 170 to line 220 below line 3</li>
-<li><code>:23,29c100</code>: copy line 23 to line 29 and paste below line 100</li>
-<li><code>:set nu</code>: display line number</li>
-<li><code>:.$0%</code>: present/last/first/all line of this passage</li>
-<li><code>:20,.m$</code>: move from line 20 to present line to the end line</li>
-<li><code>:+/-</code>: reletive line number</li>
-<li><code>:.,.+10co.-20</code>: copy from present line to present +10 line and paste present - 20 line  </li>
-<li><code>:/pattern/</code>: find line through pattern</li>
-<li><code>(in vi)d/while</code>: delete words from cursor to ‘while’</li>
-<li><code>(in ex):.,/while/d</code>: delete current to next match ‘while’</li>
-<li><code>:g/pattern</code>: move to last ‘pattern’ in the article</li>
-<li><code>:g/pattern/p</code>: display all lines that match pattern</li>
-<li><code>:g!/pattern/p</code>: display any line not mathch ‘pattern’</li>
-<li><code>:60,110g/pattern/p</code>: from line 60 to 110, search and display</li>
-<li><code>|</code>: split commands</li>
-<li><code>:1,3d | s/thier/their</code>: del 1 to 3 line, sub ‘thier’ to ‘their’(in current line, which is original line 4)</li>
-<li><code>:w!</code>: write in by force</li>
-<li><code>:1,30w newfile.txt</code>: write line 1 to 30 to newfile.txt</li>
-<li><code>:1,30w &gt;&gt; newfile.txt</code>: append 1,30 to newfile.txt</li>
-<li><code>:r/read filename</code>: read a newfile and copy it to next line of cursor</li>
-<li><code>:100 r filename</code>: put the file to 100 line</li>
-<li><code>:vi file1 file2; :w; :n</code>: edit file1, write file1, goto file2</li>
-<li><code>:args</code>: show all file in edit list</li>
-<li><code>:e file2</code>: switch to file2</li>
-<li><code>:#,%</code>: represent for first file and second file</li>
-<li><code>:w %.new</code>: save present content in buffer to a new file</li>
-<li><code>:&quot;f4yy, w, e letter, &quot;fp</code>: yank line 4 into buffer ‘f’, save, switch to file ‘letter’, place text</li>
-</ul>
-<h2 id="Global-Replacement"><a href="#Global-Replacement" class="headerlink" title="Global Replacement"></a>Global Replacement</h2><ul>
-<li><code>:s/old/new/</code>: substitude one ‘old’ to ‘new’, in current line</li>
-<li><code>:s/old/new/g</code>: substitude all ‘old’ in the line</li>
-<li><code>:1,$s/old/new/g</code>: substitude whole passage</li>
-<li><code>:%s/old/new/g</code>: % == 1,$</li>
-<li><code>:1,$s/old/new/gc</code>: c means confirmation, mannually confirm each change.(y+enter to change, enter to pass)</li>
-<li><code>:g/pattern/s/old/new/g</code>: global search line with ‘pattern’, and sub ‘old’ to</li>
-<li>`:  ‘new’ in the matched line </li>
-<li><code>:%s/Yae/&amp; Sakura/</code>: substitude ‘Yae’ for ‘Yae Sakura’, ‘&amp;’ represents matched</li>
-<li>`:  content</li>
-<li><code>:s/\(this\) \(that\)/\u\1 \l\2</code>: ‘This That’ =&gt; ‘This that’</li>
-<li>`:  !Attention, must use ‘(‘,’)‘ so the matched pattern can be written in \1, \2</li>
-<li><code>:g/content/mo14</code>: search line with ‘content’ and move to line 14</li>
-<li><code>:1,10g/^/ 12,17 t $</code>: copy line 12 to line 17 to end of passage 10 times</li>
-<li><code>:g /^\d/.+2 w &gt;&gt; newfile</code>: search line begin with number, append 2 line next to it</li>
-<li>`:  to a newfile</li>
-<li><code>:/^part2/,/^part3/ g /^Chapter/ .+2 w &gt;&gt; newfile</code>: search line begin with</li>
-<li>`:  Chapter from line start with ‘part2’ to ‘part3’ and append 2 lines after it to</li>
-<li>`:  new file</li>
-<li><code>:/^part2/,/^part3/ g /^Chapter/ .+2 w &gt;&gt; newfile | + t $</code>: append those lines to</li>
-<li>`:  newfile and put one line after it to end of passage</li>
-</ul>
-<h2 id="Chapter-7-Advanced-Edit"><a href="#Chapter-7-Advanced-Edit" class="headerlink" title="Chapter 7: Advanced Edit"></a>Chapter 7: Advanced Edit</h2><h3 id="Customize-vi"><a href="#Customize-vi" class="headerlink" title="Customize vi"></a>Customize vi</h3><ul>
-<li><code>:set option</code>: turn off option</li>
-<li><code>:set nooption</code>: turn off option</li>
-<li><code>:set all</code>: check all options</li>
-<li><code>:set wrapmargin=10</code>: right margin = 10, auto change line</li>
-<li><code>config &#39;.exrc&#39; file</code>: vi will pre process commands in ‘.exrc’, no need to input</li>
-<li><code>&#39;</code>:’ before commands. <h3 id="Unix-Command"><a href="#Unix-Command" class="headerlink" title="Unix Command"></a>Unix Command</h3></li>
-<li><code>:!ls</code>: add ‘!’ before order to run in unix</li>
-<li><code>:sh</code>: open a shell window(press ^d to quit)</li>
-<li><code>:r !filename</code>: put contents in filename to this passage</li>
-</ul>
-<h2 id="Chapter-10-vim-vi-improved"><a href="#Chapter-10-vim-vi-improved" class="headerlink" title="Chapter 10: vim-vi improved"></a>Chapter 10: vim-vi improved</h2><ul>
-<li><code>50%</code>: go to line 50/100*(total line number)</li>
-<li><code>v</code>: visual mode, can select words and put them into buffer<br><code>in visual mode</code><ul>
-<li><code>as</code>: add a sentence to selected area</li>
-<li><code>is</code>: add inner sentence</li>
-<li><code>ap</code>: add paragraph</li>
-<li><code>ip</code>: add inner paragraph</li>
-<li><code>5aw</code>: add 5 words(including punctuations)</li>
-<li><code>5aW</code>: add 5 words(just words)</li>
-</ul>
-</li>
-</ul>
-<h2 id="Chapter-11-Multi-Windows"><a href="#Chapter-11-Multi-Windows" class="headerlink" title="Chapter 11: Multi Windows"></a>Chapter 11: Multi Windows</h2><h3 id="CREATE-NEW-WINDOW"><a href="#CREATE-NEW-WINDOW" class="headerlink" title="CREATE NEW WINDOW"></a>CREATE NEW WINDOW</h3><ul>
-<li>in command line<ul>
-<li><code>vim -o file1 file2</code></li>
-<li><code>vim -o3 file1 file2</code>: open 3 windows in total</li>
-</ul>
-</li>
-<li>in ex mode<ul>
-<li><code>vsplit</code>: split windows vertically</li>
-<li><code>split file2</code>: open file2 in another window horizontally</li>
-<li><code>[n]split file2</code>: display n lines of file2 horizontally. </li>
-<li>`  if no file is specified, display another window in the same content of present window. New window will cut the screen evenly if no [n] is specified. </li>
-<li><code>^WS</code>: same as split </li>
-<li><code>[n]new</code>: new window, creat a new file. </li>
-<li><code>[n]vnew</code>: open a vertical window.<h3 id="MOVE-CURSOR"><a href="#MOVE-CURSOR" class="headerlink" title="MOVE CURSOR"></a>MOVE CURSOR</h3></li>
-</ul>
-</li>
-<li><code>^W+h/j/k/l</code>: move cursor between windows, in the direction of h/j/k/l</li>
-<li><code>+t</code>: move to upper left corner.</li>
-<li><code>+b</code>: move to buttom right corner.</li>
-<li><code>+p</code>: move to last visited window.</li>
-<li><code>+w</code>: move to window below or to the right.(will circle back)</li>
-<li>`MOVE WINDOW<ul>
-<li><code>^W+r</code>: Rotate the window below or to the right.</li>
-<li><code>+R</code>: Rotate the window in the opposite way.</li>
-<li><code>+x</code>: exchange position with ajacent window.</li>
-<li><code>3^W+x</code>: exchange position with 3rd window below it.</li>
-<li><code>+H/J/K/L</code>: move window to the left/bottom/top/right side of the screen.</li>
-<li><code>+T</code>: move window to the new page.</li>
-</ul>
-</li>
-<li>RESIZE WINDOW<ul>
-<li><code>^W+=</code>: justfy windows to the same size.</li>
-<li><code>+-</code>: cut one line of present window.</li>
-<li><code>++</code>: add one line to present windwo.</li>
-<li><code>+&gt;</code>: cut one column.</li>
-<li><code>+&lt;</code>: add one column.</li>
-<li><code>:resize +n</code>: add n lines to present window.</li>
-<li><code>:resize n</code>: set width of present window to n lines.</li>
-<li><code>:vertical resize n</code>: set column number.</li>
-</ul>
-</li>
-<li>NEW TAB<ul>
-<li><code>:tabnew filename</code>: open new file in a new tab.</li>
-<li><code>:tabclose</code>: close present tab.</li>
-<li><code>:tabonly</code>: close all but this tab.</li>
-</ul>
-</li>
-<li>QUIT TAB<ul>
-<li><code>^W+q</code>: If ‘hidden’ is set and this window is the last one, window will be closed while buffer is saved. If ‘hidden’ not set or unsaved changes remain in buffer, no change will be make.</li>
-<li><code>+c</code>: Close present window.</li>
-<li><code>+o</code>: Close all but this.</li>
-<li><code>:only</code>: Close all but this. </li>
-<li><code>:close</code>: Close present window.</li>
-<li><code>:quit</code>: Leave the file while keeping the buffer.</li>
-</ul>
-</li>
-</ul>
-<h2 id="Chapter-12-Vim-Script"><a href="#Chapter-12-Vim-Script" class="headerlink" title="Chapter 12: Vim Script"></a>Chapter 12: Vim Script</h2><ul>
-<li>Edit <code>.vimrc</code>/<code>.gvimrc</code>/<code>_gvimrc</code></li>
-</ul>
-<h2 id="Chapter-13-Other-Usage"><a href="#Chapter-13-Other-Usage" class="headerlink" title="Chapter 13: Other Usage"></a>Chapter 13: Other Usage</h2><ul>
-<li>FOLD<ul>
-<li><code>zA</code>: Recursively switch the folding state. </li>
-<li><code>zC</code>: Recursively close folds.</li>
-<li><code>zD</code>: Recursively delete folds.</li>
-<li><code>zE</code>: Remove all folds.</li>
-<li><code>zf</code>: Fold starts from present cursor position to next position.</li>
-<li><code>[n]zf</code>: Fold n lines.</li>
-<li><code>zM</code>: Set foldlevel to 0.</li>
-<li><code>zN</code>: Set foldenable.</li>
-<li><code>zn</code>: Reset foldenable.</li>
-<li><code>zi</code>: Switch value of foldenable.</li>
-<li><code>zo</code>: Recursively onpen folds.</li>
-<li><code>za</code>: Switch status of a fold.</li>
-<li><code>zd</code>: Delete a fold.</li>
-<li><code>zj</code>: Move cursor to the begining of next fold.</li>
-<li><code>zk</code>: Move cursor to the end of last fold.</li>
-<li><code>zr</code>: Increment value of fold level.</li>
-<li><code>zm</code>: Decrement value of fold level.</li>
-<li><code>:mkview</code>,<code>:loadview</code>: Save all folds.</li>
-</ul>
-</li>
-<li>examples`:<ul>
-<li><code>3zF</code>: Fold 3 lines, including present line.</li>
-<li><code>3zfj</code>: Fold present line and 3 lines below.</li>
-<li>Firstly move cursor to <code>{</code> or <code>}</code>, then type <code>zf%</code>, will fold a code block. because <code>%</code> is used to move between pairs of brackets.</li>
-<li><code>Fold from &#39;FOLD&#39; to &#39;examples&#39;</code>: move cursor to FOLD, type <code>zf/examples[enter]</code>. Everything do to the folded line will change all lines folded.</li>
-<li><code>:set foldmethod=indent</code>: Fold based on indents.</li>
-<li><code>:set foldlevel=0</code>: Only view zero level of fold.</li>
-<li><code>:set foldmethod=syntax</code>: Fold based on syntax.</li>
-</ul>
-</li>
-<li>INDENT<ul>
-<li><code>:set ..indent</code></li>
-<li><code>autoindent</code></li>
-<li><code>cindent</code>: for c language.</li>
-<li><code>smartindent</code></li>
-</ul>
-</li>
-<li>COMPLETE KEY WORDS<ul>
-<li><code>^x</code>: Complete words.</li>
-<li><code>^x^f</code>: Complete filename.</li>
-<li><code>^x^n</code>: Find among candidates. (after that)^n`: Next completion choice. </li>
-<li><code>^p</code>: Previous choice.</li>
-<li><code>^x^l</code>: Complete line.</li>
-<li><code>^x^i</code>: Find keywords in present file and included files.</li>
-<li><code>^x^s</code>: Give a candidate list of available words. Need to switch on spelling check. `:set spell.</li>
-</ul>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tianyilt.github.io/push.github.io/2019/12/15/hexo/qq/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="tianyilt">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/push.github.io/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="探究前线">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/push.github.io/2019/12/15/hexo/qq/" itemprop="url">未命名</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-15T12:53:28+08:00">
-                2019-12-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/push.github.io/categories/hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">hexo</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="去去去"><a href="#去去去" class="headerlink" title="去去去"></a>去去去</h1><h2 id="滚滚"><a href="#滚滚" class="headerlink" title="滚滚"></a>滚滚</h2><p><img src="qq/1576220631714.png" alt="mdzz"></p>
-<p><strong>啊啊啊</strong></p>
-<ol>
-<li></li>
-</ol>
-<p>啊啊啊啊</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tianyilt.github.io/push.github.io/2019/12/15/Git/hexo%E6%BA%90%E7%A0%81%E5%90%8C%E6%AD%A5github/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="tianyilt">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/push.github.io/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="探究前线">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/push.github.io/2019/12/15/Git/hexo%E6%BA%90%E7%A0%81%E5%90%8C%E6%AD%A5github/" itemprop="url">hexo源码同步github</a></h1>
+                <a class="post-title-link" href="/push.github.io/2019/12/15/Git/2019-08-30-%E5%92%8Cfork%E6%9D%A5%E7%9A%84%E4%BB%93%E5%BA%93%E5%90%8C%E6%AD%A5/" itemprop="url">2019-08-30-和fork来的仓库同步</a></h1>
         
 
         <div class="post-meta">
@@ -1609,23 +341,11 @@ a</code></pre><h2 id="Moving-Cursor"><a href="#Moving-Cursor" class="headerlink"
       
         
           
-            <p>摘自大佬<a href="https://1csh1.github.io/2017/04/15/save-hexo-source-to-github/" target="_blank" rel="noopener">原文</a><br>categories: Git<br>我们在使用 Hexo 来写博客的时候，我们将博客搭建在 GitHub 上后，当我们使用 hexo d 部署到 GitHub 上，其实没有把我们编写的 xxx.md 原博客文档保存上去，而只是生成一些博客需要的静态的页面。假设我们硬盘坏了，数据无法恢复，那么我们的博客源文档也会不见，所以最好我们是把源代码也托管到 GitHub 上， 这个也有一个好处就是你在其他电脑上也可以同步编写博客。接下来就讲述如何实现。</p>
-<h1 id="建立分支"><a href="#建立分支" class="headerlink" title="建立分支"></a>建立分支</h1><p>因为 master 分支是存放 Hexo 博客生成的页面，所以只能创建一个分支来保存博客的源代码在你的 GitHub 。例如，我创建了一个分支叫 save</p>
-<p><img src="hexo%E6%BA%90%E7%A0%81%E5%90%8C%E6%AD%A5github/hexo01.png" alt="img"></p>
-<h1 id="更改默认分支"><a href="#更改默认分支" class="headerlink" title="更改默认分支"></a>更改默认分支</h1><p>更改我们的项目的默认分支为 save</p>
-<p><img src="hexo%E6%BA%90%E7%A0%81%E5%90%8C%E6%AD%A5github/hexo02.png" alt="img"></p>
-<h1 id="clone-项目"><a href="#clone-项目" class="headerlink" title="clone 项目"></a>clone 项目</h1><p>clone 你的项目到你的 Hexo 目录下。例如我的是执行下面的命令：</p>
-<pre><code class="git">git clone https://github.com/1CSH1/1CSH1.github.io.git</code></pre>
-<h1 id="执行命令"><a href="#执行命令" class="headerlink" title="执行命令"></a>执行命令</h1><p>执行下面的命令将你的博客的原文配置等等保存到分支 save 上</p>
-<pre><code>git remote add origin https://github.com/1CSH1/1CSH1.github.io.git
-git add .
-git commit -m &quot;your description&quot;
-git push origin save</code></pre><h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><p>确认你的 _config.yml 配置是提交到 master 分支</p>
-<pre><code>deploy:
-  type: git
-  repository: git@github.com:1CSH1/1CSH1.github.io.git
-  branch: master</code></pre><p>通过以上的配置，就可以把 Hexo 博客的源文件配置等到保存到 GitHub 上。</p>
-
+            <h1 id="和fork来的仓库同步"><a href="#和fork来的仓库同步" class="headerlink" title="和fork来的仓库同步"></a>和fork来的仓库同步</h1><p>categories: Git<br>git将fork的仓库名称记为<code>upstream</code>, 因此同步就和远程仓库一样.</p>
+<p>同步远程仓库时, 使用</p>
+<pre><code>$ git pull origin</code></pre><p>同步fork的原仓库, 使用</p>
+<pre><code>$ git pull upstream master</code></pre><p>然后推送到远程</p>
+<pre><code>$ git push origin master</code></pre>
           
         
       
@@ -1673,7 +393,7 @@ git push origin save</code></pre><h1 id="配置"><a href="#配置" class="header
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tianyilt.github.io/push.github.io/2019/12/15/Git/2019-11-23-unable%20to%20autodetect%20email%20address%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/">
+    <link itemprop="mainEntityOfPage" href="http://tianyilt.github.io/push.github.io/2019/12/15/Git/2019-08-25-git%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="tianyilt">
@@ -1692,7 +412,7 @@ git push origin save</code></pre><h1 id="配置"><a href="#配置" class="header
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/push.github.io/2019/12/15/Git/2019-11-23-unable%20to%20autodetect%20email%20address%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" itemprop="url">2019-11-23-unable to autodetect email address解决方法</a></h1>
+                <a class="post-title-link" href="/push.github.io/2019/12/15/Git/2019-08-25-git%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/" itemprop="url">2019-08-25-git基础命令</a></h1>
         
 
         <div class="post-meta">
@@ -1766,18 +486,88 @@ git push origin save</code></pre><h1 id="配置"><a href="#配置" class="header
       
         
           
-            <h1 id="unable-to-auto-detect-email-address解决方法"><a href="#unable-to-auto-detect-email-address解决方法" class="headerlink" title="unable to auto-detect email address解决方法"></a>unable to auto-detect email address解决方法</h1><p>categories: Git<br> git pull 失败 ,提示：<code>fatal: refusing to merge unrelated histories</code> </p>
-<p> 使用</p>
-<pre><code>git pull origin master --allow-unrelated-histories </code></pre><p>然后git提示<code>unable to auto-detect email address</code>,</p>
+            <h1 id="git基础命令"><a href="#git基础命令" class="headerlink" title="git基础命令"></a>git基础命令</h1><p>categories: Git</p>
+<h2 id="初始配置"><a href="#初始配置" class="headerlink" title="初始配置"></a>初始配置</h2><ul>
+<li><code>git  init</code> 初始化  </li>
+<li><code>git  status</code>  </li>
+</ul>
+<h2 id="提交和日志"><a href="#提交和日志" class="headerlink" title="提交和日志"></a>提交和日志</h2><ul>
+<li><code>git  add</code>  </li>
+<li><code>git  commit -m &#39;write something to explain the changes&#39;</code>  </li>
+<li><code>git  log --pretty=oneline</code>  </li>
+<li><code>git  log --graph --pretty=oneline --abbrev-commit</code> 可视化  </li>
+</ul>
+<h2 id="回滚"><a href="#回滚" class="headerlink" title="回滚"></a>回滚</h2><ul>
+<li><code>git  reset --hard HEAD^</code>  </li>
+<li><code>git  reset --hard version_id</code>  </li>
+<li><code>git  checkout -- &lt;filename&gt;</code> 丢弃工作区的修改，退回到版本库（或暂存区）最新版本  </li>
+<li><code>git  reset HEAD &lt;filename&gt;</code> 撤销暂存区的修改，重新放回工作区<br><code>rm &lt;filename&gt;</code> 从系统删除文件  </li>
+<li><code>git  rm &lt;filename&gt;</code> 从版本库删除文件。删除之后要git commit -m提交  </li>
+</ul>
+<h2 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h2><p>github git仓库托管服务  </p>
 <ul>
-<li><p>在<code>.git</code>文件夹下, <code>vi config</code></p>
+<li><code>git  remote</code> 查看远程库信息  </li>
+<li><code>git  remote -v</code> 查看远程库详细信息  </li>
+<li><code>git  remote add origin https://github.com/LiuJin3042/learngit.git</code> 关联远程库，默认名称origin  </li>
+<li><code>git  remote add &lt;repo_name&gt; https://github.com/LiuJin3042/learngit.git</code> 关联远程库，用任意名称  </li>
+<li><code>git  push -u origin master</code> 将本地分支master上传到远程库origin，-u参数关联master分支  </li>
+<li><code>git  push origin master(dev)</code> 将本地分支master(dev)的修改推送到github。没有联网也可以工作  </li>
+<li><code>git  clone https://...</code> 复制远程库到本地，复制后只能看到master分支  </li>
+<li><code>git  pull</code> 必须先将远程库同步到本地，解决冲突后本地才可以push到远程  </li>
+</ul>
+<h2 id="多分支"><a href="#多分支" class="headerlink" title="多分支"></a>多分支</h2><ul>
+<li><code>git  branch --set-upstream-to=origin/dev dev</code> 将本地的dev和远程的dev链接起来  </li>
+<li><code>git  checkout -b branch-name origin/branch-name</code> 本地创建和远程分支对应的分支，分支名称最好一致  </li>
+<li><code>git  checkout -b dev</code> 创建dev分支，切换到dev分支（相当于下面两条指令）  <ul>
+<li><code>git branch dev</code>  </li>
+<li><code>git checkout dev</code>  </li>
+</ul>
 </li>
-<li><p>在最前面加上</p>
-<pre><code>[user]
-email=your email
-name=your name</code></pre></li>
-<li><p>不需要单引号</p>
-</li>
+<li><code>git  branch</code> 查看分支  </li>
+<li><code>git  merge dev</code> 合并指定分支到当前分支  </li>
+<li><code>git  branch -d dev</code> 删除dev  </li>
+<li><code>git  merge --no-ff -m &quot;merge with no-ff&quot; dev</code> 禁用fast forward  </li>
+</ul>
+<h2 id="上传大文件"><a href="#上传大文件" class="headerlink" title="上传大文件"></a>上传大文件</h2><p>超过100M的大文件需要使用git-lfs上传. 但是git-lfs对库的容量有要求, 库超过1G大就要购买额外空间.</p>
+<ul>
+<li>在<a href="git-lfs.github.com">此网站</a>下载git-lfs并安装(Windows系统)</li>
+<li>在<code>git bash</code>中输入<code>git lfs install</code></li>
+<li>在库中输入<code>git lfs track &quot;*.pdf&quot;</code>, 以后pdf文件都是用git-lfs上传</li>
+</ul>
+<h2 id="暂存状态"><a href="#暂存状态" class="headerlink" title="暂存状态"></a>暂存状态</h2><ul>
+<li><code>git  stash</code>清空工作区，将当前工作放到栈里  </li>
+<li><code>git  stash list</code> 查看栈  </li>
+<li><code>git  stash pop</code> 恢复栈，清空内容。  </li>
+<li><code>git  stash app</code>  </li>
+</ul>
+<h2 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h2><ul>
+<li><code>git  tag</code> 查看所有标签  </li>
+<li><code>git  tag v0.9 f52c633</code> 在id为f52c633的commit上打一个标签，标签名是v0.9  </li>
+<li><code>git  show &lt;tagname&gt;</code> 查看标签信息  </li>
+<li><code>git  tag -a v0.1 -m &quot;version 0.1 released&quot; 1094adb</code> -a添加标签名称，-m添加备注  </li>
+<li><code>git  tag -d &lt;tagname&gt;</code>  </li>
+<li><code>git  push origin &lt;tagname&gt;</code> 将本地的标签推到远程  </li>
+<li><code>git  push origin --tags</code> 推送所有标签  </li>
+<li><code>git  push origin :refs/tags/v0.9</code> 删除远程标签，要先删除本地的标签，然后用这句话  </li>
+</ul>
+<h2 id="杂项配置"><a href="#杂项配置" class="headerlink" title="杂项配置"></a>杂项配置</h2><ul>
+<li><code>git  config --global color.ui true</code> 命令显示颜色  </li>
+</ul>
+<h2 id="忽略文件"><a href="#忽略文件" class="headerlink" title="忽略文件"></a>忽略文件</h2><p>编写 .gitignore 文件<br>.gitignore 需要提交到库里，并对文件做版本管理  </p>
+<ul>
+<li><code>git  add -f App.class</code> 强制添加被忽略的文件  </li>
+<li><code>git  check-ignore -v App.class</code>  </li>
+</ul>
+<h2 id="命令别名"><a href="#命令别名" class="headerlink" title="命令别名"></a>命令别名</h2><ul>
+<li><code>git  config --global alias.st status</code> 用st代替status命令。–global是全局参数，表示本电脑所有git库都可以使用  </li>
+</ul>
+<h2 id="配置git服务器"><a href="#配置git服务器" class="headerlink" title="配置git服务器"></a>配置git服务器</h2><ul>
+<li>推荐linux系统<br><code>sudo apt-get install git</code><br><code>sudo adduser git</code>  </li>
+<li>把所有公钥导入到<code>/home/git/.ssh/authorized_keys</code>文件里，一行一个  </li>
+<li>先选定一个目录作为Git仓库，假定<code>是/srv/sample.git</code>，在/srv目录下输入命令：<br><code>sudo git init --bare sample.git</code>  </li>
+<li>把owner改为git: <code>sudo chown -R git:git sample.git</code>  </li>
+<li>禁用shell登录sudo chown -R git:git sample.git改为git: <code>x:1001:1001:...:/home/git:/usr/bin/git-shell</code>  </li>
+<li><code>git  clone git@server:/srv/sample.git</code>  </li>
 </ul>
 
           
@@ -1827,7 +617,7 @@ name=your name</code></pre></li>
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tianyilt.github.io/push.github.io/2019/12/15/Git/2019-11-23-github_desktop%E7%9A%84gui%E7%95%8C%E9%9D%A2%E7%AE%80%E5%8D%95%E6%93%8D%E4%BD%9C/">
+    <link itemprop="mainEntityOfPage" href="http://tianyilt.github.io/push.github.io/2019/12/15/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="tianyilt">
@@ -1846,7 +636,7 @@ name=your name</code></pre></li>
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/push.github.io/2019/12/15/Git/2019-11-23-github_desktop%E7%9A%84gui%E7%95%8C%E9%9D%A2%E7%AE%80%E5%8D%95%E6%93%8D%E4%BD%9C/" itemprop="url">2019-11-23-github_desktop的gui界面简单操作</a></h1>
+                <a class="post-title-link" href="/push.github.io/2019/12/15/hello-world/" itemprop="url">Hello World</a></h1>
         
 
         <div class="post-meta">
@@ -1858,7 +648,7 @@ name=your name</code></pre></li>
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-15T12:53:28+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-15T10:39:48+08:00">
                 2019-12-15
               </time>
             
@@ -1868,28 +658,6 @@ name=your name</code></pre></li>
             
           </span>
 
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/push.github.io/categories/Git/" itemprop="url" rel="index">
-                    <span itemprop="name">Git</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -1920,184 +688,15 @@ name=your name</code></pre></li>
       
         
           
-            <p>#github desktop的gui界面简单操作<br>categories: Git<br>github在PC平台推出了这款应用<img src="2019-11-23-github_desktop%E7%9A%84gui%E7%95%8C%E9%9D%A2%E7%AE%80%E5%8D%95%E6%93%8D%E4%BD%9C/1574471105559.png" alt="1574471105559"></p>
-<p>极大地简化了使用git的操作,现在以一次日常操作为例讲解其使用方法</p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p><a href="https://desktop.github.com/" target="_blank" rel="noopener">安装连接</a></p>
-<p>​    下载完一路默认</p>
-<h2 id="添加本地仓库"><a href="#添加本地仓库" class="headerlink" title="添加本地仓库"></a>添加本地仓库</h2><p>比如我刚刚<del>从刘锦的博客把所有代码剽窃了</del>,<img src="2019-11-23-github_desktop%E7%9A%84gui%E7%95%8C%E9%9D%A2%E7%AE%80%E5%8D%95%E6%93%8D%E4%BD%9C/1574472839733.png" alt="1574472839733"></p>
-<p>现在准备放到自己的博客网站.当前工作目录如下</p>
-<p><img src="2019-11-23-github_desktop%E7%9A%84gui%E7%95%8C%E9%9D%A2%E7%AE%80%E5%8D%95%E6%93%8D%E4%BD%9C/1574472951010.png" alt="1574472951010"></p>
-<p><img src="2019-11-23-github_desktop%E7%9A%84gui%E7%95%8C%E9%9D%A2%E7%AE%80%E5%8D%95%E6%93%8D%E4%BD%9C/1574473125827.png" alt="1574473125827"></p>
-<p><img src="2019-11-23-github_desktop%E7%9A%84gui%E7%95%8C%E9%9D%A2%E7%AE%80%E5%8D%95%E6%93%8D%E4%BD%9C/1574473163626.png" alt="1574473163626"></p>
-<p>添加后发现我刚才因为抄了一大堆代码产生的更改</p>
-<p><img src="2019-11-23-github_desktop%E7%9A%84gui%E7%95%8C%E9%9D%A2%E7%AE%80%E5%8D%95%E6%93%8D%E4%BD%9C/1574473219593.png" alt="1574473219593"></p>
-<h2 id="本地同步远程"><a href="#本地同步远程" class="headerlink" title="本地同步远程"></a>本地同步远程</h2><p>直接提交</p>
-<p><img src="2019-11-23-github_desktop%E7%9A%84gui%E7%95%8C%E9%9D%A2%E7%AE%80%E5%8D%95%E6%93%8D%E4%BD%9C/1574473383934.png" alt="1574473383934"></p>
-<p>然后一键同步</p>
-<p><img src="2019-11-23-github_desktop%E7%9A%84gui%E7%95%8C%E9%9D%A2%E7%AE%80%E5%8D%95%E6%93%8D%E4%BD%9C/1574473671656.png" alt="1574473671656"></p>
-<p>可以看到完全同步</p>
-<p><a href="https://tianyilt.github.io/MyBlog/" target="_blank" rel="noopener">剽窃的地址</a></p>
-<h3 id="切换远程仓库位置"><a href="#切换远程仓库位置" class="headerlink" title="切换远程仓库位置"></a>切换远程仓库位置</h3><p>如果使用的是fork的仓库,可以在gui设置远程</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tianyilt.github.io/push.github.io/2019/12/15/Git/2019-11-10-%E5%9C%A8github%E7%AB%AFfork%E8%BF%9C%E7%A8%8B%E5%90%8C%E6%AD%A5/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="tianyilt">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/push.github.io/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="探究前线">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/push.github.io/2019/12/15/Git/2019-11-10-%E5%9C%A8github%E7%AB%AFfork%E8%BF%9C%E7%A8%8B%E5%90%8C%E6%AD%A5/" itemprop="url">2019-11-10-在github端fork远程同步</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-15T12:53:28+08:00">
-                2019-12-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/push.github.io/categories/Git/" itemprop="url" rel="index">
-                    <span itemprop="name">Git</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="在github端fork远程同步"><a href="#在github端fork远程同步" class="headerlink" title="在github端fork远程同步"></a>在github端fork远程同步</h1><p>categories: Git<br>现在我们已经fork别人的一个远程仓库，经过一段时间，原仓库进行了一端更新，我们需要与远程的原仓库同步。</p>
-<p>进入自己fork仓库的pull request</p>
-<p><img src="%E5%9C%A8github%E7%AB%AFfork%E8%BF%9C%E7%A8%8B%E5%90%8C%E6%AD%A5/1573359731289.png" alt="1573359731289"></p>
-<p><img src="%E5%9C%A8github%E7%AB%AFfork%E8%BF%9C%E7%A8%8B%E5%90%8C%E6%AD%A5/1573359783354.png" alt="1573359783354"></p>
-<p>可以发现目前默认是从自己仓库同步到原仓库，需要交换标签顺序，首先把发起栏目改成原仓库</p>
-<p><img src="%E5%9C%A8github%E7%AB%AFfork%E8%BF%9C%E7%A8%8B%E5%90%8C%E6%AD%A5/1573359832906.png" alt="1573359832906"></p>
-<p>可是会出现这个页面</p>
-<p><img src="%E5%9C%A8github%E7%AB%AFfork%E8%BF%9C%E7%A8%8B%E5%90%8C%E6%AD%A5/1573359891243.png" alt="1573359891243"></p>
-<p>点击</p>
-<p> compare across forks</p>
-<p><img src="%E5%9C%A8github%E7%AB%AFfork%E8%BF%9C%E7%A8%8B%E5%90%8C%E6%AD%A5/1573359938161.png" alt="1573359938161"></p>
-<p>再把目标仓库换成自己fork仓库</p>
-<p><img src="%E5%9C%A8github%E7%AB%AFfork%E8%BF%9C%E7%A8%8B%E5%90%8C%E6%AD%A5/1573359959587.png" alt="1573359959587"></p>
-<p>可以从这里看到自己更新的内容</p>
-<p>点击<img src="%E5%9C%A8github%E7%AB%AFfork%E8%BF%9C%E7%A8%8B%E5%90%8C%E6%AD%A5/1573359982645.png" alt="1573359982645"></p>
-<p><img src="%E5%9C%A8github%E7%AB%AFfork%E8%BF%9C%E7%A8%8B%E5%90%8C%E6%AD%A5/1573360028978.png" alt="1573360028978"></p>
-<p><img src="%E5%9C%A8github%E7%AB%AFfork%E8%BF%9C%E7%A8%8B%E5%90%8C%E6%AD%A5/1573360054850.png" alt="1573360054850"></p>
-<p>自此，完成合并</p>
-<p>从自己pull request到原仓库方法一样</p>
+            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="bash">$ hexo new &quot;My New Post&quot;</code></pre>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="bash">$ hexo server</code></pre>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="bash">$ hexo generate</code></pre>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="bash">$ hexo deploy</code></pre>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 
           
         
@@ -2137,7 +736,7 @@ name=your name</code></pre></li>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/push.github.io/page/5/">&lt;i class&#x3D;&quot;fa fa-angle-left&quot;&gt;&lt;&#x2F;i&gt;</a><a class="page-number" href="/push.github.io/">1</a><span class="space">&hellip;</span><a class="page-number" href="/push.github.io/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/push.github.io/page/7/">7</a><a class="page-number" href="/push.github.io/page/8/">8</a><a class="extend next" rel="next" href="/push.github.io/page/7/">&lt;i class&#x3D;&quot;fa fa-angle-right&quot;&gt;&lt;&#x2F;i&gt;</a>
+    <a class="extend prev" rel="prev" href="/push.github.io/page/5/">&lt;i class&#x3D;&quot;fa fa-angle-left&quot;&gt;&lt;&#x2F;i&gt;</a><a class="page-number" href="/push.github.io/">1</a><span class="space">&hellip;</span><a class="page-number" href="/push.github.io/page/5/">5</a><span class="page-number current">6</span>
   </nav>
 
 
@@ -2183,7 +782,7 @@ name=your name</code></pre></li>
               
                 <a href="/push.github.io/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">74</span>
+                  <span class="site-state-item-count">53</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2194,7 +793,7 @@ name=your name</code></pre></li>
               
               <div class="site-state-item site-state-categories">
                 <a href="/push.github.io/categories/index.html">
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
