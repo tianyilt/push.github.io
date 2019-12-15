@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next gemini use-motion" lang="zh-CN">
+<html class="theme-next gemini use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -83,7 +83,6 @@
 <meta property="og:title" content="探究前线">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;page&#x2F;4&#x2F;index.html">
 <meta property="og:site_name" content="探究前线">
-<meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="tianyilt">
 <meta name="twitter:card" content="summary">
 
@@ -101,7 +100,7 @@
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     duoshuo: {
       userId: '0',
-      author: 'Author'
+      author: '博主'
     },
     algolia: {
       applicationID: '',
@@ -133,7 +132,7 @@
 
 <meta name="generator" content="Hexo 4.1.1"></head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
   
@@ -182,7 +181,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Home
+            首页
           </a>
         </li>
       
@@ -192,7 +191,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
-            Tags
+            标签
           </a>
         </li>
       
@@ -202,7 +201,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
-            Categories
+            分类
           </a>
         </li>
       
@@ -212,7 +211,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archives
+            归档
           </a>
         </li>
       
@@ -249,7 +248,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/15/Linux/2019-08-29-man,info,reboot/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/15/%E6%80%9D%E7%A7%911/2019-09-21-ch02%E9%85%8D%E7%BD%AE%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="tianyilt">
@@ -268,7 +267,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/12/15/Linux/2019-08-29-man,info,reboot/" itemprop="url">2019-08-29-man,info,reboot</a></h1>
+                <a class="post-title-link" href="/2019/12/15/%E6%80%9D%E7%A7%911/2019-09-21-ch02%E9%85%8D%E7%BD%AE%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" itemprop="url">2019-09-21-ch02配置网络操作系统</a></h1>
         
 
         <div class="post-meta">
@@ -278,9 +277,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-15T12:53:28+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-15T12:53:28+08:00">
                 2019-12-15
               </time>
             
@@ -299,12 +298,12 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">In</span>
+                <span class="post-meta-item-text">分类于</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
+                  <a href="/categories/%E6%80%9D%E7%A7%911/" itemprop="url" rel="index">
+                    <span itemprop="name">思科1</span>
                   </a>
                 </span>
 
@@ -342,1748 +341,2154 @@
       
         
           
-            <h1 id="man-info-shutdown"><a href="#man-info-shutdown" class="headerlink" title="man, info, shutdown"></a>man, info, shutdown</h1><p>categories: Linux</p>
-<h2 id="man"><a href="#man" class="headerlink" title="man"></a>man</h2><ul>
-<li>查看特定代号的man, 使用<code>man -f [words]</code>, 可以查询<code>[words]</code>代表的所有代号. <code>man -f</code>相当于<code>whatis</code></li>
+            <h1 id="ch2：配置网络操作系统"><a href="#ch2：配置网络操作系统" class="headerlink" title="ch2：配置网络操作系统"></a>ch2：配置网络操作系统</h1><p>categories: 思科1</p>
+<h2 id="思科IOS"><a href="#思科IOS" class="headerlink" title="思科IOS"></a>思科IOS</h2><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><ul>
+<li>思科的操作系统</li>
+<li>允许用户与设备交互</li>
+<li>RJ45接口：console口，即控制台接口，在控制计算机上打开一个终端CLI进行配置. 使用控制台电缆, 连接主机的串行接口和控制台接口. </li>
+<li>AUX口: 辅助控制口, console口无法使用的时候</li>
+<li>每一个思科系统都有一个IOS</li>
 </ul>
-<pre><code># man -f passwd
-passwd (5)           - password file
-sslpasswd (1ssl)     - compute password hashes
-passwd (1)           - update user&#39;s authentication tokens</code></pre><ul>
-<li><p>粗略寻找文件和帮助, 使用<code>man -k [words]</code>, 则会正则匹配<code>[words]</code>,<code>man -k</code>相当于<code>apropos</code>.</p>
-</li>
-<li><p>查看man文档的类型数字代表的含义, 使用<code>man man</code>, 在第二页. </p>
-</li>
-<li><p>查看特定类型的文件, 例如<code>passwd (5)</code>, 那么使用<code>man 5 passwd</code>.</p>
-</li>
-<li><p>man文档存放在<code>/usr/share</code>目录下.</p>
-</li>
+<h3 id="命令结构"><a href="#命令结构" class="headerlink" title="命令结构"></a>命令结构</h3><ul>
+<li>关键字, 如果不会引起歧义, 可以缩短</li>
+<li>参数</li>
 </ul>
-<h2 id="info"><a href="#info" class="headerlink" title="info"></a>info</h2><ul>
-<li>将光标停在info节点上, 按住<code>[enter]</code>就可以进入该节点.</li>
-<li><code>n</code>和<code>p</code>分别用于跳转到下一个, 上一个节点. </li>
+<h3 id="帮助"><a href="#帮助" class="headerlink" title="帮助"></a>帮助</h3><ul>
+<li>上下文帮助, 直接输入问号<code>?</code></li>
 </ul>
-<h2 id="shutdown"><a href="#shutdown" class="headerlink" title="shutdown"></a>shutdown</h2><ul>
-<li><code>shutdown -h 1:30</code>: 在1:30关机.</li>
-<li><code>shutdown -h +10</code>: 在10分钟后关机.</li>
-<li><code>shutdown -r now</code>: 立刻重启. </li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/15/Linux/2019-08-27-%E7%A3%81%E7%9B%98%E6%A0%BC%E5%BC%8F%E8%AF%B4%E6%98%8E/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="tianyilt">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="探究前线">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/12/15/Linux/2019-08-27-%E7%A3%81%E7%9B%98%E6%A0%BC%E5%BC%8F%E8%AF%B4%E6%98%8E/" itemprop="url">2019-08-27-磁盘格式说明</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-15T12:53:28+08:00">
-                2019-12-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="Linux的磁盘格式"><a href="#Linux的磁盘格式" class="headerlink" title="Linux的磁盘格式"></a>Linux的磁盘格式</h1><p>categories: Linux</p>
-<ol>
-<li>NTFS: 微软专用的磁盘格式,  替代FAT.</li>
-<li>EXT4: 第四代扩展文件系统. </li>
-<li>GUID: 全局唯一标识符, 128位, 显示硬件的唯一性.</li>
-<li>UEFI: 统一的可扩展固件接口. 用于加载操作系统. </li>
-<li>MBR: 分区表类型: 主引导记录, 磁盘前面的引导代码. <u>将分区信息写道磁盘64个字节中</u>, 读写硬盘时判断分区的合法性, 分区引导信息. Linux系统中MBR是GRUB加载器. 电脑启动时, BIOS先读取MBR, MBR启动windows.<ul>
-<li>MBR分区可直接用的叫主分割(Primary), 不可直接用的叫扩展分割(Extended), 扩展分割最多一个.</li>
-<li>Extended可以使用逻辑分区(Logical)来分割, 分区信息被记录到Extended中.</li>
-<li>可以有多达63个逻辑分区. </li>
+<h2 id="基本设备配置"><a href="#基本设备配置" class="headerlink" title="基本设备配置"></a>基本设备配置</h2><h3 id="主机名"><a href="#主机名" class="headerlink" title="主机名"></a>主机名</h3><ul>
+<li><p>设备名称: 用来区分设备, 好的设备名能准确表达设备的角色</p>
+<ul>
+<li>大小写敏感</li>
+<li>字母, 数字, 破折号</li>
 </ul>
 </li>
-<li>GPT: 分区表类型: GUID Partition Table, 全局唯一标识磁盘分区表. 使用UEFI启动. 微软建议使用GPT. </li>
-<li>MSR: 微软保留分区. 一共备用. 在将磁盘转换为动态磁盘的时候会使用. </li>
-<li>ESP: EFI系统分区. EFI BIOS来启动操作系统. <blockquote>
-<p>使用DiskGenius查看分区类型: 选择硬盘, 如果显示<code>转换为MBR分区</code>, 说明当前是GPT. </p>
-<img src='./2019-08-27-linux系统安装/001.png' width='100%'>
-</blockquote>
-</li>
-</ol>
-<h2 id="Linux磁盘文件"><a href="#Linux磁盘文件" class="headerlink" title="Linux磁盘文件"></a>Linux磁盘文件</h2><ol>
-<li>Linux硬件都挂载到/dev/下, <ul>
-<li>IDE接口的硬盘目录: <code>/dev/hd\[abcd][123456...]</code>, <code>a</code>对应第一个IDE槽的master, <code>b</code>对应第一个的slave. 1对应第一个分区. 如果配置为<code>2\*primary + 1\*logical</code>, 那么<code>primary</code>对应<code>hda1,hda2</code>, <code>extended</code>对应<code>hda3</code>, <code>logical</code>对应<code>hda4</code>.</li>
-<li>SATA接口的硬盘目录: <code>/dev/sd[abcd...]</code>.</li>
-<li>m.2接口: <code>/dev/nvme[0123...]n1p[1234...]</code>.</li>
+<li><p>配置主机名</p>
+<pre><code>enable
+config terminal
+hostname SW-Floor-1
+no hostname // 把主机名设置为</code></pre></li>
+<li><p>防止不必要的dns查找, 命令输错时, 防止交换机把他们认为是主机名而进行搜索</p>
+<pre><code>// 配置模式下
+no ip domain-lookup</code></pre></li>
+</ul>
+<h3 id="默认限制对设备配置的访问"><a href="#默认限制对设备配置的访问" class="headerlink" title="默认限制对设备配置的访问"></a>默认限制对设备配置的访问</h3><ul>
+<li><p>使用分层模式对设备设置密码</p>
+<ul>
+<li>密码保护特权exec访问</li>
+<li>密码保护用户exec访问</li>
+<li>密码保护telnet访问</li>
+<li>加密密码+法律通知</li>
 </ul>
 </li>
-</ol>
-<h2 id="Linux安装分区"><a href="#Linux安装分区" class="headerlink" title="Linux安装分区"></a>Linux安装分区</h2><ol>
-<li><p>/boot分区: 早年的bios只能读取1024个柱面. 如果启动文件放在前1024个柱面以外, 就无法读取. 因此需要专门划分100MB的/boot分区. 现在已不需要.</p>
+<li><p>配置密码</p>
+<ul>
+<li><p>特权exec密码</p>
+<pre><code class="shell">// 用户模式下
+enable
+conf terminal
+enable secret your_password // 设置特权exec的使能加密密码, 密码以密文存储
+exit // 退出配置模式
+disable // 退出特权模式
+enable // 会提示输入密码</code></pre>
 </li>
-<li><p>/swap分区: 虚拟内存. 服务器数据库需要大量读写的时候就尤为重要. 内存较小时, 大约是RAM的两倍.</p>
+<li><p>用户exec密码</p>
+<pre><code>// 配置模式(config)下
+line console 0 // line console代表线路控制台配置, 0代表第一个(大多只有一个)控制台接口
+password your_password
+login // 启用用户exec访问
+exit // 回到配置模式</code></pre></li>
+<li><p>虚拟终端(VTY)线路支持设备远程访问, 配置密码</p>
+<pre><code>// 配置模式下
+line vty 0 15 // 为0-15共16个VTY线路配置密码
+password your_password 
+login</code></pre></li>
+</ul>
 </li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/15/Linux/2019-08-27-vim%E7%BC%96%E8%BE%91%E5%99%A8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="tianyilt">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="探究前线">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/12/15/Linux/2019-08-27-vim%E7%BC%96%E8%BE%91%E5%99%A8/" itemprop="url">2019-08-27-vim编辑器</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-15T12:53:28+08:00">
-                2019-12-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="Vim编辑器"><a href="#Vim编辑器" class="headerlink" title="Vim编辑器"></a>Vim编辑器</h1><p>categories: Linux</p>
-<pre><code>test paragraph:
-My name is van, i&#39;m an artist, a performance artist. i&#39;m hired for people to 
-fulfill their fantasies, the deep dark fantesies.
-a</code></pre><h2 id="Moving-Cursor"><a href="#Moving-Cursor" class="headerlink" title="Moving Cursor"></a>Moving Cursor</h2><ul>
-<li><code>i</code>: insert</li>
-<li><code>I</code>: insert at front of line</li>
-<li><code>a</code>: append</li>
-<li><code>A</code>: append at end of line</li>
-<li><code>o</code>: overline</li>
-<li><code>O</code>: upperline</li>
-<li><code>w</code>: word forward</li>
-<li><code>b</code>: word backword</li>
-<li><code>0</code>: move to the head of the line</li>
-<li><code>$</code>: move o the end of line </li>
-<li><code>+</code>: go to the first letter next line</li>
-<li><code>-</code>: first letter last line</li>
-<li><code>e/E</code>: end of word</li>
-<li><code>h,j,k,l</code>: left,up,down,right</li>
-<li><code>4h</code>: repeat ‘h’ 4 times</li>
-</ul>
-<h2 id="Edit"><a href="#Edit" class="headerlink" title="Edit"></a>Edit</h2><ul>
-<li><code>c</code>: change the letter</li>
-<li><code>cc</code>: change whole line</li>
-<li><code>cw</code>: change word</li>
-<li><code>c2b</code>: 2 words before the cursor</li>
-<li><code>c$/C</code>: delete words from cursor to the end of this line(stay in insert mode)</li>
-<li><code>c0</code>: cursor to the begin of the line</li>
-<li><code>C</code>: delete words from the cursor to the end</li>
-<li><code>s</code>: switch letter(will stay in the insert mode)</li>
-<li><code>r</code>: replace(will stay in the cmd mode) </li>
-<li><code>R</code>: replace but will cover letters behind</li>
-<li><code>u</code>: undo</li>
-<li><code>U</code>: recover whole line</li>
-<li><code>ctrl+r</code>: redo</li>
-<li><code>ZZ</code>: save and quit</li>
-<li><code>:e!</code>: ignore changes without quitting the file</li>
-<li><code>:q!</code>: ignore changes and quit</li>
-<li><code>x</code>: delete letter in the cursor(stay in cmd mode)</li>
-<li><code>X</code>: delete letter before cursor</li>
-<li><code>d</code>: delete and put them in clipboard </li>
-<li><code>dw</code>: delete word</li>
-<li><code>dd</code>: delete line</li>
-<li>`db,d2b,2dd,d$=D,d0,…</li>
-<li><code>p</code>: place the text behind the cursor</li>
-<li><code>P</code>: place before cursor</li>
-<li><code>y</code>: copy</li>
-<li><code>yy/Y</code>: copy whole line</li>
-<li><code>.</code>: repeat last command</li>
-</ul>
-<h2 id="Scrolling-Screen"><a href="#Scrolling-Screen" class="headerlink" title="Scrolling Screen"></a>Scrolling Screen</h2><pre><code>^f means [ctrl] + [f]</code></pre><ul>
-<li><code>^f</code>: forward scroll screen </li>
-<li><code>^b</code>: backward scroll screen</li>
-<li><code>^d</code>: downward half screen</li>
-<li><code>^u</code>: upward half screen</li>
-<li><code>z[enter]</code>: move cursor to the top of screen </li>
-<li><code>z.</code>: move cursor to mid of screen</li>
-<li><code>z-</code>: move cursor to end of screen</li>
-<li><code>50z[enter]</code>: move line 50 to the top</li>
-<li><code>H</code>: move cursor to the top of screen</li>
-<li><code>M</code>: mid of screen</li>
-<li><code>L</code>: buttom of screen</li>
-<li><code>5H</code>: 5 lines down the screen</li>
-<li><code>5L</code>: 5 lines up the screen</li>
-<li><code>+/-</code>: move to the first letter of next/up line</li>
-<li><code>^</code>: move to the first no space place</li>
-<li><code>5|</code>: move to the 5th column of this line</li>
-<li><code>e</code>: move to the end of letter</li>
-<li><code>E</code>: move to the end of letter ignoring the punctuate</li>
-<li><code>(</code>: move to the begining of current sentence</li>
-<li><code>)</code>: ~ next sentence</li>
-<li><code>{</code>: ~ current paragraph</li>
-<li><code>}</code>: ~ next paragraph</li>
-<li><code>[[</code>: ~ this section</li>
-<li><code>]]</code>: ~ next section</li>
-<li>`Move based of Search</li>
-<li><code>/</code>: search downwards</li>
-<li><code>?</code>: search upwards</li>
-<li><code>n</code>: repeat last search</li>
-<li><code>N</code>: repeat last search but in the opposite direction</li>
-<li><code>fw</code>: move cursor to the next place of ‘w’(in this line)</li>
-<li><code>Fw</code>: ~ last place ~</li>
-<li><code>tw</code>: move cursor to the place before ‘w’    </li>
-<li><code>Tw</code>: ~ last place ~</li>
-<li><code>;</code>: repeat last searching cmd</li>
-<li><code>&#39;</code>: ~ opposite direction</li>
-<li>`Move based on line number</li>
-<li><code>set nu</code>: view line number</li>
-<li><code>ctrl+G</code>: view info of this line</li>
-<li><code>G</code>: go to the last line</li>
-<li><code>55G</code>: go to 55th line</li>
-<li>`(command)(number)(object)</li>
-<li><code>c17G</code>: change text from cursor to line 17</li>
-<li><code>d{</code>: delete text from cursor to last paragraph</li>
-<li><code>yH</code>: copy from cursor to head of screen</li>
-</ul>
-<h2 id="Open-File"><a href="#Open-File" class="headerlink" title="Open File"></a>Open File</h2><ul>
-<li><code>vi + file</code>: open file at last line</li>
-<li><code>vi +10 file</code>: open file at 10th line</li>
-<li><code>vi +/&quot;pattern&quot; file</code>: open file at first pattern</li>
-<li><code>vi -R file</code>: open file in “ReadOnly”(this case, use `:w! to write and quit)</li>
-<li><code>view file</code>: ditto</li>
-</ul>
-<h2 id="Mark"><a href="#Mark" class="headerlink" title="Mark"></a>Mark</h2><ul>
-<li><code>mx</code>: mark current place as x(can be any symble)</li>
-<li><code>&#39;x</code>: move cursor to the line marked with x</li>
-<li><code>\</code>x`: move cursor to mark x</li>
-<li><code>``</code>: return to last mark or the place of cursor before moving</li>
-<li><code>&#39;&#39;</code>: return to last mark or begining of the line </li>
-</ul>
-<h2 id="ex-Editor"><a href="#ex-Editor" class="headerlink" title="ex Editor"></a>ex Editor</h2><ul>
-<li><code>:d[ln]</code>: delete + line number [ln]</li>
-<li><code>:m</code>: move line</li>
-<li><code>:co</code>/<code>t</code>: copy line</li>
-<li><code>:3,18d</code>: delete line 3 to line 18</li>
-<li><code>:170,220m3</code>: move line 170 to line 220 below line 3</li>
-<li><code>:23,29c100</code>: copy line 23 to line 29 and paste below line 100</li>
-<li><code>:set nu</code>: display line number</li>
-<li><code>:.$0%</code>: present/last/first/all line of this passage</li>
-<li><code>:20,.m$</code>: move from line 20 to present line to the end line</li>
-<li><code>:+/-</code>: reletive line number</li>
-<li><code>:.,.+10co.-20</code>: copy from present line to present +10 line and paste present - 20 line  </li>
-<li><code>:/pattern/</code>: find line through pattern</li>
-<li><code>(in vi)d/while</code>: delete words from cursor to ‘while’</li>
-<li><code>(in ex):.,/while/d</code>: delete current to next match ‘while’</li>
-<li><code>:g/pattern</code>: move to last ‘pattern’ in the article</li>
-<li><code>:g/pattern/p</code>: display all lines that match pattern</li>
-<li><code>:g!/pattern/p</code>: display any line not mathch ‘pattern’</li>
-<li><code>:60,110g/pattern/p</code>: from line 60 to 110, search and display</li>
-<li><code>|</code>: split commands</li>
-<li><code>:1,3d | s/thier/their</code>: del 1 to 3 line, sub ‘thier’ to ‘their’(in current line, which is original line 4)</li>
-<li><code>:w!</code>: write in by force</li>
-<li><code>:1,30w newfile.txt</code>: write line 1 to 30 to newfile.txt</li>
-<li><code>:1,30w &gt;&gt; newfile.txt</code>: append 1,30 to newfile.txt</li>
-<li><code>:r/read filename</code>: read a newfile and copy it to next line of cursor</li>
-<li><code>:100 r filename</code>: put the file to 100 line</li>
-<li><code>:vi file1 file2; :w; :n</code>: edit file1, write file1, goto file2</li>
-<li><code>:args</code>: show all file in edit list</li>
-<li><code>:e file2</code>: switch to file2</li>
-<li><code>:#,%</code>: represent for first file and second file</li>
-<li><code>:w %.new</code>: save present content in buffer to a new file</li>
-<li><code>:&quot;f4yy, w, e letter, &quot;fp</code>: yank line 4 into buffer ‘f’, save, switch to file ‘letter’, place text</li>
-</ul>
-<h2 id="Global-Replacement"><a href="#Global-Replacement" class="headerlink" title="Global Replacement"></a>Global Replacement</h2><ul>
-<li><code>:s/old/new/</code>: substitude one ‘old’ to ‘new’, in current line</li>
-<li><code>:s/old/new/g</code>: substitude all ‘old’ in the line</li>
-<li><code>:1,$s/old/new/g</code>: substitude whole passage</li>
-<li><code>:%s/old/new/g</code>: % == 1,$</li>
-<li><code>:1,$s/old/new/gc</code>: c means confirmation, mannually confirm each change.(y+enter to change, enter to pass)</li>
-<li><code>:g/pattern/s/old/new/g</code>: global search line with ‘pattern’, and sub ‘old’ to</li>
-<li>`:  ‘new’ in the matched line </li>
-<li><code>:%s/Yae/&amp; Sakura/</code>: substitude ‘Yae’ for ‘Yae Sakura’, ‘&amp;’ represents matched</li>
-<li>`:  content</li>
-<li><code>:s/\(this\) \(that\)/\u\1 \l\2</code>: ‘This That’ =&gt; ‘This that’</li>
-<li>`:  !Attention, must use ‘(‘,’)‘ so the matched pattern can be written in \1, \2</li>
-<li><code>:g/content/mo14</code>: search line with ‘content’ and move to line 14</li>
-<li><code>:1,10g/^/ 12,17 t $</code>: copy line 12 to line 17 to end of passage 10 times</li>
-<li><code>:g /^\d/.+2 w &gt;&gt; newfile</code>: search line begin with number, append 2 line next to it</li>
-<li>`:  to a newfile</li>
-<li><code>:/^part2/,/^part3/ g /^Chapter/ .+2 w &gt;&gt; newfile</code>: search line begin with</li>
-<li>`:  Chapter from line start with ‘part2’ to ‘part3’ and append 2 lines after it to</li>
-<li>`:  new file</li>
-<li><code>:/^part2/,/^part3/ g /^Chapter/ .+2 w &gt;&gt; newfile | + t $</code>: append those lines to</li>
-<li>`:  newfile and put one line after it to end of passage</li>
-</ul>
-<h2 id="Chapter-7-Advanced-Edit"><a href="#Chapter-7-Advanced-Edit" class="headerlink" title="Chapter 7: Advanced Edit"></a>Chapter 7: Advanced Edit</h2><h3 id="Customize-vi"><a href="#Customize-vi" class="headerlink" title="Customize vi"></a>Customize vi</h3><ul>
-<li><code>:set option</code>: turn off option</li>
-<li><code>:set nooption</code>: turn off option</li>
-<li><code>:set all</code>: check all options</li>
-<li><code>:set wrapmargin=10</code>: right margin = 10, auto change line</li>
-<li><code>config &#39;.exrc&#39; file</code>: vi will pre process commands in ‘.exrc’, no need to input</li>
-<li><code>&#39;</code>:’ before commands. <h3 id="Unix-Command"><a href="#Unix-Command" class="headerlink" title="Unix Command"></a>Unix Command</h3></li>
-<li><code>:!ls</code>: add ‘!’ before order to run in unix</li>
-<li><code>:sh</code>: open a shell window(press ^d to quit)</li>
-<li><code>:r !filename</code>: put contents in filename to this passage</li>
-</ul>
-<h2 id="Chapter-10-vim-vi-improved"><a href="#Chapter-10-vim-vi-improved" class="headerlink" title="Chapter 10: vim-vi improved"></a>Chapter 10: vim-vi improved</h2><ul>
-<li><code>50%</code>: go to line 50/100*(total line number)</li>
-<li><code>v</code>: visual mode, can select words and put them into buffer<br><code>in visual mode</code><ul>
-<li><code>as</code>: add a sentence to selected area</li>
-<li><code>is</code>: add inner sentence</li>
-<li><code>ap</code>: add paragraph</li>
-<li><code>ip</code>: add inner paragraph</li>
-<li><code>5aw</code>: add 5 words(including punctuations)</li>
-<li><code>5aW</code>: add 5 words(just words)</li>
+<li><p>加密密码</p>
+<pre><code>// 配置模式下
+service password-encryption // 加密密码
+show running-conf // 查看密码是否加密</code></pre></li>
+<li><p>标语</p>
+<pre><code>// 配置模式下
+banner motd #No unauthorized access allowed# // ## 是分隔符, 是必须的, 分隔符可以任意, 但不能是警告语句中的字符</code></pre></li>
+<li><p>保存配置</p>
+<pre><code>// 特权模式下
+show running-config // 目前配置
+show startup-config // 开机配置
+copy running-config startup-config // 或者 copy run start
+reload // 重启, 删除为保存的配置
+erase startup-config // 删除开机配置</code></pre></li>
+<li><p>保存配置到文本文件</p>
+<ul>
+<li>使用<code>show startup-config</code>输出所有配置到屏幕上</li>
+<li>复制配置到文本文件中</li>
+<li>复制文本文件的配置到另一个终端里, 就可以重复这一配置</li>
 </ul>
 </li>
 </ul>
-<h2 id="Chapter-11-Multi-Windows"><a href="#Chapter-11-Multi-Windows" class="headerlink" title="Chapter 11: Multi Windows"></a>Chapter 11: Multi Windows</h2><h3 id="CREATE-NEW-WINDOW"><a href="#CREATE-NEW-WINDOW" class="headerlink" title="CREATE NEW WINDOW"></a>CREATE NEW WINDOW</h3><ul>
-<li>in command line<ul>
-<li><code>vim -o file1 file2</code></li>
-<li><code>vim -o3 file1 file2</code>: open 3 windows in total</li>
+<h2 id="地址方案"><a href="#地址方案" class="headerlink" title="地址方案"></a>地址方案</h2><h3 id="端口和地址"><a href="#端口和地址" class="headerlink" title="端口和地址"></a>端口和地址</h3><ul>
+<li><p>ip地址</p>
+<ul>
+<li><p>可以分配给物理端口和虚拟接口, 虚拟接口表示设备没有关联任何物理硬件</p>
+</li>
+<li><p>默认网关: 主机将用于远程网络(internet访问)的路由器IP地址</p>
+</li>
+<li><p>子网掩码: 对于ipv4是必要的, 区分地址的网络部分和主机部分</p>
+</li>
 </ul>
 </li>
-<li>in ex mode<ul>
-<li><code>vsplit</code>: split windows vertically</li>
-<li><code>split file2</code>: open file2 in another window horizontally</li>
-<li><code>[n]split file2</code>: display n lines of file2 horizontally. </li>
-<li>`  if no file is specified, display another window in the same content of present window. New window will cut the screen evenly if no [n] is specified. </li>
-<li><code>^WS</code>: same as split </li>
-<li><code>[n]new</code>: new window, creat a new file. </li>
-<li><code>[n]vnew</code>: open a vertical window.<h3 id="MOVE-CURSOR"><a href="#MOVE-CURSOR" class="headerlink" title="MOVE CURSOR"></a>MOVE CURSOR</h3></li>
-</ul>
-</li>
-<li><code>^W+h/j/k/l</code>: move cursor between windows, in the direction of h/j/k/l</li>
-<li><code>+t</code>: move to upper left corner.</li>
-<li><code>+b</code>: move to buttom right corner.</li>
-<li><code>+p</code>: move to last visited window.</li>
-<li><code>+w</code>: move to window below or to the right.(will circle back)</li>
-<li>`MOVE WINDOW<ul>
-<li><code>^W+r</code>: Rotate the window below or to the right.</li>
-<li><code>+R</code>: Rotate the window in the opposite way.</li>
-<li><code>+x</code>: exchange position with ajacent window.</li>
-<li><code>3^W+x</code>: exchange position with 3rd window below it.</li>
-<li><code>+H/J/K/L</code>: move window to the left/bottom/top/right side of the screen.</li>
-<li><code>+T</code>: move window to the new page.</li>
-</ul>
-</li>
-<li>RESIZE WINDOW<ul>
-<li><code>^W+=</code>: justfy windows to the same size.</li>
-<li><code>+-</code>: cut one line of present window.</li>
-<li><code>++</code>: add one line to present windwo.</li>
-<li><code>+&gt;</code>: cut one column.</li>
-<li><code>+&lt;</code>: add one column.</li>
-<li><code>:resize +n</code>: add n lines to present window.</li>
-<li><code>:resize n</code>: set width of present window to n lines.</li>
-<li><code>:vertical resize n</code>: set column number.</li>
-</ul>
-</li>
-<li>NEW TAB<ul>
-<li><code>:tabnew filename</code>: open new file in a new tab.</li>
-<li><code>:tabclose</code>: close present tab.</li>
-<li><code>:tabonly</code>: close all but this tab.</li>
-</ul>
-</li>
-<li>QUIT TAB<ul>
-<li><code>^W+q</code>: If ‘hidden’ is set and this window is the last one, window will be closed while buffer is saved. If ‘hidden’ not set or unsaved changes remain in buffer, no change will be make.</li>
-<li><code>+c</code>: Close present window.</li>
-<li><code>+o</code>: Close all but this.</li>
-<li><code>:only</code>: Close all but this. </li>
-<li><code>:close</code>: Close present window.</li>
-<li><code>:quit</code>: Leave the file while keeping the buffer.</li>
+<li><p>端口和接口</p>
+<ul>
+<li>接口设备包括: 用户设备接口, 网络设备接口, 电缆</li>
+<li>通信介质要考虑: 传输信号距离, 部署环境, 传输数据量和速度, 材料与成本</li>
+<li>交换机是二层设备, 不要ip地址, 分给思科交换机的ip地址是为了远程连接, 称为svi, 交换机虚拟接口. </li>
 </ul>
 </li>
 </ul>
-<h2 id="Chapter-12-Vim-Script"><a href="#Chapter-12-Vim-Script" class="headerlink" title="Chapter 12: Vim Script"></a>Chapter 12: Vim Script</h2><ul>
-<li>Edit <code>.vimrc</code>/<code>.gvimrc</code>/<code>_gvimrc</code></li>
-</ul>
-<h2 id="Chapter-13-Other-Usage"><a href="#Chapter-13-Other-Usage" class="headerlink" title="Chapter 13: Other Usage"></a>Chapter 13: Other Usage</h2><ul>
-<li>FOLD<ul>
-<li><code>zA</code>: Recursively switch the folding state. </li>
-<li><code>zC</code>: Recursively close folds.</li>
-<li><code>zD</code>: Recursively delete folds.</li>
-<li><code>zE</code>: Remove all folds.</li>
-<li><code>zf</code>: Fold starts from present cursor position to next position.</li>
-<li><code>[n]zf</code>: Fold n lines.</li>
-<li><code>zM</code>: Set foldlevel to 0.</li>
-<li><code>zN</code>: Set foldenable.</li>
-<li><code>zn</code>: Reset foldenable.</li>
-<li><code>zi</code>: Switch value of foldenable.</li>
-<li><code>zo</code>: Recursively onpen folds.</li>
-<li><code>za</code>: Switch status of a fold.</li>
-<li><code>zd</code>: Delete a fold.</li>
-<li><code>zj</code>: Move cursor to the begining of next fold.</li>
-<li><code>zk</code>: Move cursor to the end of last fold.</li>
-<li><code>zr</code>: Increment value of fold level.</li>
-<li><code>zm</code>: Decrement value of fold level.</li>
-<li><code>:mkview</code>,<code>:loadview</code>: Save all folds.</li>
-</ul>
+<h3 id="配置ip地址"><a href="#配置ip地址" class="headerlink" title="配置ip地址"></a>配置ip地址</h3><ul>
+<li><p>dhcp: dynamic host configuration protocol, 动态主机设置协议, 自动分配ip, 子网掩码, 网关.</p>
 </li>
-<li>examples`:<ul>
-<li><code>3zF</code>: Fold 3 lines, including present line.</li>
-<li><code>3zfj</code>: Fold present line and 3 lines below.</li>
-<li>Firstly move cursor to <code>{</code> or <code>}</code>, then type <code>zf%</code>, will fold a code block. because <code>%</code> is used to move between pairs of brackets.</li>
-<li><code>Fold from &#39;FOLD&#39; to &#39;examples&#39;</code>: move cursor to FOLD, type <code>zf/examples[enter]</code>. Everything do to the folded line will change all lines folded.</li>
-<li><code>:set foldmethod=indent</code>: Fold based on indents.</li>
-<li><code>:set foldlevel=0</code>: Only view zero level of fold.</li>
-<li><code>:set foldmethod=syntax</code>: Fold based on syntax.</li>
-</ul>
+<li><p>为思科交换机配置svi</p>
+<pre><code>// 在全局配置下
+interface vlan 1 // 默认虚拟交换机接口
+ip address 192.168.1.10 255.255.255.0
+no shutdown // 激活vlan 1接口
+exit // 进入使能模式
+show ip interface brief // 查看ip接口简要信息
+// 看到vlan 1接口逻辑上是开启的, 物理上关闭, 因为没有设备vlan接入
+// 将一个以太网电缆从终端上接到交换机的以太网接口
+show ip interface brief // 这次逻辑上和物理上接口都是up
+// 如果看到administratively down, 说明忘记设置no shutdown
+// 在计算机上设置ip和子网掩码
+// 用命令行ping交换机的接口</code></pre></li>
+<li><p>交换机的ip是绑定到svi而不是物理接口, 因此无论哪个接口, ip地址都是一样的. pc的ip地址就是绑定到以太网</p>
 </li>
-<li>INDENT<ul>
-<li><code>:set ..indent</code></li>
-<li><code>autoindent</code></li>
-<li><code>cindent</code>: for c language.</li>
-<li><code>smartindent</code></li>
-</ul>
-</li>
-<li>COMPLETE KEY WORDS<ul>
-<li><code>^x</code>: Complete words.</li>
-<li><code>^x^f</code>: Complete filename.</li>
-<li><code>^x^n</code>: Find among candidates. (after that)^n`: Next completion choice. </li>
-<li><code>^p</code>: Previous choice.</li>
-<li><code>^x^l</code>: Complete line.</li>
-<li><code>^x^i</code>: Find keywords in present file and included files.</li>
-<li><code>^x^s</code>: Give a candidate list of available words. Need to switch on spelling check. `:set spell.</li>
-</ul>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/15/hexo/qq/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="tianyilt">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="探究前线">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/12/15/hexo/qq/" itemprop="url">hexo/qq</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-15T12:53:28+08:00">
-                2019-12-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">hexo</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="去去去"><a href="#去去去" class="headerlink" title="去去去"></a>去去去</h1><h2 id="滚滚"><a href="#滚滚" class="headerlink" title="滚滚"></a>滚滚</h2><p><img src="qq/1576220631714.png" alt="mdzz"></p>
-<p><strong>啊啊啊</strong></p>
-<ol>
 <li></li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/15/%E6%80%9D%E7%A7%911/2019-09-21-ch01%E5%88%9D%E8%AF%86%E7%BD%91%E7%BB%9C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="tianyilt">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="探究前线">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/12/15/%E6%80%9D%E7%A7%911/2019-09-21-ch01%E5%88%9D%E8%AF%86%E7%BD%91%E7%BB%9C/" itemprop="url">2019-09-21-ch01初识网络</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-15T12:53:28+08:00">
+                2019-12-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%80%9D%E7%A7%911/" itemprop="url" rel="index">
+                    <span itemprop="name">思科1</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="ch1：初识网络"><a href="#ch1：初识网络" class="headerlink" title="ch1：初识网络"></a>ch1：初识网络</h1><p>categories: 思科1</p>
+<h2 id="类型"><a href="#类型" class="headerlink" title="类型"></a>类型</h2><ul>
+<li><p>局域网、广域网……</p>
+</li>
+<li><p>对等网</p>
+<ul>
+<li>一台机器同时作为服务器，客户端</li>
+<li>适用于小型网络</li>
+</ul>
+</li>
+</ul>
+<h2 id="LAN-WAN和互联网"><a href="#LAN-WAN和互联网" class="headerlink" title="LAN,WAN和互联网"></a>LAN,WAN和互联网</h2><ul>
+<li><p>终端设备：源或目标设备</p>
+</li>
+<li><p>网络介质：无线、电缆……</p>
+</li>
+<li><p>中间网络设备：交换机、路由器</p>
+</li>
+<li><p>网络表示方式：打印机、IP电话、无线连接、路由器</p>
+</li>
+<li><p>拓扑图</p>
+</li>
+<li><p>局域网（LAN）：单一组织管理、局部的、内部设备提供带宽、终端互联</p>
+</li>
+<li><p>广域网：服务提供商管理、局域网互联、费用敏感</p>
+</li>
+<li><p>内部网、互联网</p>
+</li>
+<li><p>互联网访问计数</p>
+<ul>
+<li>ISP：互联网服务提供商</li>
+</ul>
+</li>
+</ul>
+<h2 id="作为平台的网络"><a href="#作为平台的网络" class="headerlink" title="作为平台的网络"></a>作为平台的网络</h2><ul>
+<li>融合网络：在一个网络基础设施上传输所有数据</li>
+<li>可靠性<ul>
+<li>容错能力</li>
+<li>扩展性</li>
+<li>服务质量QoS</li>
+<li>安全</li>
+</ul>
+</li>
+</ul>
+<h2 id="发展趋势"><a href="#发展趋势" class="headerlink" title="发展趋势"></a>发展趋势</h2><ul>
+<li>自带设备BYOD：自己买设备</li>
+<li>在线协作</li>
+</ul>
+<h2 id="家庭网络技术"><a href="#家庭网络技术" class="headerlink" title="家庭网络技术"></a>家庭网络技术</h2><ul>
+<li>电力线网络</li>
+<li>智能家庭</li>
+<li>无线互联网服务提供商（WISP）</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/15/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/%E8%BF%AD%E4%BB%A3%E6%B3%95%E6%94%B6%E6%95%9B%E6%80%A7%E5%AE%9E%E9%AA%8C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="tianyilt">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="探究前线">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/12/15/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/%E8%BF%AD%E4%BB%A3%E6%B3%95%E6%94%B6%E6%95%9B%E6%80%A7%E5%AE%9E%E9%AA%8C/" itemprop="url">未命名</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-15T12:53:28+08:00">
+                2019-12-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90/" itemprop="url" rel="index">
+                    <span itemprop="name">数值分析</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/15/%E9%85%8D%E7%8E%AF%E5%A2%83_%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/2019-11-24-%E8%B0%B7%E6%AD%8C%E4%BA%91T4%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="tianyilt">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="探究前线">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/12/15/%E9%85%8D%E7%8E%AF%E5%A2%83_%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/2019-11-24-%E8%B0%B7%E6%AD%8C%E4%BA%91T4%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/" itemprop="url">2019-11-24-谷歌云T4服务器配置</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-15T12:53:28+08:00">
+                2019-12-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E9%85%8D%E7%8E%AF%E5%A2%83-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index">
+                    <span itemprop="name">配环境_深度学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>#2019-11-24-谷歌云T4服务器配置<br>categories: 配置深度学习环境大作战<br>辣鸡神经网络,本地挂个4天都跑不完,8G显存都能爆掉,我选择tesla T4服务器</p>
+<h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><ul>
+<li>科学上网</li>
+<li>visa卡注册的账户</li>
+<li>已经提升过权限,不再是免费用户</li>
+<li>有xshell与xftp更加方便地进行图形化操作</li>
+</ul>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p>建立前查看gpu在哪里有 <a href="https://cloud.google.com/compute/docs/gpus/" target="_blank" rel="noopener">https://cloud.google.com/compute/docs/gpus/</a><br>上来先 <a href="https://app.yinxiang.com/shard/s31/nl/23686157/6219b777-705d-4d6c-8319-ad038219d36a" target="_blank" rel="noopener">(1条消息)用SSH工具XShell连接谷歌云 root用户或普通用户 - 干货 - CSDN博客</a><br>然后根据 <a href="https://app.yinxiang.com/shard/s31/nl/23686157/988e45eb-d2a7-4bcf-b3a6-6340aa26f6f5" target="_blank" rel="noopener">在谷歌云服务器上搭建深度学习平台</a></p>
+<h2 id="申请compute-engine"><a href="#申请compute-engine" class="headerlink" title="申请compute engine"></a>申请compute engine</h2><p><img src="2019-11-24-%E8%B0%B7%E6%AD%8C%E4%BA%91T4%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/1574582404542.png" alt="1574582404542"></p>
+<p><img src="2019-11-24-%E8%B0%B7%E6%AD%8C%E4%BA%91T4%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/1574582419933.png" alt="1574582419933"></p>
+<p>然后不出所料地出现</p>
+<p><img src="2019-11-24-%E8%B0%B7%E6%AD%8C%E4%BA%91T4%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/1574582433893.png" alt="1574582433893"></p>
+<p>提高配额</p>
+<p>首先全局添加gpu</p>
+<p><img src="2019-11-24-%E8%B0%B7%E6%AD%8C%E4%BA%91T4%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/1574585845393.png" alt="1574585845393"></p>
+<p>然后修改每个地区</p>
+<p><img src="2019-11-24-%E8%B0%B7%E6%AD%8C%E4%BA%91T4%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/1574582451567.png" alt="1574582451567"></p>
+<p>把配额都提升到1,然后第二天配额通过后再来</p>
+<h2 id="服务器配置"><a href="#服务器配置" class="headerlink" title="服务器配置"></a>服务器配置</h2><h3 id="ssh配置"><a href="#ssh配置" class="headerlink" title="ssh配置"></a>ssh配置</h3><p><img src="2019-11-24-%E8%B0%B7%E6%AD%8C%E4%BA%91T4%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/1574748770830.png" alt="1574748770830"></p>
+<p>夺取新时代中国特色社会主义root账户所有权</p>
+<pre><code class="bash">sudo -i</code></pre>
+<p>禁用防火墙</p>
+<pre><code class="bash">sudo ufw disable</code></pre>
+<h4 id="修改SSH配置文件"><a href="#修改SSH配置文件" class="headerlink" title="修改SSH配置文件"></a><strong>修改SSH配置文件</strong></h4><p><strong>/etc/ssh/sshd_config</strong></p>
+<pre><code>vi /etc/ssh/sshd_config</code></pre><p>修改PermitRootLogin和PasswordAuthentication为yes</p>
+<pre><code class="bash"># Authentication:
+PermitRootLogin yes //默认为no，需要开启root用户访问改为yes
+
+# Change to no to disable tunnelled clear text passwords
+PasswordAuthentication yes //默认为no，改为yes开启密码登陆</code></pre>
+<h4 id="给root用户设置密码"><a href="#给root用户设置密码" class="headerlink" title="给root用户设置密码"></a><strong>给root用户设置密码</strong></h4><pre><code>passwd root</code></pre><p>####<strong>重启SSH服务使修改生效</strong></p>
+<pre><code>/etc/init.d/ssh restart</code></pre><h3 id="xshell-连接"><a href="#xshell-连接" class="headerlink" title="xshell 连接"></a>xshell 连接</h3><h3 id="光速配置深度学习环境"><a href="#光速配置深度学习环境" class="headerlink" title="光速配置深度学习环境"></a>光速配置深度学习环境</h3><h4 id="显卡驱动安装"><a href="#显卡驱动安装" class="headerlink" title="显卡驱动安装"></a>显卡驱动安装</h4><pre><code class="bash">apt -y install ubuntu-drivers-common
+apt-get update
+apt-get upgrade
+ubuntu-drivers autoinstall</code></pre>
+<p>然后<code>nvidia-smi</code>暗中观察一下</p>
+<p><img src="2019-11-24-%E8%B0%B7%E6%AD%8C%E4%BA%91T4%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/1574749300805.png" alt="1574749300805"></p>
+<h4 id="安装anaconda"><a href="#安装anaconda" class="headerlink" title="安装anaconda"></a>安装anaconda</h4><pre><code class="bash">wget https://repo.anaconda.com/archive/Anaconda3-2019.07-Linux-x86_64.sh
+cd ~
+mkdir .conda
+cd -
+bash Anaconda3-2019.07-Linux-x86_64.sh
+source ~/.bashrc</code></pre>
+<p>ps:感兴趣的同学可以考虑不创建.conda,然后欢乐踩坑</p>
+<h4 id="配置conda环境"><a href="#配置conda环境" class="headerlink" title="配置conda环境"></a>配置conda环境</h4><p>用conda只为一个原因.不用自己搞cuda与cudnn,只要安装<strong>-gpu</strong>就可以自动根据tensorflow版本配置相应版本的cuda与cudnn</p>
+<p>如果输入conda显示<code>command not find</code>,应该考虑重连</p>
+<pre><code class="bash">conda install -y tensorflow-gpu==1.14.0
+conda install -y keras-gpu</code></pre>
+<h3 id="部署项目过去"><a href="#部署项目过去" class="headerlink" title="部署项目过去"></a>部署项目过去</h3><p>如果有github库直接git clone就行了.</p>
+<p>通常需要使用xftp来传输文件到相应的位置</p>
+<p><img src="2019-11-24-%E8%B0%B7%E6%AD%8C%E4%BA%91T4%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/1574756196114.png" alt="1574756196114"></p>
+<h3 id="调用程序训练"><a href="#调用程序训练" class="headerlink" title="调用程序训练"></a>调用程序训练</h3><h4 id="利用screen防止xshell关进程亡"><a href="#利用screen防止xshell关进程亡" class="headerlink" title="利用screen防止xshell关进程亡"></a>利用screen防止xshell关进程亡</h4><p>如果程序要花费很长时间训练,xshell会中途断掉,需要先</p>
+<pre><code class="screen">screen</code></pre>
+<p>生成新的窗口,然后训练<br>重新回到窗口</p>
+<pre><code>screen -ls</code></pre><p>查看id</p>
+<p>如果dettached用<code>screen -r id</code>如果attached用<code>screen -rd id</code></p>
+<h4 id="tensorboard服务器在本地端查看"><a href="#tensorboard服务器在本地端查看" class="headerlink" title="tensorboard服务器在本地端查看"></a>tensorboard服务器在本地端查看</h4><p>在谷歌云防火墙开放外部端口，然后运行</p>
+<p>具体操作参考</p>
+<p><a href="https://www.jianshu.com/p/893d622d1b5a" target="_blank" rel="noopener">https://www.jianshu.com/p/893d622d1b5a</a></p>
+<pre><code class="bash">tensorboard --logdir=&#39;logs&#39; --port=6006</code></pre>
+<p>之后通过http://[服务器ip]:6006访问</p>
+<h4 id="设置python运行的工作路径"><a href="#设置python运行的工作路径" class="headerlink" title="设置python运行的工作路径"></a>设置python运行的工作路径</h4><p>如果直接运行,会看到令人窒息的结果</p>
+<p><img src="2019-11-24-%E8%B0%B7%E6%AD%8C%E4%BA%91T4%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE/1574584660714.png" alt="1574584660714"></p>
+<p>这完全是因为工作路径PYTHONPATH下没有相关文件夹,需要设定工作路径</p>
+<p>用<code>export PYTHONPATH=</code>可以解忧</p>
+<pre><code class="bash">export PYTHONPATH=&quot;${PYTHONPATH}:/root/model_test(now)&quot;</code></pre>
+<p>然后</p>
+<pre><code class="bash">python3.7 /root/model_test\(now\)/train_script/train.py</code></pre>
+<h2 id="历史记录"><a href="#历史记录" class="headerlink" title="历史记录"></a>历史记录</h2><p>k80配置完成后的history记录，中间先安装-gpu再装显卡驱动，因此产生很多波折</p>
+<pre><code class="bash">  1  wget https://repo.anaconda.com/archive/Anaconda3-2019.07-Linux-x86_64.sh
+    2  bash Anaconda3-2019.07-Linux-x86_64.sh
+    3  sudo bash Anaconda3-2019.07-Linux-x86_64.sh
+    4  l
+    5  ll
+    6  cd /
+    7  ll
+    8  python
+    9  pip
+   10  conda
+   11  conda config --set auto_activate_base false
+   12  bash -u Anaconda3-2019.07-Linux-x86_64.sh
+   13  cd ~
+   14  bash -u Anaconda3-2019.07-Linux-x86_64.sh
+   15  ll
+   16  ./Anaconda3-2019.07-Linux-x86_64.sh
+   17  sudo -u ./Anaconda3-2019.07-Linux-x86_64.sh
+   18  passwd rppt
+   19  passwd root
+   20  vi /etc/ssh/sshd_config
+   21  /etc/init.d/ssh restart
+   22  ll
+   23  mkdir .conda
+   24  bash -u Anaconda3-2019.07-Linux-x86_64.sh
+   25  ./Anaconda3-2019.07-Linux-x86_64.sh
+   26  sudo -u ./Anaconda3-2019.07-Linux-x86_64.sh
+   27  rm -r anaconda3/
+   28  ll
+   29  bash  Anaconda3-2019.07-Linux-x86_64.sh
+   30  conda
+   31  lspci | grep -i nvidia
+   32  ubuntu-drivers autoinstall
+   33  apt install ubuntu-drivers-common
+   34  ubuntu-drivers autoinstall
+   35  nvidia-smi
+   36  history
+   37  conda list
+   38  pip install tqdm
+   39  conda install -y tensorflow-gpu==1.14.0
+   40  conda install -y keras-gpu
+   41  pip install scikit-learn
+   42  ll
+   43  nvidia-smi
+   44  git
+   45  ll
+   46  cd DGA-detector/
+   47  conda info
+   48  conda list
+   49  conda env export --file DGA.yml
+   50  cd DGA-detector/
+   51  ll
+   52  cd model_test\(now\)/
+   53  ll
+   54  python train_script/train.py
+   55  python ./train_script/train.py
+   56  pwd
+   57  export PYTHONPATH=&quot;${PYTHONPATH}:/root/DGA-detector/model_test(now)&quot;
+   58  python ./train_script/train.py
+   59  nvcc -v
+   60  apt install nvidia-cuda-toolkit
+   61  reboot
+   62  nvidia-smi
+   63  nvcc 0v
+   64  nvcc -v
+   65  nvcc
+   66  conda list
+   67  nvcc -v
+   68  nvcc --help
+   69  nvcc -V
+   70  conda install -y tensorflow-gpu==1.14.0
+   71  nvidia-smi
+   72  nvcc --version
+   73  cat /proc/driver/nvidia/version
+   74  sudo add-apt-repository ppa:graphics-drivers/ppa
+   75  apt update
+   76  apt list --upgradable
+   77  apt upgrade
+   78  nvidia-smi
+   79  sudo lshw -numeric -C display
+   80  ubuntu-drivers devices
+   81  apt install nvidia-430
+   82  nvidia-smi
+   83  nvcc -V
+   84  apt install nvidia-cuda-toolkit
+   85  apt uninstall nvidia-cuda-toolkit
+   86  apt remove nvidia-cuda-toolkit
+   87  apt install nvidia-cuda-toolkit
+   88  nvidia-smi
+   89  reboot
+   90  cd DGA-detector/model_test\(now\)/train_script/
+   91  ./ train.py
+   92  python train.py
+   93  export PYTHONPATH=&quot;${PYTHONPATH}:/root/DGA-detector/model_test(now)&quot;
+   94  python train.py
+   95  test2forbaipiao
+   96  ubuntu-drivers devices
+   97  nvcc -v
+   98  nvcc -V
+   99  nvidia-smi
+  100  history
+  101  watch nvidia-smi
+  102  history</code></pre>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/15/%E9%85%8D%E7%8E%AF%E5%A2%83_%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/2019-11-16-pycharm%E6%97%A0%E6%B3%95%E8%BF%90%E8%A1%8C%E8%B0%83%E5%87%BAconsole/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="tianyilt">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="探究前线">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/12/15/%E9%85%8D%E7%8E%AF%E5%A2%83_%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/2019-11-16-pycharm%E6%97%A0%E6%B3%95%E8%BF%90%E8%A1%8C%E8%B0%83%E5%87%BAconsole/" itemprop="url">2019-11-16-pycharm无法运行调出console</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-15T12:53:28+08:00">
+                2019-12-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E9%85%8D%E7%8E%AF%E5%A2%83-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index">
+                    <span itemprop="name">配环境_深度学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>这个时候要重装ipython<br>categories: 配置深度学习环境大作战</p>
+<ul>
+<li><p>物理删除ipython文件</p>
+<p>在anaconda安装该环境的安装目录下</p>
+</li>
+</ul>
+<p>删除<strong>ipython-版本号-py3.6.egg-info文件</strong></p>
+<p>如D:\appstore\anaconda\env\pytorch\Lib\site-packages\ipython-5.1.0-py3.6.egg-info 文件即可</p>
+<ul>
+<li>然后在相应conda环境下pip install ipython</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/15/oracle/2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="tianyilt">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="探究前线">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/12/15/oracle/2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93/" itemprop="url">2019-11-16-oracle安装示例数据库</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-15T12:53:28+08:00">
+                2019-12-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/oracle/" itemprop="url" rel="index">
+                    <span itemprop="name">oracle</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="oracle安装示例数据库"><a href="#oracle安装示例数据库" class="headerlink" title="oracle安装示例数据库"></a>oracle安装示例数据库</h1><p>categories: oracle<br>我们在安装完oracle数据后发现没有示例数据库,先重新配置一个有hr的数据库</p>
+<h2 id="依赖环境"><a href="#依赖环境" class="headerlink" title="依赖环境"></a>依赖环境</h2><p>完成<a href="./2019-11-03-oracle工作环境.md">oracle安装</a></p>
+<h2 id="前置准备"><a href="#前置准备" class="headerlink" title="前置准备"></a>前置准备</h2><p><del>从入门到删库跑路</del>删除原有库</p>
+<p>输入dbca,点击删除,一路确定</p>
+<h2 id="创建非容器的数据库"><a href="#创建非容器的数据库" class="headerlink" title="创建非容器的数据库"></a>创建非容器的数据库</h2><p>输入dbca</p>
+<p><img src="2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93/1573866789059.png" alt="1573866789059"></p>
+<p>勾掉容器数据库</p>
+<p><img src="2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93/1573866845789.png" alt="1573866840466"></p>
+<p><img src="2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93/1573866871323.png" alt="1573866871323"></p>
+<p>这里也勾掉容器数据库</p>
+<p><img src="2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93/1573866899402.png" alt="1573866899402"></p>
+<p><img src="2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93/1573866917756.png" alt="1573866917756"></p>
+<p><img src="2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93/1573866937385.png" alt="1573866937385"></p>
+<p><img src="2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93/1573866948026.png" alt="1573866948026"></p>
+<p><img src="2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93/1573866975319.png" alt="1573866975319"></p>
+<p>这里勾示例方案添加到数据库</p>
+<p><img src="2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93/1573867014239.png" alt="1573867014239"></p>
+<p>字符集最好操作系统字符集</p>
+<p><img src="2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93/1573867045201.png" alt="1573867045201"></p>
+<p><img src="2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93/1573867064239.png" alt="1573867064239"></p>
+<p><img src="2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93/1573867088628.png" alt="1573867088628"></p>
+<p><img src="2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93/1573867112386.png" alt="1573867112386"></p>
+<p><img src="2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93/1573867161011.png" alt="1573867161011"></p>
+<p><img src="2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93/1573867495931.png" alt="1573867495931">点击<strong>口令管理</strong></p>
+<p><img src="2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93/1573867626477.png" alt="1573867626477"></p>
+<p><img src="2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93/1573867644945.png" alt="1573867644945"></p>
+<p>给hr配上口令为hr</p>
+<p><strong>如果你忘记了这一步</strong></p>
+<p>在sqlplus中输入</p>
+<pre><code>alter user hr account unlock identified as hr</code></pre><h2 id="登陆hr"><a href="#登陆hr" class="headerlink" title="登陆hr"></a>登陆hr</h2><p>哈哈哈哈终于装好了,我们直接登进去</p>
+<p>发现</p>
+<p><img src="2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93/1573867794323.png" alt="1573867794323"></p>
+<p>对此,我们应该</p>
+<p><img src="2019-11-16-oracle%E5%AE%89%E8%A3%85%E7%A4%BA%E4%BE%8B%E6%95%B0%E6%8D%AE%E5%BA%93/1573867821641.png" alt="1573867821641"></p>
+<p>先变成管理员</p>
+<pre><code class="bash">sqlplus / as sysdba</code></pre>
+<p>然后解锁</p>
+<pre><code>alter user hr account unlock;</code></pre><p>然后登入hr</p>
+<pre><code>sqlplus hr/hr</code></pre><p>成功,完事情,撒花</p>
+<h2 id="从github下载示例文件"><a href="#从github下载示例文件" class="headerlink" title="从github下载示例文件"></a>从github下载示例文件</h2><p>从github上下载源代码：</p>
+<p><a href="https://github.com/oracle/db-sample-schemas/releases/latest" target="_blank" rel="noopener">https://github.com/oracle/db-sample-schemas/releases/latest</a></p>
+<p>上传到数据库服务器：</p>
+<pre><code class="bash">[oracle@dave.cndba.cn demo]$ cp /home/oracle/db-sample-schemas-12.2.0.1.zip $ORACLE_HOME/demo
+[oracle@dave.cndba.cn demo]$ ls
+db-sample-schemas-12.2.0.1.zip  schema
+[oracle@dave.cndba.cn demo]$ unzip db-sample-schemas-12.2.0.1.zip
+[oracle@dave.cndba.cn demo]$ mv schema schema.bak
+[oracle@dave.cndba.cn demo]$ mv db-sample-schemas-12.2.0.1 schema</code></pre>
+<p>导入</p>
+<pre><code class="sql">@mksample waterman waterman hr oe pm ix sh bi users temp /home/oracle/dbca/ 192.168.0.220:1521/orcl</code></pre>
+<p>报错处理</p>
+<pre><code class="bash">perl -p -i.bak -e &#39;s#__SUB__CWD__#&#39;$(pwd)&#39;#g&#39; *.sql */*.sql */*.dat</code></pre>
+<p>验证</p>
+<pre><code class="sql">select username,created from dba_users where created&gt;sysdate-1;</code></pre>
+<h2 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h2><p><a href="https://www.cndba.cn/dave/article/1985" target="_blank" rel="noopener">Oracle 12cR2 安装示例用户(Sample Schemas)</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/15/oracle/2019-11-10-%E5%90%AF%E5%8A%A8%E6%95%B0%E6%8D%AE%E5%BA%93/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="tianyilt">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="探究前线">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/12/15/oracle/2019-11-10-%E5%90%AF%E5%8A%A8%E6%95%B0%E6%8D%AE%E5%BA%93/" itemprop="url">2019-11-10-启动数据库</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-15T12:53:28+08:00">
+                2019-12-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/oracle/" itemprop="url" rel="index">
+                    <span itemprop="name">oracle</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="启动数据库"><a href="#启动数据库" class="headerlink" title="启动数据库"></a>启动数据库</h1><p>categories: oracle</p>
+<h3 id="启动流程"><a href="#启动流程" class="headerlink" title="启动流程"></a>启动流程</h3><ul>
+<li>启动实例</li>
+<li>启动监听</li>
+</ul>
+<p>进入路径<code>cd /u01/app/oracle/product/12.2.0.1/db_1/dbs</code></p>
+<p>这个路径下有这些文件</p>
+<pre><code>hc_ORCL.dat  init.ora  lkORCL  orapwORCL  snapcf_ORCL.f  spfileORCL.ora</code></pre><ul>
+<li><p>spfileORCL.ora: 格式为spfileSID.ora, (sp=sql parameters)这里我的SID是ORCL. 是二进制文件, 较之文本文件,  会实时更新. 使用strings命令查看</p>
+<pre><code class="bash">ORCL.__data_transfer_cache_size=0
+ORCL.__db_cache_size=603979776
+ORCL.__inmemory_ext_roarea=0
+ORCL.__inmemory_ext_rwarea=0
+ORCL.__java_pool_size=16777216
+ORCL.__large_pool_size=33554432
+ORCL.__oracle_base=&#39;/u01/app/oracle&#39;#ORACLE_BASE set from environment
+ORCL.__pga_aggregate_target=637534208
+ORCL.__sga_target=956301312 # sga可用内存大小
+ORCL.__shared_io_pool_size=50331648
+ORCL.__shared_pool_size=234881024
+ORCL.__streams_pool_size=0
+*.audit_file_dest=&#39;/u01/app/oracle/admin/orcl/adump&#39;
+*.audit_trail=&#39;d
+*.compatible=&#39;12.2.0&#39;
+*.control_files=&#39;/u01/app/oracle/oradata/orcl/control01.ctl&#39;,&#39;/u01/app/oracle/fast_recovery_area/orcl/control02.ctl&#39; # 控制文件位置, control02.ctl存放配置文件和检查点等记录
+*.db_block_size=8192 # 数据块大小
+*.db_name=&#39;orcl&#39; # 数据库名称
+*.db_recovery_file_dest=&#39;/u01/app/oracle/fast_recovery_area/orcl&#39;
+*.db_recovery_file_dest_size=12780m
+*.deferred_segment_creation=FALSE
+*.diagnostic_dest=&#39;/u01/app/oracle&#39;
+*.dispatchers=&#39;(PROTOCOL=TCP) (SERVICE=ORCLXDB)&#39;
+*.enable_pluggable_database=true
+*.local_listener=&#39;LISTENER_ORCL&#39;
+*.log_archive_format=
+&#39;%t_%s_%r.dbf&#39;
+*.memory_target=1507m # oracle 可用内存
+*.nls_language=&#39;SIMPLIFIED CHINESE&#39;
+*.nls_territory=&#39;CHINA&#39;
+*.open_cursors=300
+*.processes=320
+*.remote_login_passwordfile=&#39;EXCLUSIVE&#39;
+*.undo_tablespace=&#39;UNDOTBS1&#39;</code></pre>
+</li>
+</ul>
+<ul>
+<li><p>init.ora: 再spfileSID.ora和initSID.ora缺失的时候会使用此文件启动</p>
+<p><code>create pfile from spfile</code>, 会创建initSID.ora</p>
+</li>
+</ul>
+<h3 id="sqlplus命令"><a href="#sqlplus命令" class="headerlink" title="sqlplus命令"></a>sqlplus命令</h3><ul>
+<li><code>select * from v$parameter;</code>, 查看系统参数, 不推荐使用<code>select *</code></li>
+<li><code>desc v$parameter;</code>, 查看表字段</li>
+<li><code>show parameter process;</code>, 查看parameter中含有process的字段</li>
+</ul>
+<h3 id="修改参数"><a href="#修改参数" class="headerlink" title="修改参数"></a>修改参数</h3><ul>
+<li><code>alter system set processes=400 scope=spfile(memory|both);</code>, 把processes改为400, scope是作用域, 作用在配置文件|内存|两者.</li>
+</ul>
+<h3 id="开关机"><a href="#开关机" class="headerlink" title="开关机"></a>开关机</h3><p>数据库开关机阶段</p>
+<ul>
+<li>shutdown, 关机状态</li>
+<li>nomount, 开启实例</li>
+<li>mount, 打开数据和控制文件, 控制文件修复数据文件, 保证一致性完整性</li>
+<li>open, 数据库打开</li>
+</ul>
+<pre><code class="bash">startup nomount; # 启动实例
+alter database mount; # 读取控制文件, 没有查询控制文件和日志文件
+alter database open; # 打开数据库
+alter database close; # 到mount状态, 回写数据, 拉检查点
+alter database dismount;</code></pre>
+<p>关机</p>
+<pre><code class="sql">shutdown ;
+startup force; 先断电再开机</code></pre>
+<p>参数</p>
+<ul>
+<li>N, normal, 会话全部结束才能关机</li>
+<li>T, transactional, 事务结束后关机</li>
+<li>I, immediate, 没有结束的事务回滚, 立刻结束</li>
+<li>A, abort, 立刻结束</li>
+</ul>
+<h2 id="安装pl-sqldeveloper"><a href="#安装pl-sqldeveloper" class="headerlink" title="安装pl sqldeveloper"></a><a href="2019-11-10-oracle客户端配置.md">安装pl sqldeveloper</a></h2><p>并且安装优化文件</p>
+<p>安装toad</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/15/oracle/2019-11-10-oracle%E6%96%87%E6%9C%AC%E6%8F%92%E4%BB%B6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="tianyilt">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="探究前线">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/12/15/oracle/2019-11-10-oracle%E6%96%87%E6%9C%AC%E6%8F%92%E4%BB%B6/" itemprop="url">2019-11-10-oracle文本插件</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-15T12:53:28+08:00">
+                2019-12-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/oracle/" itemprop="url" rel="index">
+                    <span itemprop="name">oracle</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>categories: oracle</p>
+<h1 id="Oracle文本插件"><a href="#Oracle文本插件" class="headerlink" title="Oracle文本插件"></a>Oracle文本插件</h1><p>在安装完oracle后发现文本操作很不友好，退格左右按键都与正常配置不一样，以下给出相关插件</p>
+<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><pre><code class="bash">wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+rpm -Uvh epel-release-latest-7.noarch.rpm</code></pre>
+<h2 id="安裝rlwrap"><a href="#安裝rlwrap" class="headerlink" title="安裝rlwrap"></a>安裝rlwrap</h2><pre><code>yum install rlwrap -y</code></pre><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>設定別名在使用者.bash_profile</p>
+<pre><code>source .bash_profile</code></pre><p>然后启动数据库</p>
+<pre><code class="bash">su - oracle
+lsnrctl start
+lsnrctl status
+sqlplus / as sysdba
+startup
+alter system register;</code></pre>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/15/oracle/2019-11-10-oracle%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E7%BD%AE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="tianyilt">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="探究前线">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/12/15/oracle/2019-11-10-oracle%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E7%BD%AE/" itemprop="url">2019-11-10-oracle客户端配置</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-15T12:53:28+08:00">
+                2019-12-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/oracle/" itemprop="url" rel="index">
+                    <span itemprop="name">oracle</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="oracle客户端配置"><a href="#oracle客户端配置" class="headerlink" title="oracle客户端配置"></a>oracle客户端配置</h1><p>categories: oracle<br>目前已经通过<a href="./2019-11-03-oracle工作环境.md">oracle工作环境</a>配置了cnetos7上的oracle服务器与web端客户端，接下来介绍主要win10客户端配置。</p>
+<p>主要涵盖</p>
+<ul>
+<li>Oracle Database Client12c</li>
+<li>sqldeveloper</li>
+</ul>
+<h2 id="Oracle-Database-Client12c-发行版"><a href="#Oracle-Database-Client12c-发行版" class="headerlink" title="Oracle Database Client12c 发行版"></a>Oracle Database Client12c 发行版</h2><p>启动安装程序</p>
+<p><img src="2019-11-10-oracle%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E7%BD%AE/1573358120643.png" alt="1573358120643"></p>
+<p><img src="2019-11-10-oracle%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E7%BD%AE/1573358215909.png" alt="1573358215909"></p>
+<p><img src="2019-11-10-oracle%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E7%BD%AE/1573358244982.png" alt="1573358244982"></p>
+<p><img src="2019-11-10-oracle%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E7%BD%AE/1573358273369.png" alt="1573358273369"></p>
+<p><img src="2019-11-10-oracle%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E7%BD%AE/1573358327651.png" alt="1573358327651"></p>
+<p><img src="2019-11-10-oracle%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E7%BD%AE/1573358356370.png" alt="1573358356370"></p>
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><h2 id="sqldeveloper"><a href="#sqldeveloper" class="headerlink" title="sqldeveloper"></a>sqldeveloper</h2><p>首先进行安装</p>
+<p><img src="2019-11-10-oracle%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E7%BD%AE/1573358908649.png" alt="1573358908649"></p>
+<p><img src="2019-11-10-oracle%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E7%BD%AE/1573360973987.png" alt="1573360973987"></p>
+<p>安装完成</p>
+<h1 id="使用-1"><a href="#使用-1" class="headerlink" title="使用"></a>使用</h1><h2 id="oracle-database-client12c"><a href="#oracle-database-client12c" class="headerlink" title="oracle database client12c"></a>oracle database client12c</h2><p>点击<img src="2019-11-10-oracle%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E7%BD%AE/1573363651542.png" alt="1573363651542"></p>
+<p><img src="2019-11-10-oracle%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E7%BD%AE/1573363635595.png" alt="1573363635595"></p>
+<h2 id="PLSQL-Developer"><a href="#PLSQL-Developer" class="headerlink" title="PLSQL Developer"></a>PLSQL Developer</h2><p>前置条件：</p>
+<ul>
+<li>安装完成Oracle Database client12c，并且连通以上步骤</li>
+</ul>
+<p>点击<img src="2019-11-10-oracle%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E7%BD%AE/1573361404041.png" alt="1573361404041"></p>
+<p><img src="2019-11-10-oracle%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E7%BD%AE/1573362267186.png" alt="1573362267186"></p>
+<p><img src="2019-11-10-oracle%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E7%BD%AE/1573361538482.png" alt="1573361538482"></p>
+<p>然后连不通，连不通就对了，我们点击取消进入主界面</p>
+<p>看到这个</p>
+<p><img src="2019-11-10-oracle%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E7%BD%AE/1573361556406.png" alt="1573361556406"></p>
+<p>需要<del>注册机或者</del>掏钱</p>
+<p>这是我出于教学和科研目的的结果（耿直）</p>
+<p><img src="2019-11-10-oracle%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E7%BD%AE/1573370268106.png" alt="1573370268106"></p>
+<p>当然，注册机跑不通也没关系</p>
+<p>我们接下来进行连接配置</p>
+<p><img src="2019-11-10-oracle%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E7%BD%AE/1573367140950.png" alt="1573367140950"></p>
+<p><img src="2019-11-10-oracle%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E7%BD%AE/1573368627273.png" alt="1573368627273"></p>
+<p>点击<img src="2019-11-10-oracle%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E7%BD%AE/1573368897603.png" alt="1573368897603">可以自动弹出，点击应用，确定，之后关闭PLSQL Developer</p>
+<p>找到win10端的oracle目录设置连接协议的地方</p>
+<p>我的是E:\app\client\tianyilt\product\12.2.0\client_1\network\admin</p>
+<p>在这里创建一个文件tnsnames.ora</p>
+<p>填入以下内容：</p>
+<pre><code>test_online=  
+  (DESCRIPTION =  
+    (ADDRESS = (PROTOCOL = TCP)(HOST = 192.168.12.132)(PORT = 1521))  
+    (CONNECT_DATA =  
+      (SERVER = DEDICATED)  
+      (SERVICE_NAME = ORCL)  
+    )  
+  )  </code></pre><p>HOST：远程oracle的ip地址</p>
+<p>PORT：远程lsnrctl监听的端口，默认1521</p>
+<p>SERVICE_NAME：远程SID号，我们课程里设置的是ORCL</p>
+<p>保存</p>
+<p>然后再打开PLSQL Developer</p>
+<p><img src="2019-11-10-oracle%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E7%BD%AE/1573369362921.png" alt="1573369362921"></p>
+<p>可以发现数据库中出现可选项目</p>
+<p><img src="2019-11-10-oracle%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E7%BD%AE/1573369398277.png" alt="1573369398277"></p>
+<p>这样就可以连通了</p>
+<p>PLSQL链接方法2</p>
+<p>在数据库里面输入 服务器ip/SID</p>
+<p>如192.168.12.132/orcl也可以连上</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/15/oracle/2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="tianyilt">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="探究前线">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/12/15/oracle/2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/" itemprop="url">2019-11-03-oracle工作环境安装</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-15T12:53:28+08:00">
+                2019-12-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/oracle/" itemprop="url" rel="index">
+                    <span itemprop="name">oracle</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Oracle工作环境安装"><a href="#Oracle工作环境安装" class="headerlink" title="Oracle工作环境安装"></a>Oracle工作环境安装</h1><p><a href="https://www.oracle.com/database/technologies/oracle-database-software-downloads.html" target="_blank" rel="noopener">下载网站</a></p>
+<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/1572743053819.png" alt="1572743053819"></p>
+<p>下载12cRelease2, (12.2.0.1.0)</p>
+<p><a href="https://docs.oracle.com/en/" target="_blank" rel="noopener">获取数据库帮助</a></p>
+<h2 id="Oracle管理员的任务"><a href="#Oracle管理员的任务" class="headerlink" title="Oracle管理员的任务"></a>Oracle管理员的任务</h2><ol>
+<li>确定服务器硬件</li>
+<li>安装Oracle软件</li>
+<li>…</li>
 </ol>
-<p>啊啊啊啊</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/15/Git/hexo%E6%BA%90%E7%A0%81%E5%90%8C%E6%AD%A5github/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="tianyilt">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="探究前线">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/12/15/Git/hexo%E6%BA%90%E7%A0%81%E5%90%8C%E6%AD%A5github/" itemprop="url">hexo源码同步github</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-15T12:53:28+08:00">
-                2019-12-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Git/" itemprop="url" rel="index">
-                    <span itemprop="name">Git</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>摘自大佬<a href="https://1csh1.github.io/2017/04/15/save-hexo-source-to-github/" target="_blank" rel="noopener">原文</a><br>categories: Git<br>我们在使用 Hexo 来写博客的时候，我们将博客搭建在 GitHub 上后，当我们使用 hexo d 部署到 GitHub 上，其实没有把我们编写的 xxx.md 原博客文档保存上去，而只是生成一些博客需要的静态的页面。假设我们硬盘坏了，数据无法恢复，那么我们的博客源文档也会不见，所以最好我们是把源代码也托管到 GitHub 上， 这个也有一个好处就是你在其他电脑上也可以同步编写博客。接下来就讲述如何实现。</p>
-<h1 id="建立分支"><a href="#建立分支" class="headerlink" title="建立分支"></a>建立分支</h1><p>因为 master 分支是存放 Hexo 博客生成的页面，所以只能创建一个分支来保存博客的源代码在你的 GitHub 。例如，我创建了一个分支叫 save</p>
-<p><img src="hexo%E6%BA%90%E7%A0%81%E5%90%8C%E6%AD%A5github/hexo01.png" alt="img"></p>
-<h1 id="更改默认分支"><a href="#更改默认分支" class="headerlink" title="更改默认分支"></a>更改默认分支</h1><p>更改我们的项目的默认分支为 save</p>
-<p><img src="hexo%E6%BA%90%E7%A0%81%E5%90%8C%E6%AD%A5github/hexo02.png" alt="img"></p>
-<h1 id="clone-项目"><a href="#clone-项目" class="headerlink" title="clone 项目"></a>clone 项目</h1><p>clone 你的项目到你的 Hexo 目录下。例如我的是执行下面的命令：</p>
-<pre><code class="git">git clone https://github.com/1CSH1/1CSH1.github.io.git</code></pre>
-<h1 id="执行命令"><a href="#执行命令" class="headerlink" title="执行命令"></a>执行命令</h1><p>执行下面的命令将你的博客的原文配置等等保存到分支 save 上</p>
-<pre><code>git remote add origin https://github.com/1CSH1/1CSH1.github.io.git
-git add .
-git commit -m &quot;your description&quot;
-git push origin save</code></pre><h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><p>确认你的 _config.yml 配置是提交到 master 分支</p>
-<pre><code>deploy:
-  type: git
-  repository: git@github.com:1CSH1/1CSH1.github.io.git
-  branch: master</code></pre><p>通过以上的配置，就可以把 Hexo 博客的源文件配置等到保存到 GitHub 上。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/15/Git/2019-11-23-unable%20to%20autodetect%20email%20address%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="tianyilt">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="探究前线">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/12/15/Git/2019-11-23-unable%20to%20autodetect%20email%20address%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" itemprop="url">2019-11-23-unable to autodetect email address解决方法</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-15T12:53:28+08:00">
-                2019-12-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Git/" itemprop="url" rel="index">
-                    <span itemprop="name">Git</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="unable-to-auto-detect-email-address解决方法"><a href="#unable-to-auto-detect-email-address解决方法" class="headerlink" title="unable to auto-detect email address解决方法"></a>unable to auto-detect email address解决方法</h1><p>categories: Git<br> git pull 失败 ,提示：<code>fatal: refusing to merge unrelated histories</code> </p>
-<p> 使用</p>
-<pre><code>git pull origin master --allow-unrelated-histories </code></pre><p>然后git提示<code>unable to auto-detect email address</code>,</p>
+<h2 id="用于管理Oracle的工具"><a href="#用于管理Oracle的工具" class="headerlink" title="用于管理Oracle的工具"></a>用于管理Oracle的工具</h2><ul>
+<li>Oracle Universal Installer(OUI)</li>
+<li>Database Configuration Assistant(DBCA), 创建数据库</li>
+<li>Oracle Enterprise Manager(OEM)</li>
+<li>SQL Plus, 管理工具</li>
+</ul>
+<h2 id="安装开始"><a href="#安装开始" class="headerlink" title="安装开始"></a>安装开始</h2><h3 id="环境检查"><a href="#环境检查" class="headerlink" title="环境检查"></a>环境检查</h3><ul>
+<li><p>系统要求(很重要)</p>
 <ul>
-<li><p>在<code>.git</code>文件夹下, <code>vi config</code></p>
+<li>系统: Centos 7.3以上</li>
+<li>内存（交换空间）: 4G</li>
+<li>磁盘容量: 40G以上</li>
+</ul>
 </li>
-<li><p>在最前面加上</p>
-<pre><code>[user]
-email=your email
-name=your name</code></pre></li>
-<li><p>不需要单引号</p>
+<li><p>检查版本</p>
+<pre><code class="bash">cat /etc/redhat-release</code></pre>
+</li>
+<li><p>检查内核</p>
+<pre><code class="bash">uname -a</code></pre>
+</li>
+<li><p>检查内存</p>
+<pre><code class="bash">grep MemTotal /proc/meminfo
+grep SwapTotal /proc/meminfo</code></pre>
+</li>
+<li><p>检查安装包</p>
+<p>linuxx64_12201_database, 3.3G左右</p>
 </li>
 </ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/15/Git/2019-11-23-github_desktop%E7%9A%84gui%E7%95%8C%E9%9D%A2%E7%AE%80%E5%8D%95%E6%93%8D%E4%BD%9C/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="tianyilt">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="探究前线">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/12/15/Git/2019-11-23-github_desktop%E7%9A%84gui%E7%95%8C%E9%9D%A2%E7%AE%80%E5%8D%95%E6%93%8D%E4%BD%9C/" itemprop="url">2019-11-23-github_desktop的gui界面简单操作</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-15T12:53:28+08:00">
-                2019-12-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Git/" itemprop="url" rel="index">
-                    <span itemprop="name">Git</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>#github desktop的gui界面简单操作<br>categories: Git<br>github在PC平台推出了这款应用<img src="2019-11-23-github_desktop%E7%9A%84gui%E7%95%8C%E9%9D%A2%E7%AE%80%E5%8D%95%E6%93%8D%E4%BD%9C/1574471105559.png" alt="1574471105559"></p>
-<p>极大地简化了使用git的操作,现在以一次日常操作为例讲解其使用方法</p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p><a href="https://desktop.github.com/" target="_blank" rel="noopener">安装连接</a></p>
-<p>​    下载完一路默认</p>
-<h2 id="添加本地仓库"><a href="#添加本地仓库" class="headerlink" title="添加本地仓库"></a>添加本地仓库</h2><p>比如我刚刚<del>从刘锦的博客把所有代码剽窃了</del>,<img src="2019-11-23-github_desktop%E7%9A%84gui%E7%95%8C%E9%9D%A2%E7%AE%80%E5%8D%95%E6%93%8D%E4%BD%9C/1574472839733.png" alt="1574472839733"></p>
-<p>现在准备放到自己的博客网站.当前工作目录如下</p>
-<p><img src="2019-11-23-github_desktop%E7%9A%84gui%E7%95%8C%E9%9D%A2%E7%AE%80%E5%8D%95%E6%93%8D%E4%BD%9C/1574472951010.png" alt="1574472951010"></p>
-<p><img src="2019-11-23-github_desktop%E7%9A%84gui%E7%95%8C%E9%9D%A2%E7%AE%80%E5%8D%95%E6%93%8D%E4%BD%9C/1574473125827.png" alt="1574473125827"></p>
-<p><img src="2019-11-23-github_desktop%E7%9A%84gui%E7%95%8C%E9%9D%A2%E7%AE%80%E5%8D%95%E6%93%8D%E4%BD%9C/1574473163626.png" alt="1574473163626"></p>
-<p>添加后发现我刚才因为抄了一大堆代码产生的更改</p>
-<p><img src="2019-11-23-github_desktop%E7%9A%84gui%E7%95%8C%E9%9D%A2%E7%AE%80%E5%8D%95%E6%93%8D%E4%BD%9C/1574473219593.png" alt="1574473219593"></p>
-<h2 id="本地同步远程"><a href="#本地同步远程" class="headerlink" title="本地同步远程"></a>本地同步远程</h2><p>直接提交</p>
-<p><img src="2019-11-23-github_desktop%E7%9A%84gui%E7%95%8C%E9%9D%A2%E7%AE%80%E5%8D%95%E6%93%8D%E4%BD%9C/1574473383934.png" alt="1574473383934"></p>
-<p>然后一键同步</p>
-<p><img src="2019-11-23-github_desktop%E7%9A%84gui%E7%95%8C%E9%9D%A2%E7%AE%80%E5%8D%95%E6%93%8D%E4%BD%9C/1574473671656.png" alt="1574473671656"></p>
-<p>可以看到完全同步</p>
-<p><a href="https://tianyilt.github.io/MyBlog/" target="_blank" rel="noopener">剽窃的地址</a></p>
-<h3 id="切换远程仓库位置"><a href="#切换远程仓库位置" class="headerlink" title="切换远程仓库位置"></a>切换远程仓库位置</h3><p>如果使用的是fork的仓库,可以在gui设置远程</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/15/Git/2019-11-10-%E5%9C%A8github%E7%AB%AFfork%E8%BF%9C%E7%A8%8B%E5%90%8C%E6%AD%A5/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="tianyilt">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="探究前线">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/12/15/Git/2019-11-10-%E5%9C%A8github%E7%AB%AFfork%E8%BF%9C%E7%A8%8B%E5%90%8C%E6%AD%A5/" itemprop="url">2019-11-10-在github端fork远程同步</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-15T12:53:28+08:00">
-                2019-12-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Git/" itemprop="url" rel="index">
-                    <span itemprop="name">Git</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="在github端fork远程同步"><a href="#在github端fork远程同步" class="headerlink" title="在github端fork远程同步"></a>在github端fork远程同步</h1><p>categories: Git<br>现在我们已经fork别人的一个远程仓库，经过一段时间，原仓库进行了一端更新，我们需要与远程的原仓库同步。</p>
-<p>进入自己fork仓库的pull request</p>
-<p><img src="%E5%9C%A8github%E7%AB%AFfork%E8%BF%9C%E7%A8%8B%E5%90%8C%E6%AD%A5/1573359731289.png" alt="1573359731289"></p>
-<p><img src="%E5%9C%A8github%E7%AB%AFfork%E8%BF%9C%E7%A8%8B%E5%90%8C%E6%AD%A5/1573359783354.png" alt="1573359783354"></p>
-<p>可以发现目前默认是从自己仓库同步到原仓库，需要交换标签顺序，首先把发起栏目改成原仓库</p>
-<p><img src="%E5%9C%A8github%E7%AB%AFfork%E8%BF%9C%E7%A8%8B%E5%90%8C%E6%AD%A5/1573359832906.png" alt="1573359832906"></p>
-<p>可是会出现这个页面</p>
-<p><img src="%E5%9C%A8github%E7%AB%AFfork%E8%BF%9C%E7%A8%8B%E5%90%8C%E6%AD%A5/1573359891243.png" alt="1573359891243"></p>
-<p>点击</p>
-<p> compare across forks</p>
-<p><img src="%E5%9C%A8github%E7%AB%AFfork%E8%BF%9C%E7%A8%8B%E5%90%8C%E6%AD%A5/1573359938161.png" alt="1573359938161"></p>
-<p>再把目标仓库换成自己fork仓库</p>
-<p><img src="%E5%9C%A8github%E7%AB%AFfork%E8%BF%9C%E7%A8%8B%E5%90%8C%E6%AD%A5/1573359959587.png" alt="1573359959587"></p>
-<p>可以从这里看到自己更新的内容</p>
-<p>点击<img src="%E5%9C%A8github%E7%AB%AFfork%E8%BF%9C%E7%A8%8B%E5%90%8C%E6%AD%A5/1573359982645.png" alt="1573359982645"></p>
-<p><img src="%E5%9C%A8github%E7%AB%AFfork%E8%BF%9C%E7%A8%8B%E5%90%8C%E6%AD%A5/1573360028978.png" alt="1573360028978"></p>
-<p><img src="%E5%9C%A8github%E7%AB%AFfork%E8%BF%9C%E7%A8%8B%E5%90%8C%E6%AD%A5/1573360054850.png" alt="1573360054850"></p>
-<p>自此，完成合并</p>
-<p>从自己pull request到原仓库方法一样</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/15/Git/2019-10-27-%E4%BD%BF%E7%94%A8guiscrcpy%E6%8A%95%E5%B1%8F/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="tianyilt">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="探究前线">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/12/15/Git/2019-10-27-%E4%BD%BF%E7%94%A8guiscrcpy%E6%8A%95%E5%B1%8F/" itemprop="url">2019-10-27-使用guiscrcpy投屏</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-15T12:53:28+08:00">
-                2019-12-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Git/" itemprop="url" rel="index">
-                    <span itemprop="name">Git</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="使用guiscrcpy投屏"><a href="#使用guiscrcpy投屏" class="headerlink" title="使用guiscrcpy投屏"></a>使用guiscrcpy投屏</h1><p>categories: Git<br><a href="https://github.com/srevinsaju/guiscrcpy#Installation" target="_blank" rel="noopener">github项目地址</a></p>
-<p>对于Windows平台: </p>
+<h3 id="安装软件包"><a href="#安装软件包" class="headerlink" title="安装软件包"></a>安装软件包</h3><pre><code class="bash">yum -y install binutils compat-libcap1 compat-libstdc++-33 gcc gcc-c++ glibc glibc-devel ksh libaio libaio-devel libgcc libstdc++ libstdc++-devel libXi libXtst make sysstat unixODBC unixODBC-devel
+yum update</code></pre>
+<p>为虚拟机拍摄快照</p>
+<h3 id="配置安装环境"><a href="#配置安装环境" class="headerlink" title="配置安装环境"></a>配置安装环境</h3><ul>
+<li><p>修改主机名为任意名称(<strong>不能是localhost</strong>), 改为例如cent7</p>
+<pre><code>sudo vi /etc/hostname</code></pre></li>
+</ul>
 <ul>
-<li><p><a href="https://github.com/srevinsaju/guiscrcpy/releases/download/1.10/guiscrcpy-1.10-27082019-windows.exe" target="_blank" rel="noopener">下载安装包</a>(不要使用pip下载)</p>
+<li><p>创建用户和组(在root用户下)</p>
+<pre><code class="bash">groupadd oinstall  
+groupadd dba    
+useradd -g oinstall -G dba oracle 
+passwd oracle</code></pre>
 </li>
-<li><p>安装到<code>c:/program files(x86)</code></p>
+<li><p>配置内存参数</p>
+<p>创建文件</p>
+<pre><code class="bash">touch /etc/sysctl.d/97-oracledatabase-sysctl.conf</code></pre>
+<p>写入内容(直接复制到命令行, 需要删去注释)</p>
+<pre><code class="bash">cat &gt;&gt; /etc/sysctl.d/97-oracledatabase-sysctl.conf &lt;&lt; EOF
+fs.aio-max-nr = 1048576  
+fs.file-max = 6815744    
+# shm, shared memory, 共享内存
+# 配置共享内存和文件操作符是为了开启自动存储管理（AMM, Automatic Memory Management）
+kernel.shmall = 2097152   #需要计算, 设置为shmmax/4096
+kernel.shmmax = 4294967295   #需要计算, 设置为物理内存的90%
+kernel.shmmni = 4096    
+kernel.sem = 250 32000 100 128    
+net.ipv4.ip_local_port_range = 9000 65500    
+net.core.rmem_default = 4194304 12c 262144   
+net.core.rmem_max = 4194304    
+net.core.wmem_default = 262144    
+net.core.wmem_max = 1048586
+EOF</code></pre>
+<p>无注释版本</p>
+<pre><code class="bash">cat &gt;&gt; /etc/sysctl.d/97-oracledatabase-sysctl.conf &lt;&lt; EOF
+fs.aio-max-nr = 1048576  
+fs.file-max = 6815744    
+kernel.shmall = 2097152   
+kernel.shmmax = 4294967295   
+kernel.shmmni = 4096    
+kernel.sem = 250 32000 100 128    
+net.ipv4.ip_local_port_range = 9000 65500    
+net.core.rmem_default = 4194304 12c 262144   
+net.core.rmem_max = 4194304    
+net.core.wmem_default = 262144    
+net.core.wmem_max = 1048586
+EOF</code></pre>
 </li>
-<li><p>找到<code>guiscrcpy</code>文件夹, 把它添加到PATH</p>
-</li>
-<li><p>安装adb</p>
+</ul>
 <ul>
-<li><p>从<a href="https://developer.android.google.cn/studio/releases/platform-tools?hl=zh_cn" target="_blank" rel="noopener">这个网站</a>下载一个压缩包</p>
-<p><img src="2019-10-27-%E4%BD%BF%E7%94%A8guiscrcpy%E6%8A%95%E5%B1%8F/1572136841226.png" alt="1572136841226"></p>
+<li><p>启用配置</p>
+<pre><code class="bash">sysctl --system # 立即生效
+sysctl -a |grep shmmax
+sysctl -a |grep shmall</code></pre>
 </li>
-<li><p>解压会看到一个叫<code>platform-tools</code>的文件夹, 放到到C盘根目录</p>
+<li><p>配置资源限制</p>
+<pre><code class="bash">cat &gt;&gt; /etc/security/limits.conf &lt;&lt; EOF  
+oracle  soft  nproc  2047    
+oracle  hard  nproc  16384    
+oracle  soft  nofile  1024    
+oracle  hard  nofile  65536    
+oracle  soft  stack   3145728
+oracle  hard  stack   3145728  
+EOF</code></pre>
+<ul>
+<li><p>修改本地hosts文件</p>
+<pre><code class="bash">vi /etc/hosts </code></pre>
+<p>在最后一行加入<code>[ip地址] [主机名]</code></p>
+<pre><code>192.168.27.157 cent7</code></pre></li>
+</ul>
 </li>
-<li><p>添加这个文件夹到PATH变量</p>
+<li><p>创建安装目录</p>
+<pre><code class="bash">mkdir -p /u01/app/oracle
+chown -R oracle:oinstall /u01/app/
+chown -R oracle:oinstall /u01
+chmod -R 755 /u01/app/oracle/
+chmod -R 755 /u01/</code></pre>
 </li>
-<li><p>在cmd中输入adb, 如果看到一大堆输出, 表示已经安装成功</p>
+<li><p>安装rlwrap</p>
+<pre><code>wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+rpm -Uvh epel-release-latest-7.noarch.rpm
+yum install rlwrap -y</code></pre></li>
+<li><p>配置环境变量</p>
+<pre><code class="bash">su - oracle
+(以下的中文不需要去除)
+cat &gt;&gt; /home/oracle/.bash_profile &lt;&lt; EOF
+export EDITOR=vim 
+#oracle的BASE目录定义   
+export ORACLE_BASE=/u01/app/oracle 
+#oracle的HOME目录定义   
+export ORACLE_HOME=\$ORACLE_BASE/product/12.2.0.1/db_1    
+export ORACLE_SID=ORCL
+#重新定义系统环境变量
+export PATH=\$PATH:\$HOME/.local/bin:\$HOME/bin:\$ORACLE_HOME/bin 
+#简体中文版
+#export NLS_LANG=&quot;AMERICAN_AMERICA.ZHS16GBK&quot;   
+export NLS_LANG=&quot;SIMPLIFIED CHINESE_CHINA&quot;.UTF8 
+#定义语系
+export LANG=zh_CN.UTF-8
+#export LANG=en_US    
+#export LC_ALL=en_US    
+export LD_LIBRARY_PATH=/lib:/usr/lib:\$ORACLE_HOME/lib    
+export CLASSPATH=\$ORACLE_HOME/JRE:\$ORACLE_HOME/jlib:$ORACLE_HOME/rdbms/jlib
+alias sqlplus=&quot;rlwrap sqlplus&quot;    
+alias rman=&quot;rlwrap rman&quot;    
+#权限（反码）
+umask 022    
+EOF
+
+source .bash_profile</code></pre>
+</li>
+<li><p>关闭selinux和防火墙</p>
+<pre><code class="bash">vi /etc/selinux/config</code></pre>
+<p>把<code>SELINUX=enable</code>改为<code>SELINUX=disabled</code></p>
+<pre><code class="bash">systemctl stop firewalld.service
+systemctl disable firewalld.service</code></pre>
+</li>
+<li><p>关闭透明大页<br>查看</p>
+<pre><code class="bash">cat /sys/kernel/mm/transparent_hugepage/enabled
+[always]代表启用
+[never]代表禁用</code></pre>
+<p>修改</p>
+<pre><code>vi /etc/default/grub
+GRUB_CMDLINE_LINUX=&quot;crashkernel=auto rhgb quiet transparent_hugepage=never&quot;</code></pre><p>编译文件</p>
+<pre><code>grub2-mkconfig -o /boot/grub2/grub.cfg</code></pre></li>
+</ul>
+<ul>
+<li><p>重启系统</p>
+<pre><code>init 6</code></pre><p>检验有没有加进去</p>
+<pre><code>cat /proc/cmdline </code></pre></li>
+</ul>
+<h3 id="安装oracle12c"><a href="#安装oracle12c" class="headerlink" title="安装oracle12c"></a>安装oracle12c</h3><p>先为虚拟机拍摄快照</p>
+<ul>
+<li><p>需要使用远程安装的方式, 先安装<code>xmanager</code></p>
+</li>
+<li><p>用xmanager下的xshell连接虚拟机</p>
+</li>
+<li><p>(用户切换到oracle)将压缩包<strong>通过xshell界面(否则会解压失败)</strong>扔到<code>/u01</code>下</p>
+<ul>
+<li><p>方法0，直接</p>
+<ul>
+<li><pre><code class="bash">        cd /u01</code></pre>
+<p>  然后把文件拖进xshell</p>
 </li>
 </ul>
 </li>
-<li><p>将手机USB调试打开(直接在设置里搜索USB, 一般在开发者选项里面) , 把手机用数据线连接到电脑</p>
-</li>
-<li><p>查看手机的ip地址(手机要和电脑放在同一个局域网内)</p>
+<li><p>方法1</p>
 <ul>
-<li>设置-关于手机-状态-ip地址</li>
+<li><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/1573351396870.png" alt="1573351396870"></li>
+<li>用xftp速度更快</li>
 </ul>
 </li>
-<li><p>在命令行使用adb连接手机</p>
+<li><p>方法2：直接拷贝进vmware虚拟机内</p>
+</li>
+</ul>
+</li>
+<li><p>友情提示，如果出现权限问题，路径问题，请使用chmod来授权与mv来移动路径</p>
+</li>
+<li><p>解压</p>
+<pre><code>unzip ****.zip</code></pre></li>
+<li><p>安装</p>
+<pre><code>cd /u01/database
+./runinstaller</code></pre><p>如果出现错误<code>Error: Can&#39;t open display:</code></p>
+<pre><code>export DISPLAY=[主机和虚拟机同一个网段的ip]:0.0</code></pre></li>
+</ul>
+<p>如果一切正常, 会在主机弹出gui</p>
+<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/001.png" alt="001"></p>
+<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/002.png" alt="002"></p>
+<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/003.png" alt="003"></p>
+<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/004.png" alt="004"></p>
+<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/005.png" alt="005"></p>
+<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/006.png" alt="006"></p>
 <ul>
-<li><code>adb tcpip 5555 \\开启5555端口用于adb连接</code></li>
-<li><code>adb connect DEVICE_IP:5555 \\此时可以断开数据线连接</code></li>
+<li><p>最后会提示你用root身份执行两个脚本</p>
+<pre><code>su -
+/u01/app/oraInventory/orainstRoot.sh   
+/u01/app/oracle/product/12.2.0.1/db_1/root.sh</code></pre></li>
 </ul>
+<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/1573353610472.png" alt="1573353610472"></p>
+<p>看到这个直接回车</p>
+<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/1573353641428.png" alt="1573353641428"></p>
+<p>看到这个键入y然后回车</p>
+<h3 id="创建监听服务"><a href="#创建监听服务" class="headerlink" title="创建监听服务"></a>创建监听服务</h3><ul>
+<li><p>切换到oracle用户</p>
 </li>
-<li><p>把命令行切换到<code>c:/program files(x86)/guiscrcpy</code>, 输入<code>guiscrcpy</code>, 即可运行.</p>
+<li><p>输入</p>
+<p><code>netca</code></p>
+</li>
+<li><p>然后在gui配置, 一路下一步</p>
+<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/001-1573290283151.png" alt="001"></p>
+</li>
+<li><p>检验</p>
+<pre><code>ps -ef |grep ora_</code></pre></li>
+</ul>
+<h3 id="创建数据库"><a href="#创建数据库" class="headerlink" title="创建数据库"></a>创建数据库</h3><pre><code>dbca</code></pre><p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/001-1573291200234.png" alt="001"></p>
+<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/002-1573291203916.png" alt="002"></p>
+<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/003-1573291207112.png" alt="003"></p>
+<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/004-1573291210275.png" alt="004"></p>
+<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/005-1573291214103.png" alt="005"></p>
+<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/006-1573291217094.png" alt="006"></p>
+<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/007.png" alt="007"></p>
+<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/008.png" alt="008"></p>
+<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/009.png" alt="009"></p>
+<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/0090.png" alt="0090"></p>
+<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/0091.png" alt="0091"></p>
+<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/010.png" alt="010"></p>
+<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/011.png" alt="011"></p>
+<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/012.png" alt="012"></p>
+<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/013.png" alt="013"></p>
+<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/014.png" alt="014"></p>
+<h3 id="访问数据库"><a href="#访问数据库" class="headerlink" title="访问数据库"></a>访问数据库</h3><ul>
+<li><p>安装flash-player播放器插件</p>
+<p>前往<a href="https://www.flash.cn/" target="_blank" rel="noopener">flash官网</a>下载rpm包</p>
+<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/1573292156421.png" alt="1573292156421"></p>
+<pre><code>rpm -ivh flash-player-npapi-26.0.0.131-release.x86_64.rpm
+sqlplus / as sysdba
+alter user sys identified by [sys密码]; # 更改sys的密码, 可不用</code></pre></li>
+<li><p>在主机的<strong>谷歌浏览器</strong> 地址栏中输入</p>
+<pre><code>https://[虚拟机ip地址]:5500/em/login</code></pre><p>会提示安装flash, 只要在网站设置里允许flash就可以了</p>
+<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/1573293118995.png" alt="1573293118995"></p>
+<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/1573295042473.png" alt="1573295042473"></p>
+<p>注意sys登录一定要勾选以sysdba身份</p>
+<p>成功登录.</p>
+<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/1573295081107.png" alt="1573295081107"></p>
 </li>
 </ul>
+<h3 id="其他配置"><a href="#其他配置" class="headerlink" title="其他配置"></a>其他配置</h3><ul>
+<li><p>启动配置</p>
+<pre><code class="bash">vi /etc/oratab  
+#把最后的N改成Y (默认是N)    
+orcl:/u01/app/oracle/product/12.2.0.1/db_1:Y
+# rc.local启动方式
+cat &gt;&gt; /etc/rc.local &lt;&lt; EOF  
+# Oracle service start    
+su - oracle -c &quot;lsnrctl start&quot;    
+su - oracle -c &quot;dbstart&quot;    
+EOF
 
-          
-        
-      
-    </div>
-    
-    
-    
+chmod +x /etc/rc.local</code></pre>
+</li>
+<li><p>进入数据库</p>
+<pre><code>sqlplus / as sysdba</code></pre><p>可以看到提示符变为<code>SQL&gt;</code></p>
+</li>
+<li><p>安装完数据库密码过期问题</p>
+<p>(alter等命令都是在数据库管理模式下输入, 即提示符是SQL)</p>
+<pre><code>SQL&gt; alter profile default limit password_life_time unlimited;
+alter profile default limit failed_login_attempts unlimited;</code></pre></li>
+<li><p>取消段延迟特性</p>
+<pre><code>alter system set deferred_segment_creation=false scope=both;</code></pre></li>
+<li><p>实例启动关闭</p>
+<pre><code>startup
+shutdown immediate </code></pre><p>查看实例状态</p>
+<pre><code>select status from v$instance;</code></pre></li>
+</ul>
+<h2 id="如果你很不幸"><a href="#如果你很不幸" class="headerlink" title="如果你很不幸"></a>如果你很不幸</h2><h3 id="交换空间不足"><a href="#交换空间不足" class="headerlink" title="交换空间不足"></a>交换空间不足</h3><p>查看swap交换空间方式一：</p>
+<pre><code class="bash">free -m
+free -mh</code></pre>
+<p>可以看出只有2G，而安装需要有4G</p>
+<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/1573352458187.png" alt="1573352458187"></p>
+<p>使用dd命令创建一个swap交换文件：</p>
+<pre><code class="bash">cd ~
+dd if=/dev/zero of=/home/swap bs=4096 count=1024000</code></pre>
+<p>制作为swap格式文件：</p>
+<pre><code>mkswap ~/swap
+swapon ~/swap</code></pre><p>然后查看一下</p>
+<pre><code>free -mh</code></pre><p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/1573353004564.png" alt="1573353004564"></p>
+<h3 id="netca报错Failed-to-write-core-dump"><a href="#netca报错Failed-to-write-core-dump" class="headerlink" title="netca报错Failed to write core dump"></a>netca报错Failed to write core dump</h3><p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/1573354328768.png" alt="1573354328768"></p>
+<p>首先确定xclock能看到</p>
+<p>然后</p>
+<pre><code class="bash">vi /etc/hosts </code></pre>
+<p>作以下修改<img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/1YVD9CWT(97IJ)ZS81V%60YG.png" alt="img"></p>
+<p>然后重启，在xmanager里面打开oracle</p>
 
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/15/Git/2019-08-30-%E5%92%8Cfork%E6%9D%A5%E7%9A%84%E4%BB%93%E5%BA%93%E5%90%8C%E6%AD%A5/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="tianyilt">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="探究前线">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/12/15/Git/2019-08-30-%E5%92%8Cfork%E6%9D%A5%E7%9A%84%E4%BB%93%E5%BA%93%E5%90%8C%E6%AD%A5/" itemprop="url">2019-08-30-和fork来的仓库同步</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-15T12:53:28+08:00">
-                2019-12-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Git/" itemprop="url" rel="index">
-                    <span itemprop="name">Git</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="和fork来的仓库同步"><a href="#和fork来的仓库同步" class="headerlink" title="和fork来的仓库同步"></a>和fork来的仓库同步</h1><p>categories: Git<br>git将fork的仓库名称记为<code>upstream</code>, 因此同步就和远程仓库一样.</p>
-<p>同步远程仓库时, 使用</p>
-<pre><code>$ git pull origin</code></pre><p>同步fork的原仓库, 使用</p>
-<pre><code>$ git pull upstream master</code></pre><p>然后推送到远程</p>
-<pre><code>$ git push origin master</code></pre>
           
         
       
@@ -2122,7 +2527,7 @@ name=your name</code></pre></li>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/3/">&lt;i class&#x3D;&quot;fa fa-angle-left&quot;&gt;&lt;&#x2F;i&gt;</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/5/">&lt;i class&#x3D;&quot;fa fa-angle-right&quot;&gt;&lt;&#x2F;i&gt;</a>
+    <a class="extend prev" rel="prev" href="/page/3/">&lt;i class&#x3D;&quot;fa fa-angle-left&quot;&gt;&lt;&#x2F;i&gt;</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/5/">&lt;i class&#x3D;&quot;fa fa-angle-right&quot;&gt;&lt;&#x2F;i&gt;</a>
   </nav>
 
 
@@ -2168,8 +2573,8 @@ name=your name</code></pre></li>
               
                 <a href="/archives/%20%7C%7C%20archive">
               
-                  <span class="site-state-item-count">52</span>
-                  <span class="site-state-item-name">posts</span>
+                  <span class="site-state-item-count">73</span>
+                  <span class="site-state-item-name">日志</span>
                 </a>
               </div>
             
@@ -2178,10 +2583,10 @@ name=your name</code></pre></li>
               
               
               <div class="site-state-item site-state-categories">
-                
-                  <span class="site-state-item-count">9</span>
-                  <span class="site-state-item-name">categories</span>
-                
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
               </div>
             
 
@@ -2228,7 +2633,7 @@ name=your name</code></pre></li>
 </div>
 
 
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
 
 
@@ -2236,7 +2641,7 @@ name=your name</code></pre></li>
 
 
 
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
 
 
 

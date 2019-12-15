@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="交换机配置categories: 思科2 基本配置通过初始配置设置交换机交换机启动顺序 POST: power on self test 加电自检.   引导程序: 存放在rom中  低级cpu初始化: 初始化cpu寄存器  启动初始化系统主板的flash系统  加载ios到内存  用boot环境变量的信息启动  环境变量未设置-找flash中第一个可执行文件  show boot &#x2F;&#x2F; 查看启动">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2019-11-26-ch05交换机配置">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;15&#x2F;CCNA&#x2F;%E6%80%9D%E7%A7%912&#x2F;2019-11-26-ch05%E4%BA%A4%E6%8D%A2%E6%9C%BA%E9%85%8D%E7%BD%AE&#x2F;index.html">
+<meta property="og:site_name" content="探究前线">
+<meta property="og:description" content="交换机配置categories: 思科2 基本配置通过初始配置设置交换机交换机启动顺序 POST: power on self test 加电自检.   引导程序: 存放在rom中  低级cpu初始化: 初始化cpu寄存器  启动初始化系统主板的flash系统  加载ios到内存  用boot环境变量的信息启动  环境变量未设置-找flash中第一个可执行文件  show boot &#x2F;&#x2F; 查看启动">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;15&#x2F;CCNA&#x2F;%E6%80%9D%E7%A7%912&#x2F;2019-11-26-ch05%E4%BA%A4%E6%8D%A2%E6%9C%BA%E9%85%8D%E7%BD%AE&#x2F;2019-11-26-ch05%E4%BA%A4%E6%8D%A2%E6%9C%BA%E9%85%8D%E7%BD%AE&#x2F;image-20191126144003969.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;15&#x2F;CCNA&#x2F;%E6%80%9D%E7%A7%912&#x2F;2019-11-26-ch05%E4%BA%A4%E6%8D%A2%E6%9C%BA%E9%85%8D%E7%BD%AE&#x2F;2019-11-26-ch05%E4%BA%A4%E6%8D%A2%E6%9C%BA%E9%85%8D%E7%BD%AE&#x2F;image-20191126193054420.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;15&#x2F;CCNA&#x2F;%E6%80%9D%E7%A7%912&#x2F;2019-11-26-ch05%E4%BA%A4%E6%8D%A2%E6%9C%BA%E9%85%8D%E7%BD%AE&#x2F;2019-11-26-ch05%E4%BA%A4%E6%8D%A2%E6%9C%BA%E9%85%8D%E7%BD%AE&#x2F;image-20191126193413274.png">
+<meta property="article:published_time" content="2019-12-15T07:02:04.431Z">
+<meta property="article:modified_time" content="2019-12-10T00:53:01.491Z">
+<meta property="article:author" content="tianyilt">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;15&#x2F;CCNA&#x2F;%E6%80%9D%E7%A7%912&#x2F;2019-11-26-ch05%E4%BA%A4%E6%8D%A2%E6%9C%BA%E9%85%8D%E7%BD%AE&#x2F;2019-11-26-ch05%E4%BA%A4%E6%8D%A2%E6%9C%BA%E9%85%8D%E7%BD%AE&#x2F;image-20191126144003969.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/12/15/CCNA/思科2/2019-11-26-ch05交换机配置/"/>
+
+
+
+
+
+  <title>2019-11-26-ch05交换机配置 | 探究前线</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.1.1"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">探究前线</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">究天人之际,析万物之理</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/15/CCNA/%E6%80%9D%E7%A7%912/2019-11-26-ch05%E4%BA%A4%E6%8D%A2%E6%9C%BA%E9%85%8D%E7%BD%AE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="tianyilt">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="探究前线">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">2019-11-26-ch05交换机配置</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-15T15:02:04+08:00">
+                2019-12-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CCNA/" itemprop="url" rel="index">
+                    <span itemprop="name">CCNA</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CCNA/%E6%80%9D%E7%A7%912/" itemprop="url" rel="index">
+                    <span itemprop="name">思科2</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="交换机配置"><a href="#交换机配置" class="headerlink" title="交换机配置"></a>交换机配置</h1><p>categories: 思科2</p>
+<h2 id="基本配置"><a href="#基本配置" class="headerlink" title="基本配置"></a>基本配置</h2><h3 id="通过初始配置设置交换机"><a href="#通过初始配置设置交换机" class="headerlink" title="通过初始配置设置交换机"></a>通过初始配置设置交换机</h3><h4 id="交换机启动顺序"><a href="#交换机启动顺序" class="headerlink" title="交换机启动顺序"></a>交换机启动顺序</h4><ul>
+<li><p>POST: power on self test 加电自检. </p>
+</li>
+<li><p>引导程序: 存放在rom中</p>
+</li>
+<li><p>低级cpu初始化: 初始化cpu寄存器</p>
+</li>
+<li><p>启动初始化系统主板的flash系统</p>
+</li>
+<li><p>加载ios到内存</p>
+<ul>
+<li><p>用boot环境变量的信息启动</p>
+<ul>
+<li>环境变量未设置-找flash中第一个可执行文件</li>
+</ul>
+<pre><code>show boot // 查看启动文件设置
+boot system flash://..... // 指定启动文件</code></pre></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>开机后在nvram中找到startup config</li>
+</ul>
+<h4 id="修复系统"><a href="#修复系统" class="headerlink" title="修复系统"></a>修复系统</h4><p><img src="2019-11-26-ch05%E4%BA%A4%E6%8D%A2%E6%9C%BA%E9%85%8D%E7%BD%AE/image-20191126144003969.png" alt="image-20191126144003969"></p>
+<p>进入到恢复模式, 可以格式化操作系统, 重新安装操作系统, 回复密码</p>
+<h4 id="LED指示灯"><a href="#LED指示灯" class="headerlink" title="LED指示灯"></a>LED指示灯</h4><ul>
+<li>系统: 绿色-正常, 琥珀色-不正常, 不亮-未开机</li>
+<li>冗余电源(RPS): 不亮-未发现RPS, 绿色-正常, 闪烁-RPS正在为其他设备供电, 琥珀色-RPS故障, 琥珀色闪烁-RPS正在供电.</li>
+<li>端口状态: <ul>
+<li>绿色-一条链路, </li>
+<li>绿色闪烁-传输数据, </li>
+<li>绿色琥珀色交替-故障. </li>
+<li>琥珀色-端口阻塞, 正在确保转发域不存在环路; 端口被激活30s内是这个状态</li>
+<li>琥珀色闪烁-端口阻塞, 转发域存在环路;</li>
+</ul>
+</li>
+<li>端口双工LED, 绿色: 全双工, 不亮: 半双工, </li>
+<li>端口速度LED, 绿色: 100Mbps, 绿色闪烁: 1000Mbps, 不亮: 10Mbps</li>
+<li>以太网供电(PoE), <ul>
+<li>不亮: 没有使用PoE. </li>
+<li>琥珀色闪烁: 没有选择PoE, 但是有一个端口断电或故障</li>
+<li>绿色: 选择了PoE</li>
+<li>绿色琥珀色交替: PoE被拒绝, 用电设备的供电超过交换机电源容量</li>
+<li>琥珀色闪烁: 故障关闭</li>
+<li>琥珀色: 禁用PoE</li>
+</ul>
+</li>
+</ul>
+<h2 id="配置交换机端口"><a href="#配置交换机端口" class="headerlink" title="配置交换机端口"></a>配置交换机端口</h2><h4 id="准备基本交换机管理"><a href="#准备基本交换机管理" class="headerlink" title="准备基本交换机管理"></a>准备基本交换机管理</h4><p>想远程管理访问交换机, 必须配置ip, 子网掩码, 如果是其他网络访问还要配置默认网关. 配置到虚拟接口SVI上</p>
+<p>所有端口默认是分给vlan1的. 所以SVI也是默认给vlan1. 最好是将SVI分配给另一个vlan. </p>
+<pre><code>conf t
+inter vlan 99
+ip addr ...
+no shut
+end
+(config)
+ip default-gateway ...
+end
+(en)
+copy run start</code></pre><h4 id="配置全双工"><a href="#配置全双工" class="headerlink" title="配置全双工"></a>配置全双工</h4><p>交换机都有自动协商功能(默认启用), 但是连接到专用设备的时候, 手动配置非常有用.</p>
+<pre><code>conf t
+inter g0/0
+duplex full // 全双工
+speed 100 // 100Mbps
+end</code></pre><p>1000Mbps只能在全双工下工作</p>
+<h4 id="MDIX"><a href="#MDIX" class="headerlink" title="MDIX"></a>MDIX</h4><p>auto-MDIX自动检测直通/交叉, 自动配置, 但是连接到服务器/工作站等没有自动MDIX的, 就需要手动选择电缆. 启用MDIX:</p>
+<pre><code>conf t
+inter g0/0
+duplex auto
+speed auto
+mdix auto
+end</code></pre><h4 id="验证配置"><a href="#验证配置" class="headerlink" title="验证配置"></a>验证配置</h4><pre><code>show interfaces f0/18
+show ip f0/18
+show mac-address-table
+show flash</code></pre><h3 id="接入层故障排除"><a href="#接入层故障排除" class="headerlink" title="接入层故障排除"></a>接入层故障排除</h3><p><img src="2019-11-26-ch05%E4%BA%A4%E6%8D%A2%E6%9C%BA%E9%85%8D%E7%BD%AE/image-20191126193054420.png" alt="image-20191126193054420"></p>
+<ul>
+<li>接口up, 协议down, 说明另一端接口可能被禁用, 查看是否有<code>EMI/noise</code>, 找到噪声源. 双工配置是否正确. </li>
+<li>接口协议都down, 说明电缆未链接/损坏, 接口损坏, 接口速度不匹配造成问题</li>
+<li>管理性关闭, 说明被手动禁用</li>
+</ul>
+<p><img src="2019-11-26-ch05%E4%BA%A4%E6%8D%A2%E6%9C%BA%E9%85%8D%E7%BD%AE/image-20191126193413274.png" alt="image-20191126193413274"></p>
+<ul>
+<li>如果CRC错误多, 说明电缆可能存在问题(电磁干扰)</li>
+<li>冲突: 半双工时会存在. 全双工不会存在冲突</li>
+<li>延迟冲突: 传输了512位的帧之后发生冲突. 可能由于电缆过长, 一端是全双工而另一端是半双工.</li>
+</ul>
+<h2 id="安全性"><a href="#安全性" class="headerlink" title="安全性"></a>安全性</h2><h3 id="配置SSH"><a href="#配置SSH" class="headerlink" title="配置SSH"></a>配置SSH</h3><ul>
+<li><p>配置步骤</p>
+<pre><code>show ip ssh // 检查是否支持ssh
+conf t // 全局配置
+ip domain-name cisco.com // 配置ip域名
+crypto key generate rsa // 生成rsa密钥对
+username admin secret ccna // 创建用户
+line vty 0 15 // 在vty0-15上启用
+transport input ssh // 只接受ssh
+login local // 从本地用户名数据库验证身份
+exit
+ip ssh version 2 // 开启第二版ssh
+exit</code></pre></li>
+</ul>
+<h3 id="保护未使用端口安全"><a href="#保护未使用端口安全" class="headerlink" title="保护未使用端口安全"></a>保护未使用端口安全</h3><ul>
+<li><p>禁用未使用端口</p>
+<pre><code>interface range f0/1 - 15
+(config-if-range)
+shutdown</code></pre></li>
+<li><p>安全mac地址: 限定端口的mac地址, 其他地址不可接入</p>
+<ul>
+<li><p>静态安全: 手动配置</p>
+</li>
+<li><p>动态安全: 动态获取, 存储在地址表中, 重启后删除</p>
+</li>
+<li><p>粘性安全: 动态获取或手动配置, 存储在地址表中, 添加到运行配置.</p>
+<pre><code>switchport port-security mac-address sticky [mac-address] 
+no switchport port-security mac-address sticky //禁用</code></pre></li>
+</ul>
+</li>
+<li><p>违规模式: 违反安全要求后</p>
+<ul>
+<li>保护: 安全MAC地址数量达到限制, 未知源的数据包会被丢弃, 不通知. 直至移除足够数量的安全 MAC 地址或增加允许的最大地址数 </li>
+<li>限制: 同保护, 只是会发出通知.</li>
+<li>关闭: 立刻禁用, <code>show interface f0/18</code>会显示<code>err-disabled</code></li>
+</ul>
+<pre><code>switchport port-security violation {protect | restrict | shutdown}</code></pre></li>
+<li><p>总结配置</p>
+<pre><code>inter f0/18
+(config if)
+switchport mode access
+switchport port-security
+switchport port-security maximum 10
+switchport port-security mac-address sticky</code></pre></li>
+<li><p>查看配置</p>
+<pre><code>(en)
+show port-security inter f0/18
+show port-security address</code></pre></li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/12/15/CCNA/%E6%80%9D%E7%A7%912/2019-11-25-ch03%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1/" rel="next" title="2019-11-25-ch03动态路由">
+                <i class="fa fa-chevron-left"></i> 2019-11-25-ch03动态路由
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/12/15/CCNA/%E6%80%9D%E7%A7%912/2019-11-28-ch09%20IPv4%20NAT/" rel="prev" title="2019-11-28-ch09 IPv4 NAT">
+                2019-11-28-ch09 IPv4 NAT <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">tianyilt</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%20%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">73</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#交换机配置"><span class="nav-number">1.</span> <span class="nav-text">交换机配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本配置"><span class="nav-number">1.1.</span> <span class="nav-text">基本配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#通过初始配置设置交换机"><span class="nav-number">1.1.1.</span> <span class="nav-text">通过初始配置设置交换机</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#交换机启动顺序"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">交换机启动顺序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修复系统"><span class="nav-number">1.1.1.2.</span> <span class="nav-text">修复系统</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#LED指示灯"><span class="nav-number">1.1.1.3.</span> <span class="nav-text">LED指示灯</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置交换机端口"><span class="nav-number">1.2.</span> <span class="nav-text">配置交换机端口</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#准备基本交换机管理"><span class="nav-number">1.2.0.1.</span> <span class="nav-text">准备基本交换机管理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置全双工"><span class="nav-number">1.2.0.2.</span> <span class="nav-text">配置全双工</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#MDIX"><span class="nav-number">1.2.0.3.</span> <span class="nav-text">MDIX</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#验证配置"><span class="nav-number">1.2.0.4.</span> <span class="nav-text">验证配置</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#接入层故障排除"><span class="nav-number">1.2.1.</span> <span class="nav-text">接入层故障排除</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安全性"><span class="nav-number">1.3.</span> <span class="nav-text">安全性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#配置SSH"><span class="nav-number">1.3.1.</span> <span class="nav-text">配置SSH</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#保护未使用端口安全"><span class="nav-number">1.3.2.</span> <span class="nav-text">保护未使用端口安全</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">tianyilt</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="NATcategories: 思科2公有IPv4地址有限, 为了节省地址发明. 内网流量传到外网, 通过路由器包装, 路由器会把NAT地址池中的一个地址拿来替换内网地址. 这样外网看来是一个公有地址在通讯.  NAT 操作NAT有这些术语  内部地址: 经过NAT转换设备的地址 外部地址: 目标设备的地址 本地地址: 内网出现的地址 全局地址: 出现在外网  推广  内部本地: 内网出现的要被转换">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2019-11-28-ch09 IPv4 NAT">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;15&#x2F;CCNA&#x2F;%E6%80%9D%E7%A7%912&#x2F;2019-11-28-ch09%20IPv4%20NAT&#x2F;index.html">
+<meta property="og:site_name" content="探究前线">
+<meta property="og:description" content="NATcategories: 思科2公有IPv4地址有限, 为了节省地址发明. 内网流量传到外网, 通过路由器包装, 路由器会把NAT地址池中的一个地址拿来替换内网地址. 这样外网看来是一个公有地址在通讯.  NAT 操作NAT有这些术语  内部地址: 经过NAT转换设备的地址 外部地址: 目标设备的地址 本地地址: 内网出现的地址 全局地址: 出现在外网  推广  内部本地: 内网出现的要被转换">
+<meta property="article:published_time" content="2019-12-15T07:02:04.436Z">
+<meta property="article:modified_time" content="2019-12-10T00:53:01.496Z">
+<meta property="article:author" content="tianyilt">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/12/15/CCNA/思科2/2019-11-28-ch09 IPv4 NAT/"/>
+
+
+
+
+
+  <title>2019-11-28-ch09 IPv4 NAT | 探究前线</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.1.1"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">探究前线</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">究天人之际,析万物之理</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/15/CCNA/%E6%80%9D%E7%A7%912/2019-11-28-ch09%20IPv4%20NAT/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="tianyilt">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="探究前线">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">2019-11-28-ch09 IPv4 NAT</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-15T15:02:04+08:00">
+                2019-12-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CCNA/" itemprop="url" rel="index">
+                    <span itemprop="name">CCNA</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CCNA/%E6%80%9D%E7%A7%912/" itemprop="url" rel="index">
+                    <span itemprop="name">思科2</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="NAT"><a href="#NAT" class="headerlink" title="NAT"></a>NAT</h1><p>categories: 思科2<br>公有IPv4地址有限, 为了节省地址发明. 内网流量传到外网, 通过路由器包装, 路由器会把NAT地址池中的一个地址拿来替换内网地址. 这样外网看来是一个公有地址在通讯. </p>
+<h2 id="NAT-操作"><a href="#NAT-操作" class="headerlink" title="NAT 操作"></a>NAT 操作</h2><p>NAT有这些术语</p>
+<ul>
+<li>内部地址: 经过NAT转换设备的地址</li>
+<li>外部地址: 目标设备的地址</li>
+<li>本地地址: 内网出现的地址</li>
+<li>全局地址: 出现在外网</li>
+</ul>
+<p>推广</p>
+<ul>
+<li>内部本地: 内网出现的要被转换的地址</li>
+<li>内部全局: 内网地址转换后的地址</li>
+<li>外部本地: 目标设备的地址在内网的样子(不变)</li>
+<li>外部全局: 目标设备的地址在外网的样子(==外部本地)</li>
+</ul>
+<h3 id="工作方式"><a href="#工作方式" class="headerlink" title="工作方式"></a>工作方式</h3><ul>
+<li>内部主机使用内部本地地址发送一个数据包</li>
+<li>NAT路由器接到数据包</li>
+<li>NAT路由器吧数据包的内部本地地址替换为内部全局地址</li>
+<li>发往外部全局地址</li>
+<li>收到回信</li>
+<li>把内部全局地址按照映射表转换为内部本地地址</li>
+<li>发送回去</li>
+</ul>
+<h3 id="NAT类型"><a href="#NAT类型" class="headerlink" title="NAT类型"></a>NAT类型</h3><ul>
+<li><p>静态NAT: 本地地址-全局地址, 一对一映射, 永久的, 除非手动更改.</p>
+</li>
+<li><p>动态NAT: 多对多. 100内部, 10个全局, 可以按需转换. 如果NAT池耗尽, 其他的接入就要等待</p>
+<p>静态/动态NAT工作流程</p>
+<ul>
+<li>发起会话</li>
+<li>路由器的一个端口上接收到数据包, 如果应用了NAT, 就检查数据包的内部地址, 如果满足条件, 就进行转换</li>
+<li>收到数据包时根据记录的映射进行转换</li>
+</ul>
+</li>
+<li><p>端口地址转换PAT: 多对一. 根据端口转发. 重复次数高达65536次</p>
+<p>一般来说只有一个内部全局地址.</p>
+<p>通信流程</p>
+<ul>
+<li>发起TCP/IP会话</li>
+<li>生成一个 TCP 或 UDP 源端口值或专门为 ICMP 分配的查询 ID来标记会话</li>
+<li>用端口号确定转发</li>
+</ul>
+<p>如果源端口别占用, 会从相应端口组( 0–511、512–1023 或 1024–65535 )分配第一个可用的端口号. <strong>新的端口号是对于内部全局地址而言的, 内部本地地址不必更改端口号</strong>. 收到数据包的时候, 会根据映射表把端口号和ip都进行转换.</p>
+</li>
+</ul>
+<h3 id="NAT优势"><a href="#NAT优势" class="headerlink" title="NAT优势"></a>NAT优势</h3><ul>
+<li>节省地址</li>
+<li>增强连接公网的灵活性, 可以实施多池/备用池/负载均衡池</li>
+<li>更改公共IPv4地址不必对本地地址重新编址, 为内部网络编址方案提供了一致性 </li>
+<li>隐藏内部地址</li>
+</ul>
+<h3 id="NAT缺陷"><a href="#NAT缺陷" class="headerlink" title="NAT缺陷"></a>NAT缺陷</h3><ul>
+<li><p>转发延迟</p>
+</li>
+<li><p>端到端编址的丢失, 与目的IPv4地址有关的协议将不可用. 例如数字签名</p>
+</li>
+<li><p>端到端IPv4可追溯性缺失, 排除故障困难</p>
+</li>
+<li><p>隧道协议复杂. IPsec不可用</p>
+</li>
+<li><p>外网发起的TCP链接的一些服务或无状态协议可能中断</p>
+</li>
+</ul>
+<h2 id="配置NAT"><a href="#配置NAT" class="headerlink" title="配置NAT"></a>配置NAT</h2><h3 id="静态NAT"><a href="#静态NAT" class="headerlink" title="静态NAT"></a>静态NAT</h3><p>配置 192.168.10.254 映射到 209.165.201.5 </p>
+<pre><code>(config)
+ip nat inside source static 192.168.10.254 209.168.201.5 // 静态nat映射
+interface s0/0/0
+(config-if)
+ip addr 192.168.1.2 255.255.255.252 // 分配端口ip
+ip nat inside // 配置为nat内部接口
+exit
+(config)
+inter s0/1/0
+(config-if)
+ip addr 209.165.200.1 255.255.255.252
+ip nat outside</code></pre><p>验证NAT</p>
+<pre><code>clear ip nat statistics // 先清空NAT统计信息
+show ip nat translations // 清空后是没有转换的, 如果一段时间后看到了转换, 说明NAT成功建立</code></pre><h3 id="动态NAT"><a href="#动态NAT" class="headerlink" title="动态NAT"></a>动态NAT</h3><pre><code>(config)
+ip nat pool NAT-POOL-NAME 209.168.200.226 209.168.200.240 netmask 255.255.255.224 // 地址池
+access-list 1 permit 192.168.0.0 0.0.255.255 // 建立ACL 1
+ip nat inside source list 1 pool NAT-POOL-NAME // 把 nat pool 和 ACL 1 绑定
+inter s0/0/0
+(config-if)
+ip nat inside
+inter s0/1/0
+ip nat outside</code></pre><p>验证NAT</p>
+<pre><code>(en)
+show ip nat translations verbose // 加上verbose查看详细信息, 包括过期时间
+ip nat translation timeout timeout-seconds // 设定过期时间(默认1天)
+clear ip nat translation inside [内部全局ip] [内部本地ip] {可选: global [外部本地ip] [外部全局ip]} // 清除一个动态转换条目
+clear ip nat translation protocol inside [内部全局ip] [内部全局port] [内部本地ip] [内部本地port] {可选: global [外部本地ip] [外部本地port] [外部全局ip] [外部全局port]} // 清楚一个PAT
+clear ip nat translation * // 加上*清楚所有动态条目</code></pre><h3 id="PAT"><a href="#PAT" class="headerlink" title="PAT"></a>PAT</h3><p>PAT可以是地址池可以是一个地址</p>
+<pre><code>ip nat pool POOL-1 209.168.200.226 209.165.200.240 netmask 255.255.255.224
+access-list 1 permit 192.168.0.0 0.0.255.255 // 建立ACL 1
+ip nat inside source list 1 pool POOL-1 overload // 注意关键词overload
+inter s0/0/0
+(config-if)
+ip nat inside
+inter s0/1/0
+ip nat outside</code></pre><h3 id="端口转发"><a href="#端口转发" class="headerlink" title="端口转发"></a>端口转发</h3><p>为了在点对点传输中, 让外部客户机访问内网的服务器, 用端口转发, 把特定请求转发到内部的特定端口.</p>
+<p>例如: </p>
+<p>外部用户想访问内网的web服务器</p>
+<ul>
+<li>外部用户向80端口发送请求</li>
+<li>路由器接收到80端口的请求, 把它转发到内部的192.168.1.100:8080主机</li>
+<li>内部主机接受请求并且应答</li>
+</ul>
+<p>配置</p>
+<pre><code>ip nat inside source static tcp 192.168.10.254 80 209.165.200.225 8080
+inter s0/0/0
+ip nat inside
+inter s0/1/0
+ip nat outside</code></pre><h3 id="NAT和IPv6"><a href="#NAT和IPv6" class="headerlink" title="NAT和IPv6"></a>NAT和IPv6</h3><p>IPv6唯一本地地址(ULA), 为本地站点的通信提供IPv6地址空间, <strong>前缀FC00::/7</strong>, 第8位是0或1, 如果前缀是本地分配的, 第8位就是1. 这样前缀就是<strong>FD00/8</strong></p>
+<p>![image-20191129093417161](2019-11-28-ch09 IPv4 NAT/image-20191129093417161.png)</p>
+<ul>
+<li>允许站点合并, 私下互联</li>
+<li>独立于ISP, 不可进行互联网链接</li>
+<li>不可同通过互联网路由</li>
+</ul>
+<p>IPv6的NAT用来提供仅支持IPv6和仅支持IPv4的网络之间的访问, 不是地址转换.</p>
+<h2 id="故障排除"><a href="#故障排除" class="headerlink" title="故障排除"></a>故障排除</h2><h3 id="NAT故障排除命令"><a href="#NAT故障排除命令" class="headerlink" title="NAT故障排除命令"></a>NAT故障排除命令</h3><p><strong>步骤 1.</strong>根据配置，清楚地确定应该实现什么样的 NAT。这可能会揭示出配置问题。</p>
+<p><strong>步骤 2.</strong>使用 <strong>show ip nat translations</strong> 命令验证转换表中转换条目是否正确。</p>
+<ul>
+<li><p>如果内外接口弄反了</p>
+<pre><code>inter s0/0/0
+no ip nat outside
+ip nat inside</code></pre><p>使用<strong>show access-lists</strong>检查ACL配置</p>
+<pre><code>show access-lists
+no access-list 1
+access-list 1 permit ...</code></pre></li>
+</ul>
+<p><strong>步骤 3.</strong>使用 <strong>clear</strong> 和 <strong>debug</strong> 命令验证 NAT 是否如预期一样工作。检查动态条目被清除后，是否又被重新创建出来。</p>
+<pre><code>debug ip nat</code></pre><p>![image-20191129094323010](2019-11-28-ch09 IPv4 NAT/image-20191129094323010.png)</p>
+<p><strong>步骤 4.</strong>详细审查数据包传送情况，确认路由器具有移动数据包所需的正确路由信息。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/12/15/CCNA/%E6%80%9D%E7%A7%912/2019-11-26-ch05%E4%BA%A4%E6%8D%A2%E6%9C%BA%E9%85%8D%E7%BD%AE/" rel="next" title="2019-11-26-ch05交换机配置">
+                <i class="fa fa-chevron-left"></i> 2019-11-26-ch05交换机配置
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/12/15/CCNA/%E6%80%9D%E7%A7%912/RSE_C2_PT%20/" rel="prev" title="RSE_C2_PT">
+                RSE_C2_PT <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">tianyilt</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%20%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">73</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#NAT"><span class="nav-number">1.</span> <span class="nav-text">NAT</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#NAT-操作"><span class="nav-number">1.1.</span> <span class="nav-text">NAT 操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#工作方式"><span class="nav-number">1.1.1.</span> <span class="nav-text">工作方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NAT类型"><span class="nav-number">1.1.2.</span> <span class="nav-text">NAT类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NAT优势"><span class="nav-number">1.1.3.</span> <span class="nav-text">NAT优势</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NAT缺陷"><span class="nav-number">1.1.4.</span> <span class="nav-text">NAT缺陷</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置NAT"><span class="nav-number">1.2.</span> <span class="nav-text">配置NAT</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#静态NAT"><span class="nav-number">1.2.1.</span> <span class="nav-text">静态NAT</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#动态NAT"><span class="nav-number">1.2.2.</span> <span class="nav-text">动态NAT</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PAT"><span class="nav-number">1.2.3.</span> <span class="nav-text">PAT</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#端口转发"><span class="nav-number">1.2.4.</span> <span class="nav-text">端口转发</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NAT和IPv6"><span class="nav-number">1.2.5.</span> <span class="nav-text">NAT和IPv6</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#故障排除"><span class="nav-number">1.3.</span> <span class="nav-text">故障排除</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#NAT故障排除命令"><span class="nav-number">1.3.1.</span> <span class="nav-text">NAT故障排除命令</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">tianyilt</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
