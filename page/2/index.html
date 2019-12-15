@@ -248,6 +248,283 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://tianyilt.github.io/push.github.io/2019/12/15/CCNA/%E6%80%9D%E7%A7%911/2019-09-21-ch02%E9%85%8D%E7%BD%AE%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="tianyilt">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/push.github.io/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="探究前线">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/push.github.io/2019/12/15/CCNA/%E6%80%9D%E7%A7%911/2019-09-21-ch02%E9%85%8D%E7%BD%AE%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" itemprop="url">2019-09-21-ch02配置网络操作系统</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-15T15:02:04+08:00">
+                2019-12-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/push.github.io/categories/CCNA/" itemprop="url" rel="index">
+                    <span itemprop="name">CCNA</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/push.github.io/categories/CCNA/%E6%80%9D%E7%A7%911/" itemprop="url" rel="index">
+                    <span itemprop="name">思科1</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="ch2：配置网络操作系统"><a href="#ch2：配置网络操作系统" class="headerlink" title="ch2：配置网络操作系统"></a>ch2：配置网络操作系统</h1><p>categories: 思科1</p>
+<h2 id="思科IOS"><a href="#思科IOS" class="headerlink" title="思科IOS"></a>思科IOS</h2><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><ul>
+<li>思科的操作系统</li>
+<li>允许用户与设备交互</li>
+<li>RJ45接口：console口，即控制台接口，在控制计算机上打开一个终端CLI进行配置. 使用控制台电缆, 连接主机的串行接口和控制台接口. </li>
+<li>AUX口: 辅助控制口, console口无法使用的时候</li>
+<li>每一个思科系统都有一个IOS</li>
+</ul>
+<h3 id="命令结构"><a href="#命令结构" class="headerlink" title="命令结构"></a>命令结构</h3><ul>
+<li>关键字, 如果不会引起歧义, 可以缩短</li>
+<li>参数</li>
+</ul>
+<h3 id="帮助"><a href="#帮助" class="headerlink" title="帮助"></a>帮助</h3><ul>
+<li>上下文帮助, 直接输入问号<code>?</code></li>
+</ul>
+<h2 id="基本设备配置"><a href="#基本设备配置" class="headerlink" title="基本设备配置"></a>基本设备配置</h2><h3 id="主机名"><a href="#主机名" class="headerlink" title="主机名"></a>主机名</h3><ul>
+<li><p>设备名称: 用来区分设备, 好的设备名能准确表达设备的角色</p>
+<ul>
+<li>大小写敏感</li>
+<li>字母, 数字, 破折号</li>
+</ul>
+</li>
+<li><p>配置主机名</p>
+<pre><code>enable
+config terminal
+hostname SW-Floor-1
+no hostname // 把主机名设置为</code></pre></li>
+<li><p>防止不必要的dns查找, 命令输错时, 防止交换机把他们认为是主机名而进行搜索</p>
+<pre><code>// 配置模式下
+no ip domain-lookup</code></pre></li>
+</ul>
+<h3 id="默认限制对设备配置的访问"><a href="#默认限制对设备配置的访问" class="headerlink" title="默认限制对设备配置的访问"></a>默认限制对设备配置的访问</h3><ul>
+<li><p>使用分层模式对设备设置密码</p>
+<ul>
+<li>密码保护特权exec访问</li>
+<li>密码保护用户exec访问</li>
+<li>密码保护telnet访问</li>
+<li>加密密码+法律通知</li>
+</ul>
+</li>
+<li><p>配置密码</p>
+<ul>
+<li><p>特权exec密码</p>
+<pre><code class="shell">// 用户模式下
+enable
+conf terminal
+enable secret your_password // 设置特权exec的使能加密密码, 密码以密文存储
+exit // 退出配置模式
+disable // 退出特权模式
+enable // 会提示输入密码</code></pre>
+</li>
+<li><p>用户exec密码</p>
+<pre><code>// 配置模式(config)下
+line console 0 // line console代表线路控制台配置, 0代表第一个(大多只有一个)控制台接口
+password your_password
+login // 启用用户exec访问
+exit // 回到配置模式</code></pre></li>
+<li><p>虚拟终端(VTY)线路支持设备远程访问, 配置密码</p>
+<pre><code>// 配置模式下
+line vty 0 15 // 为0-15共16个VTY线路配置密码
+password your_password 
+login</code></pre></li>
+</ul>
+</li>
+<li><p>加密密码</p>
+<pre><code>// 配置模式下
+service password-encryption // 加密密码
+show running-conf // 查看密码是否加密</code></pre></li>
+<li><p>标语</p>
+<pre><code>// 配置模式下
+banner motd #No unauthorized access allowed# // ## 是分隔符, 是必须的, 分隔符可以任意, 但不能是警告语句中的字符</code></pre></li>
+<li><p>保存配置</p>
+<pre><code>// 特权模式下
+show running-config // 目前配置
+show startup-config // 开机配置
+copy running-config startup-config // 或者 copy run start
+reload // 重启, 删除为保存的配置
+erase startup-config // 删除开机配置</code></pre></li>
+<li><p>保存配置到文本文件</p>
+<ul>
+<li>使用<code>show startup-config</code>输出所有配置到屏幕上</li>
+<li>复制配置到文本文件中</li>
+<li>复制文本文件的配置到另一个终端里, 就可以重复这一配置</li>
+</ul>
+</li>
+</ul>
+<h2 id="地址方案"><a href="#地址方案" class="headerlink" title="地址方案"></a>地址方案</h2><h3 id="端口和地址"><a href="#端口和地址" class="headerlink" title="端口和地址"></a>端口和地址</h3><ul>
+<li><p>ip地址</p>
+<ul>
+<li><p>可以分配给物理端口和虚拟接口, 虚拟接口表示设备没有关联任何物理硬件</p>
+</li>
+<li><p>默认网关: 主机将用于远程网络(internet访问)的路由器IP地址</p>
+</li>
+<li><p>子网掩码: 对于ipv4是必要的, 区分地址的网络部分和主机部分</p>
+</li>
+</ul>
+</li>
+<li><p>端口和接口</p>
+<ul>
+<li>接口设备包括: 用户设备接口, 网络设备接口, 电缆</li>
+<li>通信介质要考虑: 传输信号距离, 部署环境, 传输数据量和速度, 材料与成本</li>
+<li>交换机是二层设备, 不要ip地址, 分给思科交换机的ip地址是为了远程连接, 称为svi, 交换机虚拟接口. </li>
+</ul>
+</li>
+</ul>
+<h3 id="配置ip地址"><a href="#配置ip地址" class="headerlink" title="配置ip地址"></a>配置ip地址</h3><ul>
+<li><p>dhcp: dynamic host configuration protocol, 动态主机设置协议, 自动分配ip, 子网掩码, 网关.</p>
+</li>
+<li><p>为思科交换机配置svi</p>
+<pre><code>// 在全局配置下
+interface vlan 1 // 默认虚拟交换机接口
+ip address 192.168.1.10 255.255.255.0
+no shutdown // 激活vlan 1接口
+exit // 进入使能模式
+show ip interface brief // 查看ip接口简要信息
+// 看到vlan 1接口逻辑上是开启的, 物理上关闭, 因为没有设备vlan接入
+// 将一个以太网电缆从终端上接到交换机的以太网接口
+show ip interface brief // 这次逻辑上和物理上接口都是up
+// 如果看到administratively down, 说明忘记设置no shutdown
+// 在计算机上设置ip和子网掩码
+// 用命令行ping交换机的接口</code></pre></li>
+<li><p>交换机的ip是绑定到svi而不是物理接口, 因此无论哪个接口, ip地址都是一样的. pc的ip地址就是绑定到以太网</p>
+</li>
+<li></li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://tianyilt.github.io/push.github.io/2019/12/15/CCNA/%E6%80%9D%E7%A7%911/2019-09-21-ch01%E5%88%9D%E8%AF%86%E7%BD%91%E7%BB%9C/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2573,203 +2850,6 @@ show ip route</code></pre></li>
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tianyilt.github.io/push.github.io/2019/12/15/CCNA/%E6%80%9D%E7%A7%912/2019-11-10-ch04%E4%BA%A4%E6%8D%A2%E7%BD%91%E7%BB%9C/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="tianyilt">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/push.github.io/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="探究前线">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/push.github.io/2019/12/15/CCNA/%E6%80%9D%E7%A7%912/2019-11-10-ch04%E4%BA%A4%E6%8D%A2%E7%BD%91%E7%BB%9C/" itemprop="url">2019-11-10-ch04交换网络</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-15T15:02:04+08:00">
-                2019-12-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/push.github.io/categories/CCNA/" itemprop="url" rel="index">
-                    <span itemprop="name">CCNA</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/push.github.io/categories/CCNA/%E6%80%9D%E7%A7%912/" itemprop="url" rel="index">
-                    <span itemprop="name">思科2</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="交换网络"><a href="#交换网络" class="headerlink" title="交换网络"></a>交换网络</h1><p>categories: 思科2</p>
-<h2 id="LAN设计"><a href="#LAN设计" class="headerlink" title="LAN设计"></a>LAN设计</h2><h3 id="融合网络"><a href="#融合网络" class="headerlink" title="融合网络"></a>融合网络</h3><h4 id="无边界交换网络的层次结构"><a href="#无边界交换网络的层次结构" class="headerlink" title="无边界交换网络的层次结构"></a>无边界交换网络的层次结构</h4><ul>
-<li>分层: 简化部署<ul>
-<li>接入层: 用户pc连接的一层, 网络边缘.</li>
-<li>分布层: 接入ISP</li>
-<li>核心层: 网络主干</li>
-</ul>
-</li>
-<li>模块化: 无缝网络扩展</li>
-<li>恢复能力: 保持网络运行</li>
-<li>灵活性: 只能流量负载</li>
-</ul>
-<h3 id="交换网络-1"><a href="#交换网络-1" class="headerlink" title="交换网络"></a>交换网络</h3><h4 id="选购交换机"><a href="#选购交换机" class="headerlink" title="选购交换机"></a>选购交换机</h4><ul>
-<li><p>成本</p>
-</li>
-<li><p>接口密度: 接口不要空余. 一般有12, 24, 48接口</p>
-</li>
-<li><p>电源: 冗余电源</p>
-</li>
-<li><p>可靠性</p>
-</li>
-<li><p>端口速度</p>
-</li>
-<li><p>帧缓冲</p>
-</li>
-<li><p>扩展性: 交换机的菊花链可以连接交换机做成一个大交换机</p>
-<p><img src="2019-11-10-ch04%E4%BA%A4%E6%8D%A2%E6%9C%BA/image-20191126141544180.png" alt="image-20191126141544180"></p>
-</li>
-</ul>
-<h3 id="帧转发"><a href="#帧转发" class="headerlink" title="帧转发"></a>帧转发</h3><p>交换机根据入口端口和目标地址转发帧</p>
-<ul>
-<li>存储转发: 循环冗余检查CRC, 检查帧(通过FCS校验)是否有错再转发</li>
-<li>直通交换: 直接转发</li>
-</ul>
-<h3 id="交换域"><a href="#交换域" class="headerlink" title="交换域"></a>交换域</h3><h4 id="冲突域"><a href="#冲突域" class="headerlink" title="冲突域"></a>冲突域</h4><p>设备之间共享带宽的网段是冲突域. <strong>半双工</strong>的交换机, 每个网段都是冲突与. <strong>全双工</strong>则没有这个问题.</p>
-<h4 id="广播域"><a href="#广播域" class="headerlink" title="广播域"></a>广播域</h4><p>路由器的一个接口就是一个广播域. 因为广播无法通过路由器.</p>
-<p>交换机接收到广播会范洪处理, 除了接收端口以外转发到其他端口.</p>
-<p>广播MAC地址为<code>FF-FF-FF-FF-FF-FF</code></p>
-<h4 id="缓解网络拥塞"><a href="#缓解网络拥塞" class="headerlink" title="缓解网络拥塞"></a>缓解网络拥塞</h4><ul>
-<li>高端口密度</li>
-<li>大型帧缓冲区</li>
-<li>端口速度</li>
-<li>快速内部交换</li>
-<li>低的端口成本</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2820,7 +2900,7 @@ show ip route</code></pre></li>
               
                 <a href="/push.github.io/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">73</span>
+                  <span class="site-state-item-count">74</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2831,7 +2911,7 @@ show ip route</code></pre></li>
               
               <div class="site-state-item site-state-categories">
                 <a href="/push.github.io/categories/index.html">
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>

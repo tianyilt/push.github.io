@@ -248,6 +248,315 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://tianyilt.github.io/push.github.io/2019/12/15/%E6%80%9D%E7%A7%911/2019-09-28-ch03%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE%E5%92%8C%E9%80%9A%E4%BF%A1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="tianyilt">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/push.github.io/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="探究前线">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/push.github.io/2019/12/15/%E6%80%9D%E7%A7%911/2019-09-28-ch03%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE%E5%92%8C%E9%80%9A%E4%BF%A1/" itemprop="url">2019-09-28-ch03网络协议和通信</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-15T12:53:28+08:00">
+                2019-12-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/push.github.io/categories/%E6%80%9D%E7%A7%911/" itemprop="url" rel="index">
+                    <span itemprop="name">思科1</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="网络协议和通信"><a href="#网络协议和通信" class="headerlink" title="网络协议和通信"></a>网络协议和通信</h1><p>categories: 思科1</p>
+<h2 id="通信规则"><a href="#通信规则" class="headerlink" title="通信规则"></a>通信规则</h2><h3 id="规则"><a href="#规则" class="headerlink" title="规则"></a>规则</h3><ul>
+<li><p>通信要素包括: 消息来源, 目的地址, 通道</p>
+</li>
+<li><p>协议要对以下要求做出说明</p>
+<ul>
+<li>标识发送方, 接收方</li>
+<li>语言和语法</li>
+<li>传递的速度和时间</li>
+<li>证实或确认要求</li>
+</ul>
+</li>
+<li><p>消息编码</p>
+<ul>
+<li>适合介质</li>
+</ul>
+</li>
+<li><p>消息格式与封装</p>
+<ul>
+<li>称为<strong>帧</strong></li>
+<li>目的地址和源主机的地址</li>
+</ul>
+</li>
+<li><p>消息大小</p>
+</li>
+<li><p>消息时序</p>
+<ul>
+<li>访问方法: 消息发送的时间以及发生冲突的响应方式</li>
+<li>流量控制: 信息量和发送速度</li>
+<li>响应超时: 没有及时回复的操作</li>
+</ul>
+</li>
+<li><p>消息传输</p>
+<ul>
+<li>单播: 一对一, 只有一个目的地址</li>
+<li>组播: 一对多, 发送同一条消息到一组主机</li>
+<li>广播: 发送消息到所有主机</li>
+</ul>
+</li>
+</ul>
+<h2 id="网络协议与标准"><a href="#网络协议与标准" class="headerlink" title="网络协议与标准"></a>网络协议与标准</h2><h3 id="协议"><a href="#协议" class="headerlink" title="协议"></a>协议</h3><ul>
+<li><p>协议簇: 执行某种通信功能所需的一组内在相关协议, 在通讯涉及到的软硬件中实施</p>
+</li>
+<li><p>网络协议</p>
+<ul>
+<li>协议是为了让发送接收方都理解信息。</li>
+<li>消息格式化/结构化</li>
+<li>网络设备与其他网络贡献路径信息</li>
+<li>传送错误信息与系统消息的方式与使劲啊</li>
+<li>网络通道建立和拆除</li>
+</ul>
+</li>
+<li><p>协议交互: 示例: web服务器和客户端</p>
+<ul>
+<li>应用层-HTTP(超文本传输协议)</li>
+<li>传输层-TCP(传输控制协议), TCP将HTTP消息划分为小片段(数据段), 控制消息大小和传输速率</li>
+<li>互联网层-IP(Internet 协议), 从TCP获得格式化数据段, 封装成为数据包, 分配地址, 传送到目标主机</li>
+<li>网络接入层-以太网, 网络访问协议, 包括数据链路上的通信和网络介质中数据的物理传输. 接受来自IP的数据包, 封装称为介质传输的格式</li>
+</ul>
+<p><img src="2019-09-28-ch3%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE%E5%92%8C%E9%80%9A%E4%BF%A1/1570074476689.png" alt="1570074476689"></p>
+</li>
+</ul>
+<h3 id="TCP-IP协议簇"><a href="#TCP-IP协议簇" class="headerlink" title="TCP/IP协议簇"></a>TCP/IP协议簇</h3><ul>
+<li>协议分层: 不同厂商专注于自己的层, 层之间的交互方式是固定的. TCP/IP协议簇包括: 应用层-传输层-互联网层-网络接入层.</li>
+<li>TCP/IP协议簇被作为TCP/IP协议栈来实施, 通过网络为应用程序提供给端到端的传送. 以太网协议用于通过 LAN 使用的物理介质传输 IP 数据包</li>
+<li>不同层的常用协议<ul>
+<li>应用层<ul>
+<li>DNS, 域名系统</li>
+<li>DHCP, 动态主机配置协议, 动态分配/回收ip</li>
+<li>SMTP(简单邮件传输协议, 客户端或服务器发送邮件), POP3(邮局协议, 检索和下载邮件), IMAP(Internet 消息访问协议, 访问存储在邮件服务器中的邮件, 维护电子邮件)</li>
+<li>FTP(文件传输协议, 确认传输结果, 可靠, 面向连接), TFTP(简单文件传输协议, 无连接, 五确认, 比FTP占用资源少)</li>
+<li>HTTP, 超文本传输协议</li>
+</ul>
+</li>
+<li>传输层<ul>
+<li>UDP, 用户数据报协议, 不确认数据传输是否成功</li>
+<li>TCP, 确认成功传输, 可靠</li>
+</ul>
+</li>
+<li>互联网层<ul>
+<li>IP, 从传输层接收消息段, 打包为数据包, 数据包在网络上端对端传输.</li>
+<li>NAT, 将私有网络IP地址转化为公有IP地址</li>
+<li>ICMP, Internet控制消息协议, 反馈数据包传输过程中的错误</li>
+<li>OSPF, 开放最短路径优先, 路由协议</li>
+<li>EIGRP, 增强型内部网关路由协议, 综合度量带宽, 延迟, 负载, 可靠性</li>
+</ul>
+</li>
+<li>网络接入层<ul>
+<li>ARP, 地址解析(resolution)协议, 查询局域网IP地址对应的MAC地址</li>
+<li>PPP, 点对点协议</li>
+<li>以太网, 网络接入层的布线标准, 信令标准</li>
+<li>接口驱动程序</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>TCP/IP通信过程, 以HTTP为例<ul>
+<li>HTTP将报头添加到HTML数据前面, 把HTML格式的网页数据传给传输层</li>
+<li>TCP传输层协议管理当个会话</li>
+<li>将IP信息添加到TCP信息前, 形成<strong>IP数据包</strong></li>
+<li>以太网协议添加到IP数据包两端, 形成<strong>数据链路帧</strong></li>
+</ul>
+</li>
+</ul>
+<h3 id="标准组织"><a href="#标准组织" class="headerlink" title="标准组织"></a>标准组织</h3><ul>
+<li>IEEE, 电气电子工程师协会</li>
+<li>ISOC</li>
+<li>TIA, 电信工业协会(网线排列的协议), TIA/EIA协议</li>
+<li>EIA, 美国电子工业协会(网线排列的协议)</li>
+<li>……</li>
+</ul>
+<h3 id="参考模型"><a href="#参考模型" class="headerlink" title="参考模型"></a>参考模型</h3><p><img src="2019-09-28-ch3%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE%E5%92%8C%E9%80%9A%E4%BF%A1/1570077783264.png" alt="1570077783264"></p>
+<ul>
+<li>OSI模型, 用层的编号代替名称, 第一层指物理层, 第七层是应用层<ul>
+<li>应用层, 进程通信的协议</li>
+<li>表示层, 规定应用层数据传输的表示方式</li>
+<li>会话层, 为表示层提供组值对话, 管理数据交换的服务</li>
+<li>传输层, 数据分段, 传输, 重组</li>
+<li>网络层, 通过网络交换数据片段</li>
+<li>数据链路层, 通过公共介质交换数据帧</li>
+<li>物理层, 硬件设备, 电气, 功能, 操作方法, 为设备传输提供物理连接</li>
+</ul>
+</li>
+<li>TCP/IP模型<ul>
+<li>应用层, 提供数据, 编码, 会话控制</li>
+<li>传输层, 各种设备通过不同网络通信</li>
+<li>互联网层, 通信最佳路径</li>
+<li>网络接入层, 控制组成网络的硬件设备和介质</li>
+</ul>
+</li>
+</ul>
+<h2 id="网络数据传输"><a href="#网络数据传输" class="headerlink" title="网络数据传输"></a>网络数据传输</h2><h3 id="数据封装"><a href="#数据封装" class="headerlink" title="数据封装"></a>数据封装</h3><ul>
+<li><p>消息分段</p>
+<ul>
+<li>分段: 消息切割, 方便重传, 避免占用网络过长时间</li>
+<li>多路复用: 指源设备向目标设备发送一个个小片段, 交替发送不同的会话</li>
+</ul>
+</li>
+<li><p>PDU, 协议数据单元, 在不同层有不同的名字</p>
+<ul>
+<li><p>应用层-data, 数据</p>
+</li>
+<li><p>传输层-segment, 数据段, 包含目的和源的端口号</p>
+</li>
+<li><p>网络层-package, 打包, 包含目的和源的网络地址</p>
+</li>
+<li><p>数据链路层-frame, 帧, 物理地址, 包括<strong>一次转发的</strong>网络接口卡(NIC)的物理地址(MAC地址)和接收数据链路帧的NIC的物理地址, 会自动删除上一次转发的地址. </p>
+<p>对于客户端来说, 想访问web服务器, 第一级的目的MAC地址常常是<strong>默认网关</strong></p>
+</li>
+<li><p>物理层-位, 定时和同步</p>
+</li>
+</ul>
+</li>
+<li><p>封装/接触封装</p>
+<ul>
+<li>encapsulation</li>
+</ul>
+</li>
+</ul>
+<h3 id="数据访问"><a href="#数据访问" class="headerlink" title="数据访问"></a>数据访问</h3><ul>
+<li>网络地址<ul>
+<li>目的和源的物理地址(mac地址, 不可跨区域), 本地网络进行点对点通讯, 在<strong>数据链路层</strong>定义</li>
+<li>目的和源的逻辑地址(逻辑地址, 可跨区), 在<strong>网络层</strong>定义</li>
+<li>目的和源的进程号, 端口号, 在<strong>传输层</strong>定义</li>
+<li>通往特定进程</li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://tianyilt.github.io/push.github.io/2019/12/15/%E6%80%9D%E7%A7%911/2019-09-21-ch02%E9%85%8D%E7%BD%AE%E7%BD%91%E7%BB%9C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2073,456 +2382,6 @@ alter system register;</code></pre>
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://tianyilt.github.io/push.github.io/2019/12/15/oracle/2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="tianyilt">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/push.github.io/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="探究前线">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/push.github.io/2019/12/15/oracle/2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/" itemprop="url">2019-11-03-oracle工作环境安装</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-15T12:53:28+08:00">
-                2019-12-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/push.github.io/categories/oracle/" itemprop="url" rel="index">
-                    <span itemprop="name">oracle</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="Oracle工作环境安装"><a href="#Oracle工作环境安装" class="headerlink" title="Oracle工作环境安装"></a>Oracle工作环境安装</h1><p><a href="https://www.oracle.com/database/technologies/oracle-database-software-downloads.html" target="_blank" rel="noopener">下载网站</a></p>
-<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/1572743053819.png" alt="1572743053819"></p>
-<p>下载12cRelease2, (12.2.0.1.0)</p>
-<p><a href="https://docs.oracle.com/en/" target="_blank" rel="noopener">获取数据库帮助</a></p>
-<h2 id="Oracle管理员的任务"><a href="#Oracle管理员的任务" class="headerlink" title="Oracle管理员的任务"></a>Oracle管理员的任务</h2><ol>
-<li>确定服务器硬件</li>
-<li>安装Oracle软件</li>
-<li>…</li>
-</ol>
-<h2 id="用于管理Oracle的工具"><a href="#用于管理Oracle的工具" class="headerlink" title="用于管理Oracle的工具"></a>用于管理Oracle的工具</h2><ul>
-<li>Oracle Universal Installer(OUI)</li>
-<li>Database Configuration Assistant(DBCA), 创建数据库</li>
-<li>Oracle Enterprise Manager(OEM)</li>
-<li>SQL Plus, 管理工具</li>
-</ul>
-<h2 id="安装开始"><a href="#安装开始" class="headerlink" title="安装开始"></a>安装开始</h2><h3 id="环境检查"><a href="#环境检查" class="headerlink" title="环境检查"></a>环境检查</h3><ul>
-<li><p>系统要求(很重要)</p>
-<ul>
-<li>系统: Centos 7.3以上</li>
-<li>内存（交换空间）: 4G</li>
-<li>磁盘容量: 40G以上</li>
-</ul>
-</li>
-<li><p>检查版本</p>
-<pre><code class="bash">cat /etc/redhat-release</code></pre>
-</li>
-<li><p>检查内核</p>
-<pre><code class="bash">uname -a</code></pre>
-</li>
-<li><p>检查内存</p>
-<pre><code class="bash">grep MemTotal /proc/meminfo
-grep SwapTotal /proc/meminfo</code></pre>
-</li>
-<li><p>检查安装包</p>
-<p>linuxx64_12201_database, 3.3G左右</p>
-</li>
-</ul>
-<h3 id="安装软件包"><a href="#安装软件包" class="headerlink" title="安装软件包"></a>安装软件包</h3><pre><code class="bash">yum -y install binutils compat-libcap1 compat-libstdc++-33 gcc gcc-c++ glibc glibc-devel ksh libaio libaio-devel libgcc libstdc++ libstdc++-devel libXi libXtst make sysstat unixODBC unixODBC-devel
-yum update</code></pre>
-<p>为虚拟机拍摄快照</p>
-<h3 id="配置安装环境"><a href="#配置安装环境" class="headerlink" title="配置安装环境"></a>配置安装环境</h3><ul>
-<li><p>修改主机名为任意名称(<strong>不能是localhost</strong>), 改为例如cent7</p>
-<pre><code>sudo vi /etc/hostname</code></pre></li>
-</ul>
-<ul>
-<li><p>创建用户和组(在root用户下)</p>
-<pre><code class="bash">groupadd oinstall  
-groupadd dba    
-useradd -g oinstall -G dba oracle 
-passwd oracle</code></pre>
-</li>
-<li><p>配置内存参数</p>
-<p>创建文件</p>
-<pre><code class="bash">touch /etc/sysctl.d/97-oracledatabase-sysctl.conf</code></pre>
-<p>写入内容(直接复制到命令行, 需要删去注释)</p>
-<pre><code class="bash">cat &gt;&gt; /etc/sysctl.d/97-oracledatabase-sysctl.conf &lt;&lt; EOF
-fs.aio-max-nr = 1048576  
-fs.file-max = 6815744    
-# shm, shared memory, 共享内存
-# 配置共享内存和文件操作符是为了开启自动存储管理（AMM, Automatic Memory Management）
-kernel.shmall = 2097152   #需要计算, 设置为shmmax/4096
-kernel.shmmax = 4294967295   #需要计算, 设置为物理内存的90%
-kernel.shmmni = 4096    
-kernel.sem = 250 32000 100 128    
-net.ipv4.ip_local_port_range = 9000 65500    
-net.core.rmem_default = 4194304 12c 262144   
-net.core.rmem_max = 4194304    
-net.core.wmem_default = 262144    
-net.core.wmem_max = 1048586
-EOF</code></pre>
-<p>无注释版本</p>
-<pre><code class="bash">cat &gt;&gt; /etc/sysctl.d/97-oracledatabase-sysctl.conf &lt;&lt; EOF
-fs.aio-max-nr = 1048576  
-fs.file-max = 6815744    
-kernel.shmall = 2097152   
-kernel.shmmax = 4294967295   
-kernel.shmmni = 4096    
-kernel.sem = 250 32000 100 128    
-net.ipv4.ip_local_port_range = 9000 65500    
-net.core.rmem_default = 4194304 12c 262144   
-net.core.rmem_max = 4194304    
-net.core.wmem_default = 262144    
-net.core.wmem_max = 1048586
-EOF</code></pre>
-</li>
-</ul>
-<ul>
-<li><p>启用配置</p>
-<pre><code class="bash">sysctl --system # 立即生效
-sysctl -a |grep shmmax
-sysctl -a |grep shmall</code></pre>
-</li>
-<li><p>配置资源限制</p>
-<pre><code class="bash">cat &gt;&gt; /etc/security/limits.conf &lt;&lt; EOF  
-oracle  soft  nproc  2047    
-oracle  hard  nproc  16384    
-oracle  soft  nofile  1024    
-oracle  hard  nofile  65536    
-oracle  soft  stack   3145728
-oracle  hard  stack   3145728  
-EOF</code></pre>
-<ul>
-<li><p>修改本地hosts文件</p>
-<pre><code class="bash">vi /etc/hosts </code></pre>
-<p>在最后一行加入<code>[ip地址] [主机名]</code></p>
-<pre><code>192.168.27.157 cent7</code></pre></li>
-</ul>
-</li>
-<li><p>创建安装目录</p>
-<pre><code class="bash">mkdir -p /u01/app/oracle
-chown -R oracle:oinstall /u01/app/
-chown -R oracle:oinstall /u01
-chmod -R 755 /u01/app/oracle/
-chmod -R 755 /u01/</code></pre>
-</li>
-<li><p>安装rlwrap</p>
-<pre><code>wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-rpm -Uvh epel-release-latest-7.noarch.rpm
-yum install rlwrap -y</code></pre></li>
-<li><p>配置环境变量</p>
-<pre><code class="bash">su - oracle
-(以下的中文不需要去除)
-cat &gt;&gt; /home/oracle/.bash_profile &lt;&lt; EOF
-export EDITOR=vim 
-#oracle的BASE目录定义   
-export ORACLE_BASE=/u01/app/oracle 
-#oracle的HOME目录定义   
-export ORACLE_HOME=\$ORACLE_BASE/product/12.2.0.1/db_1    
-export ORACLE_SID=ORCL
-#重新定义系统环境变量
-export PATH=\$PATH:\$HOME/.local/bin:\$HOME/bin:\$ORACLE_HOME/bin 
-#简体中文版
-#export NLS_LANG=&quot;AMERICAN_AMERICA.ZHS16GBK&quot;   
-export NLS_LANG=&quot;SIMPLIFIED CHINESE_CHINA&quot;.UTF8 
-#定义语系
-export LANG=zh_CN.UTF-8
-#export LANG=en_US    
-#export LC_ALL=en_US    
-export LD_LIBRARY_PATH=/lib:/usr/lib:\$ORACLE_HOME/lib    
-export CLASSPATH=\$ORACLE_HOME/JRE:\$ORACLE_HOME/jlib:$ORACLE_HOME/rdbms/jlib
-alias sqlplus=&quot;rlwrap sqlplus&quot;    
-alias rman=&quot;rlwrap rman&quot;    
-#权限（反码）
-umask 022    
-EOF
-
-source .bash_profile</code></pre>
-</li>
-<li><p>关闭selinux和防火墙</p>
-<pre><code class="bash">vi /etc/selinux/config</code></pre>
-<p>把<code>SELINUX=enable</code>改为<code>SELINUX=disabled</code></p>
-<pre><code class="bash">systemctl stop firewalld.service
-systemctl disable firewalld.service</code></pre>
-</li>
-<li><p>关闭透明大页<br>查看</p>
-<pre><code class="bash">cat /sys/kernel/mm/transparent_hugepage/enabled
-[always]代表启用
-[never]代表禁用</code></pre>
-<p>修改</p>
-<pre><code>vi /etc/default/grub
-GRUB_CMDLINE_LINUX=&quot;crashkernel=auto rhgb quiet transparent_hugepage=never&quot;</code></pre><p>编译文件</p>
-<pre><code>grub2-mkconfig -o /boot/grub2/grub.cfg</code></pre></li>
-</ul>
-<ul>
-<li><p>重启系统</p>
-<pre><code>init 6</code></pre><p>检验有没有加进去</p>
-<pre><code>cat /proc/cmdline </code></pre></li>
-</ul>
-<h3 id="安装oracle12c"><a href="#安装oracle12c" class="headerlink" title="安装oracle12c"></a>安装oracle12c</h3><p>先为虚拟机拍摄快照</p>
-<ul>
-<li><p>需要使用远程安装的方式, 先安装<code>xmanager</code></p>
-</li>
-<li><p>用xmanager下的xshell连接虚拟机</p>
-</li>
-<li><p>(用户切换到oracle)将压缩包<strong>通过xshell界面(否则会解压失败)</strong>扔到<code>/u01</code>下</p>
-<ul>
-<li><p>方法0，直接</p>
-<ul>
-<li><pre><code class="bash">        cd /u01</code></pre>
-<p>  然后把文件拖进xshell</p>
-</li>
-</ul>
-</li>
-<li><p>方法1</p>
-<ul>
-<li><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/1573351396870.png" alt="1573351396870"></li>
-<li>用xftp速度更快</li>
-</ul>
-</li>
-<li><p>方法2：直接拷贝进vmware虚拟机内</p>
-</li>
-</ul>
-</li>
-<li><p>友情提示，如果出现权限问题，路径问题，请使用chmod来授权与mv来移动路径</p>
-</li>
-<li><p>解压</p>
-<pre><code>unzip ****.zip</code></pre></li>
-<li><p>安装</p>
-<pre><code>cd /u01/database
-./runinstaller</code></pre><p>如果出现错误<code>Error: Can&#39;t open display:</code></p>
-<pre><code>export DISPLAY=[主机和虚拟机同一个网段的ip]:0.0</code></pre></li>
-</ul>
-<p>如果一切正常, 会在主机弹出gui</p>
-<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/001.png" alt="001"></p>
-<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/002.png" alt="002"></p>
-<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/003.png" alt="003"></p>
-<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/004.png" alt="004"></p>
-<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/005.png" alt="005"></p>
-<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/006.png" alt="006"></p>
-<ul>
-<li><p>最后会提示你用root身份执行两个脚本</p>
-<pre><code>su -
-/u01/app/oraInventory/orainstRoot.sh   
-/u01/app/oracle/product/12.2.0.1/db_1/root.sh</code></pre></li>
-</ul>
-<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/1573353610472.png" alt="1573353610472"></p>
-<p>看到这个直接回车</p>
-<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/1573353641428.png" alt="1573353641428"></p>
-<p>看到这个键入y然后回车</p>
-<h3 id="创建监听服务"><a href="#创建监听服务" class="headerlink" title="创建监听服务"></a>创建监听服务</h3><ul>
-<li><p>切换到oracle用户</p>
-</li>
-<li><p>输入</p>
-<p><code>netca</code></p>
-</li>
-<li><p>然后在gui配置, 一路下一步</p>
-<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/001-1573290283151.png" alt="001"></p>
-</li>
-<li><p>检验</p>
-<pre><code>ps -ef |grep ora_</code></pre></li>
-</ul>
-<h3 id="创建数据库"><a href="#创建数据库" class="headerlink" title="创建数据库"></a>创建数据库</h3><pre><code>dbca</code></pre><p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/001-1573291200234.png" alt="001"></p>
-<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/002-1573291203916.png" alt="002"></p>
-<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/003-1573291207112.png" alt="003"></p>
-<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/004-1573291210275.png" alt="004"></p>
-<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/005-1573291214103.png" alt="005"></p>
-<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/006-1573291217094.png" alt="006"></p>
-<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/007.png" alt="007"></p>
-<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/008.png" alt="008"></p>
-<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/009.png" alt="009"></p>
-<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/0090.png" alt="0090"></p>
-<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/0091.png" alt="0091"></p>
-<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/010.png" alt="010"></p>
-<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/011.png" alt="011"></p>
-<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/012.png" alt="012"></p>
-<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/013.png" alt="013"></p>
-<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/014.png" alt="014"></p>
-<h3 id="访问数据库"><a href="#访问数据库" class="headerlink" title="访问数据库"></a>访问数据库</h3><ul>
-<li><p>安装flash-player播放器插件</p>
-<p>前往<a href="https://www.flash.cn/" target="_blank" rel="noopener">flash官网</a>下载rpm包</p>
-<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/1573292156421.png" alt="1573292156421"></p>
-<pre><code>rpm -ivh flash-player-npapi-26.0.0.131-release.x86_64.rpm
-sqlplus / as sysdba
-alter user sys identified by [sys密码]; # 更改sys的密码, 可不用</code></pre></li>
-<li><p>在主机的<strong>谷歌浏览器</strong> 地址栏中输入</p>
-<pre><code>https://[虚拟机ip地址]:5500/em/login</code></pre><p>会提示安装flash, 只要在网站设置里允许flash就可以了</p>
-<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/1573293118995.png" alt="1573293118995"></p>
-<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/1573295042473.png" alt="1573295042473"></p>
-<p>注意sys登录一定要勾选以sysdba身份</p>
-<p>成功登录.</p>
-<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/1573295081107.png" alt="1573295081107"></p>
-</li>
-</ul>
-<h3 id="其他配置"><a href="#其他配置" class="headerlink" title="其他配置"></a>其他配置</h3><ul>
-<li><p>启动配置</p>
-<pre><code class="bash">vi /etc/oratab  
-#把最后的N改成Y (默认是N)    
-orcl:/u01/app/oracle/product/12.2.0.1/db_1:Y
-# rc.local启动方式
-cat &gt;&gt; /etc/rc.local &lt;&lt; EOF  
-# Oracle service start    
-su - oracle -c &quot;lsnrctl start&quot;    
-su - oracle -c &quot;dbstart&quot;    
-EOF
-
-chmod +x /etc/rc.local</code></pre>
-</li>
-<li><p>进入数据库</p>
-<pre><code>sqlplus / as sysdba</code></pre><p>可以看到提示符变为<code>SQL&gt;</code></p>
-</li>
-<li><p>安装完数据库密码过期问题</p>
-<p>(alter等命令都是在数据库管理模式下输入, 即提示符是SQL)</p>
-<pre><code>SQL&gt; alter profile default limit password_life_time unlimited;
-alter profile default limit failed_login_attempts unlimited;</code></pre></li>
-<li><p>取消段延迟特性</p>
-<pre><code>alter system set deferred_segment_creation=false scope=both;</code></pre></li>
-<li><p>实例启动关闭</p>
-<pre><code>startup
-shutdown immediate </code></pre><p>查看实例状态</p>
-<pre><code>select status from v$instance;</code></pre></li>
-</ul>
-<h2 id="如果你很不幸"><a href="#如果你很不幸" class="headerlink" title="如果你很不幸"></a>如果你很不幸</h2><h3 id="交换空间不足"><a href="#交换空间不足" class="headerlink" title="交换空间不足"></a>交换空间不足</h3><p>查看swap交换空间方式一：</p>
-<pre><code class="bash">free -m
-free -mh</code></pre>
-<p>可以看出只有2G，而安装需要有4G</p>
-<p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/1573352458187.png" alt="1573352458187"></p>
-<p>使用dd命令创建一个swap交换文件：</p>
-<pre><code class="bash">cd ~
-dd if=/dev/zero of=/home/swap bs=4096 count=1024000</code></pre>
-<p>制作为swap格式文件：</p>
-<pre><code>mkswap ~/swap
-swapon ~/swap</code></pre><p>然后查看一下</p>
-<pre><code>free -mh</code></pre><p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/1573353004564.png" alt="1573353004564"></p>
-<h3 id="netca报错Failed-to-write-core-dump"><a href="#netca报错Failed-to-write-core-dump" class="headerlink" title="netca报错Failed to write core dump"></a>netca报错Failed to write core dump</h3><p><img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/1573354328768.png" alt="1573354328768"></p>
-<p>首先确定xclock能看到</p>
-<p>然后</p>
-<pre><code class="bash">vi /etc/hosts </code></pre>
-<p>作以下修改<img src="2019-11-03-oracle%E5%B7%A5%E4%BD%9C%E7%8E%AF%E5%A2%83/1YVD9CWT(97IJ)ZS81V%60YG.png" alt="img"></p>
-<p>然后重启，在xmanager里面打开oracle</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2573,7 +2432,7 @@ swapon ~/swap</code></pre><p>然后查看一下</p>
               
                 <a href="/push.github.io/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">73</span>
+                  <span class="site-state-item-count">74</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2584,7 +2443,7 @@ swapon ~/swap</code></pre><p>然后查看一下</p>
               
               <div class="site-state-item site-state-categories">
                 <a href="/push.github.io/categories/index.html">
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
